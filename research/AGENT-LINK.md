@@ -1,0 +1,33 @@
+# Research an artist for A Place In Grime
+
+Give your agent this link and tell it a place and how much time you want to give. For example, “Work on Derby for 30 minutes.” If you have no preference, it can take one open question anywhere in the UK. The instructions below are for the agent.
+
+The catalogue documents people. A single named appearance can be worth following. Start with a public credit, follow it to another person, record precisely what connects them and leave an open question another researcher can pick up.
+
+## Pick up one question
+
+1. Open [the project repository](https://github.com/Tally-DE/a-place-in-grime). Use its current `main` branch. Read [the source rules](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/METHOD.md), [packet guide](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/START.md) and [handoff rules](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/REVIEW.md). Search the [accepted catalogue](https://github.com/Tally-DE/a-place-in-grime/blob/main/catalogue.json), [open and closed issues](https://github.com/Tally-DE/a-place-in-grime/issues?q=is%3Aissue) and existing pull requests before starting.
+2. For a live GitHub assignment, use a writable local clone, Python 3.10 or newer, Git and GitHub CLI signed in to the contributor’s account. Use their chosen provider and existing plan. If they need to sign in, let them complete the provider’s login themselves. Keep tokens and private receipts out of chats and public submissions.
+3. From the checkout root, run `python research/claim.py list`. Choose an issue whose state is `ready`. Read its current body, linked case, source locator and last public checkpoint. The `Place:` field is the issue’s scope. A broad request such as “the Midlands” can match more than one city: record this selection, then select in-scope issues from the list. Pass `--place` only for an exact issue place.
+4. Run `python research/claim.py start` for a single task. For two hours in Derby, use `python research/claim.py start --minutes 120 --place Derby`. Record the returned run ID and absolute deadline. Keep a separate checkout for each simultaneous session. The helper stores a recovery file under the checkout’s Git metadata.
+5. Run `python research/claim.py --run RUN claim ISSUE`, replacing RUN with the ID and ISSUE with the GitHub issue number. Begin only when the returned shared state names your run and a grant. If someone else got it, pick the next eligible task. The task’s public comments are ordered by GitHub comment ID. A lease lasts 48 hours from its claim or most recent accepted checkpoint. One active question per run keeps the rest available.
+
+## Follow the evidence
+
+Look where the people involved left a record: station listings, named set line-ups, local film crews and press, flyers, tape or CD inlays, labels, producer credits, artist interviews, archived websites and public memories shared with permission. For a lost page, recover the original URL or media ID first. Open the exact Wayback capture, record its timestamp and distinguish a readable billing from playable audio. Search the next name with the crew, place, station or year that gave you the lead. An appearance in Derby supports an event connection. Recording someone’s hometown requires its own evidence.
+
+After each material finding or failed lookup, save the candidate evidence packet locally. Run `python research/claim.py --run RUN checkpoint ISSUE "Source and locator checked; what it establishes; unresolved question and next action"`. Write only information suitable for a public issue. A useful negative result identifies the searched collection and period. A checkpoint renews a live grant. If it has expired, read the latest state and claim again before continuing.
+
+If the session stops, recover the run ID from the local files listed under `git rev-parse --git-path apig-runs`. Use `python research/claim.py --run RUN resume` and the latest issue comments. The original deadline still applies. Confirm that the grant still belongs to the same run and account before resuming a search. If a write failed or timed out, read the issue and pull request before retrying. Retain the local packet when GitHub is unavailable.
+
+## Submit and keep going
+
+1. Prepare one packet using the [schema](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/artist-packet.schema.json). Each claim needs a publisher, original source or agreed collection reference, inspection date, and a locator. Record lost traces, uncertain identities, source access and people worth following. Recheck personal information before publication.
+2. In a contribution branch on your fork, save the packet to `submissions/TASK-ID.json`, substituting the literal Task ID from the issue. Open a pull request to `Tally-DE/a-place-in-grime:main` referencing the issue number. Leave the issue open for editorial review. Look for an existing packet or PR for the same task first and amend your existing submission when possible.
+3. Obtain the full current PR head commit from GitHub. Run `python research/claim.py --run RUN submit ISSUE PR_URL HEAD_SHA`. The helper checks the destination, revision and packet path. Save the confirmed comment receipt and PR URL. The editor checks the evidence before any claims appear on the site. Send revisions to the same PR so the reviewer can see the new commit.
+4. If the task needs another lead, checkpoint the search and run `python research/claim.py --run RUN release ISSUE`. A later contributor can read the note. Report partial findings on a stop request or at the deadline.
+5. For a single task, return the result and receipt. In a timed run, take the next available question in scope until the original deadline or a stop request. If the queue runs dry, check for duplicate questions and propose an evidence-backed next task to the editor. Wait for its dedicated research issue before claiming it. Report honestly if available work or agent capacity runs out.
+
+## Contributing without a GitHub login
+
+On the website, **Suggest an artist** accepts a stage name and any clues the contributor wants to provide. Each artist page also accepts source checks and corrections. Someone using a read-only assistant can follow the Derby [practice case](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/cases/derby.json), contact the organiser for a coordinated assignment, or send a completed packet using **Send a completed packet privately** on the Agent research page. A private intake receipt confirms delivery to the editor. It does not reserve a public research issue. Keep the full result with the contributor if the site cannot issue a receipt.

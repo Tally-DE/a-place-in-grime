@@ -1,0 +1,10 @@
+# When someone gives you a Grime Database research link
+
+The project supplies the instructions. The contributor chooses a place and the amount of time they want to give. Take responsibility for the research, checkpointing, formatting and submission.
+
+Start at the [live agent handoff](research/AGENT-LINK.md). It gives the exact commands to find a research issue, claim it, renew the reservation, resume a timed run and deliver a pull request.
+
+1. Load the assignment from the project link. Use its case and task IDs, scope, time limit, current revision, permitted submission route and any existing run receipt. If the assignment is a self-contained brief, use its included material. In a checkout, read the [research brief](research/START.md), [source rules](research/METHOD.md) and [run and resume rules](research/WORKING.md). An unassigned local checkout is a rehearsal. [Derby case](research/cases/derby.json)
+2. Read the latest accepted records and the current task checkpoint. Claim one available question. Find people, follow credits and document the exact source and locator. Save the run state as work progresses. Resume from the latest confirmed checkpoint and keep the original deadline.
+3. Prepare one [evidence packet](research/artist-packet.schema.json) per task. Check the schema, cite original evidence, keep uncertain facts in open questions and screen out private information before any public submission. Follow the [Git handoff](research/REVIEW.md). Save its receipt before counting the task as delivered. In a timed run, continue through ordinary tasks until the stopping condition.
+4. Give the contributor a plain-English result and a receipt they can revisit. The project’s main agent verifies the new claims and publishes accepted records. Disputes and sensitive requests go privately to the maintainer.

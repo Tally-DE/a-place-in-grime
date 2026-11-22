@@ -1,0 +1,12 @@
+A Place In Grime uses two photographs by kevin (believekevin).
+
+Scratchy (background), Trim, Flow-dan
+https://www.flickr.com/photos/believekevin/34882249/
+
+jammer, ears
+https://www.flickr.com/photos/believekevin/15112120/
+
+Both photographs and their displayed crops are available under Creative Commons Attribution-ShareAlike 2.0 Generic.
+https://creativecommons.org/licenses/by-sa/2.0/
+
+The originals are reproduced in assets/trim-flowdan.jpg and assets/jammer-ears.jpg. The website crops them to fit and overlays a gradient on desktop.

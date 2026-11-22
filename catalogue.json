@@ -1,0 +1,239 @@
+{
+  "places": [
+    {
+      "id": "england",
+      "name": "England",
+      "parent": null,
+      "kind": "nation"
+    },
+    {
+      "id": "scotland",
+      "name": "Scotland",
+      "parent": null,
+      "kind": "nation"
+    },
+    {
+      "id": "wales",
+      "name": "Wales",
+      "parent": null,
+      "kind": "nation"
+    },
+    {
+      "id": "northern-ireland",
+      "name": "Northern Ireland",
+      "parent": null,
+      "kind": "nation"
+    },
+    {
+      "id": "east-midlands",
+      "name": "East Midlands",
+      "parent": "england",
+      "kind": "region"
+    },
+    {
+      "id": "west-midlands",
+      "name": "West Midlands",
+      "parent": "england",
+      "kind": "region"
+    },
+    {
+      "id": "derby",
+      "name": "Derby",
+      "parent": "east-midlands",
+      "kind": "city"
+    },
+    {
+      "id": "normanton",
+      "name": "Normanton",
+      "parent": "derby",
+      "kind": "local area"
+    },
+    {
+      "id": "birmingham",
+      "name": "Birmingham",
+      "parent": "west-midlands",
+      "kind": "city"
+    },
+    {
+      "id": "small-heath",
+      "name": "Small Heath",
+      "parent": "birmingham",
+      "kind": "local area"
+    },
+    {
+      "id": "wolverhampton",
+      "name": "Wolverhampton",
+      "parent": "west-midlands",
+      "kind": "city"
+    }
+  ],
+  "artists": [
+    {
+      "id": "detz",
+      "name": "Detz",
+      "aliases": [
+        "Detonator"
+      ],
+      "placeIds": [
+        "wolverhampton"
+      ],
+      "intro": "Wolverhampton producer who first made his name with grime instrumentals.",
+      "claims": [
+        {
+          "id": "detz-name-and-place",
+          "text": "Detz gives Wolverhampton as his home city and Detonator as his former name.",
+          "source": "About",
+          "publisher": "Detz",
+          "url": "https://www.detz.online/",
+          "locator": "About, opening sentence identifying his former name and city.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "detz-grime",
+          "text": "His first work as a producer was in grime instrumentals.",
+          "source": "About",
+          "publisher": "Detz",
+          "url": "https://www.detz.online/",
+          "locator": "About, paragraph beginning “Since 2016”, on his early instrumentals.",
+          "checked": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": "dubzy",
+      "name": "Dubzy",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Derby MC billed on The Grime Show alongside Eyez, Kaygee, Directs and Lox.",
+      "claims": [
+        {
+          "id": "dubzy-derby",
+          "text": "JDZmedia identified Dubzy as a Derby artist when it published his SPITFIRE session in 2013.",
+          "source": "Dubzy [SPITFIRE]",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=hg9CiK4JD3c",
+          "locator": "First line of the uploader’s description. Uploaded 22 April 2013.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "dubzy-rinse",
+          "text": "Rinse FM billed Dubzy alongside Eyez, Kaygee, Directs and Lox on The Grime Show in November 2014.",
+          "source": "The Grime Show: Eyez, Dubzy, Kaygee, Directs & Lox",
+          "publisher": "Rinse FM",
+          "url": "https://www.youtube.com/watch?v=4W_8EJQZqpE",
+          "locator": "Upload title and opening paragraph of the station’s description. Uploaded 19 November 2014.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "dubzy-derby-credit",
+          "text": "Eyez named Dubzy as the artist representing Derby on Mind the Gap.",
+          "source": "Eyez",
+          "publisher": "Interview Magazine",
+          "url": "https://www.interviewmagazine.com/music/eyez",
+          "locator": "Introduction, Eyez’s account of which MCs represented each city on the mixtape.",
+          "checked": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": "eyez",
+      "name": "Eyez",
+      "aliases": [],
+      "placeIds": [
+        "derby",
+        "normanton"
+      ],
+      "intro": "Derby grime MC documented in Normanton in 2019.",
+      "claims": [
+        {
+          "id": "eyez-normanton",
+          "text": "Marketing Derby described Eyez as a grime MC based in Normanton in its 2019 film about the area.",
+          "source": "All Eyez on Normanton – DBY",
+          "publisher": "Marketing Derby",
+          "url": "https://www.youtube.com/watch?v=k-IHJB891K8",
+          "locator": "Publisher’s one-sentence film description. Uploaded 28 March 2019.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "eyez-derby",
+          "text": "Eyez recalled discovering grime through Channel U and his older brother while growing up in Derby.",
+          "source": "The regional grime artists you need to know",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/",
+          "locator": "Derby section, first answer about discovering grime.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "eyez-dubzy-lox",
+          "text": "Asked which hometown artists he rated, Eyez named Dubzy and Lox among his picks.",
+          "source": "The regional grime artists you need to know",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/",
+          "locator": "Derby section, answer to the question about artists from his hometown.",
+          "checked": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": "jaykae",
+      "name": "Jaykae",
+      "aliases": [],
+      "placeIds": [
+        "birmingham",
+        "small-heath"
+      ],
+      "intro": "Grime MC from Small Heath in Birmingham.",
+      "claims": [
+        {
+          "id": "jaykae-small-heath",
+          "text": "BritAsia TV introduced Jaykae as a grime MC from Small Heath, Birmingham.",
+          "source": "BritAsia TV meets… Jaykae",
+          "publisher": "BritAsia TV",
+          "url": "https://britasia.tv/britasia-tv-meets-jaykae/",
+          "locator": "Interview introduction, paragraph identifying his role and area.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "jaykae-influences",
+          "text": "Jaykae remembers hearing Subzy locally and listening to clashes as he got into grime.",
+          "source": "The regional grime artists you need to know",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/",
+          "locator": "Birmingham section, first answer about discovering grime.",
+          "checked": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": "s-x",
+      "name": "S-X",
+      "aliases": [],
+      "placeIds": [
+        "wolverhampton"
+      ],
+      "intro": "Wolverhampton producer behind the grime instrumental Woo Riddim.",
+      "claims": [
+        {
+          "id": "s-x-wolverhampton",
+          "text": "S-X identified Wolverhampton as his hometown in an interview at Molineux.",
+          "source": "Artist S-X on his love for his hometown",
+          "publisher": "ITV News",
+          "url": "https://www.itv.com/news/2022-07-29/buying-a-home-in-wolverhampton-is-a-career-highlight",
+          "locator": "Opening paragraph below the byline and his comments in the Molineux interview.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "s-x-woo",
+          "text": "S-X produced Woo Riddim, an instrumental that other grime artists picked up while he was still at school.",
+          "source": "Artist S-X on his love for his hometown",
+          "publisher": "ITV News",
+          "url": "https://www.itv.com/news/2022-07-29/buying-a-home-in-wolverhampton-is-a-career-highlight",
+          "locator": "Second paragraph below the byline, on the instrumental and his early career.",
+          "checked": "2026-11-22"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+
+  * { box-sizing: border-box }
+  :root { color-scheme: dark; --ink: #100f0e; --paper: #f4f0e8; --red: #ff5339 }
+  body { background: var(--ink); color: var(--paper); font: 17px/1.4 Arial, sans-serif; margin: 0 }
+  .mast { min-height: 77px; display: flex; align-items: center; justify-content: space-between; padding: 0 3.4vw; background: var(--red); color: var(--ink) }
+  .mast img { width: 228px; height: 72px; object-fit: contain }
+  .nav { display: flex; gap: 2.2rem; font-weight: 700; font-size: 16px }
+  main { max-width: 1800px; margin: auto }
+  .spread { display: grid; grid-template-columns: minmax(0,1.13fr) minmax(0,1fr); padding: 38px 3.4vw 34px; gap: 4.6vw }
+  figure { margin: 0; min-width: 0; align-self: stretch; display: flex; flex-direction: column }
+  .frame { position: relative; flex: 1; min-height: 440px; overflow: hidden; background: #1a1817 }
+  .frame img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: 51% 50% }
+  figcaption { padding-top: 15px; display: flex; align-items: center; justify-content: space-between; gap: 10px }
+  .photo-title { font-size: clamp(19px,2vw,31px); font-weight: 700; letter-spacing: -.045em; line-height: 1.1 }
+  .credit { font: 12px/1.55 Consolas, monospace; color: #c9c3ba; margin-top: 6px }
+  a { color: inherit; text-underline-offset: 3px }
+  .photo-switch { flex: none; min-height: 44px; padding: 0 4px; color: var(--paper); background: transparent; border: 0; cursor: pointer; font: 14px/1.4 Arial, sans-serif; text-decoration: underline; text-underline-offset: 4px }
+  .photo-switch:hover, .suggest:hover { color: white }
+  :focus-visible { outline: 2px solid var(--paper); outline-offset: 3px }
+  .index { padding: 4px 0 0 }
+  .intro { color: #ccc5b8; margin: 0 0 9px; font: 14px/1.5 Consolas, monospace }
+  h1 { font-size: clamp(50px,5.55vw,92px); line-height: .99; margin: 0 0 26px; letter-spacing: -.075em; font-weight: 750 }
+  .search { background: var(--paper); color: #38332e; display: flex; align-items: center; gap: 14px; padding: 16px 19px; font-size: 17px }
+  .glass { width: 15px; height: 15px; border: 2px solid; border-radius: 50%; position: relative; margin-right: 2px }
+  .glass::after { content: ''; width: 8px; border-bottom: 2px solid; position: absolute; transform: rotate(45deg); right: -6px; bottom: -3px }
+  h2 { font: 16px/1.3 Consolas, monospace; margin: 35px 0 12px; color: var(--red) }
+  ul { padding: 0; margin: 0; list-style: none; border-bottom: 1px solid #514c46 }
+  li { font-size: clamp(26px,2.15vw,40px); line-height: 1.2; letter-spacing: -.045em; font-weight: 650; padding: 9px 0; border-top: 1px solid #514c46 }
+  .suggest { display: inline-flex; align-items: center; min-height: 44px; margin-top: 10px; font-weight: 600; font-size: 15px; color: var(--paper); text-underline-offset: 4px }
+  @media(min-width:761px) {
+    .spread { position: relative; isolation: isolate; padding-block: 48px 40px; }
+    .frame { position: absolute; inset: 0 auto 0 0; width: 62%; z-index: -1; }
+    .frame::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 60%, var(--ink) 100%), linear-gradient(0deg, var(--ink), transparent 29%); }
+    .frame img { object-position: center 43%; }
+    figcaption { margin-top: auto; padding-right: 16px; }
+    .index { position: relative; }
+  }
+  @media(max-width:760px) {
+    .mast { min-height: 60px; padding: 0 16px }
+    .mast img { width: 148px; height: 49px }
+    .nav { gap: 11px; font-size: 13px }
+    .spread { display: flex; flex-direction: column; padding: 17px 17px 24px; gap: 24px }
+    .frame { min-height: 0; flex: none; aspect-ratio: 1.96 }
+    figcaption { padding-top: 9px }
+    .photo-title { font-size: 19px }
+    .credit { font-size: 11px; margin-top: 2px }
+    .intro { font-size: 13px }
+    h1 { font-size: 54px; margin-bottom: 16px }
+    h2 { margin-top: 23px }
+    .search { font-size: 15px; padding: 14px }
+    li { font-size: 24px; padding: 8px 0 }
+  }
+  @media(max-width:365px) { .mast img { width: 120px } .nav { gap: 8px } }
+  .mast a { display: inline-flex; align-items: center; text-decoration: none }
+  .nav a { min-height: 44px }
+  .nav a:hover, .rows a:hover { text-decoration: underline }
+  .skip { position: absolute; z-index: 3; top: -100px; left: 1rem; background: #fff; color: #111; padding: 10px }
+  .skip:focus { top: 5px }
+  .search input { color-scheme: light; flex: 1; min-width: 0; width: 100%; border: 0; background: transparent; color: #161412; font: inherit }
+  .search input::placeholder { color: #514e48 }
+  .search input:focus-visible { outline-color: #433e38 }
+  .search button { color: #211b17; background: none; border: 0; font-weight: bold; cursor: pointer; padding: 6px; text-decoration: underline; text-underline-offset: 4px }
+  .search { padding-block: 10px }
+  .rows a { text-decoration: none; display: block }
+  .rows small { display: block; color: #b8b2a9; font: 14px/1.5 Consolas, monospace; }
+  .rows li p { font: 16px/1.5 Arial,sans-serif; letter-spacing: 0; color: #c5c0b8; margin: .35rem 0 }
+  .inside { width: min(900px, 92%); margin: 0 auto; padding: clamp(34px,5vw,76px) 0 60px; min-height: 72vh }
+  .inside h1 { font-size: clamp(44px,6.8vw,92px); overflow-wrap: anywhere }
+  .heading { max-width: 760px; margin-bottom: 30px }
+  .kicker, .crumb, .metadata { font: 14px/1.6 Consolas, monospace }
+  .kicker { color: var(--red); margin: 0 0 12px }
+  .crumb { color: #d3cdc5; margin-bottom: 24px }
+  .crumb span { padding: 0 4px }
+  .lede { font-size: clamp(18px,2.1vw,26px); line-height: 1.45; margin: 16px 0 }
+  .inside h2 { margin-top: 33px; font-size: 18px; font-weight: bold }
+  .inside .search { margin: 18px 0 28px }
+  .inside .rows { margin-bottom: 20px }
+  .inside .rows li { padding: 15px 0 }
+  .details { border-block: 1px solid #514c46; display: grid; grid-template-columns: minmax(120px, 1fr) 3fr; gap: 12px; padding: 18px 0; margin: 22px 0 }
+  dt, .hint, .metadata, .location { color: #c4bfb6 }
+  dd { margin: 0 }
+  .prose, .editor, .fact, .context { max-width: 720px; line-height: 1.55 }
+  .fact, .context { border-top: 1px solid #514c46; padding: 16px 0 }
+  .fact h3 { font-size: 22px; line-height: 1.35; margin: 0 }
+  .fact p,.context p { margin: 8px 0 }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 14px; font-size: 15px }
+  .empty { margin: 20px 0 26px }
+  .editor label, #brief-form label { display: grid; gap: 6px; margin: 18px 0; font-size: 16px; font-weight: bold }
+  .editor input,.editor select,.editor textarea,#brief-form input,#brief-form select { color-scheme: dark; width: 100%; padding: 12px; font: 16px/1.45 Arial,sans-serif; color: var(--paper); background: #211e1b; border: 1px solid #7c756c; border-radius: 0 }
+  textarea { min-height: 130px; resize: vertical }
+  .primary { border: 0; background: var(--red); color: #151210; font: bold 16px/1.4 Arial,sans-serif; padding: 13px 20px; cursor: pointer }
+  .notice { padding: 12px; border-left: 3px solid var(--red) }
+  footer { border-top: 1px solid #514c46; color: #d9d3cb; font: 14px/1.5 Arial,sans-serif; display: flex; gap: 18px; align-items: baseline; justify-content: space-between; padding: 22px 3.4vw }
+  footer nav { display: flex; flex-wrap: wrap; gap: 10px 20px }
+  footer>span { font-weight: bold }
+  @media(max-width:760px){ footer { flex-direction:column; padding: 20px 17px } .inside { width: calc(100% - 34px) } }

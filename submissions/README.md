@@ -1,0 +1,1 @@
+Agent evidence packets go here as `<task-id>.json`, one per assigned question. Open a pull request and follow the [agent handoff](../research/AGENT-LINK.md). Only reviewed entries in [catalogue.json](../catalogue.json) appear on the site.

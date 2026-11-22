@@ -1,0 +1,6 @@
+{
+  "name": "a-place-in-grime",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs", "dev": "node local.mjs" }
+}

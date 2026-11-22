@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UK grime artist research draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "task_id", "outcome", "artist", "sources", "checked", "open_questions"],
+  "properties": {
+    "version": { "enum": [1, 2] },
+    "task_id": { "$ref": "#/$defs/text" },
+    "outcome": { "enum": ["evidence_found", "lead_only", "already_documented"] },
+    "artist": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "catalogue_id"],
+      "properties": {
+        "name": { "$ref": "#/$defs/text" },
+        "catalogue_id": { "oneOf": [{ "$ref": "#/$defs/text" }, { "type": "null" }] }
+      }
+    },
+    "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+    "checked": { "$ref": "#/$defs/notes" },
+    "open_questions": { "$ref": "#/$defs/notes" },
+    "trail_note": { "$ref": "#/$defs/text" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "version": { "const": 2 } } },
+      "then": {
+        "required": ["trail_note"],
+        "properties": {
+          "sources": { "items": { "required": ["origin", "next_people"] } }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "outcome": { "const": "evidence_found" } } },
+      "then": {
+        "properties": {
+          "sources": { "contains": { "properties": { "claims": { "minItems": 1 } } } }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "outcome": { "const": "lead_only" } } },
+      "then": {
+        "properties": {
+          "sources": { "items": { "properties": { "claims": { "maxItems": 0 } } } },
+          "open_questions": { "minItems": 1 }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "outcome": { "const": "already_documented" } } },
+      "then": {
+        "properties": {
+          "artist": { "properties": { "catalogue_id": { "$ref": "#/$defs/text" } } },
+          "checked": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "text": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "web_url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+    "notes": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "value", "locator"],
+      "properties": {
+        "field": {
+          "enum": [
+            "stage_name", "former_stage_name", "alias", "role", "from", "hometown",
+            "grew_up_in", "based_in", "active_in", "crew_membership", "documented_activity",
+            "grime_connection", "official_link"
+          ]
+        },
+        "value": { "$ref": "#/$defs/text" },
+        "locator": { "$ref": "#/$defs/text" }
+      }
+    },
+    "person_or_crew_lead": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["as_printed", "kind", "connection", "locator", "next_check"],
+      "properties": {
+        "as_printed": { "$ref": "#/$defs/text" },
+        "kind": { "enum": ["artist", "crew", "unresolved"] },
+        "connection": { "$ref": "#/$defs/text" },
+        "locator": { "$ref": "#/$defs/text" },
+        "next_check": { "$ref": "#/$defs/text" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "publisher", "original_url", "access", "checked_on", "media", "claims"],
+      "properties": {
+        "title": { "$ref": "#/$defs/text" },
+        "publisher": { "oneOf": [{ "$ref": "#/$defs/text" }, { "type": "null" }] },
+        "original_url": { "oneOf": [{ "$ref": "#/$defs/web_url" }, { "type": "null" }] },
+        "inspected_url": { "$ref": "#/$defs/web_url" },
+        "captured_at": { "type": "string", "format": "date-time" },
+        "origin": { "$ref": "#/$defs/text" },
+        "collection_ref": { "$ref": "#/$defs/text" },
+        "date_note": { "$ref": "#/$defs/text" },
+        "access": {
+          "enum": ["original_page", "archived_page", "physical_item", "consented_account", "supplied_excerpt", "unavailable"]
+        },
+        "checked_on": { "type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "media": { "enum": ["not_checked", "played", "unavailable", "not_applicable"] },
+        "claims": { "type": "array", "items": { "$ref": "#/$defs/claim" } },
+        "next_people": { "type": "array", "items": { "$ref": "#/$defs/person_or_crew_lead" } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "original_url": { "type": "null" } } },
+          "then": { "required": ["collection_ref"] }
+        },
+        {
+          "if": { "properties": { "access": { "enum": ["original_page", "archived_page"] } } },
+          "then": { "properties": { "original_url": { "$ref": "#/$defs/web_url" } } }
+        },
+        {
+          "if": { "properties": { "access": { "const": "archived_page" } } },
+          "then": { "required": ["inspected_url"] }
+        },
+        {
+          "if": { "properties": { "access": { "enum": ["physical_item", "consented_account"] } } },
+          "then": { "required": ["collection_ref"] }
+        },
+        {
+          "if": { "properties": { "access": { "enum": ["supplied_excerpt", "unavailable"] } } },
+          "then": { "properties": { "claims": { "maxItems": 0 }, "next_people": { "maxItems": 0 } } }
+        }
+      ]
+    }
+  }
+}

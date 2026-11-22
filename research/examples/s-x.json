@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "task_id": "example-sx-wolverhampton",
+  "outcome": "evidence_found",
+  "artist": {
+    "name": "S-X",
+    "catalogue_id": null
+  },
+  "sources": [
+    {
+      "title": "'Buying a home in Wolverhampton is a career highlight': Artist S-X on his love for his hometown",
+      "publisher": "ITV News",
+      "original_url": "https://www.itv.com/news/2022-07-29/buying-a-home-in-wolverhampton-is-a-career-highlight",
+      "date_note": "Interview published 29 July 2022.",
+      "access": "original_page",
+      "checked_on": "2026-11-22",
+      "media": "not_checked",
+      "claims": [
+        {
+          "field": "hometown",
+          "value": "Wolverhampton",
+          "locator": "First paragraph below the video and the reporters’ byline, where ITV identifies the artist’s hometown."
+        },
+        {
+          "field": "role",
+          "value": "Producer",
+          "locator": "First two paragraphs below the byline, introducing the artist and describing his production work."
+        }
+      ]
+    },
+    {
+      "title": "S-X - The Woooo Mixtape",
+      "publisher": "StayFresh",
+      "original_url": "https://stayfreshdigital.bandcamp.com/album/s-x-the-woooo-mixtape",
+      "access": "original_page",
+      "checked_on": "2026-11-22",
+      "media": "not_checked",
+      "claims": [
+        {
+          "field": "grime_connection",
+          "value": "StayFresh identifies Woooo as an S-X instrumental that circulated in the grime scene.",
+          "locator": "Digital Album, the release description immediately above the track listing, especially the paragraph about the instrumental."
+        }
+      ]
+    }
+  ],
+  "checked": [
+    "Inspected the ITV article text through a web reader. A separate direct fetch timed out. The StayFresh page returned its release description.",
+    "The starter kit has no published artist IDs yet. The editor can compare the S-X spelling against the live index before assigning one."
+  ],
+  "open_questions": [
+    "These sources support a city-level entry. A finer local-area connection is open."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "version": 2,
+  "task_id": "methods-derby-dubzy",
+  "outcome": "evidence_found",
+  "artist": {
+    "name": "Dubzy",
+    "catalogue_id": null
+  },
+  "sources": [
+    {
+      "title": "the regional grime artists you need to know",
+      "publisher": "i-D",
+      "original_url": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/",
+      "origin": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/",
+      "access": "original_page",
+      "checked_on": "2026-11-22",
+      "date_note": "Frankie Dunn’s interview was published on 2 September 2016.",
+      "media": "not_applicable",
+      "claims": [
+        {
+          "field": "grime_connection",
+          "value": "Eyez recommended Dubzy when asked about artists from his hometown.",
+          "locator": "Derby section, Eyez’s reply to the question about people he rates locally."
+        }
+      ],
+      "next_people": []
+    },
+    {
+      "title": "Dubzy [SPITFIRE] | JDZmedia",
+      "publisher": "JDZmedia",
+      "original_url": "https://www.youtube.com/watch?v=hg9CiK4JD3c",
+      "origin": "youtube:hg9CiK4JD3c",
+      "date_note": "Upload dated 22 April 2013.",
+      "access": "original_page",
+      "checked_on": "2026-11-22",
+      "media": "not_checked",
+      "claims": [
+        {
+          "field": "from",
+          "value": "Derby",
+          "locator": "Opening of JDZmedia’s own description, identifying the featured MC."
+        }
+      ],
+      "next_people": [
+        {
+          "as_printed": "@HekkersSnazz",
+          "kind": "unresolved",
+          "connection": "JDZmedia credits this handle for producing Dubzy’s session.",
+          "locator": "Uploader’s description, production credit following the artist and channel handles.",
+          "next_check": "Find a second contemporary credit from the producer or a label that connects the exact handle with a public artist name."
+        }
+      ]
+    },
+    {
+      "title": "The Grime Show: Eyez, Dubzy, Kaygee, Directs & Lox",
+      "publisher": "Rinse FM",
+      "original_url": "https://www.youtube.com/watch?v=4W_8EJQZqpE",
+      "inspected_url": "https://web.archive.org/web/20150103140341/https://www.youtube.com/watch?v=4W_8EJQZqpE&gl=US&hl=en",
+      "captured_at": "2015-01-03T14:03:41Z",
+      "origin": "youtube:4W_8EJQZqpE",
+      "date_note": "The archived watch page displays an upload date of 19 November 2014.",
+      "access": "archived_page",
+      "checked_on": "2026-11-22",
+      "media": "not_checked",
+      "claims": [
+        {
+          "field": "documented_activity",
+          "value": "Rinse FM included Dubzy in the published line-up for this Grime Show session.",
+          "locator": "Watch-page title and publisher’s description displayed below the player."
+        }
+      ],
+      "next_people": [
+        {
+          "as_printed": "Directs",
+          "kind": "unresolved",
+          "connection": "Rinse lists this name on the same session as Dubzy.",
+          "locator": "Watch-page title, between Kaygee and Lox.",
+          "next_check": "Look for another original credit pairing Directs with this session, channel or period to distinguish the artist from others with a similar name."
+        }
+      ]
+    }
+  ],
+  "checked": [
+    "The i-D interview supplied the starting lead. The separate JDZmedia upload gives the city and producer credit.",
+    "Queries for the exact producer handle and for Hekkers with Dubzy yielded no second original identification in this pass.",
+    "BritHopTV’s 2014 post embeds the Rinse video ID. Its post, the live watch page and the dated replay lead to the same publisher item."
+  ],
+  "open_questions": [
+    "What public name, if any, can be independently connected to @HekkersSnazz? Their city remains open.",
+    "Can a self-linked or contemporary source connect the Kay’Gee spelling in i-D with the Kaygee spelling in the Rinse line-up?"
+  ],
+  "trail_note": "The peer recommendation led to an original uploader credit and a producer to follow. Directs is a distinct lead from the archived set. The YNC branch and older Midlandz Mafia route are in the Derby field notes. These trial results await independent editorial review."
+}

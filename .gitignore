@@ -1,0 +1,8 @@
+design/
+site/dist/
+site/.local/
+site/.openai/
+__pycache__/
+.env
+.env.*
+node_modules/
