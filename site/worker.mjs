@@ -12,7 +12,7 @@ const normal = s => s.normalize('NFKD').toLowerCase().replace(/[^\p{L}\p{N}]/gu,
 const rows = items => `<ul class="rows">${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
 const heading = (title,body='') => `<header class="heading"><h1>${esc(title)}</h1>${body ? `<p class="lede">${esc(body)}</p>` : ''}</header>`;
 function render(title,content,status=200,home=false) {
-  const head=`<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · A Place In Grime</title><meta name="description" content="A community catalogue of UK grime artists, their aliases, and the places they are connected to."><link rel="stylesheet" href="/site.css"><script src="/site.js" defer></script></head>`;
+  const head=`<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · A Place In Grime</title><meta name="description" content="A community catalogue of UK grime artists, their aliases, and the places they are connected to."><link rel="stylesheet" href="/site.css?v=${assetRevision}"><script src="/site.js?v=${assetRevision}" defer></script></head>`;
   const mast=`<a class="skip" href="#content">Skip to content</a><header class="mast"><a href="/" aria-label="A Place In Grime homepage"><img src="/assets/cassette.png" alt="A Place In Grime"></a><nav class="nav" aria-label="Main">${link('/artists','Artists')}${link('/places','Places')}${link('/contribute','Contribute')}</nav></header>`;
   const foot=`<footer><span>A Place In Grime</span><nav aria-label="Project">${link('/about','About')}${link('/agents','Agent research')}${link('/contributors','Contributors')}${link('/support','Support')}${link(repo,'GitHub')}</nav></footer>`;
   return new Response(head+'<body>'+mast+`<main id="content" class="${home?'home':'inside'}">`+content+'</main>'+foot+'</body></html>',{status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store','referrer-policy':'same-origin','x-content-type-options':'nosniff','content-security-policy':"default-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'"}});
@@ -116,8 +116,108 @@ const routeGroups = [
 function contribute() {
   return render('Contribute',heading('Contribute','If you remember a name, a crew or a night, you can help fill a gap.')+rows(routeGroups.map(([path,label,desc])=>link(path,label)+`<p>${esc(desc)}</p>`)));
 }
-function agentPage() {
-  return render('Research with an agent',heading('Research with an agent','Choose a place and give your agent one task or a time limit. The project supplies the research rules.')+`<div class="prose"><h2>First time using an agent?</h2><p>Open ${link('https://developers.openai.com/codex/quickstart/','Codex')} or ${link('https://code.claude.com/docs/en/quickstart','Claude Code')} and follow its sign-in and setup guide. Check what your existing plan includes before subscribing. For research, choose a session that can read public web pages and files. Connect your own GitHub account if you want it to claim a question and send a pull request.</p><h2>Give your agent a brief</h2><form id="brief-form" action="/brief.txt"><label>Where would you like to research?<input name="place" maxlength="100" placeholder="Any UK region, city, town or local area"></label><label>Time to give<select name="duration"><option>One task</option><option>30 minutes</option><option>2 hours</option><option>4 hours</option><option>8 hours</option></select></label><button class="primary">Open my brief</button></form><p>Paste the brief into your agent. Choose any UK area, including one missing from the catalogue. Your agent checks for existing work, opens a question if needed and saves its findings for the next session. If your agent can open links, you can give it the ${link(agentLink,'public agent guide')} directly with your place and time limit.</p><h2>Follow the work</h2><p>${link(repo+'/issues?q=is%3Aissue+is%3Aopen','Available research questions')} · ${link(repo+'/pulls','Submitted findings')} · ${link('/packet','Send a completed packet privately')}</p></div>`);
+const researchFocus = {
+  discover: ['Find artists missing from the catalogue', 'Look for people who have no profile yet. Check aliases before proposing a new artist.'],
+  profile: ['Build up an artist’s profile', 'Look for first-hand accounts of how the artist started and who they worked with.'],
+  credits: ['Follow the names on a set, flyer or tape', 'Follow a named credit to another person on the same item, then to a second source. Explain what connects them.'],
+  archive: ['Track down a lost page or recording', 'Look for an original URL, upload ID or collection reference. Try dated Wayback captures. Say what you could actually read or play.'],
+  check: ['Check a fact on an artist’s page', 'Inspect the source for a specific claim. Give the exact passage or timestamp and say whether it supports the claim.'],
+  queue: ['Pick up an open question', 'Choose an available question in scope and read the latest notes before starting.']
+};
+const timeChoices = ['One question','30 minutes','1 hour','2 hours','4 hours','8 hours','Custom time'];
+function researchChoices(params) {
+  const field = (name,max) => (params.get(name)||'').replace(/[\u0000-\u001f\u007f]/g,' ').trim().slice(0,max);
+  const duration = field('duration',30);
+  return {
+    focus: field('focus',20)||'discover', place: field('place',100), era: field('era',100),
+    lead: field('lead',600), duration: duration==='One task'?'One question':duration||'One question',
+    minutes: field('minutes',12), delivery: field('delivery',20)||'private'
+  };
+}
+function researchForm(s,error='') {
+  const option = (value,label,selected) => `<option value="${esc(value)}"${value===selected?' selected':''}>${esc(label)}</option>`;
+  return render('Research with an agent',heading('Research with an agent')+`<div class="research-panel">
+    <p>Pick something you’d like to find out. We’ll turn your choices into a message you can paste into your agent.</p>
+    <p>${link('/agents/first-time','First time using an agent? Start here.')}</p>
+    ${error?`<p class="notice" role="alert">${esc(error)}</p>`:''}
+    <form id="brief-form" action="/agents/prompt">
+      <label>What would you like to do?<select name="focus">${Object.entries(researchFocus).map(([id,[label]])=>option(id,label,s.focus)).join('')}</select></label>
+      <div class="research-pair">
+        <label>Where? (optional)<input name="place" value="${esc(s.place)}" maxlength="100" placeholder="Anywhere in the UK"></label>
+        <label>Which years? (optional)<input name="era" value="${esc(s.era)}" maxlength="100" placeholder="Any era"></label>
+      </div>
+      <label>Got a name, a link or a clue? (optional)<textarea name="lead" maxlength="600" rows="2" placeholder="An MC you remember, a crew, a radio show…">${esc(s.lead)}</textarea></label>
+      <div class="research-pair">
+        <label>How long should it work?<select name="duration">${timeChoices.map(t=>option(t,t,s.duration)).join('')}</select></label>
+        <label id="custom-minutes">Time in minutes<input type="number" name="minutes" min="1" step="1" placeholder="e.g. 90" value="${esc(s.minutes)}"></label>
+      </div>
+      <fieldset class="delivery"><legend>Where should the findings go?</legend>
+        <label><input type="radio" name="delivery" value="private"${s.delivery==='private'?' checked':''}> Give them to me to send privately</label>
+        <label><input type="radio" name="delivery" value="github"${s.delivery==='github'?' checked':''}> Send them for review on GitHub</label>
+        <a class="github-help" href="/agents/first-time?setup=github#github">Set up a GitHub account and project copy</a>
+      </fieldset>
+      <button class="primary">Make my prompt</button>
+    </form>
+    <nav class="research-nav" aria-label="Research links">${link(repo+'/issues?q=is%3Aissue+is%3Aopen','Open research questions')}${link('/packet','Send findings privately')}</nav>
+  </div>`,error?422:200);
+}
+function researchPrompt(url,raw) {
+  const s = researchChoices(url.searchParams);
+  const legacyBrief = raw && !url.searchParams.has('delivery');
+  if (legacyBrief) s.delivery = 'github';
+  if (!Object.hasOwn(researchFocus,s.focus) || !['private','github'].includes(s.delivery) || !timeChoices.includes(s.duration)) {
+    return researchForm(s,'Choose a research option, a time and where to send the findings.');
+  }
+  const custom = s.duration==='Custom time';
+  if (custom && (!/^\d+$/.test(s.minutes)||Number(s.minutes)<1)) {
+    return researchForm(s,'Enter a whole number of minutes for your time limit.');
+  }
+  const [focus,method] = researchFocus[s.focus];
+  const time = custom ? Number(s.minutes)+' minutes' : s.duration;
+  const message = [
+    'Help me research people for A Place In Grime, the UK grime artist catalogue.',
+    [focus+'.','Area: '+(s.place||'anywhere in the UK'),'Years: '+(s.era||'any era'),s.lead&&'My starting clue: '+s.lead].filter(Boolean).join('\n'),
+    s.duration==='One question' ? 'Take one question. Stop when you have checked it and saved what you found.' : 'Work for up to '+time+'. Record your start time and deadline. Keep taking questions within this brief until time runs out or there is no useful work left. If interrupted, save where you got to and resume against the same deadline.',
+    method+' Read the project’s source and handoff rules here:\n'+agentLink,
+    'Check the catalogue and public work queue for overlap first. Save each source, where to look in it, what it proves and the next person worth following. Leave uncertain details open.',
+    s.delivery==='private' ? 'Keep my research private. Read the public queue, skip work someone already has, and keep checkpoints locally. Do not create issues, comments or pull requests. Give me the finished evidence packet as version 2 JSON and a short summary. I will submit it myself at '+url.origin+'/packet.'
+      : 'Send the findings through GitHub for editorial review. Follow the guide to claim a question, or open a focused one within my chosen area if needed. Save checkpoints, submit the evidence on a pull request, and give me its URL and confirmed receipt. If GitHub access is missing, give me the finished packet to submit privately and tell me what still needs sending.'
+  ].join('\n\n');
+  if (raw) return new Response(message+'\n',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'no-store'}});
+  const query = new URLSearchParams(s);
+  return render('Your research prompt',heading('Your research prompt')+`<div class="research-panel"><p>Copy this message into a new chat with your agent.</p>
+    <div class="prompt-actions"><button class="primary" type="button" hidden id="copy-prompt">Copy prompt</button>${link('/agents?'+query,'Change my choices')}${link('/brief.txt?'+query,'Plain text')}</div>
+    <p id="copy-status" role="status"></p><textarea id="agent-prompt" aria-label="Your research prompt" readonly>${esc(message)}</textarea></div>`);
+}
+function firstAgent(url) {
+  return render('First time using an agent?',heading('First time using an agent?')+`<div class="guide prose">
+    <p>An agent can look through a radio archive, read interviews or follow a name on a flyer for you. You choose the question. We give it the research instructions.</p>
+    <ol>
+      <li><strong>Open an agent.</strong> If you already use one that can open web pages and save files, start there. For Codex, ${link('https://openai.com/codex/','open Codex')} and sign in with ChatGPT. For Claude, follow the ${link('https://code.claude.com/docs/en/quickstart','Claude Code setup guide')}. If you need a subscription, check what’s included before choosing one. ${link('https://chatgpt.com/pricing/','ChatGPT plans')} · ${link('https://claude.com/pricing','Claude plans')}</li>
+      <li><strong>Make your prompt.</strong> Pick a place you know, or leave it open. One question is a good first run. Choose “Give them to me to send privately” if you’d like to read what your agent finds before you share it. ${link('/agents','Choose your research')}</li>
+      <li><strong>Paste it into a new chat.</strong> If your agent asks for a folder, give it an empty one for this project so it can save its notes. Let it open the public sources it needs. At the end it should tell you what it found and what it couldn’t check.</li>
+    </ol>
+    <p>If you chose private, your agent gives you a block of research data called JSON. Copy that into the ${link('/packet','private research form')}, send it and keep the receipt.</p>
+    <details id="github" class="sources setup-github"${url.searchParams.get('setup')==='github'?' open':''}><summary>Set up GitHub for public research</summary>
+      <p>GitHub is where we keep the shared list of questions. Your agent can use your account to reserve one and send its findings to the editor. Its notes and submissions there are public under your username.</p>
+      <ol>
+        <li>${link('https://github.com/signup','Create a free GitHub account')} and verify your email, or ${link('https://github.com/login','sign in')} if you already have one.</li>
+        <li>${link(repo+'/fork','Make your copy of A Place In Grime')}. GitHub calls this a <em>fork</em>. Choose your account as the owner and click <strong>Create fork</strong>. If you already have a fork, use that one.</li>
+        <li>Open a local project folder in your agent and give it the GitHub version of your research prompt. It will check for ${link('https://git-scm.com/downloads','Git')}, ${link('https://www.python.org/downloads/','Python')} and the ${link('https://cli.github.com/','GitHub command-line tool')}. If it needs you to sign in, ask it to start <code>gh auth login</code>. Choose GitHub.com and the browser sign-in, then finish in your browser using the account that owns your fork.</li>
+      </ol>
+      <p>The agent sends its findings back to the project in a <em>pull request</em>. You’ll get a link to read them while the editor checks the evidence.</p>
+    </details>
+    <p>Just want to pass on a name? ${link('/suggest','Suggest an artist')}.</p>
+  </div>`);
+}
+function aboutPage() {
+  return render('About',heading('About A Place In Grime')+`<div class="guide prose">
+    <p>A YouTube channel goes down and a whole run of local sets goes with it. Years later you can still remember someone’s bars, but you can’t remember what name they went by. That’s why I started A Place In Grime.</p>
+    <p>I want there to be somewhere you can look up anyone who had a part in UK grime. That includes the MC who only appeared on one tape and the producer everyone knew by a handle. I’d like you to be able to find them by the city or town they came through, read a bit about them and see who else was there.</p>
+    <p>Take Derby. On ${link('/artists/dubzy','Dubzy')}’s <em>${link('https://dubzysnazz.bandcamp.com/album/gift-of-the-gab-2','Gift of the Gab')}</em>, Eyez is credited on ‘Say My Name’. Two tracks earlier, ‘Snazz 4 Life’ names JakMan and Directs. You might come looking for Eyez and end up ${link(repo+'/issues/2','following a lead on JakMan')}.</p>
+    <p>If you remember a name we’ve missed, ${link('/suggest','send it in')}. A spelling, a crew or the name of the person who filmed the set gives us somewhere to start. You can also give an agent some time to dig through the archives. We check the evidence before adding it to someone’s page. You can open the sources there and tell us if we’ve got something wrong.</p>
+    <nav class="research-nav" aria-label="About the project">${link('/agents','Research with an agent')}${link(repo+'/blob/main/research/METHOD.md','How we check sources')}${link('/photos.txt','Photo credits')}${link('/private','Contact the editor privately')}</nav>
+  </div>`);
 }
 function about(env,path) {
   if(path==='/contributors'){
@@ -129,7 +229,7 @@ function about(env,path) {
     let donation;try{const u=new URL(env.DONATION_URL);if(u.protocol==='https:')donation=u.href;}catch{}
     return render('Support',heading('Support the catalogue','Private donations can help pay for research compute and the editor’s time.')+`<div class="prose"><p>${donation?link(donation,'Make a private donation'):'A donation link has yet to be set up.'}</p><p>You can already ${link('/suggest','suggest an artist')}, ${link('/artists','check a source')} or ${link('/agents','give research time')}.</p></div>`);
   }
-  return render('About',heading('A Place In Grime','A catalogue of the people who have made UK grime, from one appearance on a local set to a lifetime on the mic.')+`<div class="prose"><h2>What earns a profile?</h2><p>An original credit, first-hand account or contemporary listing can establish a narrow fact. Each profile shows the supporting source and where to look. A place might be someone’s hometown, a base or a documented scene connection. The wording on the profile explains which.</p><h2>From a lead to a record</h2><p>Community suggestions and agent submissions enter review. An editor checks each new claim before it reaches the catalogue. You can verify individual statements, submit a correction or ${link('/private','send a private request')}.</p><p>${link(repo+'/blob/main/research/METHOD.md','Read the research rules')} · ${link('/photos.txt','Photograph credits')}</p></div>`);
+  return aboutPage();
 }
 const receiptID=/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 async function intake(request,env,type,url) {
@@ -207,12 +307,9 @@ const entry = {
       if(artist)return artistPage(artist);
     }
     if(path==='/contribute')return contribute();
-    if(path==='/agents')return agentPage();
-    if(path==='/brief.txt') {
-      const place=(url.searchParams.get('place')||'Anywhere in the UK').replace(/[\r\n]/g,' ').slice(0,100);
-      const duration=['30 minutes','2 hours','4 hours','8 hours'].includes(url.searchParams.get('duration'))?url.searchParams.get('duration'):'One task';
-      return new Response(`Help A Place In Grime research UK grime artists.\nMy chosen research area: ${place}\nMy time budget: ${duration}\n\nOpen and follow the project’s public research instructions:\n${agentLink}\n\nHandle the research, reservation, checkpoints and submission for me. If my area has no available task, follow the guide to open and claim a focused discovery question there. If you cannot write to GitHub, check the public queue and prepare a private packet for me. Return your evidence and receipt.\n`,{headers:{'content-type':'text/plain; charset=utf-8'}});
-    }
+    if(path==='/agents')return researchForm(researchChoices(url.searchParams));
+    if(path==='/agents/first-time')return firstAgent(url);
+    if(path==='/agents/prompt'||path==='/brief.txt')return researchPrompt(url,path==='/brief.txt');
     if(path==='/catalogue.json')return Response.json(catalogue);
     if(['/support','/about','/contributors'].includes(path))return about(env,path);
     if(Object.hasOwn(formNames,path.slice(1)))return formPage(path.slice(1),url);

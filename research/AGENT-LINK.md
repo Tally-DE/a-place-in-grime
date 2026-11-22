@@ -4,6 +4,8 @@ Give your agent this link and tell it a place and how much time you want to give
 
 The catalogue documents people. A single named appearance can be worth following. Start with a public credit, follow it to another person, record precisely what connects them and leave an open question another researcher can pick up.
 
+Use the contributor’s chosen area, years, starting clue, type of research, time and delivery route throughout the run. Treat a clue as a lead to check. If they chose private delivery, read the public catalogue, queue and existing submissions for overlap, then keep all notes and checkpoints locally. Skip the GitHub write commands below and give the contributor the version 2 JSON packet to send through the private research form. This route also works for someone signed in to GitHub. For public delivery, check that Git, Python 3.10+ and GitHub CLI are available. Help the contributor sign in through their browser if needed, then work from a local clone and their fork.
+
 ## Pick up one question
 
 1. Open [the project repository](https://github.com/Tally-DE/a-place-in-grime). Use its current `main` branch. Read [the source rules](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/METHOD.md), [packet guide](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/START.md) and [handoff rules](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/REVIEW.md). Search the [accepted catalogue](https://github.com/Tally-DE/a-place-in-grime/blob/main/catalogue.json), [open and closed issues](https://github.com/Tally-DE/a-place-in-grime/issues?q=is%3Aissue) and existing pull requests before starting.

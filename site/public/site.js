@@ -15,3 +15,34 @@ if (button) {
     document.querySelector('#source').href = 'https://www.flickr.com/photos/believekevin/' + id + '/';
   });
 }
+
+const briefForm = document.querySelector('#brief-form');
+if (briefForm) {
+  const {duration, minutes} = briefForm.elements;
+  function showTimeLimit() {
+    const custom = duration.value === 'Custom time';
+    minutes.closest('label').hidden = !custom;
+    minutes.disabled = !custom;
+    minutes.required = custom;
+  }
+  duration.addEventListener('change', showTimeLimit);
+  window.addEventListener('pageshow', showTimeLimit);
+  showTimeLimit();
+}
+
+const copyPrompt = document.querySelector('#copy-prompt');
+if (copyPrompt) {
+  copyPrompt.hidden = false;
+  copyPrompt.addEventListener('click', async () => {
+    const prompt = document.querySelector('#agent-prompt');
+    const status = document.querySelector('#copy-status');
+    try {
+      await navigator.clipboard.writeText(prompt.value);
+      status.textContent = 'Copied. Paste it into your agent when you’re ready.';
+    } catch {
+      prompt.focus();
+      prompt.select();
+      status.textContent = 'The prompt is selected. Use your device’s Copy command.';
+    }
+  });
+}
