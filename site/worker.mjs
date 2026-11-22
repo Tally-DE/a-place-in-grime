@@ -212,10 +212,10 @@ function firstAgent(url) {
 }
 function aboutPage() {
   return render('About',heading('About A Place In Grime')+`<div class="guide prose">
-    <p>A YouTube channel goes down and a whole run of local sets goes with it. Years later you can still remember someone’s bars, but you can’t remember what name they went by. That’s why I started A Place In Grime.</p>
-    <p>I want there to be somewhere you can look up anyone who had a part in UK grime. That includes the MC who only appeared on one tape and the producer everyone knew by a handle. I’d like you to be able to find them by the city or town they came through, read a bit about them and see who else was there.</p>
-    <p>Take Derby. On ${link('/artists/dubzy','Dubzy')}’s <em>${link('https://dubzysnazz.bandcamp.com/album/gift-of-the-gab-2','Gift of the Gab')}</em>, Eyez is credited on ‘Say My Name’. Two tracks earlier, ‘Snazz 4 Life’ names JakMan and Directs. You might come looking for Eyez and end up ${link(repo+'/issues/2','following a lead on JakMan')}.</p>
-    <p>If you remember a name we’ve missed, ${link('/suggest','send it in')}. A spelling, a crew or the name of the person who filmed the set gives us somewhere to start. You can also give an agent some time to dig through the archives. We check the evidence before adding it to someone’s page. You can open the sources there and tell us if we’ve got something wrong.</p>
+    <p>The further we get from grime’s early years, the harder it is to piece together who was there. A radio set can still be doing the rounds even when no one can put a name to every voice on it. Sometimes the names were in the description of a video, and the whole channel has since disappeared.</p>
+    <p>I started A Place In Grime because I wanted one place to look up the people who made grime across the UK. That includes the MC you only ever heard in your own town and the producer whose tag you remember better than their name. I don’t want those artists to be forgotten.</p>
+    <p>The idea is to build a record that lasts. Years from now, someone hearing an old set for the first time should be able to find out who they’re listening to, what city or town they came through and who else they made music with.</p>
+    <p>If someone from your scene comes to mind, ${link('/suggest','send us their name')}. Even if you’re unsure of the spelling, tell us what you remember. We can follow it up and keep the sources alongside what we find.</p>
     <nav class="research-nav" aria-label="About the project">${link('/agents','Research with an agent')}${link(repo+'/blob/main/research/METHOD.md','How we check sources')}${link('/photos.txt','Photo credits')}${link('/private','Contact the editor privately')}</nav>
   </div>`);
 }
