@@ -1,4 +1,4 @@
-A Place In Grime uses two photographs by kevin (believekevin).
+The homepage photographs are by kevin (believekevin).
 
 Scratchy (background), Trim, Flow-dan
 https://www.flickr.com/photos/believekevin/34882249/
@@ -11,10 +11,11 @@ https://creativecommons.org/licenses/by-sa/2.0/
 
 The originals are reproduced in assets/trim-flowdan.jpg and assets/jammer-ears.jpg. The website crops them to fit and overlays a gradient on desktop.
 
-Dubzy — J2kcrepprot
-https://commons.wikimedia.org/wiki/File:Dubzy_Snazz.jpg
-CC BY-SA 4.0 · https://creativecommons.org/licenses/by-sa/4.0/
-Original photograph, unmodified.
+Eyez — Don't Flop Entertainment, Dialect vs Eyez (2014)
+https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s
+https://www.youtube.com/watch?v=a9q-us3JYsY
+CC BY 3.0 · https://creativecommons.org/licenses/by/3.0/
+Cropped frame from 01:20 of the original recording.
 
 Jaykae — Galtiak
 https://commons.wikimedia.org/wiki/File:Jaykaefeb2018.jpg

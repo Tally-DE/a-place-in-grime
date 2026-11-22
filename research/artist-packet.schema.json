@@ -5,7 +5,8 @@
   "additionalProperties": false,
   "required": ["version", "task_id", "outcome", "artist", "sources", "checked", "open_questions"],
   "properties": {
-    "version": { "enum": [1, 2] },
+    "version": { "enum": [1, 2, 3] },
+    "profile_media": { "$ref": "#/$defs/profile_media" },
     "task_id": { "$ref": "#/$defs/text" },
     "outcome": { "enum": ["evidence_found", "lead_only", "already_documented"] },
     "artist": {
@@ -24,13 +25,17 @@
   },
   "allOf": [
     {
-      "if": { "properties": { "version": { "const": 2 } } },
+      "if": { "properties": { "version": { "enum": [2, 3] } } },
       "then": {
         "required": ["trail_note"],
         "properties": {
           "sources": { "items": { "required": ["origin", "next_people"] } }
         }
       }
+    },
+    {
+      "if": { "properties": { "version": { "const": 3 } } },
+      "then": { "required": ["profile_media"] }
     },
     {
       "if": { "properties": { "outcome": { "const": "evidence_found" } } },
@@ -63,6 +68,66 @@
     "text": { "type": "string", "minLength": 1, "pattern": "\\S" },
     "web_url": { "type": "string", "format": "uri", "pattern": "^https?://" },
     "notes": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+    "search_log": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["url", "finding"],
+        "properties": { "url": { "$ref": "#/$defs/web_url" }, "finding": { "$ref": "#/$defs/text" } }
+      }
+    },
+    "profile_media": {
+      "type": "object", "additionalProperties": false,
+      "required": ["checked_on", "image_search", "link_search", "visual", "accounts"],
+      "properties": {
+        "checked_on": { "type": "string", "format": "date" },
+        "image_search": {
+          "type": "array", "minItems": 1,
+          "contains": { "properties": { "kind": { "const": "portrait" } } },
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["kind", "url", "finding"],
+            "properties": {
+              "kind": { "enum": ["portrait", "artwork"] },
+              "url": { "$ref": "#/$defs/web_url" }, "finding": { "$ref": "#/$defs/text" }
+            }
+          }
+        },
+        "link_search": { "$ref": "#/$defs/search_log" },
+        "visual": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object", "additionalProperties": false,
+              "required": ["kind", "title", "source", "credit", "licence", "licenceUrl", "rightsNote", "identityUrl", "identityNote", "assetLocator", "alt", "changes"],
+              "properties": {
+                "kind": { "enum": ["portrait", "artwork"] },
+                "title": { "$ref": "#/$defs/text" }, "source": { "$ref": "#/$defs/web_url" },
+                "credit": { "$ref": "#/$defs/text" }, "licence": { "$ref": "#/$defs/text" },
+                "licenceUrl": { "$ref": "#/$defs/web_url" }, "rightsNote": { "$ref": "#/$defs/text" },
+                "identityUrl": { "$ref": "#/$defs/web_url" }, "identityNote": { "$ref": "#/$defs/text" },
+                "assetLocator": { "$ref": "#/$defs/text" },
+                "alt": { "$ref": "#/$defs/text" }, "changes": { "$ref": "#/$defs/text" }
+              }
+            }
+          ]
+        },
+        "accounts": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["label", "url", "source", "locator"],
+            "properties": {
+              "label": { "$ref": "#/$defs/text" }, "url": { "$ref": "#/$defs/web_url" },
+              "source": { "$ref": "#/$defs/web_url" }, "locator": { "$ref": "#/$defs/text" }
+            }
+          }
+        }
+      },
+      "allOf": [{
+        "if": { "properties": { "visual": { "oneOf": [
+          { "type": "null" }, { "type": "object", "properties": { "kind": { "const": "artwork" } } }
+        ] } } },
+        "then": { "properties": { "image_search": { "contains": { "properties": { "kind": { "const": "artwork" } } } } } }
+      }]
+    },
     "claim": {
       "type": "object",
       "additionalProperties": false,

@@ -41,6 +41,16 @@ Periodically start from a different decade, neighbourhood, role or collection. F
 4. Record the original URL, full timestamped replay URL, capture date, page or upload date if shown, and date checked. Say separately whether the text was readable and whether the media was played. Credit a spoken identification only after listening to that timestamp. A preserved watch page can establish a printed credit even when playback is unknown.
 5. Try a nearby capture or a contemporary page that linked to the item. If nothing suitable turns up, record the exact failed lookup and its limits. Saving a public page today, where appropriate, creates a present-day capture. It cannot recover a past version. Respect access restrictions and removal requests.
 
+## Find a picture and the artist’s own links
+
+Start with the artist’s website or link page, label, photographer, event archive and their own releases. Follow stage names, old handles and credited collaborators. Check Commons, licence-filtered Flickr and original interviews. A search filter is a lead. Open the item itself and inspect its credits and terms. Save exact pages checked so another person can carry on when time runs out.
+
+Prefer a portrait. Identify the person through the photographer’s caption, an on-screen name or a spoken introduction with a timestamp. For a group shot, identify which person is which. Match the named person to the catalogue through a known credit, crew, performance or artist-owned account. Looking similar, having the same name, or appearing in search results is insufficient.
+
+Check who made the photograph or footage, what the licence covers, and which credit and changes have to appear with it. Trace earlier uses if authorship is unclear. A video’s music, an embedded photograph and the original camera footage can have different owners. If a usable portrait cannot be found, look for artwork for an identified release or an artist-authorised illustration. Verify the artist–work connection and the rights to the **image itself**. A free download or a licence on the recording alone does not clear its cover. Record the title and label it as artwork. If neither option clears both checks, leave the image empty and log the best lead to revisit. Keep permission correspondence private.
+
+Follow the artist or label’s outgoing links to their actual profiles. Check websites, Instagram, YouTube channels, SoundCloud, Bandcamp and other platforms the artist uses. Open each destination, resolve redirects and cross-check a release, collaborator, city or stable channel ID. If a platform requires login, record that limit and look for an independent first-party cross-link. Put confirmed direct profiles in the catalogue. Keep playlists, fan accounts, generic platform homepages, stale handles and unresolved namesakes in the search notes. Lead with the places listeners can hear or follow the artist.
+
 ## Review the result
 
 An editor should be able to open the source, find the line and reproduce the exact relationship. An artist’s testimony can establish whom they remember. An uploader’s own credit can establish the role printed on that upload. A mirror, a repost and a Wayback capture of that upload share one origin. Record contrary evidence and preserve uncertainty over aliases, membership and place until it is resolved.

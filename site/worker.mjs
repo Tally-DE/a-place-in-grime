@@ -48,9 +48,28 @@ function placePage(p) {
   const local=catalogue.artists.filter(a=>a.placeIds.includes(p.id));
   return render(p.name,`<nav class="crumb" aria-label="Place index">${link('/places','Cities and towns')}</nav>`+heading(p.name)+'<h2>Artists</h2>'+(local.length?artistRows(local):'<p class="empty">Help document the first artist connected to this place.</p>')+link('/suggest?place='+encodeURIComponent(p.name),'Suggest an artist'));
 }
+function profileEvidence(a) {
+  if (!a) return [];
+  const all = [...a.claims];
+  const checked = a.mediaResearch?.checked_on;
+  function append(id, text, source, url, locator) {
+    all.push({id:a.id+'-'+id,text,source,url,locator,checked,publisher:new URL(url).hostname.replace(/^www\./,'')});
+  }
+  for (const account of a.socials || []) {
+    append('account-'+normal(account.label),a.name+' on '+account.label+' · '+account.url,
+      'Official account credits',account.source,account.locator);
+  }
+  const p = a.photo;
+  if (p) {
+    append('image-subject',p.kind==='artwork'?'Artwork for '+p.title:'The image shows '+a.name+'.',
+      p.title,p.identityUrl,p.identityNote);
+    append('image-licence',p.credit+' · '+p.licence,p.title,p.source,p.rightsNote);
+  }
+  return all;
+}
 function artistPage(a) {
   const sources = new Map();
-  for (const claim of a.claims) {
+  for (const claim of profileEvidence(a)) {
     if (!sources.has(claim.url)) sources.set(claim.url, []);
     sources.get(claim.url).push(claim);
   }
@@ -63,7 +82,7 @@ function artistPage(a) {
     return `<div class="source-entry"><strong>${link(first.url,first.source)}</strong><span class="source-publisher">${esc(first.publisher)}</span>${entries}</div>`;
   }).join('');
   const p = a.photo;
-  const portrait = p ? `<figure class="artist-photo"><img src="${esc(p.path)}" alt="${esc(p.alt)}"><figcaption>${link(p.source,p.credit)} · ${link(p.licenceUrl,p.licence)}. ${esc(p.changes)}${p.originalSource?' '+link(p.originalSource,'Original interview'):''}</figcaption></figure>` : '';
+  const portrait = p ? `<figure class="artist-photo"><img src="${esc(p.path)}" alt="${esc(p.alt)}"><figcaption>${p.kind==='artwork'?'Artwork · '+esc(p.title)+' · ':''}${link(p.source,p.credit)} · ${link(p.licenceUrl,p.licence)}. ${esc(p.changes)}${p.originalSource?' '+link(p.originalSource,'Original footage'):''}</figcaption></figure>` : '';
   const socials = (a.socials || []).map(s => link(s.url,s.label)).join('');
   const unlinked = new Set((a.connections || []).map(c => artists.get(c.id)));
   const paragraphs = a.bio.map(({text}) => {
@@ -88,7 +107,7 @@ function artistPage(a) {
 const formNames={suggest:'Suggest an artist',verify:'Verify a source',correct:'Suggest a correction',private:'Private request',packet:'Submit research'};
 function formPage(type,url,message='',values={},status=200) {
   const a=artists.get(url.searchParams.get('artist')||values.artist);
-  const claim=a?.claims.find(c=>c.id===(url.searchParams.get('claim')||values.claim));
+  const claim=profileEvidence(a).find(c=>c.id===(url.searchParams.get('claim')||values.claim));
   const generalCorrection = type==='correct' && a && !url.searchParams.get('claim') && !values.claim;
   if(['verify','correct'].includes(type)&&!claim&&!generalCorrection)return render('Choose a fact',heading('Choose a fact','Open an artist profile and choose the statement you want to check.')+link('/artists','Browse artists'),400);
   const field=(label,name,required=false,multi=false,initial='')=>`<label>${esc(label)}${multi?`<textarea name="${name}" maxlength="${type==='packet'?45000:4000}" ${required?'required':''}>${esc(values[name]??initial)}</textarea>`:`<input name="${name}" maxlength="240" value="${esc(values[name]??initial)}" ${required?'required':''}>`}</label>`;
@@ -103,7 +122,7 @@ function formPage(type,url,message='',values={},status=200) {
   if(type!=='private')inputs+=field('Public credit name (optional)','credit');
   const version=values.version|| (claim?JSON.stringify([claim.id,claim.text,claim.url,claim.locator,claim.checked]):'');
   const context=claim?`<article class="context"><strong>${esc(a.name)}</strong><p>${esc(claim.text)}</p>${link(claim.url,claim.publisher+' · '+claim.source)}<p>${esc(claim.locator)}</p></article>`:generalCorrection?`<p>${linkArtist(a)}</p>`:'';
-  const descriptions={suggest:'A stage name is enough. Add a place or a source if you remember one.',private:'Use this for sensitive corrections, removal requests or information you want the editor to handle privately.',packet:'Use this private inbox if your agent has prepared a packet and cannot open a pull request.'};
+  const descriptions={suggest:'A stage name is enough. Add a place or a source if you remember one.',private:'Use this for sensitive corrections, removal requests or information you want the editor to handle privately.',packet:'Paste the research packet your agent gave you. It goes straight to the editor.'};
   return render(formNames[type],heading(formNames[type],descriptions[type]||'')+context+(message?`<p role="alert" class="notice">${esc(message)}</p>`:'')+`<form class="editor" method="post" action="/${type}"><input type="hidden" name="token" value="${esc(token)}"><input type="hidden" name="artist" value="${esc(a?.id)}"><input type="hidden" name="claim" value="${esc(claim?.id)}"><input type="hidden" name="version" value="${esc(version)}">${inputs}<p class="hint">Your submission goes privately to the editor. Save the receipt link after sending.</p><button class="primary">Send for review</button></form>`,status);
 }
 const routeGroups = [
@@ -119,6 +138,7 @@ function contribute() {
 const researchFocus = {
   discover: ['Find artists missing from the catalogue', 'Look for people who have no profile yet. Check aliases before proposing a new artist.'],
   profile: ['Build up an artist’s profile', 'Look for first-hand accounts of how the artist started and who they worked with.'],
+  media: ['Find a picture and the artist’s own links', 'Start with the artist’s documented credits and existing media checks. Trace an identified and reusable image to its rights holder, and follow the artist’s own links to their current profiles.'],
   credits: ['Follow the names on a set, flyer or tape', 'Follow a named credit to another person on the same item, then to a second source. Explain what connects them.'],
   archive: ['Track down a lost page or recording', 'Look for an original URL, upload ID or collection reference. Try dated Wayback captures. Say what you could actually read or play.'],
   check: ['Check a fact on an artist’s page', 'Inspect the source for a specific claim. Give the exact passage or timestamp and say whether it supports the claim.'],
@@ -180,7 +200,8 @@ function researchPrompt(url,raw) {
     s.duration==='One question' ? 'Take one question. Stop when you have checked it and saved what you found.' : 'Work for up to '+time+'. Record your start time and deadline. Keep taking questions within this brief until time runs out or there is no useful work left. If interrupted, save where you got to and resume against the same deadline.',
     method+' Read the project’s source and handoff rules here:\n'+agentLink,
     'Check the catalogue and public work queue for overlap first. Save each source, where to look in it, what it proves and the next person worth following. Leave uncertain details open.',
-    s.delivery==='private' ? 'Keep my research private. Read the public queue, skip work someone already has, and keep checkpoints locally. Do not create issues, comments or pull requests. Give me the finished evidence packet as version 2 JSON and a short summary. I will submit it myself at '+url.origin+'/packet.'
+    'Include profile_media in the version 3 packet. Look for a reusable portrait, then licensed artwork from the artist if needed. Identify the person or artwork from a caption, credit or timestamp. Give the original source, creator, licence and changes. Check direct official profiles against artist or label links. Record where you looked and what you could verify, even if no image or account is usable.',
+    s.delivery==='private' ? 'Keep my research private. Read the public queue, skip work someone already has, and keep checkpoints locally. Do not create issues, comments or pull requests. Give me the finished evidence packet as version 3 JSON and a short summary. I will submit it myself at '+url.origin+'/packet.'
       : 'Send the findings through GitHub for editorial review. Follow the guide to claim a question, or open a focused one within my chosen area if needed. Save checkpoints, submit the evidence on a pull request, and give me its URL and confirmed receipt. If GitHub access is missing, give me the finished packet to submit privately and tell me what still needs sending.'
   ].join('\n\n');
   if (raw) return new Response(message+'\n',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'no-store'}});
@@ -232,6 +253,29 @@ function about(env,path) {
   return aboutPage();
 }
 const receiptID=/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+function profileMediaError(media) {
+  const filled = v => typeof v==='string' && v.trim().length>0;
+  const web = v => filled(v) && URL.canParse(v) && ['http:','https:'].includes(new URL(v).protocol);
+  const log = list => Array.isArray(list) && list.length>0 && list.every(row=>web(row?.url) && filled(row.finding));
+  if (!media || !/^\d{4}-\d\d-\d\d$/.test(media.checked_on) || !log(media.image_search) || !log(media.link_search)) {
+    return 'Include the check date and the pages searched for pictures and official accounts. Say what you found on each.';
+  }
+  const v = media.visual;
+  if (!media.image_search.every(item=>['portrait','artwork'].includes(item.kind)) ||
+      !media.image_search.some(item=>item.kind==='portrait') ||
+      (v?.kind!=='portrait' && !media.image_search.some(item=>item.kind==='artwork'))) {
+    return 'Record the portrait search. If it did not turn up a usable portrait, include the artwork search too.';
+  }
+  if (v!==null && (!['portrait','artwork'].includes(v?.kind) ||
+      !['title','credit','licence','rightsNote','identityNote','assetLocator','alt','changes'].every(k=>filled(v[k])) ||
+      !['source','licenceUrl','identityUrl'].every(k=>web(v[k])))) {
+    return 'Include the image credit, identity evidence and reuse terms. Set visual to null if the search found no cleared picture.';
+  }
+  if (!Array.isArray(media.accounts) || !media.accounts.every(a=>filled(a?.label) && web(a.url) && web(a.source) && filled(a.locator))) {
+    return 'Each account needs a direct profile URL and a source and locator tying it to this artist. Use an empty accounts list if none could be verified.';
+  }
+  return '';
+}
 async function intake(request,env,type,url) {
   if(request.headers.get('origin') && request.headers.get('origin')!==url.origin) return render('Request denied',heading('Open the form on this site.'),403);
   if(!request.headers.get('content-type')?.startsWith('application/x-www-form-urlencoded'))return new Response('Expected a web form.',{status:415});
@@ -248,12 +292,20 @@ async function intake(request,env,type,url) {
   if(type!=='suggest'&&!v.note)return invalid('Add the details you want the editor to check.');
   if(type==='verify'&&!['Supports the statement','Partly supports it','Contradicts it','Source unavailable'].includes(v.verdict))return invalid('Choose what the source showed.');
   if(type==='verify'||(type==='correct'&&(v.claim||v.version||!artists.has(v.artist)))){
-    const fact=artists.get(v.artist)?.claims.find(c=>c.id===v.claim);
+    const fact=profileEvidence(artists.get(v.artist)).find(c=>c.id===v.claim);
     if(!fact)return invalid('Choose an existing statement on an artist page.');
     if(v.version!==JSON.stringify([fact.id,fact.text,fact.url,fact.locator,fact.checked]))return render('Statement updated',heading('This statement has changed','Please read the current version before sending your check.')+link('/artists/'+v.artist+'#'+v.claim,'Read the statement'),409);
   }
   if(type==='packet'){
-    try{const packet=JSON.parse(v.note);if(packet.version!==2||!packet.task_id||!packet.artist?.name||!Array.isArray(packet.sources)||!packet.outcome)throw Error();}catch{return invalid('Paste a version 2 evidence packet with a task ID, artist, outcome and sources.');}
+    let packet;
+    try { packet=JSON.parse(v.note); } catch { return invalid('Paste the JSON evidence packet your agent prepared.'); }
+    if (![2,3].includes(packet?.version)||!packet.task_id||!packet.artist?.name||!Array.isArray(packet.sources)||!packet.outcome) {
+      return invalid('Include the packet version, task ID, artist, outcome and sources.');
+    }
+    if (packet.version===3) {
+      const message=profileMediaError(packet.profile_media);
+      if (message) return invalid(message);
+    }
   }
   const key='intake/'+v.token+'.json';
   const payload={type,artist:v.artist,claim:v.claim,version:v.version,name:v.name,place:v.place,note:v.note,source:v.source,credit:v.credit,verdict:v.verdict};
@@ -294,7 +346,7 @@ const entry = {
     if(request.method==='POST' && Object.hasOwn(formNames,path.slice(1)))return intake(request,env,path.slice(1),url);
     if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405});
     if(Object.hasOwn(assets,path)){
-      const ext=path.split('.').pop(),type={css:'text/css',js:'text/javascript',jpg:'image/jpeg',png:'image/png',txt:'text/plain'}[ext];
+      const ext=path.split('.').pop(),type={css:'text/css',js:'text/javascript',jpg:'image/jpeg',jpeg:'image/jpeg',webp:'image/webp',png:'image/png',txt:'text/plain'}[ext];
       return new Response(request.method==='HEAD'?null:Uint8Array.from(atob(assets[path]),ch=>ch.charCodeAt(0)),{headers:{'content-type':type,'cache-control':'public,max-age=3600','x-content-type-options':'nosniff'}});
     }
     if(path==='/')return home();

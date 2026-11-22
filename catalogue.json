@@ -97,21 +97,128 @@
       "connections": [],
       "socials": [
         {
+          "label": "Website",
+          "url": "https://www.detz.online/",
+          "source": "https://www.detz.online/",
+          "locator": "Identifies the Wolverhampton producer and former name Detonator."
+        },
+        {
+          "label": "Bandcamp",
+          "url": "https://detonatorproducer.bandcamp.com/music",
+          "source": "https://detonatorproducer.bandcamp.com/album/sometimes-i-hate-myself",
+          "locator": "The release page identifies Detz, his Wolverhampton location and his debut album, also named in the biography on his official website."
+        },
+        {
           "label": "Instagram",
           "url": "https://www.instagram.com/detz.wav/",
-          "source": "https://www.detz.online/"
+          "source": "https://www.detz.online/",
+          "locator": "Official site social links in footer"
         },
         {
           "label": "YouTube",
           "url": "https://www.youtube.com/@detz_wav/videos",
-          "source": "https://www.detz.online/"
+          "source": "https://www.detz.online/",
+          "locator": "Official site social links in footer"
         },
         {
           "label": "TikTok",
           "url": "https://www.tiktok.com/@detz.wav/",
-          "source": "https://www.detz.online/"
+          "source": "https://www.detz.online/",
+          "locator": "Official site social links in footer"
         }
-      ]
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-22",
+        "image_search": [
+          {
+            "url": "https://www.detz.online/",
+            "finding": "About photo 2-New-Detonator-Picture-2022.png and footer. Footer reserves all rights. No separate reusable photo licence.",
+            "kind": "portrait"
+          },
+          {
+            "url": "https://detonatorproducer.bandcamp.com/music",
+            "finding": "Discography and About. Wolverhampton location, matching biography and releases. Inspected licence on each listed album.",
+            "kind": "artwork"
+          },
+          {
+            "url": "https://detonatorproducer.bandcamp.com/album/time-man",
+            "finding": "License, beneath release credits. All rights reserved. No separate cover artwork permission was found.",
+            "kind": "artwork"
+          },
+          {
+            "url": "https://detonatorproducer.bandcamp.com/album/sometimes-i-hate-myself",
+            "finding": "License, beneath release credits. All rights reserved. No separate cover artwork permission was found.",
+            "kind": "artwork"
+          },
+          {
+            "url": "https://detonatorproducer.bandcamp.com/album/schools-over",
+            "finding": "License, beneath release credits. All rights reserved. No separate cover artwork permission was found.",
+            "kind": "artwork"
+          },
+          {
+            "url": "https://detonatorproducer.bandcamp.com/album/the-remixes",
+            "finding": "License, beneath release credits. All rights reserved. No separate cover artwork permission was found.",
+            "kind": "artwork"
+          },
+          {
+            "url": "https://detonatorproducer.bandcamp.com/album/indian-summers-ep",
+            "finding": "License, beneath release credits. All rights reserved. No separate cover artwork permission was found.",
+            "kind": "artwork"
+          },
+          {
+            "url": "https://www.flickr.com/search/?text=%22detz%22+wolverhampton&license=4%2C5%2C9%2C10",
+            "finding": "Filtered image results. No matches under either Detz or Detonator plus Wolverhampton.",
+            "kind": "portrait"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search=Detz%20Wolverhampton",
+            "finding": "File namespace search for artist name and Wolverhampton. No identified images of the artist or his artwork.",
+            "kind": "portrait"
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=TztvJq-xVxw",
+            "finding": "Own artist channel, first-person retrospective about releasing a song each week. Watch page expanded description and metadata rows. No Creative Commons or attribution licence was present."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=FEm2k0jyoFk",
+            "finding": "Own artist channel. Spend The Night description confirms the new artist name. Watch page expanded description and metadata rows. No Creative Commons or attribution licence was present."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=FUwYCB1KNkw",
+            "finding": "Own artist channel. Like Yours credits Mayday and the artist’s Time Man EP. Watch page expanded description and metadata rows. No Creative Commons or attribution licence was present."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=KmAu3uk-OyQ",
+            "finding": "Wolverhampton Team Takeover description names Detonator among the performers, with no individual timestamp. Watch page expanded description and metadata rows. No Creative Commons or attribution licence was present."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.detz.online/",
+            "finding": "Identifies the Wolverhampton producer and former name Detonator."
+          },
+          {
+            "url": "https://detonatorproducer.bandcamp.com/album/sometimes-i-hate-myself",
+            "finding": "The release page identifies Detz, his Wolverhampton location and his debut album, also named in the biography on his official website."
+          },
+          {
+            "url": "https://www.detz.online/",
+            "finding": "Official site social links in footer"
+          },
+          {
+            "url": "https://www.detz.online/",
+            "finding": "Official site social links in footer"
+          },
+          {
+            "url": "https://www.detz.online/",
+            "finding": "Official site social links in footer"
+          }
+        ]
+      }
     },
     {
       "id": "dubzy",
@@ -232,32 +339,89 @@
           ]
         }
       ],
-      "photo": {
-        "path": "/assets/artists/dubzy.jpg",
-        "alt": "Dubzy in profile wearing a peaked cap",
-        "credit": "J2kcrepprot",
-        "source": "https://commons.wikimedia.org/wiki/File:Dubzy_Snazz.jpg",
-        "licence": "CC BY-SA 4.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "changes": "Original photograph, unmodified."
-      },
       "socials": [
-        {
-          "label": "Instagram",
-          "url": "https://www.instagram.com/dubzysnazz/",
-          "source": "https://www.youtube.com/watch?v=rxCaDv5iN6A"
-        },
         {
           "label": "YouTube",
           "url": "https://www.youtube.com/@DubzySnazz",
-          "source": "https://www.youtube.com/watch?v=rxCaDv5iN6A"
+          "source": "https://www.youtube.com/watch?v=rxCaDv5iN6A",
+          "locator": "Official Munich upload and live channel canonical ID UCGsCBtyFRC85HGMJ_7uErfQ."
         },
         {
           "label": "SoundCloud",
           "url": "https://soundcloud.com/dubzysnazz",
-          "source": "https://www.youtube.com/watch?v=rxCaDv5iN6A"
+          "source": "https://www.youtube.com/watch?v=rxCaDv5iN6A",
+          "locator": "Artist’s original video links directly to this SoundCloud and /dubzy-munich. Current profile returns its own canonical URL and artist title Dubzy."
+        },
+        {
+          "label": "Bandcamp",
+          "url": "https://dubzysnazz.bandcamp.com/",
+          "source": "https://dubzysnazz.bandcamp.com/album/gift-of-the-gab-2",
+          "locator": "Artist’s Gift of the Gab page and track credits including Eyez and Directs."
         }
-      ]
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-22",
+        "image_search": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Dubzy_Snazz.jpg",
+            "finding": "The Commons file is used by the Wikipedia entry for the grime artist, but this links back to the same file. I found no independent original source naming the sitter in that specific frame. A stage name in the filename is insufficient evidence on its own. Summary, Licensing, File history and Metadata. Self-declared own work, creation date 7 December 2012, uploaded 5 December 2016, caption 'Snazzy'. Its only independent camera details are generic JPEG/Exif fields. The contemporary English Wikipedia caption assigns a 2014 GRM Daily shoot, conflicting with the creation date. Revisit if the original photographer, shoot or an artist-issued caption for this frame can be identified.",
+            "kind": "portrait"
+          },
+          {
+            "url": "https://distracttv.com/6576/",
+            "finding": "Different photographs. Distract’s 637 × 346 image shows the performer facing the camera in a red jacket in front of a metal door. The 480 × 262 Commons image is a side view through railings with brickwork and a Raiders cap. Distract supplies neither authorship nor a licence for the Commons image.",
+            "kind": "portrait"
+          },
+          {
+            "kind": "artwork",
+            "url": "https://dubzysnazz.bandcamp.com/album/gift-of-the-gab-2",
+            "finding": "Gift of the Gab shows the sleeve and credits the release to Dubzy. It reserves all rights and lists no separate reuse licence for the cover."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/@DubzySnazz/videos",
+            "finding": "All 21 uploads visible under @DubzySnazz/videos were checked at their original watch pages. None displayed a Creative Commons reuse grant, including JL Freestyle, W.Y.T.M, Slow Lane with Eyez, and the filmmaker-credited Snazz Diaries launch party."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=i5P-fFx4lc4",
+            "finding": "Filmmaker-host original Eyewear Stylist interview naming Dubzy; original YouTube upload has no CC reuse label."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=hg9CiK4JD3c",
+            "finding": "JDZmedia names the Derby MC and the producer in the SPITFIRE upload; no CC reuse label. Suitable as an outbound link."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=6791ftDpC0c",
+            "finding": "Filmmaker Zach Gravenell identifies the artist and SnazzGang in the title; no CC reuse grant."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=ulQFyjnPoLY",
+            "finding": "Mixtape Madness names Dubzy in its #HUNGRY upload; this individual video lacks the CC grant present on the S-X interview."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=rxCaDv5iN6A",
+            "finding": "Official Munich upload and live channel canonical ID UCGsCBtyFRC85HGMJ_7uErfQ."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=rxCaDv5iN6A",
+            "finding": "Artist’s original video links directly to this SoundCloud and /dubzy-munich. Current profile returns its own canonical URL and artist title Dubzy."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=rxCaDv5iN6A",
+            "finding": "The original video description lists this handle, also reported by HipHopCanada in 2020. Current public page returns generic Instagram metadata; its profile embed reports possible removal. I found no first-party redirect or endorsed successor. No claim that the account was definitively deleted."
+          },
+          {
+            "url": "https://dubzysnazz.bandcamp.com/album/gift-of-the-gab-2",
+            "finding": "Artist’s Gift of the Gab page and track credits including Eyez and Directs."
+          }
+        ]
+      }
     },
     {
       "id": "eyez",
@@ -372,21 +536,127 @@
       ],
       "socials": [
         {
-          "label": "Instagram",
-          "url": "https://www.instagram.com/eyez_uk/",
-          "source": "https://events.humanitix.com/eyez-and-grim-sickers-the-link-up-tour-ft-dj-chapo-sydney"
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@EyezOfficialMusic",
+          "source": "https://www.youtube.com/channel/UCwj8iMCJl5sL6WsIhvnShIQ",
+          "locator": "Handle and stable channel resolve to EyezOfficialMusic. Its description links Eyez_uk and cites OneNineThree Recordings. Channel keywords include Derby, grime and Elijah. This is his established artist-managed channel, with historic uploads."
         },
         {
-          "label": "X",
-          "url": "https://x.com/Eyez_uk",
-          "source": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/"
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/eyez_uk",
+          "source": "https://soundcloud.com/eyez_uk/eyez-innit-prod-by-zdot-krunchie",
+          "locator": "Direct profile returned HTTP 200, with the artist’s name. On it, Innit is credited to Zdot and Krunchie, matching track one on producer Zdot’s Square One by Eyez; the account also carries a track crediting Derby collaborator Dubzy."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/eyez_uk/",
+          "source": "https://events.humanitix.com/eyez-and-grim-sickers-the-link-up-tour-ft-dj-chapo-sydney",
+          "locator": "Artist page returned HTTP 200 with Eyez (@eyez_uk) in its metadata. The Sydney concert organiser links the exact URL alongside a Derby grime MC biography."
         },
         {
           "label": "Spotify",
           "url": "https://open.spotify.com/artist/3lbE4VUYGYUusBmdfPbtJV",
-          "source": "https://maxmusicpublishing.co.uk/home/"
+          "source": "https://maxmusicpublishing.co.uk/home/",
+          "locator": "Max Music Publishing directly links the Spotify artist ID 3lbE4VUYGYUusBmdfPbtJV from its Derby-based Eyez roster profile."
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/Eyez_uk",
+          "source": "https://www.youtube.com/@EyezOfficialMusic",
+          "locator": "His own YouTube biography links www.twitter.com/Eyez_uk, also linked by i-D in the Derby interview. Current posting activity was not established."
         }
-      ]
+      ],
+      "photo": {
+        "path": "/assets/artists/eyez.jpg",
+        "alt": "Eyez with a microphone at a Don't Flop grime clash",
+        "credit": "Don't Flop Entertainment, Dialect vs Eyez (2014)",
+        "source": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+        "originalSource": "https://www.youtube.com/watch?v=a9q-us3JYsY",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "changes": "Cropped frame from 01:20 of the original recording.",
+        "kind": "portrait",
+        "title": "Dialect vs Eyez, Don’t Flop Grime Clash",
+        "identityUrl": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+        "identityNote": "At exactly 01:20 the original video names the MC EYEZ across the lower third while he holds the microphone. Same instant extracted directly from the 1920 x 1080 original video stream at 25fps.",
+        "rightsNote": "Don’t Flop Entertainment’s original recording lists Creative Commons Attribution in the expanded description. The credited image is one frame from its camera footage.",
+        "assetLocator": "Original video, 01:20. Crop the 1920 × 1080 frame to 980 × 760 at x=530, y=90."
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-22",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+            "finding": "At exactly 01:20 the original video names the MC EYEZ across the lower third while he holds the microphone. Same instant extracted directly from the 1920 x 1080 original video stream at 25fps. YouTube original watch page, expanded description > Licence: Creative Commons Attribution licence (reuse allowed). Verified in the publisher’s own metadataRowRenderer."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=k-IHJB891K8",
+            "finding": "Marketing Derby interview. No CC reuse grant in original upload metadata."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=vRB3TK_nJpY",
+            "finding": "DJDUBLTV interview. No CC reuse grant in original upload metadata."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.interviewmagazine.com/music/eyez",
+            "finding": "Matt Holyoak/Kayte Ellis Agency credited for photos. No open image licence established."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://zdotproductions.bandcamp.com/album/square-one",
+            "finding": "Producer release is all rights reserved. It is not his artist-owned Bandcamp."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.asylumagency.com/eyez-booking",
+            "finding": "Booking representative confirms identity. No explicit reuse grant for photography."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.flickr.com/search/?text=Eyez%20grime&license=4%2C5%2C9%2C10",
+            "finding": "No identified artist portrait under the searched licences."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/index.php?search=Eyez+grime&title=Special%3AMediaSearch&type=image",
+            "finding": "No matching Eyez portrait in Commons filename/description searches."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/channel/UCwj8iMCJl5sL6WsIhvnShIQ",
+            "finding": "Handle and stable channel resolve to EyezOfficialMusic. Its description links Eyez_uk and cites OneNineThree Recordings. Channel keywords include Derby, grime and Elijah. This is his established artist-managed channel, with historic uploads."
+          },
+          {
+            "url": "https://soundcloud.com/eyez_uk/eyez-innit-prod-by-zdot-krunchie",
+            "finding": "Direct profile returned HTTP 200, with the artist’s name. On it, Innit is credited to Zdot and Krunchie, matching track one on producer Zdot’s Square One by Eyez; the account also carries a track crediting Derby collaborator Dubzy."
+          },
+          {
+            "url": "https://events.humanitix.com/eyez-and-grim-sickers-the-link-up-tour-ft-dj-chapo-sydney",
+            "finding": "Artist page returned HTTP 200 with Eyez (@eyez_uk) in its metadata. The Sydney concert organiser links the exact URL alongside a Derby grime MC biography."
+          },
+          {
+            "url": "https://maxmusicpublishing.co.uk/home/",
+            "finding": "Max Music Publishing directly links the Spotify artist ID 3lbE4VUYGYUusBmdfPbtJV from its Derby-based Eyez roster profile."
+          },
+          {
+            "url": "https://www.youtube.com/@EyezOfficialMusic",
+            "finding": "His own YouTube biography links www.twitter.com/Eyez_uk, also linked by i-D in the Derby interview. Current posting activity was not established."
+          },
+          {
+            "url": "https://eyez.bandcamp.com/music",
+            "finding": "The Bay Area singer Eye’z is a different artist. Excluded."
+          },
+          {
+            "url": "https://zdotproductions.bandcamp.com/album/square-one",
+            "finding": "Zdot’s Square One release credits Eyez, Zdot and Krunchie and corroborates the SoundCloud recording."
+          }
+        ]
+      }
     },
     {
       "id": "jaykae",
@@ -488,30 +758,68 @@
         "source": "https://commons.wikimedia.org/wiki/File:Jaykaefeb2018.jpg",
         "licence": "CC BY-SA 4.0",
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "changes": "Original photograph, unmodified."
+        "changes": "Original photograph, unmodified.",
+        "kind": "portrait",
+        "title": "Jaykae, February 2018",
+        "identityUrl": "https://commons.wikimedia.org/wiki/File:Jaykaefeb2018.jpg",
+        "identityNote": "Caption identifies Jaykae, uploaded as own work by Galtiak. Summary / Description, Source and Author.",
+        "rightsNote": "Galtiak applies CC BY-SA 4.0. Original 311 × 488 JPEG matches the local asset byte for byte.",
+        "assetLocator": "Commons original file Jaykaefeb2018.jpg, 311 × 488."
       },
       "socials": [
         {
           "label": "Instagram",
           "url": "https://www.instagram.com/jaykae10/",
-          "source": "https://socialnerd-uk.wixstudio.com/be83music/be83-roster/jaykae"
+          "source": "https://socialnerd-uk.wixstudio.com/be83music/be83-roster/jaykae",
+          "locator": "BE83 roster page for Jaykae, Instagram icon target"
         },
         {
           "label": "YouTube",
           "url": "https://www.youtube.com/@Jaykae",
-          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM"
+          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM",
+          "locator": "Switched On, description under artist-owned Official Artist Channel, Follow/Subscribe links"
         },
         {
           "label": "TikTok",
           "url": "https://www.tiktok.com/@jaykae10",
-          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM"
+          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM",
+          "locator": "Switched On, description under artist-owned Official Artist Channel, Follow/Subscribe links"
         },
         {
           "label": "X",
           "url": "https://x.com/Jaykae10",
-          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM"
+          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM",
+          "locator": "Switched On, description under artist-owned Official Artist Channel, Follow/Subscribe links"
         }
-      ]
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-22",
+        "image_search": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Jaykaefeb2018.jpg",
+            "finding": "Caption identifies Jaykae, uploaded as own work by Galtiak. Galtiak applies CC BY-SA 4.0. Original 311 × 488 JPEG matches the local asset byte for byte.",
+            "kind": "portrait"
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://socialnerd-uk.wixstudio.com/be83music/be83-roster/jaykae",
+            "finding": "BE83 roster page for Jaykae, Instagram icon target"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=zS4Iyt8dYkM",
+            "finding": "Switched On, description under artist-owned Official Artist Channel, Follow/Subscribe links"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=zS4Iyt8dYkM",
+            "finding": "Switched On, description under artist-owned Official Artist Channel, Follow/Subscribe links"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=zS4Iyt8dYkM",
+            "finding": "Switched On, description under artist-owned Official Artist Channel, Follow/Subscribe links"
+          }
+        ]
+      }
     },
     {
       "id": "s-x",
@@ -595,19 +903,22 @@
       "connections": [],
       "socials": [
         {
-          "label": "Instagram",
-          "url": "https://www.instagram.com/sxxxxxx/",
-          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto"
-        },
-        {
           "label": "YouTube",
           "url": "https://www.youtube.com/@SXMusic",
-          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto"
+          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto",
+          "locator": "Official Who We Are upload, written by Sam Gumbley; uploader S-X; canonical channel ID UCHCxVGuzTseVaEu-K9IntSw matches the live handle."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/sxxxxxx/",
+          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto",
+          "locator": "Follow S-X section in the official video; live Instagram profile open graph identifies S-X (@sxxxxxx). Six x characters after the s."
         },
         {
           "label": "X",
           "url": "https://x.com/producerSX",
-          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto"
+          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto",
+          "locator": "Follow S-X section in the artist upload links twitter.com/producerSX; current X profile title is S-X (@producerSX)."
         }
       ],
       "photo": {
@@ -618,7 +929,42 @@
         "originalSource": "https://www.youtube.com/watch?v=JO588MExJX8",
         "licence": "CC BY 3.0",
         "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
-        "changes": "Cropped interview still, resized by Wikimedia Commons."
+        "changes": "Cropped interview still, resized by Wikimedia Commons.",
+        "kind": "portrait",
+        "title": "Behind the Hits with S-X",
+        "identityUrl": "https://www.youtube.com/watch?v=JO588MExJX8",
+        "identityNote": "The episode names S-X as its guest. The opening description identifies the Wolverhampton producer of Woooo Riddim. The Commons file credits this same episode as the source of the still.",
+        "rightsNote": "Commons identifies the original upload, publisher and CC BY 3.0 licence in its Summary and Licensing sections. The linked Mixtape Madness upload grants Creative Commons Attribution reuse in its expanded description.",
+        "assetLocator": "Commons file S-X 2022.jpg, 500 × 663 rendition of the interview still."
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-22",
+        "image_search": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:S-X_2022.jpg",
+            "finding": "Summary explicitly says this is a still of the S-X guest in the 2022 interview and provides the identical YouTube ID. Wikitext credits Mixtape Madness and uses the YouTube CC-BY template; volunteer licence review remains pending. Verified the uploader's actual YouTube licensing field independently.",
+            "kind": "portrait"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=JO588MExJX8",
+            "finding": "Behind The Hits, hosted by Ebz, episode 6, 8 April 2022. Channel: Mixtape Madness. Description paragraph beginning 'Born and raised in Wolverhampton' identifies Sam Gumbley, his S-X name, roles and Woooo Riddim. YouTube's expanded description displays 'Creative Commons Attribution licence (reuse allowed)'.",
+            "kind": "portrait"
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=gMTBPJPsXto",
+            "finding": "Official Who We Are upload, written by Sam Gumbley; uploader S-X; canonical channel ID UCHCxVGuzTseVaEu-K9IntSw matches the live handle."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=gMTBPJPsXto",
+            "finding": "Follow S-X section in the official video; live Instagram profile open graph identifies S-X (@sxxxxxx). Six x characters after the s."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=gMTBPJPsXto",
+            "finding": "Follow S-X section in the artist upload links twitter.com/producerSX; current X profile title is S-X (@producerSX)."
+          }
+        ]
       }
     }
   ]

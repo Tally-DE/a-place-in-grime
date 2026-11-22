@@ -26,15 +26,16 @@ Read the latest case revision and previous evidence before claiming each task. A
 
 For a live GitHub assignment, send the finished packet through the task’s pull request and confirm it in the issue. Show the contributor the result, both links and any unresolved question. A read-only chat can return a packet for the site’s private intake. Treat delivery as pending until the intake returns a receipt. The local rehearsal produces a draft. [Submission and publication rules](REVIEW.md)
 
-The editor can use ordinary text. For a structured submission, return one JSON object with the following fields. Use the [packet schema](artist-packet.schema.json) and [real Derby example](examples/derby-dubzy.json).
+The editor can use ordinary text. For a structured submission, return one JSON object with the following fields. Use the [packet schema](artist-packet.schema.json) and the [worked Eyez image and account check](examples/eyez-profile-media.json). When resuming an older draft, keep the source notes and add the checked media before submitting version 3.
 
 | Field | What to return |
 | --- | --- |
-| `version`, `task_id`, `outcome` | Version `2`, the supplied ID, and one of `evidence_found`, `lead_only`, `already_documented`. |
+| `version`, `task_id`, `outcome` | Version `3`, the supplied ID, and one of `evidence_found`, `lead_only`, `already_documented`. |
 | `artist` | An object with `name` and `catalogue_id`. Reuse a confirmed existing ID. Use `null` when a match is open or the editor will assign an ID. |
 | `sources` | One object per item. Include `title`, `publisher`, `original_url`, `access`, `checked_on`, `media` and `claims`. Use null for an unknown publisher. Use ISO dates for checks. `inspected_url` records a redirect or dated capture. Include `captured_at` when the archive supplies a precise timestamp. A physical item can use a `collection_ref` and a null URL. A non-identifying reference agreed with a collector is enough. |
 | Each source’s `claims` | One object per fact with `field`, `value` and `locator`. Common fields are `stage_name`, `former_stage_name`, `role`, `from`, `hometown`, `grew_up_in`, `based_in`, `active_in`, `crew_membership` and `grime_connection`. A locator can be a heading and paragraph, page, side or timecode. |
 | Each source’s `origin` and `next_people` | Use a stable original URL, platform ID or collection reference for `origin`. A mirror uses the origin of the item it reproduces. For each lead give `as_printed`, `kind` (`artist`, `crew` or `unresolved`), `connection`, `locator` and `next_check`. Put leads under the item you inspected. An empty list is valid. |
+| `profile_media` | Record the date, image and account search logs, a cleared portrait or artwork (or null), and verified direct accounts. Each image lookup has a `kind` of `portrait` or `artwork`, a URL and a finding. If no portrait clears review, include the artwork search too. Cite the original caption or timestamp for identity and the rights holder’s licence statement for reuse. [Picture and account checks](METHOD.md#find-a-picture-and-the-artists-own-links) |
 | `trail_note` | Say which branch you followed, what was already covered or why the trail ended. Leave a clear starting point for another researcher. |
 | `checked`, `open_questions` | Lists of search notes and unresolved questions. Record useful negatives or possible duplicates here. Use empty lists where appropriate. |
 

@@ -8,12 +8,13 @@ def read(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 validator = Draft202012Validator(read(root / "research/artist-packet.schema.json"), format_checker=FormatChecker())
+media_validator = validator.evolve(schema=validator.schema["$defs"]["profile_media"])
 for folder in ["submissions", "research/examples"]:
     for path in (root / folder).glob("*.json"):
         packet = read(path)
         validator.validate(packet)
-        if folder == "submissions" and (packet["task_id"] != path.stem or packet["version"] != 2):
-            raise ValueError(f"{path} needs a matching task ID and version 2")
+        if folder == "submissions" and (packet["task_id"] != path.stem or packet["version"] != 3):
+            raise ValueError(f"{path} needs a matching task ID and version 3")
 
 catalogue = read(root / "catalogue.json")
 places = {p["id"]: p for p in catalogue["places"]}
@@ -37,11 +38,12 @@ for artist in artists:
     for connection in artist.get("connections", []):
         assert connection["id"] in {a["id"] for a in artists} - {artist["id"]}
         assert connection["label"] and connection["claims"] and set(connection["claims"]) <= claims
-    for social in artist.get("socials", []):
-        assert social["label"] and all(social[k].startswith("https://") for k in ("source", "url"))
+    accounts = artist.get("socials", [])
+    assert len({account["label"].casefold() for account in accounts}) == len(accounts)
+    visual = None
     if photo := artist.get("photo"):
-        assert all(photo.get(k) for k in ("alt", "credit", "licence", "changes"))
-        assert all(photo[k].startswith("https://") for k in ("source", "licenceUrl"))
         assert photo["path"].startswith("/assets/artists/") and ".." not in photo["path"]
         assert (root / "site/public" / photo["path"].lstrip("/")).is_file()
+        visual = {k: v for k, v in photo.items() if k not in ("path", "originalSource")}
+    media_validator.validate({**artist["mediaResearch"], "visual": visual, "accounts": accounts})
 print(f"Catalogue and research packets checked. {len(artists)} artist profiles.")

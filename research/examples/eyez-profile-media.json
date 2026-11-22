@@ -1,0 +1,83 @@
+{
+  "version": 3,
+  "task_id": "example-eyez-performance-image",
+  "outcome": "evidence_found",
+  "artist": {
+    "name": "Eyez",
+    "catalogue_id": "eyez"
+  },
+  "sources": [
+    {
+      "title": "Dialect vs Eyez, Don’t Flop Grime Clash",
+      "publisher": "Don’t Flop Entertainment",
+      "original_url": "https://www.youtube.com/watch?v=a9q-us3JYsY",
+      "origin": "youtube:a9q-us3JYsY",
+      "access": "original_page",
+      "checked_on": "2026-11-22",
+      "media": "played",
+      "claims": [
+        {
+          "field": "documented_activity",
+          "value": "Eyez appeared in Don’t Flop’s filmed clash with Dialect.",
+          "locator": "Video title and the on-screen EYEZ credit at 01:20."
+        }
+      ],
+      "next_people": [
+        {
+          "as_printed": "Dialect",
+          "kind": "artist",
+          "connection": "Billed opposite Eyez in the original upload.",
+          "locator": "Original video title.",
+          "next_check": "Check prior research on Dialect before following another named appearance."
+        }
+      ]
+    }
+  ],
+  "checked": [
+    "Compared the original video credit with the actual frame. Checked the SoundCloud release against producer Zdot’s credits."
+  ],
+  "open_questions": [],
+  "trail_note": "This example covers one checked image and one direct account. The complete catalogue record also logs alternative sources and other verified accounts.",
+  "profile_media": {
+    "checked_on": "2026-11-22",
+    "image_search": [
+      {
+        "kind": "portrait",
+        "url": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+        "finding": "At exactly 01:20 the original video names the MC EYEZ across the lower third while he holds the microphone. Same instant extracted directly from the 1920 x 1080 original video stream at 25fps. YouTube original watch page, expanded description > Licence: Creative Commons Attribution licence (reuse allowed). Verified in the publisher’s own metadataRowRenderer."
+      }
+    ],
+    "link_search": [
+      {
+        "url": "https://soundcloud.com/eyez_uk/eyez-innit-prod-by-zdot-krunchie",
+        "finding": "Direct profile returned HTTP 200, with the artist’s name. On it, Innit is credited to Zdot and Krunchie, matching track one on producer Zdot’s Square One by Eyez; the account also carries a track crediting Derby collaborator Dubzy."
+      },
+      {
+        "url": "https://zdotproductions.bandcamp.com/album/square-one",
+        "finding": "Zdot’s Square One release credits Eyez, Zdot and Krunchie and corroborates the SoundCloud recording."
+      }
+    ],
+    "visual": {
+      "alt": "Eyez with a microphone at a Don't Flop grime clash",
+      "credit": "Don't Flop Entertainment, Dialect vs Eyez (2014)",
+      "source": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+      "licence": "CC BY 3.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "Cropped frame from 01:20 of the original recording.",
+      "kind": "portrait",
+      "title": "Dialect vs Eyez, Don’t Flop Grime Clash",
+      "identityUrl": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+      "identityNote": "At exactly 01:20 the original video names the MC EYEZ across the lower third while he holds the microphone. Same instant extracted directly from the 1920 x 1080 original video stream at 25fps.",
+      "rightsNote": "Don’t Flop Entertainment’s original recording lists Creative Commons Attribution in the expanded description. The credited image is one frame from its camera footage.",
+      "assetLocator": "Original video, 01:20. Crop the 1920 × 1080 frame to 980 × 760 at x=530, y=90."
+    },
+    "accounts": [
+      {
+        "label": "SoundCloud",
+        "url": "https://soundcloud.com/eyez_uk",
+        "source": "https://soundcloud.com/eyez_uk/eyez-innit-prod-by-zdot-krunchie",
+        "locator": "Direct profile returned HTTP 200, with the artist’s name. On it, Innit is credited to Zdot and Krunchie, matching track one on producer Zdot’s Square One by Eyez; the account also carries a track crediting Derby collaborator Dubzy."
+      }
+    ]
+  }
+}
