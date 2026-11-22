@@ -4,7 +4,7 @@ A remembered stage name is enough to start. If you recognise an old alias, have 
 
 ## Suggest an artist
 
-Open **Suggest an artist** on the homepage or a place page. Enter the name as you remember it. A town, area, crew, rough year or source can help the editor distinguish between people who used the same name. The other fields are optional.
+Open **Suggest an artist** on the homepage or a place page. Enter the name as you remember it. A city or town, crew, rough year or source can help the editor distinguish between people who used the same name. The other fields are optional.
 
 ## Check or correct a fact
 

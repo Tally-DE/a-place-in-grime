@@ -19,11 +19,8 @@ catalogue = read(root / "catalogue.json")
 places = {p["id"]: p for p in catalogue["places"]}
 assert len(places) == len(catalogue["places"])
 for place in places.values():
-    chain = set()
-    while place:
-        assert place["id"] not in chain, "Circular place hierarchy"
-        chain.add(place["id"])
-        place = places[place["parent"]] if place["parent"] else None
+    assert place["kind"] in {"city", "town"}, "Catalogue places must be cities or towns"
+    assert not place.get("parent"), "The city and town index is flat"
 
 artists = catalogue["artists"]
 assert len({a["id"] for a in artists}) == len(artists)

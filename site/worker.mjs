@@ -11,12 +11,6 @@ const linkPlace = p => link(placeURL(p),p.name);
 const normal = s => s.normalize('NFKD').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
 const rows = items => `<ul class="rows">${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
 const heading = (over,title,body='') => `<header class="heading"><p class="kicker">${esc(over)}</p><h1>${esc(title)}</h1>${body ? `<p class="lede">${esc(body)}</p>` : ''}</header>`;
-function lineage(id) {
-  const path = [];
-  let place = places.get(id);
-  while(place && !path.includes(place)) { path.unshift(place); place=places.get(place.parent); }
-  return path;
-}
 function render(title,content,status=200,home=false) {
   const head=`<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · A Place In Grime</title><meta name="description" content="A community catalogue of UK grime artists, their aliases, and the places they are connected to."><link rel="stylesheet" href="/site.css"><script src="/site.js" defer></script></head>`;
   const mast=`<a class="skip" href="#content">Skip to content</a><header class="mast"><a href="/" aria-label="A Place In Grime homepage"><img src="/assets/cassette.png" alt="A Place In Grime"></a><nav class="nav" aria-label="Main">${link('/artists','Artists')}${link('/places','Places')}${link('/contribute','Contribute')}</nav></header>`;
@@ -28,10 +22,10 @@ function searchBox(query='') {
 }
 function home() {
   const fig=`<figure><div class="frame"><img id="photo" src="/assets/trim-flowdan.jpg" alt="Two MCs holding microphones at the front of the stage."></div><figcaption><div aria-live="polite"><div id="caption" class="photo-title">Trim &amp; Flowdan, 2005</div><div class="credit">Photo by <a id="source" href="https://www.flickr.com/photos/believekevin/34882249/">kevin</a> · ${link('https://creativecommons.org/licenses/by-sa/2.0/','CC BY-SA 2.0')} · cropped</div></div><button id="next" class="photo-switch" type="button">Change photo</button></figcaption></figure>`;
-  return render('UK grime artist catalogue',`<div class="spread">${fig}<section class="index"><p class="intro">A catalogue of UK grime artists.</p><h1>Find an artist.</h1>${searchBox()}<h2>Browse by place</h2>${rows(catalogue.places.filter(p=>!p.parent).map(linkPlace))}<a class="suggest" href="/suggest">Suggest an artist</a></section></div>`,200,true);
+  return render('UK grime artist catalogue',`<div class="spread">${fig}<section class="index"><p class="intro">A catalogue of UK grime artists.</p><h1>Find an artist.</h1>${searchBox()}<h2>Browse by city or town</h2>${rows(catalogue.places.map(linkPlace))}<a class="suggest" href="/suggest">Suggest an artist</a></section></div>`,200,true);
 }
 function artistRows(list) {
-  return rows(list.map(a=>linkArtist(a)+`<small>${a.placeIds.map(id=>places.get(id)).filter(p=>p?.kind==='city').map(p=>esc(p.name)).join(', ')}</small>`));
+  return rows(list.map(a=>linkArtist(a)+`<small>${a.placeIds.map(id=>places.get(id)).map(p=>esc(p.name)).join(', ')}</small>`));
 }
 function directory() {
   return render('Artists',heading('Artist index','Artists','Find a stage name, a former alias or a place.')+searchBox()+artistRows(catalogue.artists));
@@ -40,7 +34,7 @@ function search(url) {
   const q=(url.searchParams.get('q')||'').trim().slice(0,160), key=normal(q);
   const foundPlaces=key?catalogue.places.filter(p=>normal(p.name).includes(key)):[];
   const matches=new Set(foundPlaces.map(p=>p.id));
-  const foundArtists=key?catalogue.artists.filter(a=>[a.name,...a.aliases].some(n=>normal(n).includes(key))||a.placeIds.some(id=>lineage(id).some(p=>matches.has(p.id)))):[];
+  const foundArtists=key?catalogue.artists.filter(a=>[a.name,...a.aliases].some(n=>normal(n).includes(key))||a.placeIds.some(id=>matches.has(id))):[];
   let result='';
   if(q) {
     if(foundArtists.length)result+='<h2>Artists</h2>'+artistRows(foundArtists);
@@ -51,17 +45,15 @@ function search(url) {
   return render('Search',heading('Artist index','Search the catalogue')+searchBox(q)+result);
 }
 function placePage(p) {
-  const children=catalogue.places.filter(k=>k.parent===p.id);
-  const local=catalogue.artists.filter(a=>a.placeIds.some(id=>lineage(id).includes(p)));
-  const trail=[link('/places','Places'),...lineage(p.id).slice(0,-1).map(linkPlace)].join('<span> / </span>');
-  return render(p.name,`<nav class="crumb" aria-label="Place hierarchy">${trail}</nav>`+heading(p.kind,p.name)+(children.length?'<h2>Browse within '+esc(p.name)+'</h2>'+rows(children.map(linkPlace)):'')+'<h2>Artists</h2>'+(local.length?artistRows(local):'<p class="empty">The catalogue is still open here. Help document the first artist connected to this place.</p>')+link('/suggest?place='+encodeURIComponent(p.name),'Suggest an artist'));
+  const local=catalogue.artists.filter(a=>a.placeIds.includes(p.id));
+  return render(p.name,`<nav class="crumb" aria-label="Place index">${link('/places','Cities and towns')}</nav>`+heading(p.kind,p.name)+'<h2>Artists</h2>'+(local.length?artistRows(local):'<p class="empty">Help document the first artist connected to this place.</p>')+link('/suggest?place='+encodeURIComponent(p.name),'Suggest an artist'));
 }
 function artistPage(a) {
   const facts=a.claims.map(c=>{
     const query='?artist='+encodeURIComponent(a.id)+'&claim='+encodeURIComponent(c.id);
     return `<article class="fact" id="${esc(c.id)}"><h3>${esc(c.text)}</h3><p>${link(c.url,c.publisher+' · '+c.source)}</p><p class="location">${esc(c.locator)}</p><p class="metadata">Source checked ${esc(c.checked)}</p><div class="actions">${link('/verify'+query,'Verify this source')}${link('/correct'+query,'Suggest a correction')}</div></article>`;
   }).join('');
-  return render(a.name,`<nav class="crumb">${link('/artists','Artists')}</nav>`+heading('Artist profile',a.name,a.intro)+`<dl class="details">${a.aliases.length?`<dt>Also known as</dt><dd>${a.aliases.map(esc).join(', ')}</dd>`:''}<dt>Connected places</dt><dd>${a.placeIds.map(id=>linkPlace(places.get(id))).join(' · ')}</dd></dl><h2>Research and sources</h2>${facts}`);
+  return render(a.name,`<nav class="crumb">${link('/artists','Artists')}</nav>`+heading('Artist profile',a.name,a.intro)+`<dl class="details">${a.aliases.length?`<dt>Also known as</dt><dd>${a.aliases.map(esc).join(', ')}</dd>`:''}<dt>City or town</dt><dd>${a.placeIds.map(id=>linkPlace(places.get(id))).join(' · ')}</dd></dl><h2>Research and sources</h2>${facts}`);
 }
 const formNames={suggest:'Suggest an artist',verify:'Verify a source',correct:'Suggest a correction',private:'Private request',packet:'Submit research'};
 function formPage(type,url,message='',values={},status=200) {
@@ -71,7 +63,7 @@ function formPage(type,url,message='',values={},status=200) {
   const field=(label,name,required=false,multi=false,initial='')=>`<label>${esc(label)}${multi?`<textarea name="${name}" maxlength="${type==='packet'?45000:4000}" ${required?'required':''}>${esc(values[name]??initial)}</textarea>`:`<input name="${name}" maxlength="240" value="${esc(values[name]??initial)}" ${required?'required':''}>`}</label>`;
   const token=values.token||crypto.randomUUID();
   let inputs='';
-  if(type==='suggest')inputs=field('Artist name or alias','name',true,false,url.searchParams.get('name')||'')+field('Town or area (optional)','place',false,false,url.searchParams.get('place')||'')+field('What do you remember? (optional)','note',false,true);
+  if(type==='suggest')inputs=field('Artist name or alias','name',true,false,url.searchParams.get('name')||'')+field('City or town (optional)','place',false,false,url.searchParams.get('place')||'')+field('What do you remember? (optional)','note',false,true);
   if(type==='verify')inputs='<label>What did the source show?<select required name="verdict"><option value="">Choose a finding</option>'+['Supports the statement','Partly supports it','Contradicts it','Source unavailable'].map(v=>`<option ${values.verdict===v?'selected':''}>${v}</option>`).join('')+'</select></label>'+field('Where did you check?','note',true,true);
   if(type==='correct')inputs=field('What should change, and how do you know?','note',true,true);
   if(type==='private')inputs=field('What would you like the editor to review?','note',true,true);
@@ -94,7 +86,7 @@ function contribute() {
   return render('Contribute',heading('Community','Contribute','If you remember a name, a crew or a night, you can help fill a gap.')+rows(routeGroups.map(([path,label,desc])=>link(path,label)+`<p>${esc(desc)}</p>`)));
 }
 function agentPage() {
-  return render('Research with an agent',heading('Contribute','Research with an agent','Choose a place and give your agent one task or a time limit. The project supplies the research rules.')+`<div class="prose"><h2>First time using an agent?</h2><p>Open ${link('https://developers.openai.com/codex/quickstart/','Codex')} or ${link('https://code.claude.com/docs/en/quickstart','Claude Code')} and follow its sign-in and setup guide. Check what your existing plan includes before subscribing. For research, choose a session that can read public web pages and files. Connect your own GitHub account if you want it to claim a question and send a pull request.</p><h2>Give your agent a brief</h2><form id="brief-form" action="/brief.txt"><label>Town or area<input name="place" maxlength="100" placeholder="Anywhere in the UK"></label><label>Time to give<select name="duration"><option>One task</option><option>30 minutes</option><option>2 hours</option><option>4 hours</option><option>8 hours</option></select></label><button class="primary">Open my brief</button></form><p>Paste the brief into your agent. It checks the task queue, follows the sources and saves enough context for the next session. If your agent can open links, you can give it the ${link(agentLink,'public agent guide')} directly with your place and time limit.</p><h2>Follow the work</h2><p>${link(repo+'/issues?q=is%3Aissue+is%3Aopen+label%3Aresearch-task','Available research questions')} · ${link(repo+'/pulls','Submitted findings')} · ${link('/packet','Send a completed packet privately')}</p></div>`);
+  return render('Research with an agent',heading('Contribute','Research with an agent','Choose a place and give your agent one task or a time limit. The project supplies the research rules.')+`<div class="prose"><h2>First time using an agent?</h2><p>Open ${link('https://developers.openai.com/codex/quickstart/','Codex')} or ${link('https://code.claude.com/docs/en/quickstart','Claude Code')} and follow its sign-in and setup guide. Check what your existing plan includes before subscribing. For research, choose a session that can read public web pages and files. Connect your own GitHub account if you want it to claim a question and send a pull request.</p><h2>Give your agent a brief</h2><form id="brief-form" action="/brief.txt"><label>City or town<input name="place" maxlength="100" placeholder="Anywhere in the UK"></label><label>Time to give<select name="duration"><option>One task</option><option>30 minutes</option><option>2 hours</option><option>4 hours</option><option>8 hours</option></select></label><button class="primary">Open my brief</button></form><p>Paste the brief into your agent. It checks the task queue, follows the sources and saves enough context for the next session. If your agent can open links, you can give it the ${link(agentLink,'public agent guide')} directly with your place and time limit.</p><h2>Follow the work</h2><p>${link(repo+'/issues?q=is%3Aissue+is%3Aopen+label%3Aresearch-task','Available research questions')} · ${link(repo+'/pulls','Submitted findings')} · ${link('/packet','Send a completed packet privately')}</p></div>`);
 }
 function about(env,path) {
   if(path==='/contributors'){
@@ -177,7 +169,7 @@ const entry = {
     if(path==='/')return home();
     if(path==='/artists')return directory();
     if(path==='/search')return search(url);
-    if(path==='/places')return render('Places',heading('Place index','Browse by place','Start with a nation, then follow the regions, towns and local areas documented so far.')+rows(catalogue.places.filter(p=>!p.parent).map(linkPlace)) );
+    if(path==='/places')return render('Places',heading('Place index','Cities and towns','Browse artists by their documented connections to a UK city or town.')+rows(catalogue.places.map(linkPlace)) );
     if(path.startsWith('/places/')&&places.has(path.slice(8)))return placePage(places.get(path.slice(8)));
     if(path.startsWith('/artists/')){
       const artist=artists.get(path.slice('/artists/'.length));
@@ -188,7 +180,7 @@ const entry = {
     if(path==='/brief.txt') {
       const place=(url.searchParams.get('place')||'Anywhere in the UK').replace(/[\r\n]/g,' ').slice(0,100);
       const duration=['30 minutes','2 hours','4 hours','8 hours'].includes(url.searchParams.get('duration'))?url.searchParams.get('duration'):'One task';
-      return new Response(`Help A Place In Grime research UK grime artists.\nMy selected area: ${place}\nMy time budget: ${duration}\n\nOpen and follow the project’s public research instructions:\n${agentLink}\n\nHandle the research, reservation, checkpoints and submission for me. If no eligible question is available within my scope, tell me. Return your evidence and receipt.\n`,{headers:{'content-type':'text/plain; charset=utf-8'}});
+      return new Response(`Help A Place In Grime research UK grime artists.\nMy selected city or town: ${place}\nMy time budget: ${duration}\n\nOpen and follow the project’s public research instructions:\n${agentLink}\n\nHandle the research, reservation, checkpoints and submission for me. If no eligible question is available within my scope, tell me. Return your evidence and receipt.\n`,{headers:{'content-type':'text/plain; charset=utf-8'}});
     }
     if(path==='/catalogue.json')return Response.json(catalogue);
     if(['/support','/about','/contributors'].includes(path))return about(env,path);

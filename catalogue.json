@@ -1,69 +1,18 @@
 {
   "places": [
     {
-      "id": "england",
-      "name": "England",
-      "parent": null,
-      "kind": "nation"
-    },
-    {
-      "id": "scotland",
-      "name": "Scotland",
-      "parent": null,
-      "kind": "nation"
-    },
-    {
-      "id": "wales",
-      "name": "Wales",
-      "parent": null,
-      "kind": "nation"
-    },
-    {
-      "id": "northern-ireland",
-      "name": "Northern Ireland",
-      "parent": null,
-      "kind": "nation"
-    },
-    {
-      "id": "east-midlands",
-      "name": "East Midlands",
-      "parent": "england",
-      "kind": "region"
-    },
-    {
-      "id": "west-midlands",
-      "name": "West Midlands",
-      "parent": "england",
-      "kind": "region"
+      "id": "birmingham",
+      "name": "Birmingham",
+      "kind": "city"
     },
     {
       "id": "derby",
       "name": "Derby",
-      "parent": "east-midlands",
       "kind": "city"
-    },
-    {
-      "id": "normanton",
-      "name": "Normanton",
-      "parent": "derby",
-      "kind": "local area"
-    },
-    {
-      "id": "birmingham",
-      "name": "Birmingham",
-      "parent": "west-midlands",
-      "kind": "city"
-    },
-    {
-      "id": "small-heath",
-      "name": "Small Heath",
-      "parent": "birmingham",
-      "kind": "local area"
     },
     {
       "id": "wolverhampton",
       "name": "Wolverhampton",
-      "parent": "west-midlands",
       "kind": "city"
     }
   ],
@@ -142,18 +91,17 @@
       "name": "Eyez",
       "aliases": [],
       "placeIds": [
-        "derby",
-        "normanton"
+        "derby"
       ],
-      "intro": "Derby grime MC documented in Normanton in 2019.",
+      "intro": "Grime MC from Derby.",
       "claims": [
         {
-          "id": "eyez-normanton",
-          "text": "Marketing Derby described Eyez as a grime MC based in Normanton in its 2019 film about the area.",
-          "source": "All Eyez on Normanton – DBY",
-          "publisher": "Marketing Derby",
-          "url": "https://www.youtube.com/watch?v=k-IHJB891K8",
-          "locator": "Publisher’s one-sentence film description. Uploaded 28 March 2019.",
+          "id": "eyez-ramstv",
+          "text": "Derby County introduced Eyez as a local grime MC when he joined RamsTV in 2017.",
+          "source": "All Eyez On RamsTV As Grime Star Joins Derby County",
+          "publisher": "Derby County",
+          "url": "https://www.dcfc.co.uk/news/2017/10/all-eyez-on-ramstv-as-grime-star-joins-derby-county",
+          "locator": "Opening paragraph announcing his RamsTV role.",
           "checked": "2026-11-22"
         },
         {
@@ -181,18 +129,17 @@
       "name": "Jaykae",
       "aliases": [],
       "placeIds": [
-        "birmingham",
-        "small-heath"
+        "birmingham"
       ],
-      "intro": "Grime MC from Small Heath in Birmingham.",
+      "intro": "Grime MC from Birmingham.",
       "claims": [
         {
-          "id": "jaykae-small-heath",
-          "text": "BritAsia TV introduced Jaykae as a grime MC from Small Heath, Birmingham.",
+          "id": "jaykae-birmingham",
+          "text": "BritAsia TV identifies Jaykae as a grime MC from Birmingham.",
           "source": "BritAsia TV meets… Jaykae",
           "publisher": "BritAsia TV",
           "url": "https://britasia.tv/britasia-tv-meets-jaykae/",
-          "locator": "Interview introduction, paragraph identifying his role and area.",
+          "locator": "Opening artist biography below the interview introduction.",
           "checked": "2026-11-22"
         },
         {

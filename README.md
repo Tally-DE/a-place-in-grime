@@ -38,7 +38,7 @@ An earlier example from Wolverhampton shows why alias searches matter. The produ
 | Years documented and a few identifying sources | A dated appearance establishes activity at that time. Keep dates approximate when the evidence is approximate. A flyer, interview, tape sleeve or broadcast can be enough to start a page. |
 | Evidence, open questions, credits and changes | Each factual claim has a source, a precise place to check it, its review status and the last check. Visitors can verify or correct that claim directly. |
 
-Browse from UK nation to region where useful, then city or town and local area. Support England, Scotland, Wales and Northern Ireland without forcing them into England’s regional tiers. Allow more than one parent or local name where people use overlapping scene boundaries. Index a person under each supported connection and show why they appear there. Stage names and aliases should also be searchable without choosing a place. Use public music identities and places associated with the scene. Keep home addresses and private identities out of the catalogue.
+Browse the catalogue directly by UK city or town. Publish each supported city or town connection with its source and explain what it means for that artist. Leave the location open when the source is too broad or uncertain. Stage names and aliases are searchable without choosing a place.
 
 ## Let people contribute in a minute
 
