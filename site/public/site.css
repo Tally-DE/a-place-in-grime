@@ -67,8 +67,7 @@
   .inside { width: min(900px, 92%); margin: 0 auto; padding: clamp(34px,5vw,76px) 0 60px; min-height: 72vh }
   .inside h1 { font-size: clamp(44px,6.8vw,92px); overflow-wrap: anywhere }
   .heading { max-width: 760px; margin-bottom: 30px }
-  .kicker, .crumb, .metadata { font: 14px/1.6 Consolas, monospace }
-  .kicker { color: var(--red); margin: 0 0 12px }
+  .crumb, .metadata { font: 14px/1.6 Consolas, monospace }
   .crumb { color: #d3cdc5; margin-bottom: 24px }
   .crumb span { padding: 0 4px }
   .lede { font-size: clamp(18px,2.1vw,26px); line-height: 1.45; margin: 16px 0 }
@@ -94,3 +93,29 @@
   footer nav { display: flex; flex-wrap: wrap; gap: 10px 20px }
   footer>span { font-weight: bold }
   @media(max-width:760px){ footer { flex-direction:column; padding: 20px 17px } .inside { width: calc(100% - 34px) } }
+
+.artist .crumb { margin-bottom: 12px }
+.artist h1 { margin: 0 0 clamp(18px,3vw,32px) }
+.artist-layout.with-photo { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(0,1fr); gap: clamp(25px,4vw,58px); align-items: start }
+.biography { max-width: 66ch; min-width: 0 }
+.biography p { margin: 0 0 1em; font-size: clamp(17px,1.5vw,20px); line-height: 1.55 }
+.biography p.artist-meta, .artist-links { font-size: 15px; line-height: 1.55; color: #c9c3ba }
+.artist-links { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 18px 0 }
+.artist-photo { max-width: 100%; align-self: start }
+.artist-photo img { display: block; max-width: 100%; width: auto; height: auto; max-height: 420px; align-self: start; object-fit: contain }
+.artist-photo figcaption { display: block; margin: 0; padding: 8px 0 0; font: 12px/1.55 Consolas,monospace; color: #c9c3ba }
+.sources { border-block: 1px solid #514c46; margin-top: 26px }
+.sources summary { cursor: pointer; font: bold 16px/1.5 Arial,sans-serif; padding: 15px 0 }
+.source-entry { border-top: 1px solid #514c46; padding: 20px 0; max-width: 70ch }
+.source-publisher { display: block; color: #b8b2a9; font-size: 14px; margin: 4px 0 14px }
+.evidence-item + .evidence-item { margin-top: 18px }
+.evidence-item p { margin: 4px 0 }
+.source-note { font-size: 14px; color: #b8b2a9 }
+.evidence-item .actions { margin-top: 7px }
+@media(max-width:700px) {
+  .artist-layout.with-photo { display: flex; flex-direction: column; gap: 16px }
+  .artist-photo { width: 100%; order: -1 }
+  .artist-photo img { max-height: 240px }
+}
+
+.profile-contribute { font-size: 15px; margin: 16px 0 0 }

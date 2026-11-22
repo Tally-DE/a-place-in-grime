@@ -26,7 +26,7 @@
       "placeIds": [
         "wolverhampton"
       ],
-      "intro": "Wolverhampton producer who first made his name with grime instrumentals.",
+      "intro": "Detz is a Wolverhampton producer formerly known as Detonator.",
       "claims": [
         {
           "id": "detz-name-and-place",
@@ -45,6 +45,71 @@
           "url": "https://www.detz.online/",
           "locator": "About, paragraph beginning “Since 2016”, on his early instrumentals.",
           "checked": "2026-11-22"
+        },
+        {
+          "id": "detz-solo",
+          "text": "Detz cites his Punjabi background, hip-hop and electronic music as influences and dates his Indian Summers EP to 2016 and his debut album to 2019.",
+          "source": "About",
+          "publisher": "Detz",
+          "url": "https://www.detz.online/",
+          "locator": "About section, paragraphs on musical influences and solo projects.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "detz-credits",
+          "text": "Detz credits production work with Potter Payper in 2020, Merky Ace in 2021 and Reepa for Wolves’ 2022/23 campaign.",
+          "source": "Production Credits",
+          "publisher": "Detz",
+          "url": "https://www.detz.online/production-credits",
+          "locator": "2020, 2021 and 2022 entries for Kings Blood, Movies and Wolverhampton Wanderers Football Club x Reepa.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "detz-pack",
+          "text": "Wolverhampton Wanderers used Reepa’s The Pack for their 2022/23 kit unveiling. It was the first official Wolves Records release.",
+          "source": "Wolves Records release provides kit reveal soundtrack",
+          "publisher": "Wolverhampton Wanderers",
+          "url": "https://www.wolves.co.uk/news/club/20220609-wolves-records-release-provides-kit-reveal-soundtrack/",
+          "locator": "Opening paragraphs naming the song, the kit campaign and its role as the label’s first release.",
+          "checked": "2026-11-22"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Detz is a Wolverhampton producer formerly known as Detonator. He started out making grime instrumentals. He describes his Punjabi background, hip-hop and electronic music as influences on how he makes beats. He has pursued his own instrumental work alongside production for MCs, from the Indian Summers EP in 2016 to his first album, Sometimes, I Hate Myself, in 2019.",
+          "claims": [
+            "detz-name-and-place",
+            "detz-grime",
+            "detz-solo"
+          ]
+        },
+        {
+          "text": "His work with vocalists includes ‘Kings Blood’ for Potter Payper and ‘Movies’ for Merky Ace. In his home city he worked with Reepa on the music for Wolverhampton Wanderers’ 2022/23 kit launch. The club unveiled the strip to Reepa’s ‘The Pack’, the first official release on Wolves Records.",
+          "claims": [
+            "detz-credits",
+            "detz-pack"
+          ]
+        }
+      ],
+      "roles": [
+        "Producer"
+      ],
+      "connections": [],
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/detz.wav/",
+          "source": "https://www.detz.online/"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@detz_wav/videos",
+          "source": "https://www.detz.online/"
+        },
+        {
+          "label": "TikTok",
+          "url": "https://www.tiktok.com/@detz.wav/",
+          "source": "https://www.detz.online/"
         }
       ]
     },
@@ -55,7 +120,7 @@
       "placeIds": [
         "derby"
       ],
-      "intro": "Derby MC billed on The Grime Show alongside Eyez, Kaygee, Directs and Lox.",
+      "intro": "Dubzy is a grime MC who grew up between London and Derby and started rapping at thirteen.",
       "claims": [
         {
           "id": "dubzy-derby",
@@ -83,6 +148,114 @@
           "url": "https://www.interviewmagazine.com/music/eyez",
           "locator": "Introduction, Eyez’s account of which MCs represented each city on the mixtape.",
           "checked": "2026-11-22"
+        },
+        {
+          "id": "dubzy-upbringing",
+          "text": "Dubzy grew up in both London and Derby.",
+          "source": "What You Telling Me (WYTM)",
+          "publisher": "The Hype Magazine / Listen Up",
+          "url": "https://www.thehypemagazine.com/2019/10/17/what-you-telling-me-wytm-is-uk-rapper-dubzys-powerful-return-to-the-music-scene/",
+          "locator": "The release announcement supplied by Listen Up, About Dubzy section, first sentence.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "dubzy-gift",
+          "text": "His 2014 mixtape Gift of the Gab was available digitally and on CD. It features Trim, Paper Pabs, JakMan, Directs and Eyez.",
+          "source": "Gift of The Gab",
+          "publisher": "Dubzy",
+          "url": "https://dubzysnazz.bandcamp.com/album/gift-of-the-gab-2",
+          "locator": "Compact Disc description, track list (tracks 1, 3, 4 and 5), and release date below Credits.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "dubzy-gap-anthem",
+          "text": "Red Bull’s 2016 Mind the Gap session credits Dubzy alongside Eyez, Mez, Snowy, Kamakaze, Dialect, R.I.O and Kannan.",
+          "source": "Mind The Gap Anthem",
+          "publisher": "Red Bull Music",
+          "url": "https://www.youtube.com/watch?v=5bmzhuOAwVw",
+          "locator": "Original video title, uploader description and publication date.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "dubzy-wytm",
+          "text": "Dubzy described the scenes in his 2019 What You Telling Me video as parts of his own life and explained the title as a statement of self-belief.",
+          "source": "What You Telling Me (WYTM)",
+          "publisher": "The Hype Magazine / Listen Up",
+          "url": "https://www.thehypemagazine.com/2019/10/17/what-you-telling-me-wytm-is-uk-rapper-dubzys-powerful-return-to-the-music-scene/",
+          "locator": "Dubzy’s two statements following the embedded video, 17 October 2019.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "dubzy-raise-the-bar",
+          "text": "Dubzy started rapping at thirteen. At Raise the Bar in 2015 he spoke about being selected to record over a Z-Dot production. His Snazz team also supplied headwear to KA.",
+          "source": "Red Bull Studios (RBS) RAISE THE BAR TOP 5",
+          "publisher": "Distract TV",
+          "url": "https://distracttv.com/6576/",
+          "locator": "Dubzy section, from the paragraph beginning “Aged 24” to the account of his journey from Derby to London, 20 November 2015.",
+          "checked": "2026-11-22"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Dubzy is a grime MC who grew up between London and Derby and started rapping at thirteen. In 2013 he represented Derby in a SPITFIRE freestyle for JDZmedia. A year later, on his mixtape Gift of the Gab, he traded verses with Eyez on ‘Say My Name’, brought JakMan and Directs together on ‘Snazz 4 Life’, and opened the tape with Trim.",
+          "claims": [
+            "dubzy-upbringing",
+            "dubzy-raise-the-bar",
+            "dubzy-derby",
+            "dubzy-gift"
+          ]
+        },
+        {
+          "text": "Snazz was also the name of his clothing brand. By 2015 his team was supplying headwear to KA. That year he travelled from Derby to London for Red Bull Studios’ Raise the Bar, writing verses on the journey for a session with producer Z-Dot. When Eyez brought MCs from the Midlands and the North together for Mind the Gap in 2016, he chose Dubzy to represent Derby.",
+          "claims": [
+            "dubzy-raise-the-bar",
+            "dubzy-derby-credit",
+            "dubzy-gap-anthem"
+          ]
+        },
+        {
+          "text": "In 2019 Dubzy used the video for ‘What You Telling Me’ to reintroduce himself. Filmed around London, it moves between time with friends and family and a political message. Dubzy described those scenes as different parts of his own life.",
+          "claims": [
+            "dubzy-wytm"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "eyez",
+          "label": "Recorded ‘Say My Name’ together on Dubzy’s Gift of the Gab.",
+          "claims": [
+            "dubzy-gift"
+          ]
+        }
+      ],
+      "photo": {
+        "path": "/assets/artists/dubzy.jpg",
+        "alt": "Dubzy in profile wearing a peaked cap",
+        "credit": "J2kcrepprot",
+        "source": "https://commons.wikimedia.org/wiki/File:Dubzy_Snazz.jpg",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "changes": "Original photograph, unmodified."
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/dubzysnazz/",
+          "source": "https://www.youtube.com/watch?v=rxCaDv5iN6A"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@DubzySnazz",
+          "source": "https://www.youtube.com/watch?v=rxCaDv5iN6A"
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/dubzysnazz",
+          "source": "https://www.youtube.com/watch?v=rxCaDv5iN6A"
         }
       ]
     },
@@ -93,7 +266,7 @@
       "placeIds": [
         "derby"
       ],
-      "intro": "Grime MC from Derby.",
+      "intro": "Eyez wrote his first bars, recorded his first tune and had his first clash in Derby.",
       "claims": [
         {
           "id": "eyez-ramstv",
@@ -121,6 +294,97 @@
           "url": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/",
           "locator": "Derby section, answer to the question about artists from his hometown.",
           "checked": "2026-11-22"
+        },
+        {
+          "id": "eyez-beginnings",
+          "text": "Eyez describes writing his first bars, recording and battling in Derby, taking up MCing alongside his brothers at about eleven, and hearing US hip-hop in his own lyricism.",
+          "source": "Eyez",
+          "publisher": "Interview Magazine",
+          "url": "https://www.interviewmagazine.com/music/eyez",
+          "locator": "Hometown, Musical History and Hip-Hop Versus Grime passages, in Eyez’s own words.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "eyez-spitfire",
+          "text": "Eyez built an audience through JDZmedia’s SPITFIRE freestyles and won the 2016 Grime-A-Side final against Leicester.",
+          "source": "All Eyez On RamsTV As Grime Star Joins Derby County",
+          "publisher": "Derby County",
+          "url": "https://www.dcfc.co.uk/news/2017/10/all-eyez-on-ramstv-as-grime-star-joins-derby-county",
+          "locator": "Paragraphs on the SPITFIRE series and the Leicester final below the embedded video.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "eyez-gap",
+          "text": "Eyez organised Mind the Gap with Red Bull. He explains how he chose Dubzy, Mez, Dialect and other MCs to represent their cities.",
+          "source": "Eyez",
+          "publisher": "Interview Magazine",
+          "url": "https://www.interviewmagazine.com/music/eyez",
+          "locator": "Introduction, including Eyez’s account of choosing artists.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "eyez-quarter",
+          "text": "Eyez led Derby against Jaykae’s Birmingham side in the 2016 Grime-A-Side quarter-final.",
+          "source": "Derby VS Birmingham Cypher | QUARTER FINAL | Grime-A-Side",
+          "publisher": "Red Bull Music",
+          "url": "https://www.youtube.com/watch?v=DqPAQIJKd_Y",
+          "locator": "Uploader description naming both team leaders and the round.",
+          "checked": "2026-11-22"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Eyez wrote his first bars, recorded his first tune and had his first clash in Derby. He started rapping at about eleven, trying to keep up with his brothers. In an interview he traced his ear for lyrics to the US hip-hop he listened to as a kid, though grime was where he first felt at home writing. His SPITFIRE freestyles for JDZmedia helped him find an audience beyond the city.",
+          "claims": [
+            "eyez-beginnings",
+            "eyez-spitfire"
+          ]
+        },
+        {
+          "text": "In 2016 Eyez put together Mind the Gap with Red Bull. He wanted listeners to hear MCs who were already rated in their own cities. His picks included Dubzy for Derby, Mez for Nottingham and Dialect for Leeds. That year he also captained Derby in Grime-A-Side, taking on Jaykae’s Birmingham team on the way to a win over Leicester in the final. In 2017 he went back to football in a different role, joining Derby County’s RamsTV as a host.",
+          "claims": [
+            "eyez-gap",
+            "eyez-quarter",
+            "eyez-spitfire",
+            "eyez-ramstv"
+          ]
+        }
+      ],
+      "roles": [
+        "MC",
+        "Host"
+      ],
+      "connections": [
+        {
+          "id": "dubzy",
+          "label": "Chose Dubzy to represent Derby on Mind the Gap.",
+          "claims": [
+            "eyez-gap"
+          ]
+        },
+        {
+          "id": "jaykae",
+          "label": "Captained opposing teams in the 2016 Grime-A-Side quarter-final.",
+          "claims": [
+            "eyez-quarter"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/eyez_uk/",
+          "source": "https://events.humanitix.com/eyez-and-grim-sickers-the-link-up-tour-ft-dj-chapo-sydney"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/Eyez_uk",
+          "source": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/"
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/artist/3lbE4VUYGYUusBmdfPbtJV",
+          "source": "https://maxmusicpublishing.co.uk/home/"
         }
       ]
     },
@@ -131,7 +395,7 @@
       "placeIds": [
         "birmingham"
       ],
-      "intro": "Grime MC from Birmingham.",
+      "intro": "Jaykae came up in Birmingham through grime clashes, pirate radio and the crew Invasion Alert.",
       "claims": [
         {
           "id": "jaykae-birmingham",
@@ -150,6 +414,102 @@
           "url": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/",
           "locator": "Birmingham section, first answer about discovering grime.",
           "checked": "2026-11-22"
+        },
+        {
+          "id": "jaykae-invasion",
+          "text": "Jaykae joined Birmingham crew Invasion Alert after he started MCing in 2009.",
+          "source": "Jaykae: Momentum",
+          "publisher": "PRS Foundation",
+          "url": "https://prsfoundation.com/grantees/momentum-jaykae/",
+          "locator": "Opening paragraph of the artist’s Momentum funding profile.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "jaykae-radio",
+          "text": "Jaykae recalls Grime Blog freestyles, early radio sessions with Rusky, DJ Free, Remtrex and RM, and getting a show on Silk City.",
+          "source": "Jaykae",
+          "publisher": "Notion",
+          "url": "https://notion.online/jaykae/",
+          "locator": "Jaykae’s answers about starting in music and the first time he rapped on radio.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "jaykae-captain",
+          "text": "Jaykae chose Deadly and Mayhem for their pedigree in clashes. He also explains how he wrote Toothache and credits Thomas Mellor’s production.",
+          "source": "New Noise: Jaykae",
+          "publisher": "Wonderland",
+          "url": "https://www.wonderlandmagazine.com/2016/09/14/new-noise-jaykae/",
+          "locator": "Answers about choosing teammates and the writing and production of Toothache.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "jaykae-quarter",
+          "text": "Jaykae led Birmingham against Eyez’s Derby team in the 2016 Grime-A-Side quarter-final.",
+          "source": "Derby VS Birmingham Cypher | QUARTER FINAL | Grime-A-Side",
+          "publisher": "Red Bull Music",
+          "url": "https://www.youtube.com/watch?v=DqPAQIJKd_Y",
+          "locator": "Uploader description naming both team leaders and the round.",
+          "checked": "2026-11-22"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Jaykae came up in Birmingham through grime clashes, pirate radio and the crew Invasion Alert. He remembers MCs trading freestyles on the city’s Grime Blog YouTube channel in 2009, then watching to see whose response drew the biggest crowd. On radio he shared the mic with Rusky, Remtrex and RM alongside DJ Free before getting a show on Birmingham station Silk City.",
+          "claims": [
+            "jaykae-birmingham",
+            "jaykae-invasion",
+            "jaykae-radio"
+          ]
+        },
+        {
+          "text": "Clashing shaped his choices as a captain in Red Bull’s Grime-A-Side in 2016. He picked Deadly and Mayhem for Birmingham because he had seen them take on anyone at a set. They faced Eyez’s Derby team in the quarter-final. For his solo comeback, Jaykae worked with producer Thomas Mellor on ‘Toothache’. He told Wonderland the title came from an actual toothache he had while writing it.",
+          "claims": [
+            "jaykae-captain",
+            "jaykae-quarter"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "eyez",
+          "label": "Captained opposing teams in the 2016 Grime-A-Side quarter-final.",
+          "claims": [
+            "jaykae-quarter"
+          ]
+        }
+      ],
+      "photo": {
+        "path": "/assets/artists/jaykae-galtiak-2018.jpg",
+        "alt": "Jaykae standing outdoors in a black gilet and camouflage hoodie.",
+        "credit": "Galtiak",
+        "source": "https://commons.wikimedia.org/wiki/File:Jaykaefeb2018.jpg",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "changes": "Original photograph, unmodified."
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/jaykae10/",
+          "source": "https://socialnerd-uk.wixstudio.com/be83music/be83-roster/jaykae"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@Jaykae",
+          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM"
+        },
+        {
+          "label": "TikTok",
+          "url": "https://www.tiktok.com/@jaykae10",
+          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/Jaykae10",
+          "source": "https://www.youtube.com/watch?v=zS4Iyt8dYkM"
         }
       ]
     },
@@ -160,7 +520,7 @@
       "placeIds": [
         "wolverhampton"
       ],
-      "intro": "Wolverhampton producer behind the grime instrumental Woo Riddim.",
+      "intro": "S-X is a producer, singer and songwriter from Wolverhampton.",
       "claims": [
         {
           "id": "s-x-wolverhampton",
@@ -179,8 +539,87 @@
           "url": "https://www.itv.com/news/2022-07-29/buying-a-home-in-wolverhampton-is-a-career-highlight",
           "locator": "Second paragraph below the byline, on the instrumental and his early career.",
           "checked": "2026-11-22"
+        },
+        {
+          "id": "s-x-early",
+          "text": "S-X made beats at home and sought out Tim Westwood and Ras Kwame for airplay. By eighteen he had worked with Chipmunk, Tinie Tempah and Skepta. He later worked in the Wolves warehouse before releasing music as a singer.",
+          "source": "S-X: the Wolverhampton wonderkid loved by Lil Wayne and Rick Ross",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/music/2020/sep/18/s-x-wolverhampton-wonderkid-lil-wayne-rick-ross-dangerous",
+          "locator": "Interview, passages following the Dangerous video on early radio trips, collaborators and his return to music.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "s-x-solo",
+          "text": "S-X says he began singing in 2017 and discusses hearing crowds on his solo tour sing back the songs he wrote.",
+          "source": "In Talks With S-X",
+          "publisher": "Mixtape Madness",
+          "url": "https://www.mixtapemadness.com/blog/exclusives/in-talks-with-s-x-dealing-with-fame-at-an-early-age-and-being-the-man-behind-the-hits",
+          "locator": "Introduction credits him as songwriter and singer. See his answers about the Reasons mixtape and his solo tour.",
+          "checked": "2026-11-22"
+        },
+        {
+          "id": "s-x-album",
+          "text": "S-X’s debut solo album Things Change came out in 2022.",
+          "source": "Artist S-X on his love for his hometown",
+          "publisher": "ITV News",
+          "url": "https://www.itv.com/news/2022-07-29/buying-a-home-in-wolverhampton-is-a-career-highlight",
+          "locator": "Interview published 29 July 2022, paragraphs on the name and release of his debut album.",
+          "checked": "2026-11-22"
         }
-      ]
+      ],
+      "bio": [
+        {
+          "text": "S-X is a producer, singer and songwriter from Wolverhampton. As a teenager he made beats on his home computer and travelled to the BBC studios hoping to get them into the hands of DJs Tim Westwood and Ras Kwame. He was still at school when grime MCs picked up his ‘Woo Riddim’. By eighteen he had worked with Chipmunk, Tinie Tempah and Skepta.",
+          "claims": [
+            "s-x-wolverhampton",
+            "s-x-woo",
+            "s-x-early",
+            "s-x-solo"
+          ]
+        },
+        {
+          "text": "After a spell working in the Wolverhampton Wanderers warehouse, S-X began putting his own voice on record. He dates his start as a singer to 2017. The move took him from supplying beats for other people’s bars to touring songs he had written himself. In 2022 he released his debut solo album, Things Change.",
+          "claims": [
+            "s-x-early",
+            "s-x-solo",
+            "s-x-album"
+          ]
+        }
+      ],
+      "roles": [
+        "Producer",
+        "Singer",
+        "Songwriter"
+      ],
+      "connections": [],
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/sxxxxxx/",
+          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@SXMusic",
+          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/producerSX",
+          "source": "https://www.youtube.com/watch?v=gMTBPJPsXto"
+        }
+      ],
+      "photo": {
+        "path": "/assets/artists/s-x.jpg",
+        "alt": "S-X speaking at a Mixtape Madness interview in 2022",
+        "credit": "Mixtape Madness, Behind The Hits w/ S-X (2022)",
+        "source": "https://commons.wikimedia.org/wiki/File:S-X_2022.jpg",
+        "originalSource": "https://www.youtube.com/watch?v=JO588MExJX8",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "changes": "Cropped interview still, resized by Wikimedia Commons."
+      }
     }
   ]
 }

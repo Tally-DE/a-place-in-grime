@@ -30,4 +30,18 @@ for artist in artists:
     for fact in artist["claims"]:
         assert all(fact.get(k) for k in ("id","text","source","publisher","url","locator","checked"))
         assert fact["url"].startswith(("https://","http://"))
+    claims = {c["id"] for c in artist["claims"]}
+    assert artist["bio"], f"{artist['id']} needs a sourced profile"
+    for paragraph in artist["bio"]:
+        assert paragraph["text"].strip() and paragraph["claims"] and set(paragraph["claims"]) <= claims
+    for connection in artist.get("connections", []):
+        assert connection["id"] in {a["id"] for a in artists} - {artist["id"]}
+        assert connection["label"] and connection["claims"] and set(connection["claims"]) <= claims
+    for social in artist.get("socials", []):
+        assert social["label"] and all(social[k].startswith("https://") for k in ("source", "url"))
+    if photo := artist.get("photo"):
+        assert all(photo.get(k) for k in ("alt", "credit", "licence", "changes"))
+        assert all(photo[k].startswith("https://") for k in ("source", "licenceUrl"))
+        assert photo["path"].startswith("/assets/artists/") and ".." not in photo["path"]
+        assert (root / "site/public" / photo["path"].lstrip("/")).is_file()
 print(f"Catalogue and research packets checked. {len(artists)} artist profiles.")

@@ -2,12 +2,15 @@
 
 import argparse
 from datetime import datetime, timedelta, timezone
+import hashlib
 import json
 import os
 from pathlib import Path
 import re
 import subprocess
 import sys
+import time
+import unicodedata
 import uuid
 
 
@@ -15,6 +18,16 @@ REPO = "Tally-DE/a-place-in-grime"
 BASE = f"repos/{REPO}"
 MARKER = "A Place In Grime · research queue v1\n"
 LEASE = timedelta(hours=48)
+DISCOVERY = "<!-- apig-area-discovery-v1 -->"
+
+
+def key(value):
+    return " ".join(unicodedata.normalize("NFKC", value).casefold().split())
+
+
+def discovery_id(place, focus):
+    identity = json.dumps([key(place), key(focus)], ensure_ascii=False)
+    return "discovery-" + hashlib.sha256(identity.encode()).hexdigest()[:24]
 
 
 def now():
@@ -104,11 +117,51 @@ def issue_data(issue):
     body = (issue.get("body") or "").replace("\r\n", "\n")
     match = re.search(r"^Task ID:[ \t]*`?([a-z0-9][a-z0-9-]*)`?[ \t]*$", body, re.M)
     place = re.search(r"^Place:[ \t]*([^\n]+)$", body, re.M)
-    if (issue.get("pull_request") or "research-task" not in {x["name"] for x in issue["labels"]}
-            or not match):
+    focus = re.search(r"^Focus:[ \t]*([^\n]+)$", body, re.M)
+    discovery = (body.startswith(DISCOVERY + "\n") and place and focus and match
+                 and match[1] == discovery_id(place[1], focus[1]))
+    if (issue.get("pull_request") or not match
+            or ("research-task" not in {x["name"] for x in issue["labels"]} and not discovery)):
         raise ValueError("Expected a research-task issue with a Task ID line.")
     return {"task": match[1], "place": place[1].strip() if place else "", "issue": issue["number"],
             "title": issue["title"], "url": issue["html_url"]}
+
+
+def tasks(state):
+    found = {}
+    for issue in gh(f"{BASE}/issues?state={state}&per_page=100", pages=True):
+        try:
+            info = issue_data(issue)
+        except ValueError:
+            continue
+        prior = found.get(info["task"])
+        if not prior or prior["issue"] > info["issue"]:
+            found[info["task"]] = info | {"issue_state": issue["state"]}
+    return found
+
+
+def open_discovery(place, focus, source=None):
+    for field in (place, focus):
+        if not field.strip() or len(field) > 150 or any(not ch.isprintable() for ch in field):
+            raise ValueError("Provide the area and a specific source, collection or question on one line each.")
+    task = discovery_id(place, focus)
+    existing = tasks("all").get(task)
+    if existing:
+        return existing
+    body = f"{DISCOVERY}\nTask ID: {task}\nPlace: {place}\nFocus: {focus}\n\nRecord the people identified, precise source locators and next leads."
+    if source:
+        if not source.startswith("https://") or not source.isprintable() or len(source) > 2000:
+            raise ValueError("Supply a public HTTPS source URL.")
+        body += f"\n\nStarting source: {source}"
+    created = gh(f"{BASE}/issues", body={"title": f"{place} · {focus}"[:240], "body": body})
+    # Concurrent requests converge on the earliest issue, including a completed one.
+    for delay in (0, 1, 2, 4, 8):
+        if delay:
+            time.sleep(delay)
+        canonical = tasks("all").get(task)
+        if canonical:
+            return canonical
+    raise ValueError(f"Issue {created['html_url']} was created. Check its status before claiming.")
 
 
 def current(issue):
@@ -137,6 +190,10 @@ def main():
     start.add_argument("--place", default="")
     subs.add_parser("resume")
     subs.add_parser("list")
+    discover = subs.add_parser("discover", help="Find or open a bounded question in any UK area")
+    discover.add_argument("place")
+    discover.add_argument("focus", help="Specific collection, source or lead to investigate")
+    discover.add_argument("--source", help="Public URL for the starting evidence")
     for name in ["status", "claim", "checkpoint", "release", "submit"]:
         sub = subs.add_parser(name)
         sub.add_argument("issue", type=int)
@@ -156,8 +213,10 @@ def main():
         save(run_path(run_id), run)
         return run
     if args.action == "list":
-        issues = gh(f"{BASE}/issues?labels=research-task&state=open&per_page=100", pages=True)
-        return [issue_data(i) | current(i["number"]) for i in issues if not i.get("pull_request")]
+        return [info | current(info["issue"]) for info in tasks("all").values() if info["issue_state"] == "open"]
+    if args.action == "discover":
+        info = open_discovery(args.place.strip(), args.focus.strip(), args.source)
+        return info | current(info["issue"])
     if args.action != "status":
         if not args.run:
             raise ValueError("Supply --run ID before the command. Use start to create one.")
@@ -177,6 +236,10 @@ def main():
     event = {"action": args.action, "run": args.run}
     owns = state.get("run") == args.run and state.get("user") == gh("user")["id"]
     if args.action == "claim":
+        if (issue.get("body") or "").startswith(DISCOVERY):
+            canonical = tasks("all").get(info["task"])
+            if not canonical or canonical["issue"] != args.issue:
+                raise ValueError("This discovery has an earlier issue. Use discover to find its canonical number.")
         if run["current"] not in [None, args.issue]:
             other = current(run["current"])
             if other["status"] == "claimed" and other.get("run") == args.run:
@@ -187,7 +250,7 @@ def main():
             raise ValueError("The run deadline has passed.")
         if not run["deadline"] and run["completed"]:
             raise ValueError("The single-task run is complete.")
-        if run["place"] and run["place"].casefold() != info["place"].casefold():
+        if run["place"] and key(run["place"]) != key(info["place"]):
             raise ValueError(f"Task place is {info['place']}; run scope is {run['place']}.")
         if state["status"] == "claimed" and owns:
             run["current"] = args.issue

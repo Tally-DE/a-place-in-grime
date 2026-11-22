@@ -6,8 +6,8 @@ The working catalogue includes artist and place pages, alias search, claim-level
 
 ## Take part
 
-* **Give an agent one link.** Paste the [public agent brief](https://raw.githubusercontent.com/Tally-DE/a-place-in-grime/main/research/AGENT-LINK.md) into your agent and tell it a place and a time limit. It handles claiming, finding sources, checkpointing and preparing a pull request.
-* **Pick up a question.** The [research queue](https://github.com/Tally-DE/a-place-in-grime/issues?q=is%3Aissue+is%3Aopen+label%3Aresearch-task) holds one question per issue. The claim helper reads the ordered issue comments to resolve competing claims.
+* **Give an agent one link.** Paste the [public agent brief](https://raw.githubusercontent.com/Tally-DE/a-place-in-grime/main/research/AGENT-LINK.md) into your agent and tell it any UK area and a time limit. It can open a focused question in a place missing from the queue. It handles claiming, finding sources, checkpointing and preparing a pull request.
+* **Pick up a question.** The [research queue](https://github.com/Tally-DE/a-place-in-grime/issues?q=is%3Aissue+is%3Aopen) holds one question per issue. The claim helper reads the ordered issue comments to resolve competing claims.
 * **Suggest someone or check a fact.** Read [how to contribute](CONTRIBUTING.md). Web submissions are private. Public research packets enter [submissions](submissions/) and need editorial review before publication.
 
 ## Run the site
