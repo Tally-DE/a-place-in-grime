@@ -5,8 +5,9 @@
   "additionalProperties": false,
   "required": ["version", "task_id", "outcome", "artist", "sources", "checked", "open_questions"],
   "properties": {
-    "version": { "enum": [1, 2, 3] },
+    "version": { "enum": [1, 2, 3, 4] },
     "profile_media": { "$ref": "#/$defs/profile_media" },
+    "profile_research": { "$ref": "#/$defs/profile_research" },
     "task_id": { "$ref": "#/$defs/text" },
     "outcome": { "enum": ["evidence_found", "lead_only", "already_documented"] },
     "artist": {
@@ -25,7 +26,7 @@
   },
   "allOf": [
     {
-      "if": { "properties": { "version": { "enum": [2, 3] } } },
+      "if": { "properties": { "version": { "enum": [2, 3, 4] } } },
       "then": {
         "required": ["trail_note"],
         "properties": {
@@ -34,8 +35,13 @@
       }
     },
     {
-      "if": { "properties": { "version": { "const": 3 } } },
+      "if": { "properties": { "version": { "enum": [3, 4] } } },
       "then": { "required": ["profile_media"] }
+    },
+    {
+      "if": { "properties": { "version": { "const": 4 } } },
+      "then": { "required": ["profile_research"] },
+      "else": { "not": { "required": ["profile_research"] } }
     },
     {
       "if": { "properties": { "outcome": { "const": "evidence_found" } } },
@@ -73,6 +79,54 @@
       "items": {
         "type": "object", "additionalProperties": false, "required": ["url", "finding"],
         "properties": { "url": { "$ref": "#/$defs/web_url" }, "finding": { "$ref": "#/$defs/text" } }
+      }
+    },
+    "profile_research": {
+      "type": "object", "additionalProperties": false,
+      "required": ["checked_on", "coverage", "activity", "booking"],
+      "properties": {
+        "checked_on": { "type": "string", "format": "date" },
+        "coverage": {
+          "type": "object", "additionalProperties": false,
+          "required": ["identity", "place", "biography", "connections"],
+          "properties": {
+            "identity": { "$ref": "#/$defs/text" }, "place": { "$ref": "#/$defs/text" },
+            "biography": { "$ref": "#/$defs/text" }, "connections": { "$ref": "#/$defs/text" }
+          }
+        },
+        "activity": {
+          "type": "object", "additionalProperties": false, "required": ["search", "evidence"],
+          "properties": {
+            "search": { "$ref": "#/$defs/search_log" },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object", "additionalProperties": false, "required": ["kind", "value", "source", "locator"],
+                "properties": {
+                  "kind": { "enum": ["dated_activity", "career_start", "career_end", "active_period"] },
+                  "value": { "$ref": "#/$defs/text" }, "source": { "$ref": "#/$defs/web_url" },
+                  "locator": { "$ref": "#/$defs/text" }
+                }
+              }
+            }
+          }
+        },
+        "booking": {
+          "type": "object", "additionalProperties": false, "required": ["search", "route"],
+          "properties": {
+            "search": { "$ref": "#/$defs/search_log" },
+            "route": { "oneOf": [
+              { "type": "null" },
+              {
+                "type": "object", "additionalProperties": false, "required": ["url", "source", "locator"],
+                "properties": {
+                  "url": { "$ref": "#/$defs/web_url" }, "source": { "$ref": "#/$defs/web_url" },
+                  "locator": { "$ref": "#/$defs/text" }
+                }
+              }
+            ] }
+          }
+        }
       }
     },
     "profile_media": {

@@ -1,0 +1,179 @@
+{
+  "version": 4,
+  "task_id": "example-eyez-profile-v4",
+  "outcome": "evidence_found",
+  "artist": {
+    "name": "Eyez",
+    "catalogue_id": "eyez"
+  },
+  "sources": [
+    {
+      "title": "Dialect vs Eyez, Don’t Flop Grime Clash",
+      "publisher": "Don’t Flop Entertainment",
+      "original_url": "https://www.youtube.com/watch?v=a9q-us3JYsY",
+      "origin": "youtube:a9q-us3JYsY",
+      "access": "original_page",
+      "checked_on": "2026-11-22",
+      "media": "played",
+      "claims": [
+        {
+          "field": "documented_activity",
+          "value": "Eyez appeared in Don’t Flop’s filmed clash with Dialect.",
+          "locator": "Video title and the on-screen EYEZ credit at 01:20."
+        }
+      ],
+      "next_people": [
+        {
+          "as_printed": "Dialect",
+          "kind": "artist",
+          "connection": "Billed opposite Eyez in the original upload.",
+          "locator": "Original video title.",
+          "next_check": "Check prior research on Dialect before following another named appearance."
+        }
+      ]
+    },
+    {
+      "title": "All Eyez On RamsTV As Grime Star Joins Derby County",
+      "publisher": "Derby County",
+      "original_url": "https://www.dcfc.co.uk/news/2017/10/all-eyez-on-ramstv-as-grime-star-joins-derby-county",
+      "origin": "https://www.dcfc.co.uk/news/2017/10/all-eyez-on-ramstv-as-grime-star-joins-derby-county",
+      "access": "original_page",
+      "checked_on": "2026-11-23",
+      "media": "not_applicable",
+      "claims": [
+        {
+          "field": "role",
+          "value": "Derby County introduced Eyez as a grime MC and host.",
+          "locator": "Opening paragraph of the RamsTV announcement."
+        },
+        {
+          "field": "grew_up_in",
+          "value": "Eyez moved to Derby as a child and grew up there.",
+          "locator": "Biographical paragraph immediately after the video."
+        },
+        {
+          "field": "documented_activity",
+          "value": "Eyez performed Spitfire freestyles for JDZ Media.",
+          "locator": "Paragraph about his early music, after the childhood paragraph."
+        }
+      ],
+      "next_people": []
+    },
+    {
+      "title": "Square One by Eyez",
+      "publisher": "Zdot",
+      "original_url": "https://zdotproductions.bandcamp.com/album/square-one",
+      "origin": "https://zdotproductions.bandcamp.com/album/square-one",
+      "access": "original_page",
+      "checked_on": "2026-11-23",
+      "media": "not_applicable",
+      "claims": [
+        {
+          "field": "documented_activity",
+          "value": "Zdot’s release page dates Square One by Eyez to 24 October 2021.",
+          "locator": "Artist heading and release date under the track listing."
+        }
+      ],
+      "next_people": [
+        {
+          "as_printed": "Zdot",
+          "kind": "artist",
+          "connection": "Producer credited on the release by Eyez.",
+          "locator": "Title of track one, Innit, credits Zdot and Krunchie.",
+          "next_check": "Check Zdot’s producer catalogue for another named MC. Search the queue for the same credit."
+        }
+      ]
+    }
+  ],
+  "checked": [
+    "Compared the original video credit with the actual frame. Checked the SoundCloud release against producer Zdot’s credits."
+  ],
+  "open_questions": [
+    "Which original account, if any, explicitly dates the start of Eyez’s grime career?"
+  ],
+  "trail_note": "Followed the credit for Innit back to the producer’s release and checked the Derby connection against the club’s own profile. The named clash with Dialect remains a route to a separate artist question.",
+  "profile_media": {
+    "checked_on": "2026-11-22",
+    "image_search": [
+      {
+        "kind": "portrait",
+        "url": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+        "finding": "At exactly 01:20 the original video names the MC EYEZ across the lower third while he holds the microphone. Same instant extracted directly from the 1920 x 1080 original video stream at 25fps. YouTube original watch page, expanded description > Licence: Creative Commons Attribution licence (reuse allowed). Verified in the publisher’s own metadataRowRenderer."
+      }
+    ],
+    "link_search": [
+      {
+        "url": "https://soundcloud.com/eyez_uk/eyez-innit-prod-by-zdot-krunchie",
+        "finding": "Direct profile returned HTTP 200, with the artist’s name. On it, Innit is credited to Zdot and Krunchie, matching track one on producer Zdot’s Square One by Eyez; the account also carries a track crediting Derby collaborator Dubzy."
+      },
+      {
+        "url": "https://zdotproductions.bandcamp.com/album/square-one",
+        "finding": "Zdot’s Square One release credits Eyez, Zdot and Krunchie and corroborates the SoundCloud recording."
+      }
+    ],
+    "visual": {
+      "alt": "Eyez with a microphone at a Don't Flop grime clash",
+      "credit": "Don't Flop Entertainment, Dialect vs Eyez (2014)",
+      "source": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+      "licence": "CC BY 3.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "Cropped frame from 01:20 of the original recording.",
+      "kind": "portrait",
+      "title": "Dialect vs Eyez, Don’t Flop Grime Clash",
+      "identityUrl": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=80s",
+      "identityNote": "At exactly 01:20 the original video names the MC EYEZ across the lower third while he holds the microphone. Same instant extracted directly from the 1920 x 1080 original video stream at 25fps.",
+      "rightsNote": "Don’t Flop Entertainment’s original recording lists Creative Commons Attribution in the expanded description. The credited image is one frame from its camera footage.",
+      "assetLocator": "Original video, 01:20. Crop the 1920 × 1080 frame to 980 × 760 at x=530, y=90."
+    },
+    "accounts": [
+      {
+        "label": "SoundCloud",
+        "url": "https://soundcloud.com/eyez_uk",
+        "source": "https://soundcloud.com/eyez_uk/eyez-innit-prod-by-zdot-krunchie",
+        "locator": "Direct profile returned HTTP 200, with the artist’s name. On it, Innit is credited to Zdot and Krunchie, matching track one on producer Zdot’s Square One by Eyez; the account also carries a track crediting Derby collaborator Dubzy."
+      }
+    ]
+  },
+  "profile_research": {
+    "checked_on": "2026-11-23",
+    "coverage": {
+      "identity": "Derby County identifies Eyez as a grime MC and host. None of the inspected sources establishes a former stage name.",
+      "place": "The childhood paragraph in the RamsTV announcement establishes that Eyez grew up in Derby. Asylum Agency also describes Eyez as Derby-based.",
+      "biography": "The RamsTV announcement gives his early JDZ Media freestyles and the club’s appointment of him as a host. The Zdot release establishes a later recording credit.",
+      "connections": "Don’t Flop names Dialect as a clash opponent. The Square One track listing credits producers Zdot and Krunchie. These credits do not establish a shared crew."
+    },
+    "activity": {
+      "search": [
+        {
+          "url": "https://zdotproductions.bandcamp.com/album/square-one",
+          "finding": "The track listing gives a release date for Square One. It does not give career boundaries."
+        },
+        {
+          "url": "https://www.dcfc.co.uk/news/2017/10/all-eyez-on-ramstv-as-grime-star-joins-derby-county",
+          "finding": "Derby County describes the earlier freestyles. The article does not date the start of Eyez’s career."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "dated_activity",
+          "value": "Square One by Eyez was released on 24 October 2021.",
+          "source": "https://zdotproductions.bandcamp.com/album/square-one",
+          "locator": "Square One artist heading and release date directly below the track list."
+        }
+      ]
+    },
+    "booking": {
+      "search": [
+        {
+          "url": "https://www.asylumagency.com/eyez-booking",
+          "finding": "The agency identifies the Derby MC by his RamsTV presenting credit and offers a named booking form. The page gives no availability dates."
+        }
+      ],
+      "route": {
+        "url": "https://www.asylumagency.com/eyez-booking",
+        "source": "https://www.asylumagency.com/eyez-booking",
+        "locator": "Eyez profile, Book Eyez form immediately below the biography."
+      }
+    }
+  }
+}

@@ -218,7 +218,25 @@
             "finding": "Official site social links in footer"
           }
         ]
-      }
+      },
+      "activity": {
+        "first": {
+          "year": 2016,
+          "source": "https://www.detz.online/",
+          "locator": "About, paragraph on his solo projects, dates his Indian Summers EP to 2016; he used the name Detonator."
+        },
+        "last": {
+          "year": 2026,
+          "source": "https://www.detz.online/production-credits",
+          "locator": "Artist's Production Credits, 2026 heading, names Yatta Bandz – Day By Day and Loyal DTM – Amnesia (co-produced with AyP)."
+        },
+        "current": {
+          "source": "https://www.detz.online/",
+          "locator": "About, closing paragraph, describes his ongoing work releasing solo music, featuring and making beats. The artist's production credits also list two 2026 projects.",
+          "asOf": "2026-11-23"
+        }
+      },
+      "activityChecked": "2026-11-23"
     },
     {
       "id": "dubzy",
@@ -359,12 +377,32 @@
           "locator": "Artist’s Gift of the Gab page and track credits including Eyez and Directs."
         }
       ],
+      "photo": {
+        "path": "/assets/artists/dubzy.jpg",
+        "kind": "portrait",
+        "title": "Dubzy Snazz",
+        "alt": "Dubzy in profile, wearing a peaked cap",
+        "credit": "J2kcrepprot",
+        "source": "https://commons.wikimedia.org/wiki/File:Dubzy_Snazz.jpg",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "rightsNote": "J2kcrepprot uploaded the photograph as their own work and explicitly released it under CC BY-SA 4.0 on its Commons file page.",
+        "identityUrl": "https://en.wikipedia.org/wiki/Dubzy",
+        "identityNote": "The catalogue editor confirmed on 23 November 2026 that the person in this photograph is Dubzy. His Wikipedia entry illustrates its profile with the same file. The shoot and date remain unconfirmed.",
+        "assetLocator": "Original JPEG, 480 × 262 pixels, uploaded to Wikimedia Commons by J2kcrepprot on 5 December 2016.",
+        "changes": "Original photograph, unmodified."
+      },
       "mediaResearch": {
-        "checked_on": "2026-11-22",
+        "checked_on": "2026-11-23",
         "image_search": [
           {
+            "kind": "portrait",
             "url": "https://commons.wikimedia.org/wiki/File:Dubzy_Snazz.jpg",
-            "finding": "The Commons file is used by the Wikipedia entry for the grime artist, but this links back to the same file. I found no independent original source naming the sitter in that specific frame. A stage name in the filename is insufficient evidence on its own. Summary, Licensing, File history and Metadata. Self-declared own work, creation date 7 December 2012, uploaded 5 December 2016, caption 'Snazzy'. Its only independent camera details are generic JPEG/Exif fields. The contemporary English Wikipedia caption assigns a 2014 GRM Daily shoot, conflicting with the creation date. Revisit if the original photographer, shoot or an artist-issued caption for this frame can be identified.",
+            "finding": "23 November 2026. The catalogue editor confirmed the sitter is Dubzy. The uploader J2kcrepprot’s own-work declaration and CC BY-SA 4.0 grant remain on the Commons file page. The restored JPEG matches the original file checksum. Published without assigning a shoot or date."
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Dubzy_Snazz.jpg",
+            "finding": "22 November 2026. The Commons file is used by the Wikipedia entry for the grime artist, but this links back to the same file. I found no independent original source naming the sitter in that specific frame. A stage name in the filename is insufficient evidence on its own. Summary, Licensing, File history and Metadata. Self-declared own work, creation date 7 December 2012, uploaded 5 December 2016, caption 'Snazzy'. Its only independent camera details are generic JPEG/Exif fields. The contemporary English Wikipedia caption assigns a 2014 GRM Daily shoot, conflicting with the creation date. The image was held pending identification at that review.",
             "kind": "portrait"
           },
           {
@@ -421,7 +459,25 @@
             "finding": "Artist’s Gift of the Gab page and track credits including Eyez and Directs."
           }
         ]
-      }
+      },
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=zz_1HU64HTE",
+          "locator": "BarsOnDemandUK's original Dubzy: Freestyle (Part 1), published 16 January 2011. The uploader identifies the performer as Dubzy (Snazzman)."
+        },
+        "last": {
+          "year": 2024,
+          "source": "https://www.youtube.com/watch?v=b_iuUM4NPps",
+          "locator": "JL Freestyle on Dubzy's official channel, 15 May 2024. The title includes @DubzySnazz."
+        }
+      },
+      "booking": {
+        "url": "https://encoremusicians.com/Jesse-James",
+        "source": "https://encoremusicians.com/Jesse-James",
+        "locator": "Artist booking profile titled Hire Dubzy Snazz. The Watch section includes his Oceans music video and Snazz Diaries launch party. The artist answers client questions and the Check availability form accepts public booking enquiries."
+      },
+      "activityChecked": "2026-11-23"
     },
     {
       "id": "eyez",
@@ -656,7 +712,25 @@
             "finding": "Zdot’s Square One release credits Eyez, Zdot and Krunchie and corroborates the SoundCloud recording."
           }
         ]
-      }
+      },
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=_6rWTaGkwps",
+          "locator": "TooHardForTV - Eyez, a contemporary performance uploaded by OfficialTooHardForTV on 4 April 2011."
+        },
+        "last": {
+          "year": 2026,
+          "source": "https://www.youtube.com/watch?v=bVBcxbMeZ5c",
+          "locator": "Zdot's own release announcement, Eyez & Zdot - Cold Days, published 9 October 2026 with a link to the recording."
+        }
+      },
+      "booking": {
+        "url": "https://www.asylumagency.com/eyez-booking",
+        "source": "https://www.asylumagency.com/eyez-booking",
+        "locator": "Asylum Agency's Eyez Booking roster page identifies the Derby MC and provides a public Book Eyez form."
+      },
+      "activityChecked": "2026-11-23"
     },
     {
       "id": "jaykae",
@@ -819,7 +893,25 @@
             "finding": "Switched On, description under artist-owned Official Artist Channel, Follow/Subscribe links"
           }
         ]
-      }
+      },
+      "activity": {
+        "first": {
+          "year": 2009,
+          "source": "https://notion.online/jaykae/",
+          "locator": "Asked when he found a scene, Jaykae dates Birmingham's Grime Blog freestyles to 2009. In the preceding answer he recalls informally rapping on MSN in probably 2008. He explicitly qualifies that earlier year."
+        },
+        "start": {
+          "year": 2009,
+          "source": "https://prsfoundation.com/grantees/momentum-jaykae/",
+          "locator": "Opening of PRS Foundation's artist profile dates his professional beginnings to 2009. In Notion he says he chose MCing as a career and joined the local scene in 2009, after informally rapping on MSN in approximately 2008."
+        },
+        "last": {
+          "year": 2026,
+          "source": "https://www.qobuz.com/us-en/album/frank-sinatra-feat-jaykae-rheez/cg1abh1crvu8a",
+          "locator": "Rheez.'s label-supplied Frank Sinatra credits identify Jaykae as featured artist and Janum Khan as lyricist and composer. Released 12 March 2026."
+        }
+      },
+      "activityChecked": "2026-11-23"
     },
     {
       "id": "s-x",
@@ -965,7 +1057,20 @@
             "finding": "Follow S-X section in the artist upload links twitter.com/producerSX; current X profile title is S-X (@producerSX)."
           }
         ]
-      }
+      },
+      "activity": {
+        "first": {
+          "year": 2009,
+          "source": "https://www.theguardian.com/music/2020/sep/18/s-x-wolverhampton-wonderkid-lil-wayne-rick-ross-dangerous",
+          "locator": "Interview, paragraphs after the Dangerous video. S-X dates the radio airplay that brought MCs to his beats to the end of 2009."
+        },
+        "last": {
+          "year": 2025,
+          "source": "https://www.youtube.com/watch?v=YxVEcOZa_o8",
+          "locator": "HARDER TO FIND music video, artist's official S-X channel, 3 October 2025. The January 2026 catalogue listing for Always Wrong is a reissue of his 2019 recording and does not establish new activity."
+        }
+      },
+      "activityChecked": "2026-11-23"
     }
   ]
 }

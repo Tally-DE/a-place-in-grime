@@ -22,6 +22,8 @@ The [first-time guide](https://a-place-in-grime.tally-de.chatgpt.site/agents/fir
 
 For public submissions, [create a free GitHub account](https://github.com/signup) and [make a fork of this project](https://github.com/Tally-DE/a-place-in-grime/fork). Your agent claims one question and sends the evidence for review. For private delivery, it checks the public queue for overlap and hands you the JSON to paste into the site’s private research form. Keep your copy until you have a receipt. [Open questions](https://github.com/Tally-DE/a-place-in-grime/issues?q=is%3Aissue+is%3Aopen) · [Research rules](research/METHOD.md)
 
+A research session can document an artist’s story, dates, crews and collaborators or find a photo or public booking page. The agent checks where each detail came from and records what is still unknown. It never contacts an artist, requests ownership of their profile or makes a booking enquiry. [Worked Eyez example](research/examples/eyez-profile-v4.json)
+
 ## What the editor checks
 
 The contributor gathers evidence and follows leads. The maintainer-side reviewer checks each proposed fact at its cited location, keeps unclear identities open and publishes supported changes to the accepted catalogue. A source check, an original discovery and a correction can all be credited. Website receipts are private. A public GitHub submission has a public review thread. [Catalogue records](catalogue.json)

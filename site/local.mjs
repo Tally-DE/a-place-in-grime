@@ -13,7 +13,7 @@ const env = {
   REVIEW_KEY: process.env.REVIEW_KEY,
   BUCKET: {
     async get(key) {
-      const file = new URL(key.replace('intake/', 'intake-'), receipts);
+      const file = new URL(key.replace('/', '-'), receipts);
       try { const body = await readFile(file, 'utf8'); return {json: () => JSON.parse(body),etag:createHash('sha256').update(body).digest('hex')}; }
       catch (error) { if (error.code === 'ENOENT') return null; throw error; }
     },
@@ -23,7 +23,7 @@ const env = {
       return {objects:page.map(key=>({key})),truncated:keys.length>limit,cursor:page.at(-1)};
     },
     async put(key, value, options) {
-      const file = new URL(key.replace('intake/', 'intake-'), receipts);
+      const file = new URL(key.replace('/', '-'), receipts);
       const temp = new URL(randomUUID()+'.tmp', receipts);
       if(options?.onlyIf?.etagMatches) {
         const lock=new URL(file.href+'.lock');

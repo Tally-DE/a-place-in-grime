@@ -26,6 +26,8 @@ The shared record holds the research. The agent can change, its context can fill
 
 After a material finding, failed search, change of branch or before a session ends, append a dated note. Include the task ID, query or item checked, what was observed, its locator, uncertainty and the exact next action. For a large collection, save the last item and next unexamined item. For a later visit, save the event that should prompt it, such as a new scan, a contributor reply or access to a collection. A waiting case consumes no agent time.
 
+Save the current version 4 packet, including completed profile checks, URLs tried, source locators, unresolved fields and next lookup. A later session can reuse a confirmed check with its original date and source. Record whether the activity is a dated sighting or an explicitly stated career period, and whether a public booking page was actually found.
+
 Update the short summary, task states and revision alongside the note. A lead can be ready, claimed, waiting, in review or closed. A waiting item names its reopening condition. Completed and inconclusive checks remain searchable. Only reviewed findings enter public profiles. Contact details, permission records and private material stay with the organiser.
 
 Use the [agent handoff](AGENT-LINK.md) for the commands to claim, checkpoint, submit, release and resume. The issue stores public progress across contributors. A checkpoint from the active owner renews the grant for 48 hours. A later researcher can recover the notes after expiry. Keep sensitive material in the site’s private intake. A text-only chat can prepare a packet for the contributor to send through the site’s Agent research page.

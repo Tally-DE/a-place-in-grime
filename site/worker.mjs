@@ -15,7 +15,7 @@ function render(title,content,status=200,home=false) {
   const head=`<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · A Place In Grime</title><meta name="description" content="A community catalogue of UK grime artists, their aliases, and the places they are connected to."><link rel="stylesheet" href="/site.css?v=${assetRevision}"><script src="/site.js?v=${assetRevision}" defer></script></head>`;
   const mast=`<a class="skip" href="#content">Skip to content</a><header class="mast"><a href="/" aria-label="A Place In Grime homepage"><img src="/assets/cassette.png" alt="A Place In Grime"></a><nav class="nav" aria-label="Main">${link('/artists','Artists')}${link('/places','Places')}${link('/contribute','Contribute')}</nav></header>`;
   const foot=`<footer><span>A Place In Grime</span><nav aria-label="Project">${link('/about','About')}${link('/agents','Agent research')}${link('/contributors','Contributors')}${link('/support','Support')}${link(repo,'GitHub')}</nav></footer>`;
-  return new Response(head+'<body>'+mast+`<main id="content" class="${home?'home':'inside'}">`+content+'</main>'+foot+'</body></html>',{status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store','referrer-policy':'same-origin','x-content-type-options':'nosniff','content-security-policy':"default-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'"}});
+  return new Response(head+'<body>'+mast+`<main id="content" class="${home?'home':'inside'}">`+content+'</main>'+foot+'</body></html>',{status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store','referrer-policy':'no-referrer','x-content-type-options':'nosniff','content-security-policy':"default-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'"}});
 }
 function searchBox(query='') {
   return `<form action="/search" class="search" role="search"><i class="glass" aria-hidden="true"></i><input aria-label="Search artists, aliases or places" name="q" type="search" value="${esc(query)}" placeholder="Search artists, aliases or places" maxlength="160"><button>Search</button></form>`;
@@ -44,13 +44,57 @@ function search(url) {
   }
   return render('Search',heading('Search the catalogue')+searchBox(q)+result);
 }
-function placePage(p) {
+function activityLine(a) {
+  const t=a.activity;
+  if(!t)return '';
+  const dates=[];
+  if(t.start&&t.end)dates.push('Active '+t.start.year+'–'+t.end.year);
+  else if(t.start)dates.push('Started in '+t.start.year);
+  else if(t.end)dates.push('Active until '+t.end.year);
+  else if(t.first)dates.push('First documented in '+t.first.year);
+  if(t.last&&!t.end&&!t.current&&t.last.year!==t.first?.year)dates.push('Latest credit in '+t.last.year);
+  if(t.current&&!t.end)dates.push('Active as of '+new Intl.DateTimeFormat('en-GB',{month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(t.current.asOf)));
+  return dates.join(' · ');
+}
+function bookingLink(a,ownership) {
+  const contact=ownership.owner?ownership.booking:a.booking?.url;
+  if(!contact)return '';
+  return link(isEmail(contact)?'mailto:'+contact:contact,'Booking enquiries');
+}
+function artistFacts(a,ownership) {
+  const facts=[esc(activityLine(a)),ownership.owner?'Page claimed':'',bookingLink(a,ownership)].filter(Boolean);
+  return facts.length?`<p class="artist-facts">${facts.join(' · ')}</p>`:'';
+}
+async function placePage(p,env,url) {
+  const onlyContacts=url.searchParams.get('booking')==='1';
   const local=catalogue.artists.filter(a=>a.placeIds.includes(p.id));
-  return render(p.name,`<nav class="crumb" aria-label="Place index">${link('/places','Cities and towns')}</nav>`+heading(p.name)+'<h2>Artists</h2>'+(local.length?artistRows(local):'<p class="empty">Help document the first artist connected to this place.</p>')+link('/suggest?place='+encodeURIComponent(p.name),'Suggest an artist'));
+  const listed=await Promise.all(local.map(async a=>{
+    const {state}=await readClaimState(env,a.id);
+    const booking=bookingLink(a,state);
+    if(onlyContacts&&!booking)return '';
+    return `<div class="city-act">${linkArtist(a)}${booking?`<span>${booking}</span>`:''}</div>${activityLine(a)?`<small>${esc(activityLine(a))}</small>`:''}`;
+  }));
+  const filter=`<nav class="city-filter" aria-label="Artist list"><a href="${placeURL(p)}"${!onlyContacts?' aria-current="page"':''}>All artists</a><a href="${placeURL(p)}?booking=1"${onlyContacts?' aria-current="page"':''}>With booking contacts</a></nav>`;
+  const artistsHere=listed.filter(Boolean);
+  return render(p.name,`<nav class="crumb">${link('/places','Cities and towns')}</nav>`+heading(p.name)+filter+(artistsHere.length?rows(artistsHere):'<p class="empty">No booking contacts listed here yet.</p>')+link('/suggest?place='+encodeURIComponent(p.name),'Suggest an artist'));
+}
+function photoCredits() {
+  const homePhotos=[
+    {title:'Scratchy (background), Trim, Flow-dan',credit:'kevin',file:'trim-flowdan.jpg',id:'34882249',alt:'Two MCs at the front of the stage.'},
+    {title:'Jammer & Ears',credit:'kevin',file:'jammer-ears.jpg',id:'15112120',alt:'Two MCs performing beneath red ceiling beams.'}
+  ].map(p=>({...p,path:'/assets/'+p.file,source:'https://www.flickr.com/photos/believekevin/'+p.id+'/',licence:'CC BY-SA 2.0',licenceUrl:'https://creativecommons.org/licenses/by-sa/2.0/',changes:'Cropped on the homepage, with a gradient on desktop.'}));
+  const photos=[...homePhotos,...catalogue.artists.filter(a=>a.photo).map(a=>({...a.photo,title:a.name,artist:a}))];
+  const figures=photos.map(p=>`<figure><img loading="lazy" src="${esc(p.path)}" alt="${esc(p.alt)}"><figcaption><strong>${p.artist?linkArtist(p.artist):esc(p.title)}</strong><span>${link(p.source,p.credit)} · ${link(p.licenceUrl,p.licence)}</span><span>${esc(p.changes)}</span></figcaption></figure>`);
+  return render('Photo credits',heading('Photo credits')+`<div class="photo-index">${figures.join('')}</div>`);
 }
 function profileEvidence(a) {
   if (!a) return [];
   const all = [...a.claims];
+  for(const [kind,e] of Object.entries(a.activity||{})){
+    const labels={start:'Started making music',end:'Ended this period of activity',first:'Earliest activity we have documented',last:'Latest activity we have documented',current:'Active as of'};
+    all.push({id:a.id+'-activity-'+kind,text:labels[kind]+' · '+(e.year||e.asOf),source:'Evidence of activity',url:e.source,publisher:new URL(e.source).hostname,locator:e.locator,checked:a.activityChecked});
+  }
+  if(a.booking)all.push({id:a.id+'-booking-source',text:'Public booking enquiries for '+a.name,source:'Booking page',url:a.booking.source,publisher:new URL(a.booking.source).hostname,locator:a.booking.locator,checked:a.activityChecked});
   const checked = a.mediaResearch?.checked_on;
   function append(id, text, source, url, locator) {
     all.push({id:a.id+'-'+id,text,source,url,locator,checked,publisher:new URL(url).hostname.replace(/^www\./,'')});
@@ -67,7 +111,7 @@ function profileEvidence(a) {
   }
   return all;
 }
-function artistPage(a) {
+function artistPage(a,ownership) {
   const sources = new Map();
   for (const claim of profileEvidence(a)) {
     if (!sources.has(claim.url)) sources.set(claim.url, []);
@@ -102,9 +146,9 @@ function artistPage(a) {
   }).join('');
   const aliases = a.aliases.filter(name => !a.bio.some(b => b.text.includes(name)));
   const correction = link('/correct?artist='+encodeURIComponent(a.id),'Add information or suggest a correction');
-  return render(a.name,`<article class="artist"><nav class="crumb" aria-label="Breadcrumb">${link('/artists','Artists')} / ${a.placeIds.map(id=>linkPlace(places.get(id))).join(', ')}</nav><h1>${esc(a.name)}</h1><div class="artist-layout${p?' with-photo':''}"><div class="biography">${paragraphs}${aliases.length?`<p class="artist-meta">Also known as ${aliases.map(esc).join(', ')}.</p>`:''}${socials?`<nav class="artist-links" aria-label="Official artist links">${socials}</nav>`:''}</div>${portrait}</div><details class="sources"><summary>Sources (${sources.size})</summary>${evidence}</details><p class="profile-contribute">${correction}</p></article>`);
+  return render(a.name,`<article class="artist"><nav class="crumb" aria-label="Breadcrumb">${link('/artists','Artists')} / ${a.placeIds.map(id=>linkPlace(places.get(id))).join(', ')}</nav><h1>${esc(a.name)}</h1>${artistFacts(a,ownership)}<div class="artist-layout${p?' with-photo':''}"><div class="biography">${paragraphs}${aliases.length?`<p class="artist-meta">Also known as ${aliases.map(esc).join(', ')}.</p>`:''}${socials?`<nav class="artist-links" aria-label="Official artist links">${socials}</nav>`:''}</div>${portrait}</div><details class="sources"><summary>Sources (${sources.size})</summary>${evidence}</details><p class="profile-contribute">${correction} · ${link('/claim?artist='+encodeURIComponent(a.id),ownership.owner?'Artist or representative access':'Claim this artist page')}</p></article>`);
 }
-const formNames={suggest:'Suggest an artist',verify:'Verify a source',correct:'Suggest a correction',private:'Private request',packet:'Submit research'};
+const formNames={suggest:'Suggest an artist',verify:'Verify a source',correct:'Suggest a correction',private:'Private request',packet:'Submit research',claim:'Claim your artist page'};
 function formPage(type,url,message='',values={},status=200) {
   const a=artists.get(url.searchParams.get('artist')||values.artist);
   const claim=profileEvidence(a).find(c=>c.id===(url.searchParams.get('claim')||values.claim));
@@ -113,20 +157,29 @@ function formPage(type,url,message='',values={},status=200) {
   const field=(label,name,required=false,multi=false,initial='')=>`<label>${esc(label)}${multi?`<textarea name="${name}" maxlength="${type==='packet'?45000:4000}" ${required?'required':''}>${esc(values[name]??initial)}</textarea>`:`<input name="${name}" maxlength="240" value="${esc(values[name]??initial)}" ${required?'required':''}>`}</label>`;
   const token=values.token||crypto.randomUUID();
   let inputs='';
+  if(type==='claim'){
+    if(!a)return render('Choose your artist page',heading('Choose your artist page')+rows(catalogue.artists.map(person=>link('/claim?artist='+encodeURIComponent(person.id),person.name))));
+    inputs=field('Name you go by and your role','name',true)+field('Email for the editor (private)','reply',true)
+      +field('Artist or agency page you control','source',true)+field('Booking email or booking page to publish (optional)','booking')
+      +bookingConsent(values.consent==='yes');
+  }
   if(type==='suggest')inputs=field('Artist name or alias','name',true,false,url.searchParams.get('name')||'')+field('City or town (optional)','place',false,false,url.searchParams.get('place')||'')+field('What do you remember? (optional)','note',false,true);
   if(type==='verify')inputs='<label>What did the source show?<select required name="verdict"><option value="">Choose a finding</option>'+['Supports the statement','Partly supports it','Contradicts it','Source unavailable'].map(v=>`<option ${values.verdict===v?'selected':''}>${v}</option>`).join('')+'</select></label>'+field('Where did you check?','note',true,true);
   if(type==='correct')inputs=field('What should change, and how do you know?','note',true,true);
   if(type==='private')inputs=field('What would you like the editor to review?','note',true,true);
   if(type==='packet')inputs=field('Completed evidence packet (JSON)','note',true,true);
   if(['suggest','correct','verify'].includes(type))inputs+=field('Source or collection reference (optional)','source');
-  if(type!=='private')inputs+=field('Public credit name (optional)','credit');
+  if(!['private','claim'].includes(type))inputs+=field('Public credit name (optional)','credit');
   const version=values.version|| (claim?JSON.stringify([claim.id,claim.text,claim.url,claim.locator,claim.checked]):'');
   const context=claim?`<article class="context"><strong>${esc(a.name)}</strong><p>${esc(claim.text)}</p>${link(claim.url,claim.publisher+' · '+claim.source)}<p>${esc(claim.locator)}</p></article>`:generalCorrection?`<p>${linkArtist(a)}</p>`:'';
-  const descriptions={suggest:'A stage name is enough. Add a place or a source if you remember one.',private:'Use this for sensitive corrections, removal requests or information you want the editor to handle privately.',packet:'Paste the research packet your agent gave you. It goes straight to the editor.'};
-  return render(formNames[type],heading(formNames[type],descriptions[type]||'')+context+(message?`<p role="alert" class="notice">${esc(message)}</p>`:'')+`<form class="editor" method="post" action="/${type}"><input type="hidden" name="token" value="${esc(token)}"><input type="hidden" name="artist" value="${esc(a?.id)}"><input type="hidden" name="claim" value="${esc(claim?.id)}"><input type="hidden" name="version" value="${esc(version)}">${inputs}<p class="hint">Your submission goes privately to the editor. Save the receipt link after sending.</p><button class="primary">Send for review</button></form>`,status);
+  const descriptions={claim:'If you’re the artist or handle their bookings, you can claim this page. We’ll give you a code to show from an established artist or agency account so the editor can check it’s you.',suggest:'A stage name is enough. Add a place or a source if you remember one.',private:'Use this for sensitive corrections, removal requests or information you want the editor to handle privately.',packet:'Paste the research packet your agent gave you. It goes straight to the editor.'};
+  const title=type==='claim'?'Claim '+a.name+'’s page':formNames[type];
+  const accessHelp=type==='claim'?'<details class="sources"><summary>Already claimed this page?</summary><p>Open your private receipt to change your booking details. If you’ve lost the link, send a fresh claim so the editor can restore access.</p></details>':'';
+  return render(title,heading(title,descriptions[type]||'')+context+(message?`<p role="alert" class="notice">${esc(message)}</p>`:'')+`<form class="editor" method="post" action="/${type}"><input type="hidden" name="token" value="${esc(token)}"><input type="hidden" name="artist" value="${esc(a?.id)}"><input type="hidden" name="claim" value="${esc(claim?.id)}"><input type="hidden" name="version" value="${esc(version)}">${inputs}<p class="hint">Your submission goes privately to the editor. Save the receipt link after sending.</p><button class="primary">Send for review</button></form>`+accessHelp,status);
 }
 const routeGroups = [
   ['/suggest','Suggest an artist','Start with a stage name, however small the paper trail.'],
+  ['/claim','Claim your artist page','Artists and their representatives can add or change a public booking contact.'],
   ['/artists','Check a source or correct a fact','Choose a statement on an artist page and tell us what you found.'],
   ['/agents','Research with an agent','Give a research assistant one link and as much time as you choose.'],
   ['/private','Contact the editor privately','Send sensitive corrections or ask for material to be removed.'],
@@ -139,6 +192,7 @@ const researchFocus = {
   discover: ['Find artists missing from the catalogue', 'Look for people who have no profile yet. Check aliases before proposing a new artist.'],
   profile: ['Build up an artist’s profile', 'Look for first-hand accounts of how the artist started and who they worked with.'],
   media: ['Find a picture and the artist’s own links', 'Start with the artist’s documented credits and existing media checks. Trace an identified and reusable image to its rights holder, and follow the artist’s own links to their current profiles.'],
+  activity: ['Check activity dates and booking links', 'Find dated performances or credits. Look for the artist’s own account of when they started or stopped, and a public booking page tied to the artist or their representative.'],
   credits: ['Follow the names on a set, flyer or tape', 'Follow a named credit to another person on the same item, then to a second source. Explain what connects them.'],
   archive: ['Track down a lost page or recording', 'Look for an original URL, upload ID or collection reference. Try dated Wayback captures. Say what you could actually read or play.'],
   check: ['Check a fact on an artist’s page', 'Inspect the source for a specific claim. Give the exact passage or timestamp and say whether it supports the claim.'],
@@ -200,8 +254,9 @@ function researchPrompt(url,raw) {
     s.duration==='One question' ? 'Take one question. Stop when you have checked it and saved what you found.' : 'Work for up to '+time+'. Record your start time and deadline. Keep taking questions within this brief until time runs out or there is no useful work left. If interrupted, save where you got to and resume against the same deadline.',
     method+' Read the project’s source and handoff rules here:\n'+agentLink,
     'Check the catalogue and public work queue for overlap first. Save each source, where to look in it, what it proves and the next person worth following. Leave uncertain details open.',
-    'Include profile_media in the version 3 packet. Look for a reusable portrait, then licensed artwork from the artist if needed. Identify the person or artwork from a caption, credit or timestamp. Give the original source, creator, licence and changes. Check direct official profiles against artist or label links. Record where you looked and what you could verify, even if no image or account is usable.',
-    s.delivery==='private' ? 'Keep my research private. Read the public queue, skip work someone already has, and keep checkpoints locally. Do not create issues, comments or pull requests. Give me the finished evidence packet as version 3 JSON and a short summary. I will submit it myself at '+url.origin+'/packet.'
+    'Include profile_media in the version 4 packet. Look for a reusable portrait, then licensed artwork from the artist if needed. Identify the person or artwork from a caption, credit or timestamp. Give the original source, creator, licence and changes. Check direct official profiles against artist or label links. Record where you looked and what you could verify, even if no image or account is usable.',
+    'Complete profile_research too. Check stage names and roles, city or town and the nature of that connection, biography, crews and the next named lead. Find dated evidence of activity. Distinguish first or last surviving credits from an actual career start, end or current status. Look for the official public booking page, verify who it represents, and record the search even when nothing turns up. Never claim a page, contact the artist, include private details or assume they are available for bookings.',
+    s.delivery==='private' ? 'Keep my research private. Read the public queue, skip work someone already has, and keep checkpoints locally. Do not create issues, comments or pull requests. Give me the finished evidence packet as version 4 JSON and a short summary. I will submit it myself at '+url.origin+'/packet.'
       : 'Send the findings through GitHub for editorial review. Follow the guide to claim a question, or open a focused one within my chosen area if needed. Save checkpoints, submit the evidence on a pull request, and give me its URL and confirmed receipt. If GitHub access is missing, give me the finished packet to submit privately and tell me what still needs sending.'
   ].join('\n\n');
   if (raw) return new Response(message+'\n',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'no-store'}});
@@ -237,7 +292,7 @@ function aboutPage() {
     <p>I started A Place In Grime because I wanted one place to look up the people who made grime across the UK. That includes the MC you only ever heard in your own town and the producer whose tag you remember better than their name. I don’t want those artists to be forgotten.</p>
     <p>The idea is to build a record that lasts. Years from now, someone hearing an old set for the first time should be able to find out who they’re listening to, what city or town they came through and who else they made music with.</p>
     <p>If someone from your scene comes to mind, ${link('/suggest','send us their name')}. Even if you’re unsure of the spelling, tell us what you remember. We can follow it up and keep the sources alongside what we find.</p>
-    <nav class="research-nav" aria-label="About the project">${link('/agents','Research with an agent')}${link(repo+'/blob/main/research/METHOD.md','How we check sources')}${link('/photos.txt','Photo credits')}${link('/private','Contact the editor privately')}</nav>
+    <nav class="research-nav" aria-label="About the project">${link('/agents','Research with an agent')}${link(repo+'/blob/main/research/METHOD.md','How we check sources')}${link('/photos','Photo credits')}${link('/private','Contact the editor privately')}</nav>
   </div>`);
 }
 function about(env,path) {
@@ -253,6 +308,100 @@ function about(env,path) {
   return aboutPage();
 }
 const receiptID=/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+const isEmail = s => /^[^\s@<>?:/#,&%]+@[^\s@<>?:/#,&%]+\.[^\s@<>?:/#,&%]+$/.test(s);
+function isWeb(s) {
+  try {
+    const u=new URL(s);
+    return u.protocol==='https:' && !u.username && !u.password && !/\s/.test(s);
+  } catch { return false; }
+}
+function bookingError(contact,consent) {
+  if (contact && (contact.length>240||(!isWeb(contact)&&!isEmail(contact)))) return 'Use a booking email or an HTTPS booking page.';
+  if (contact && consent!=='yes') return 'Tick the box if you want this booking contact shown publicly.';
+  return '';
+}
+function bookingConsent(checked) {
+  return `<label class="opt-in"><input type="checkbox" name="consent" value="yes" ${checked?'checked':''}> I want this booking contact shown on my artist page and in the city directory.</label>`;
+}
+async function readClaimState(env,artist) {
+  const object=await env.BUCKET.get('claims/'+artist+'.json');
+  return {revision:object?.etag||'new',state:object?await object.json():{owner:null,booking:'',decisions:{}}};
+}
+async function saveClaimState(env,artist,state,revision) {
+  const onlyIf=revision==='new'?new Headers({'If-None-Match':'*'}):{etagMatches:revision};
+  return env.BUCKET.put('claims/'+artist+'.json',JSON.stringify(state),{onlyIf,httpMetadata:{contentType:'application/json'}});
+}
+async function proofCode(id) {
+  const bytes=new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode('artist-claim:'+id)));
+  return 'APIG-'+Array.from(bytes.slice(0,8),b=>b.toString(16).padStart(2,'0')).join('');
+}
+async function reviewClaim(request,env,id,record,headers) {
+  const artist=record.payload.artist;
+  const {state,revision}=await readClaimState(env,artist);
+  const prior=state.decisions[id]||{};
+  if(request.method==='GET')return Response.json({...record,...prior,revision,proofCode:await proofCode(id),hasApprovedClaim:Boolean(state.owner)},{headers});
+  if(request.method!=='POST')return new Response('Method not allowed',{status:405});
+  const decision=await request.json().catch(()=>null);
+  if(!['Accepted','Needs more evidence','Closed'].includes(decision?.status))return new Response('Invalid decision',{status:400});
+  if(decision.revision!==revision)return new Response('Read the latest claim before updating it.',{status:409});
+  if(decision.status==='Accepted'){
+    if(state.owner && state.owner!==id)return new Response('This artist already has an approved claim. Resolve the existing claim before transferring access.',{status:409});
+    if(typeof decision.proofNote!=='string'||!decision.proofNote.trim()||decision.proofNote.length>2000)return new Response('Record how control of the established artist or agency account was verified.',{status:400});
+    if(state.owner!==id)state.booking=record.payload.consent?record.payload.booking:'';
+    state.owner=id;
+  } else if(state.owner===id) {
+    state.owner=null;
+    state.booking='';
+  }
+  const result={status:decision.status,reviewed:new Date().toISOString()};
+  if(decision.status==='Accepted')result.proofNote=decision.proofNote.trim();
+  state.decisions[id]=result;
+  const saved=await saveClaimState(env,artist,state,revision);
+  return saved?Response.json({status:result.status},{headers}):new Response('Claim changed. Read it again.',{status:409});
+}
+async function claimReceipt(env,id,record,message='',status=200) {
+  const a=artists.get(record.payload.artist);
+  const {state,revision}=await readClaimState(env,a.id);
+  const outcome=state.decisions[id]?.status||record.status;
+  let body=`<p>${linkArtist(a)} · ${esc(outcome)}</p>`;
+  if(message)body+=`<p class="notice" role="status">${esc(message)}</p>`;
+  if(state.owner===id) {
+    body+=`<form class="editor" method="post" action="/receipt/${id}/booking"><input type="hidden" name="revision" value="${esc(revision)}"><label>Public booking email or booking page<input name="booking" maxlength="240" value="${esc(state.booking)}"></label>${bookingConsent(false)}<p>Leave the field empty to remove your booking contact.</p><button class="primary">Save booking details</button></form>`;
+  } else if(outcome!=='Closed') {
+    body+=`<p>Put <code>${await proofCode(id)}</code> in a post or bio on the artist or agency account you gave us. Leave it there until the editor has checked it. If you can’t use a public post, the editor can arrange a check through an established booking channel.</p>`;
+  }
+  return render('Your page claim',heading('Your page claim')+'<div class="prose">'+body+'<p>Keep this link private. Once approved, it lets you change or remove booking details.</p></div>',status);
+}
+async function manageBooking(request,env,url,id) {
+  const form=await readForm(request,url);
+  if(form instanceof Response)return form;
+  const obj=await env.BUCKET.get('intake/'+id+'.json');
+  const record=obj&&await obj.json();
+  if(record?.payload.type!=='claim')return new Response('Page claim not found.',{status:404});
+  const artist=record.payload.artist;
+  const {state,revision}=await readClaimState(env,artist);
+  if(state.owner!==id)return new Response('An approved claim is required.',{status:403});
+  const booking=(form.get('booking')||'').trim();
+  const error=bookingError(booking,form.get('consent'));
+  if(error)return claimReceipt(env,id,record,error,400);
+  if(revision!==form.get('revision')||!await saveClaimState(env,artist,{...state,booking},revision))return claimReceipt(env,id,record,'The details changed. Check the current value before saving.',409);
+  return Response.redirect(url.origin+'/receipt/'+id,303);
+}
+function validProfileResearch(report) {
+  const fields=(obj,keys)=>obj && typeof obj==='object' && !Array.isArray(obj) && Object.keys(obj).length===keys.length && keys.every(k=>Object.hasOwn(obj,k));
+  const text=v=>typeof v==='string' && Boolean(v.trim());
+  const url=v=>text(v) && /^https?:\/\//i.test(v) && URL.canParse(v);
+  const search=log=>Array.isArray(log) && log.length>0 && log.every(row=>fields(row,['url','finding']) && url(row.url) && text(row.finding));
+  if(!fields(report,['checked_on','coverage','activity','booking']))return false;
+  const {checked_on:date,coverage,activity,booking}=report;
+  if(typeof date!=='string'||!/^\d{4}-\d\d-\d\d$/.test(date)||!Number.isFinite(Date.parse(date))||new Date(date).toISOString().slice(0,10)!==date)return false;
+  if(!fields(coverage,['identity','place','biography','connections'])||!Object.values(coverage).every(text))return false;
+  if(!fields(activity,['search','evidence'])||!search(activity.search)||!Array.isArray(activity.evidence))return false;
+  if(!activity.evidence.every(row=>fields(row,['kind','value','source','locator']) && ['dated_activity','career_start','career_end','active_period'].includes(row.kind) && text(row.value) && url(row.source) && text(row.locator)))return false;
+  if(!fields(booking,['search','route'])||!search(booking.search))return false;
+  const route=booking.route;
+  return route===null || (fields(route,['url','source','locator']) && url(route.url) && url(route.source) && text(route.locator));
+}
 function profileMediaError(media) {
   const filled = v => typeof v==='string' && v.trim().length>0;
   const web = v => filled(v) && URL.canParse(v) && ['http:','https:'].includes(new URL(v).protocol);
@@ -276,20 +425,30 @@ function profileMediaError(media) {
   }
   return '';
 }
-async function intake(request,env,type,url) {
+async function readForm(request,url) {
   if(request.headers.get('origin') && request.headers.get('origin')!==url.origin) return render('Request denied',heading('Open the form on this site.'),403);
   if(!request.headers.get('content-type')?.startsWith('application/x-www-form-urlencoded'))return new Response('Expected a web form.',{status:415});
   const reader=request.body?.getReader();let text='',size=0;
   if(!reader)return new Response('Missing form',{status:400});
   const decoder=new TextDecoder();
   for(;;){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>200000){await reader.cancel();return new Response('Form too large',{status:413});}text+=decoder.decode(value,{stream:true});}
-  const params=new URLSearchParams(text+decoder.decode()),v={};
-  for(const key of ['token','version','artist','claim','name','place','source','note','credit','verdict'])v[key]=(params.get(key)||'').trim();
+  return new URLSearchParams(text+decoder.decode());
+}
+async function intake(request,env,type,url) {
+  const params=await readForm(request,url);
+  if (params instanceof Response) return params;
+  const v={};
+  for(const key of ['token','version','artist','claim','name','place','source','note','credit','verdict','reply','booking','consent'])v[key]=(params.get(key)||'').trim();
   const invalid=message=>formPage(type,url,message,v,400);
   if(!receiptID.test(v.token))return render('Form expired',heading('Reopen the form and try again.'),400);
   if(v.note.length>(type==='packet'?45000:4000)||[v.artist,v.claim,v.name,v.place,v.source,v.credit,v.verdict].some(s=>s.length>240)||v.version.length>4000)return invalid('One of the entries is too long.');
+  if(type==='claim'){
+    if(!artists.has(v.artist)||!v.name||v.reply.length>240||!isEmail(v.reply)||!isWeb(v.source))return invalid('Choose an artist and add your name, private reply email and the public HTTPS page you control.');
+    const error=bookingError(v.booking,v.consent);
+    if(error)return invalid(error);
+  }
   if(type==='suggest'&&!v.name)return invalid('Enter the stage name or alias you remember.');
-  if(type!=='suggest'&&!v.note)return invalid('Add the details you want the editor to check.');
+  if(!['suggest','claim'].includes(type)&&!v.note)return invalid('Add the details you want the editor to check.');
   if(type==='verify'&&!['Supports the statement','Partly supports it','Contradicts it','Source unavailable'].includes(v.verdict))return invalid('Choose what the source showed.');
   if(type==='verify'||(type==='correct'&&(v.claim||v.version||!artists.has(v.artist)))){
     const fact=profileEvidence(artists.get(v.artist)).find(c=>c.id===v.claim);
@@ -299,16 +458,16 @@ async function intake(request,env,type,url) {
   if(type==='packet'){
     let packet;
     try { packet=JSON.parse(v.note); } catch { return invalid('Paste the JSON evidence packet your agent prepared.'); }
-    if (![2,3].includes(packet?.version)||!packet.task_id||!packet.artist?.name||!Array.isArray(packet.sources)||!packet.outcome) {
-      return invalid('Include the packet version, task ID, artist, outcome and sources.');
+    if (packet?.version!==4||!packet.task_id||!packet.artist?.name||!Array.isArray(packet.sources)||!packet.outcome) {
+      return invalid('Send a version 4 research packet with the task ID, artist, outcome and sources. Your agent can update an older draft using the current research guide.');
     }
-    if (packet.version===3) {
-      const message=profileMediaError(packet.profile_media);
-      if (message) return invalid(message);
-    }
+    const message=profileMediaError(packet.profile_media);
+    if (message) return invalid(message);
+    if(!validProfileResearch(packet.profile_research))return invalid('Include the profile coverage, activity evidence and public booking search. Leave the route empty if none is verified.');
   }
   const key='intake/'+v.token+'.json';
   const payload={type,artist:v.artist,claim:v.claim,version:v.version,name:v.name,place:v.place,note:v.note,source:v.source,credit:v.credit,verdict:v.verdict};
+  if(type==='claim')Object.assign(payload,{reply:v.reply,booking:v.booking,consent:v.consent==='yes'});
   const item={status:'Awaiting editorial review',created:new Date().toISOString(),payload};
   try{
     const saved=await env.BUCKET.put(key,JSON.stringify(item),{onlyIf:new Headers({'If-None-Match':'*'}),httpMetadata:{contentType:'application/json'}});
@@ -331,6 +490,7 @@ async function review(request,env,url) {
   const key='intake/'+id+'.json', item=await env.BUCKET.get(key);
   if(!item)return new Response('Unknown receipt',{status:404});
   const record=await item.json();
+  if(record.payload.type==='claim')return reviewClaim(request,env,id,record,headers);
   if(request.method==='GET')return Response.json({...record,revision:item.etag},{headers});
   if(request.method!=='POST')return new Response('Method not allowed',{status:405});
   const decision=await request.json().catch(()=>null);
@@ -343,8 +503,11 @@ const entry = {
   async fetch(request,env) {
     const url=new URL(request.url), path=url.pathname.replace(/\/+$/,'')||'/';
     if(path==='/editor/inbox'||path.startsWith('/editor/inbox/'))return review(request,env,url);
+    const manage=path.match(/^\/receipt\/([^/]+)\/booking$/);
+    if(manage&&receiptID.test(manage[1])&&request.method==='POST')return manageBooking(request,env,url,manage[1]);
     if(request.method==='POST' && Object.hasOwn(formNames,path.slice(1)))return intake(request,env,path.slice(1),url);
     if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405});
+    if(path==='/photos'||path==='/photos.txt')return photoCredits();
     if(Object.hasOwn(assets,path)){
       const ext=path.split('.').pop(),type={css:'text/css',js:'text/javascript',jpg:'image/jpeg',jpeg:'image/jpeg',webp:'image/webp',png:'image/png',txt:'text/plain'}[ext];
       return new Response(request.method==='HEAD'?null:Uint8Array.from(atob(assets[path]),ch=>ch.charCodeAt(0)),{headers:{'content-type':type,'cache-control':'public,max-age=3600','x-content-type-options':'nosniff'}});
@@ -352,11 +515,11 @@ const entry = {
     if(path==='/')return home();
     if(path==='/artists')return directory();
     if(path==='/search')return search(url);
-    if(path==='/places')return render('Places',heading('Cities and towns','Browse artists by their documented connections to a UK city or town.')+rows(catalogue.places.map(linkPlace)) );
-    if(path.startsWith('/places/')&&places.has(path.slice(8)))return placePage(places.get(path.slice(8)));
+    if(path==='/places')return render('Places',heading('Cities and towns','Pick a city or town to find artists and their booking contacts.')+rows(catalogue.places.map(linkPlace)) );
+    if(path.startsWith('/places/')&&places.has(path.slice(8)))return placePage(places.get(path.slice(8)),env,url);
     if(path.startsWith('/artists/')){
       const artist=artists.get(path.slice('/artists/'.length));
-      if(artist)return artistPage(artist);
+      if(artist)return artistPage(artist,(await readClaimState(env,artist.id)).state);
     }
     if(path==='/contribute')return contribute();
     if(path==='/agents')return researchForm(researchChoices(url.searchParams));
@@ -367,6 +530,7 @@ const entry = {
     if(Object.hasOwn(formNames,path.slice(1)))return formPage(path.slice(1),url);
     if(path.startsWith('/receipt/')&&receiptID.test(path.slice(9))){
       let record;try{const object=await env.BUCKET.get('intake/'+path.slice(9)+'.json');record=object&&await object.json();}catch{return render('Unavailable',heading('The inbox is temporarily unavailable.'),503);}
+      if(record?.payload.type==='claim')return claimReceipt(env,path.slice(9),record);
       if(record)return render('Private receipt',heading('Submission received',record.status)+`<dl class="details"><dt>Submission</dt><dd>${esc(formNames[record.payload.type])}</dd><dt>Received</dt><dd>${esc(record.created.slice(0,10))}</dd></dl><p>Bookmark this private link to revisit the decision.</p>${link('/contribute','Back to contributions')}`);
     }
     return render('Page not found',heading('Page not found')+link('/','Back to the catalogue'),404);
