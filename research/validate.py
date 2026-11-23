@@ -1,19 +1,51 @@
 """Check incoming packets separately from the published catalogue."""
 import json
+import argparse
+import hashlib
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit
-from jsonschema import Draft202012Validator, FormatChecker
+from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 
 root = Path(__file__).resolve().parents[1]
 def read(path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 def web(value):
     url = urlsplit(value)
     return url.scheme in {"http", "https"} and url.hostname and not (url.username or url.password)
 
 validator = Draft202012Validator(read(root / "research/artist-packet.schema.json"), format_checker=FormatChecker())
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--packets", metavar="PATH", nargs="+", type=Path,
+                    help="Check private v4 packet files, or a folder containing them, and print a local receipt.")
+args = parser.parse_args()
+if args.packets:
+    files = []
+    for path in args.packets:
+        matches = sorted(path.glob("*.json")) if path.is_dir() else [path]
+        if not matches:
+            parser.exit(1, f"No JSON packets found in {path}\n")
+        files.extend(matches)
+    seen = set()
+    for path in dict.fromkeys(files):
+        try:
+            raw = path.read_bytes()
+            packet = json.loads(raw.decode("utf-8-sig"))
+            validator.validate(packet)
+            if packet["version"] != 4:
+                raise ValueError("new submissions require version 4")
+            if packet["task_id"] in seen:
+                raise ValueError(f"duplicate task ID: {packet['task_id']}")
+            seen.add(packet["task_id"])
+        except ValidationError as error:
+            parser.exit(1, f"{path} at {error.json_path}: {error.message}\n")
+        except (OSError, ValueError) as error:
+            parser.exit(1, f"{path}: {error}\n")
+        print(f"{packet['task_id']}  {hashlib.sha256(raw).hexdigest()}  {path.name}")
+    print(f"Validated {len(seen)} private packet(s). Keep this receipt with your files.")
+    raise SystemExit(0)
+
 media_validator = validator.evolve(schema=validator.schema["$defs"]["profile_media"])
 for folder in ["submissions", "research/examples"]:
     for path in (root / folder).glob("*.json"):
@@ -33,6 +65,7 @@ artists = catalogue["artists"]
 assert len({a["id"] for a in artists}) == len(artists)
 for artist in artists:
     assert artist["name"] and artist["claims"] and set(artist["placeIds"]) <= places.keys()
+    assert set(artist.get("placeNotes", {})) <= set(artist["placeIds"])
     assert len({c["id"] for c in artist["claims"]}) == len(artist["claims"])
     for fact in artist["claims"]:
         assert all(fact.get(k) for k in ("id","text","source","publisher","url","locator","checked"))

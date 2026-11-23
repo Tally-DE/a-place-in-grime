@@ -8,6 +8,8 @@ The uploader collects audio and mixtapes from Derby across grime, rap and singin
 
 **Pick up here.** Check that upload's credits against an artist or producer copy. Trace one named person back to a set or tape that gives a place and date.
 
+The 30-minute trial also inspected two upload listings here. “Lightwork” bills V.X and Staxxy. “Kyle” bills JakMan, Jay P and J Dubz. Find an original release or an artist credit for “Kyle” before joining profiles or dating the recording. [Lightwork](https://www.youtube.com/watch?v=elHwAYcpMqM) · [Kyle](https://www.youtube.com/watch?v=fHEG5ptc4DQ)
+
 ## SwaggaCampMedia
 
 Also written **Swagga Camp Media**. The channel now calls itself **ITAL EDGE ENTERTAINMENT** and names SwaggaCampMedia as its former name. The same channel ID carries Derby Carnival performances, freestyles and sets from elsewhere in the Midlands. [Channel UC473PsqhGCeiBsqjUL5nvGw](https://www.youtube.com/channel/UC473PsqhGCeiBsqjUL5nvGw) · [Uploads](https://www.youtube.com/@ITALEDGE/videos)
@@ -15,6 +17,8 @@ Also written **Swagga Camp Media**. The channel now calls itself **ITAL EDGE ENT
 **Checked, 23 November 2026.** The channel's description confirms the rename. Daniel James also describes Swagga Camp as his former channel in a post about Mist. The listings include Snazzman at Derby Carnival in 2011 and V.X of New Loyalty on a freestyle labelled grime. These are title checks. [Daniel James's account](https://danieljamesagencydotcom.wordpress.com/2016/06/13/mist-has-come-along-way-from-swagga-camp-tweet_mist/) · [Carnival upload](https://www.youtube.com/watch?v=R28X6o-2DJo) · [V.X freestyle](https://www.youtube.com/watch?v=JNXShj_yvUY)
 
 **Pick up here.** Search the channel for “Derby Carnival 2011”. Jay Swarve, StayFresh and Snazzman are billed on separate uploads. Follow a performer into a second source before assigning a home city. [Jay Swarve](https://www.youtube.com/watch?v=gOR8uu9DeS0) · [StayFresh](https://www.youtube.com/watch?v=5YLtk7Lr9n0)
+
+**Checked in the 23 November trial.** The PGS cypher bills Fernz, JNR and S.M, and lists the handle @donfernz. Lox's #SC1M freestyle marks the channel reaching a million views. The Snazzman Carnival upload links to Motion21's “They Dont Believe You” video. The live upload gives no individual billing for JakMan. [PGS cypher](https://www.youtube.com/watch?v=xwLQ2eUTa7Y) · [Lox](https://www.youtube.com/watch?v=dR-N-Ya7a9k) · [Carnival description](https://www.youtube.com/watch?v=R28X6o-2DJo)
 
 ## TooHardForTV
 
@@ -24,6 +28,8 @@ The YouTube channel is **OfficialTooHardForTV**, also abbreviated **THFTV**. Its
 
 **Pick up here.** Check who is credited on the four-person upload, whether the description dates the original session, and which MCs can be tied individually to Derby. Search old credits under both the upload title and the THFTVPLAYBACK spelling.
 
+**Checked in the 23 November trial.** The Smuttz birthday set names both crews and individual guests. The Mystic and Sinseer upload identifies a back-to-back on grime. “1's & 2's” bills Dubzy, Directs and Bugz, and credits TooHardForTV Hutchy behind the camera. The filmmaker and the artist named Hutch in Eyez's interview still need an identity check. [Birthday set](https://www.youtube.com/watch?v=aQWQI8R5-XQ) · [Mystic and Sinseer](https://www.youtube.com/watch?v=CmO-3gL4Q_s) · [Camera credit](https://www.youtube.com/watch?v=7jXgnxo3Ipg)
+
 ## Daniel James and Arthur Street Studios
 
 Daniel James's blog preserves names and embeds from the local filmmaking scene. His July 2016 launch post identifies the first Arthur Street Studios upload. His September round-up links the channel and names videos by V.X, Kayse, Sherz and YNC. [Launch post](https://danieljamesagencydotcom.wordpress.com/2016/07/31/derby-music-scene-pull-together-to-create-a-platform-of-their-own/) · [Filmmaker's blog](https://danieljamesagencydotcom.wordpress.com/)
@@ -31,3 +37,15 @@ Daniel James's blog preserves names and embeds from the local filmmaking scene. 
 **Checked, 23 November 2026.** Read the launch paragraph on Staxxy and the September round-up's four named entries. Earlier work on Staxxy is recorded in the [Derby case](../cases/derby.json).
 
 **Pick up here.** Follow the original video IDs in the September list. Compare the credits with the filmmaker's wording to distinguish the director, artist and crew on each item.
+
+The studio also kept a [Bandcamp catalogue](https://arthurststudios.bandcamp.com/music). The 23 November trial checked the studio and producer credits on “She Keeps Calling” and the listings for Just Corey and Staxxy. “FRIO” shares its broad genre tags with other releases in this catalogue. Look for a track-specific credit before using those tags to classify an artist.
+
+The film of [V.X’s “Ghost”](https://www.youtube.com/watch?v=pLSMnN_YM8c) survives on [channel UCBGI8G3XyAsVJEJ8044gPxQ](https://www.youtube.com/channel/UCBGI8G3XyAsVJEJ8044gPxQ). Its original description lists artist, audio and visuals separately.
+
+## More filming crews in the Derby trail
+
+| Collection | Checked on 23 November 2026 | Pick up here |
+| --- | --- | --- |
+| [Motion21](https://www.youtube.com/channel/UC9WCxGTD_XvrlljKMg3PSrQ) | The original [They Dont Believe You video](https://www.youtube.com/watch?v=N-v7vULBpbc) bills JakMan, Dubzy and Directs. | Follow the promo named in the description and compare its original track credits. |
+| [Misjif Television](https://www.youtube.com/channel/UCFuUxxQ3O3cZi3sne3MeYHQ) | A [BARZ group session](https://www.youtube.com/watch?v=tNdUFpCnJ3M) bills Don Fernz, SMG, Emkay and JNR. | Trace one of the SMG or Emkay credits into a second source. |
+| [BigFingzTV](https://www.youtube.com/channel/UC7AZBvv6_63HQlmTGKujefA) | Its [Don Fernz freestyle](https://www.youtube.com/watch?v=9m5LlbdkjzQ) introduces a Derby MC and producer. Its [Shade-One and Jesse James session](https://www.youtube.com/watch?v=RgtDIvl1Wz0) distinguishes the East Midlands and Peckham. | Use the individual descriptions when performers from different places share the mic. |

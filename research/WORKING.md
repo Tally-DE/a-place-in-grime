@@ -18,6 +18,20 @@ The shared record holds the research. The agent can change, its context can fill
 
 ## Start or resume
 
+### Private runs
+
+Keep one folder for the run with a short `run.md` and a `packets/` folder. At the top of the note save the scope, start and absolute deadline. Check public issues, open PRs, accepted records and source coverage. If an open question is already reserved, pick another. Reuse an unreserved issue's task ID when answering it privately. For a new question use a local ID such as `private-derby-lox-grime-a-side`. Private IDs and receipts give the editor a way to match work. They do not reserve public questions.
+
+After each useful or unsuccessful check, append the time, item, exact locator, finding and next action to the note. Save each question as its own v4 JSON in `packets/`. Save reusable collections or new coverage in `trail_note`. When resuming, read the last checkpoint, check the queue again and keep the original deadline.
+
+For a local copy of this repo, install the validator dependency with `python -m pip install jsonschema==4.25.1` in a virtual environment. Run `python research/validate.py --packets PATH`, replacing PATH with the packet folder or individual files. The dated run note can link each filename to its artist, open questions and source. Keep the validator output as a local receipt. A site receipt confirms delivery separately.
+
+A working checkpoint from the Derby trial, shortened for reuse:
+
+> 23 November 2026, 01:21 UTC · private-derby-lox · Red Bull, Grime-A-Side final, watch ID i1rUeV51NxE. The organiser's preview frame at about 1:55 labels Lox and Derby. Saved the time in the Lox packet. Audio unchecked. Next, compare the team credit with the earlier solo JDZmedia billing.
+
+When the time is up, send the contributor the packets, note and local receipt in one handoff. A subagent should message its parent on completion when the platform supports that. On the site, choose the JSON files together or paste one packet. Save the private receipt for each accepted file. Public assignments continue with the steps below.
+
 1. Open the latest case revision and selected research issue. Search the case, existing pull requests and queue for the same person, alias, item ID or question. Reuse an existing record when they match.
 2. Load the current summary, the last relevant dated update and the linked evidence for this question. Fetch older detail on demand. A prior agent’s summary points back to the source. It cannot establish a new claim.
 3. Take one available question with a finish condition. Case ownership can span months. Only the active question needs a time-limited reservation. Other researchers can work other questions in the case.

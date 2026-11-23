@@ -25,8 +25,11 @@ function home() {
   const fig=`<figure><div class="frame"><img id="photo" src="/assets/trim-flowdan.jpg" alt="Two MCs holding microphones at the front of the stage."></div><figcaption><div aria-live="polite"><div id="caption" class="photo-title">Trim &amp; Flowdan, 2005</div><div class="credit">Photo by <a id="source" href="https://www.flickr.com/photos/believekevin/34882249/">kevin</a> · ${link('https://creativecommons.org/licenses/by-sa/2.0/','CC BY-SA 2.0')} · cropped</div></div><button id="next" class="photo-switch" type="button">Change photo</button></figcaption></figure>`;
   return render('UK grime artist catalogue',`<div class="spread">${fig}<section class="index"><p class="intro">A catalogue of UK grime artists.</p><h1>Find an artist.</h1>${searchBox()}<h2>Browse by city or town</h2>${rows(catalogue.places.map(linkPlace))}<a class="suggest" href="/suggest">Suggest an artist</a></section></div>`,200,true);
 }
+function placeDescription(a,id) {
+  return a.placeNotes?.[id] || places.get(id).name;
+}
 function artistRows(list) {
-  return rows(list.map(a=>linkArtist(a)+`<small>${a.placeIds.map(id=>places.get(id)).map(p=>esc(p.name)).join(', ')}</small>`));
+  return rows(list.map(a=>linkArtist(a)+`<small>${a.placeIds.map(id=>esc(placeDescription(a,id))).join(' · ')}</small>`));
 }
 function directory() {
   return render('Artists',heading('Artists','Find a stage name, a former alias or a place.')+searchBox()+artistRows(catalogue.artists));
@@ -63,7 +66,7 @@ function bookingLink(a,ownership) {
   return link(isEmail(contact)?'mailto:'+contact:contact,'Booking enquiries');
 }
 function artistFacts(a,ownership) {
-  const facts=[esc(activityLine(a)),ownership.owner?'Page claimed':'',bookingLink(a,ownership)].filter(Boolean);
+  const facts=[...a.placeIds.filter(id=>a.placeNotes?.[id]).map(id=>esc(placeDescription(a,id))),esc(activityLine(a)),ownership.owner?'Page claimed':'',bookingLink(a,ownership)].filter(Boolean);
   return facts.length?`<p class="artist-facts">${facts.join(' · ')}</p>`:'';
 }
 async function placePage(p,env,url) {
@@ -73,7 +76,8 @@ async function placePage(p,env,url) {
     const {state}=await readClaimState(env,a.id);
     const booking=bookingLink(a,state);
     if(onlyContacts&&!booking)return '';
-    return `<div class="city-act">${linkArtist(a)}${booking?`<span>${booking}</span>`:''}</div>${activityLine(a)?`<small>${esc(activityLine(a))}</small>`:''}`;
+    const detail=[a.placeNotes?.[p.id],activityLine(a)].filter(Boolean).join(' · ');
+    return `<div class="city-act">${linkArtist(a)}${booking?`<span>${booking}</span>`:''}</div>${detail?`<small>${esc(detail)}</small>`:''}`;
   }));
   const filter=`<nav class="city-filter" aria-label="Artist list"><a href="${placeURL(p)}"${!onlyContacts?' aria-current="page"':''}>All artists</a><a href="${placeURL(p)}?booking=1"${onlyContacts?' aria-current="page"':''}>With booking contacts</a></nav>`;
   const artistsHere=listed.filter(Boolean);
@@ -173,10 +177,11 @@ function formPage(type,url,message='',values={},status=200) {
   if(!['private','claim'].includes(type))inputs+=field('Public credit name (optional)','credit');
   const version=values.version|| (claim?JSON.stringify([claim.id,claim.text,claim.url,claim.locator,claim.checked]):'');
   const context=claim?`<article class="context"><strong>${esc(a.name)}</strong><p>${esc(claim.text)}</p>${link(claim.url,claim.publisher+' · '+claim.source)}<p>${esc(claim.locator)}</p></article>`:generalCorrection?`<p>${linkArtist(a)}</p>`:'';
-  const descriptions={claim:'If you’re the artist or handle their bookings, you can claim this page. We’ll give you a code to show from an established artist or agency account so the editor can check it’s you.',suggest:'A stage name is enough. Add a place or a source if you remember one.',private:'Use this for sensitive corrections, removal requests or information you want the editor to handle privately.',packet:'Paste the research packet your agent gave you. It goes straight to the editor.'};
+  const descriptions={claim:'If you’re the artist or handle their bookings, you can claim this page. We’ll give you a code to show from an established artist or agency account so the editor can check it’s you.',suggest:'A stage name is enough. Add a place or a source if you remember one.',private:'Use this for sensitive corrections, removal requests or information you want the editor to handle privately.',packet:'Send your agent’s JSON files to the editor or paste one packet below. Each accepted file gets a private receipt.'};
   const title=type==='claim'?'Claim '+a.name+'’s page':formNames[type];
   const accessHelp=type==='claim'?'<details class="sources"><summary>Already claimed this page?</summary><p>Open your private receipt to change your booking details. If you’ve lost the link, send a fresh claim so the editor can restore access.</p></details>':'';
-  return render(title,heading(title,descriptions[type]||'')+context+(message?`<p role="alert" class="notice">${esc(message)}</p>`:'')+`<form class="editor" method="post" action="/${type}"><input type="hidden" name="token" value="${esc(token)}"><input type="hidden" name="artist" value="${esc(a?.id)}"><input type="hidden" name="claim" value="${esc(claim?.id)}"><input type="hidden" name="version" value="${esc(version)}">${inputs}<p class="hint">Your submission goes privately to the editor. Save the receipt link after sending.</p><button class="primary">Send for review</button></form>`+accessHelp,status);
+  const fileForm=type==='packet'?'<form id="packet-files" class="editor" hidden><label>Choose one or more research files<input name="files" type="file" accept=".json,application/json" multiple required></label><label>Public credit name (optional)<input name="credit" maxlength="240"></label><button class="primary">Send files privately</button><p role="status"></p><ol aria-label="File receipts"></ol></form>':'';
+  return render(title,heading(title,descriptions[type]||'')+context+(message?`<p role="alert" class="notice">${esc(message)}</p>`:'')+fileForm+`<form class="editor" method="post" action="/${type}"><input type="hidden" name="token" value="${esc(token)}"><input type="hidden" name="artist" value="${esc(a?.id)}"><input type="hidden" name="claim" value="${esc(claim?.id)}"><input type="hidden" name="version" value="${esc(version)}">${inputs}<p class="hint">Your submission goes privately to the editor. Save the receipt link after sending.</p><button class="primary">Send for review</button></form>`+accessHelp,status);
 }
 const routeGroups = [
   ['/suggest','Suggest an artist','Start with a stage name, however small the paper trail.'],
@@ -259,7 +264,7 @@ function researchPrompt(url,raw) {
     'Look in the shared source directory for this area: '+sourceDirectory+'. Read what has already been checked. When you find a useful collection or cover a new part of one, save its name, old names, stable link or shelf reference, the exact items inspected and the next item to check. '+(s.delivery==='private'?'Put these notes in the packet’s trail_note for the editor.':'Add the collection or update its coverage in research/sources in your pull request.'),
     'Include profile_media in the version 4 packet. Look for a reusable portrait, then licensed artwork from the artist if needed. Identify the person or artwork from a caption, credit or timestamp. Give the original source, creator, licence and changes. Check direct official profiles against artist or label links. Record where you looked and what you could verify, even if no image or account is usable.',
     'Complete profile_research too. Check stage names and roles, city or town and the nature of that connection, biography, crews and the next named lead. Find dated evidence of activity. Distinguish first or last surviving credits from an actual career start, end or current status. Look for the official public booking page, verify who it represents, and record the search even when nothing turns up. Never claim a page, contact the artist, include private details or assume they are available for bookings.',
-    s.delivery==='private' ? 'Keep my research private. Read the public queue, skip work someone already has, and keep checkpoints locally. Do not create issues, comments or pull requests. Give me the finished evidence packet as version 4 JSON and a short summary. I will submit it myself at '+url.origin+'/packet.'
+    s.delivery==='private' ? 'Keep my research private. Read the public queue, skip reserved work and follow the private run instructions. Save a v4 JSON file for each question, validate the files, and give me one handoff with the files, local receipt and unfinished leads. If you are a subagent, message your parent when the run ends. I can send all the files privately at '+url.origin+'/packet.'
       : 'Send the findings through GitHub for editorial review. Follow the guide to claim a question, or open a focused one within my chosen area if needed. Save checkpoints, submit the evidence on a pull request, and give me its URL and confirmed receipt. If GitHub access is missing, give me the finished packet to submit privately and tell me what still needs sending.'
   ].join('\n\n');
   if (raw) return new Response(message+'\n',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'no-store'}});
@@ -276,7 +281,7 @@ function firstAgent(url) {
       <li><strong>Make your prompt.</strong> Pick a place you know, or leave it open. One question is a good first run. Choose “Give them to me to send privately” if you’d like to read what your agent finds before you share it. ${link('/agents','Choose your research')}</li>
       <li><strong>Paste it into a new chat.</strong> If your agent asks for a folder, give it an empty one for this project so it can save its notes. Let it open the public sources it needs. At the end it should tell you what it found and what it couldn’t check.</li>
     </ol>
-    <p>If you chose private, your agent gives you a block of research data called JSON. Copy that into the ${link('/packet','private research form')}, send it and keep the receipt.</p>
+    <p>If you chose private, your agent gives you its research as JSON. Select its files together or paste one packet into the ${link('/packet','private research form')}, send it and keep the receipt.</p>
     <details id="github" class="sources setup-github"${url.searchParams.get('setup')==='github'?' open':''}><summary>Set up GitHub for public research</summary>
       <p>GitHub is where we keep the shared list of questions. Your agent can use your account to reserve one and send its findings to the editor. Its notes and submissions there are public under your username.</p>
       <ol>

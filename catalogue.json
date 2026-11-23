@@ -239,6 +239,306 @@
       "activityChecked": "2026-11-23"
     },
     {
+      "id": "directs",
+      "name": "Directs",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Directs recorded with Derby MC Dubzy and JakMan on “They Dont Believe You”, filmed by Motion21 in 2011.",
+      "claims": [
+        {
+          "id": "directs-1",
+          "text": "Directs recorded with Derby MC Dubzy and JakMan on “They Dont Believe You”, filmed by Motion21 in 2011.",
+          "source": "They Dont Believe You",
+          "publisher": "Motion21 Entertainment",
+          "url": "https://www.youtube.com/watch?v=N-v7vULBpbc",
+          "locator": "Original artist billing, filming credit and publication date.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "directs-2",
+          "text": "The three also made “Snazz 4 Life”, which Dubzy released on Gift of the Gab with production by Baza.",
+          "source": "Snazz 4 Life",
+          "publisher": "Dubzy on Bandcamp",
+          "url": "https://dubzysnazz.bandcamp.com/track/snazz-4-life-feat-jakman-directs",
+          "locator": "Track title, release and production credit.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "directs-3",
+          "text": "On TalentedTouch’s P2P series, Directs took part in a grime freestyle with Dubzy and V.X.",
+          "source": "TalentedTouch LTD - P2P [S.2 EP.8] - Dubzy - V.X - Directs - GRIME [@talentedtouch1]",
+          "publisher": "TalentedTouchLtd",
+          "url": "https://www.youtube.com/watch?v=6lILkBN8OjU",
+          "locator": "Series, episode, genre and performer credits in the original title.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "directs-4",
+          "text": "Rinse FM later billed him alongside Eyez, Dubzy, KayGee and Lox in Sir Spyro’s live mix.",
+          "source": "Grime Show: Eyez, Dubzy, Kaygee, Directs & Lox",
+          "publisher": "Rinse FM",
+          "url": "https://www.youtube.com/watch?v=4W_8EJQZqpE",
+          "locator": "Grime Show title and description.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Directs recorded with Derby MC Dubzy and JakMan on “They Dont Believe You”, filmed by Motion21 in 2011. The three also made “Snazz 4 Life”, which Dubzy released on Gift of the Gab with production by Baza.",
+          "claims": [
+            "directs-1",
+            "directs-2"
+          ]
+        },
+        {
+          "text": "On TalentedTouch’s P2P series, Directs took part in a grime freestyle with Dubzy and V.X. Rinse FM later billed him alongside Eyez, Dubzy, KayGee and Lox in Sir Spyro’s live mix.",
+          "claims": [
+            "directs-3",
+            "directs-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "dubzy",
+          "label": "Named together in the profile",
+          "claims": [
+            "directs-1",
+            "directs-2",
+            "directs-3",
+            "directs-4"
+          ]
+        },
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "directs-4"
+          ]
+        },
+        {
+          "id": "kaygee",
+          "label": "Named together in the profile",
+          "claims": [
+            "directs-4"
+          ]
+        },
+        {
+          "id": "v-x",
+          "label": "Named together in the profile",
+          "claims": [
+            "directs-3"
+          ]
+        },
+        {
+          "id": "lox",
+          "label": "Named together in the profile",
+          "claims": [
+            "directs-4"
+          ]
+        },
+        {
+          "id": "jakman",
+          "label": "Named together in the profile",
+          "claims": [
+            "directs-1"
+          ]
+        }
+      ],
+      "socials": [],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Directs+Snazz&srlimit=8",
+            "finding": "No relevant freely licensed portrait returned."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://dubzysnazz.bandcamp.com/track/snazz-4-life-feat-jakman-directs",
+            "finding": "Dubzy release artwork shown, no permission found for an individual artist profile."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=6lILkBN8OjU",
+            "finding": "Only other credited artists had handles."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=7jXgnxo3Ipg",
+            "finding": "Channel and maker credits do not identify a Directs account."
+          },
+          {
+            "url": "https://dubzysnazz.bandcamp.com/track/snazz-4-life-feat-jakman-directs",
+            "finding": "Host artist's account only."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=N-v7vULBpbc",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2014,
+          "source": "https://www.youtube.com/watch?v=4W_8EJQZqpE",
+          "locator": "Upload date on the publisher’s watch page."
+        }
+      },
+      "activityChecked": "2026-11-23",
+      "placeNotes": {
+        "derby": "Collaborated with Derby MCs"
+      }
+    },
+    {
+      "id": "don-fernz",
+      "name": "Don Fernz",
+      "aliases": [
+        "Fernz"
+      ],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Don Fernz is a Derby MC who produces his own beats. For his BigFingzTV freestyle he took both credits.",
+      "claims": [
+        {
+          "id": "don-fernz-1",
+          "text": "Don Fernz is a Derby MC who produces his own beats. For his BigFingzTV freestyle he took both credits.",
+          "source": "Don Fernz #Freestyle (Produced by @DonFernz)",
+          "publisher": "BigFingzTV",
+          "url": "https://www.youtube.com/watch?v=9m5LlbdkjzQ",
+          "locator": "Title, production credit and opening sentence of the description.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "don-fernz-2",
+          "text": "SwaggaCampMedia billed him as Fernz alongside JNR and S.M in a PGS grime cypher, with his full handle in the description.",
+          "source": "JNR, Fernz & S.M (PGS) [Cypher Sessions] [Grime]",
+          "publisher": "SwaggaCampMedia / ITAL EDGE ENTERTAINMENT",
+          "url": "https://www.youtube.com/watch?v=xwLQ2eUTa7Y",
+          "locator": "Title and first line of handles, including @donfernz.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "don-fernz-3",
+          "text": "He and JNR later joined Dubzy and Tiny Teff on “Sabotage”.",
+          "source": "Sabotage (feat. Don Fernz, JNR & Tiny Teff)",
+          "publisher": "Dubzy",
+          "url": "https://dubzysnazz.bandcamp.com/track/sabotage-feat-don-fernz-jnr-tiny-teff",
+          "locator": "Track title and featured credits.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "don-fernz-4",
+          "text": "On YNC’s Wait And See, Fernz produced the title track and shared “Bonnie & Clyde” with SMG over his own production.",
+          "source": "YNC – Wait And See",
+          "publisher": "Knowledge Is Power Promotions",
+          "url": "https://kippromotions.bandcamp.com/album/ync-wait-and-see",
+          "locator": "Tracklist, title track and track 18.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Don Fernz is a Derby MC who produces his own beats. For his BigFingzTV freestyle he took both credits. SwaggaCampMedia billed him as Fernz alongside JNR and S.M in a PGS grime cypher, with his full handle in the description.",
+          "claims": [
+            "don-fernz-1",
+            "don-fernz-2"
+          ]
+        },
+        {
+          "text": "He and JNR later joined Dubzy and Tiny Teff on “Sabotage”. On YNC’s Wait And See, Fernz produced the title track and shared “Bonnie & Clyde” with SMG over his own production.",
+          "claims": [
+            "don-fernz-3",
+            "don-fernz-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC",
+        "Producer"
+      ],
+      "connections": [
+        {
+          "id": "dubzy",
+          "label": "Named together in the profile",
+          "claims": [
+            "don-fernz-3"
+          ]
+        },
+        {
+          "id": "jnr",
+          "label": "Named together in the profile",
+          "claims": [
+            "don-fernz-2",
+            "don-fernz-3"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "X (historical)",
+          "url": "https://x.com/DonFernz",
+          "source": "https://www.youtube.com/watch?v=9m5LlbdkjzQ",
+          "locator": "Artist link; matching self-description, mixtape and MisjifTV post on the destination."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Don+Fernz&srlimit=8",
+            "finding": "Leading matching files were unrelated scanned books."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=9m5LlbdkjzQ",
+            "finding": "Solo performer clearly billed; no image or still reuse rights located."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/gb/album/fernz-world-ep/1654710200",
+            "finding": "Retail listing for Fernz World EP has cover artwork but no image-specific licence."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=9m5LlbdkjzQ",
+            "finding": "Explicit Follow him line."
+          },
+          {
+            "url": "https://x.com/DonFernz",
+            "finding": "Historical public account identifies his two roles, P.G.S and the 1st Love 2nd Hustle mixtape."
+          },
+          {
+            "url": "https://music.apple.com/gb/album/fernz-world-ep/1654710200",
+            "finding": "Retail release; no artist-managed social account linked."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=ozZZ-oQNh4o",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2016,
+          "source": "https://kippromotions.bandcamp.com/album/ync-wait-and-see",
+          "locator": "Credits below track table."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
       "id": "dubzy",
       "name": "Dubzy",
       "aliases": [],
@@ -352,6 +652,20 @@
         {
           "id": "eyez",
           "label": "Recorded ‘Say My Name’ together on Dubzy’s Gift of the Gab.",
+          "claims": [
+            "dubzy-gift"
+          ]
+        },
+        {
+          "id": "jakman",
+          "label": "Featured on Snazz 4 Life",
+          "claims": [
+            "dubzy-gift"
+          ]
+        },
+        {
+          "id": "directs",
+          "label": "Featured on Snazz 4 Life",
           "claims": [
             "dubzy-gift"
           ]
@@ -733,6 +1047,316 @@
       "activityChecked": "2026-11-23"
     },
     {
+      "id": "flexer-beatz",
+      "name": "Flexer Beatz",
+      "aliases": [
+        "FlexerBeatz"
+      ],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Flexer Beatz produced for 2 Ruff Diamonds, the Derby grime partnership he shared with MC Leeroy Grudge.",
+      "claims": [
+        {
+          "id": "flexer-beatz-1",
+          "text": "Flexer Beatz produced for 2 Ruff Diamonds, the Derby grime partnership he shared with MC Leeroy Grudge.",
+          "source": "Leeroy Grudge | Warm Up Sessions [S11.EP19]: SBTV Derby",
+          "publisher": "SBTV: Music",
+          "url": "https://www.youtube.com/watch?v=vUB8kfAxATA",
+          "locator": "SBTV’s opening paragraph on the Derby collaboration.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "flexer-beatz-2",
+          "text": "His own channel carried instrumentals too, including the dark grime beat “Munch & Crunch” in 2012.",
+          "source": "Flexer Beatz – Munch & Crunch [Dark Grime Instrumental] 2012",
+          "publisher": "FlexerBeatz",
+          "url": "https://www.youtube.com/watch?v=-xxbJkUAG7w",
+          "locator": "Title, artist channel and upload date.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "flexer-beatz-3",
+          "text": "Flexer made the beat for the JDZmedia cypher that brought Grudge, Smuttz, Flukes, V.X and Eyez together.",
+          "source": "Lee-Roy Grudge, Smuttz, Flukes, V.X & Eyez [CYPHER]",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=59JfWPwr2DM",
+          "locator": "Description names the five MCs and credits the producer.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "flexer-beatz-4",
+          "text": "Bru-C also credited him on “High Day”, featuring Youthoracle.",
+          "source": "IAMBRU – The Mixtape",
+          "publisher": "Bru-C",
+          "url": "https://iambru.bandcamp.com/album/iambru-the-mixtape",
+          "locator": "IAMBRU tracklist, High Day credit.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "flexer-beatz-5",
+          "text": "In 2025 Pond Life included his “Good Time” on its tenth-anniversary EP.",
+          "source": "Flexer Beatz – Good Time",
+          "publisher": "pondlifeparty",
+          "url": "https://pondlifeparty.bandcamp.com/track/flexer-beatz-good-time",
+          "locator": "Track header, parent release and date in the credits.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Flexer Beatz produced for 2 Ruff Diamonds, the Derby grime partnership he shared with MC Leeroy Grudge. His own channel carried instrumentals too, including the dark grime beat “Munch & Crunch” in 2012.",
+          "claims": [
+            "flexer-beatz-1",
+            "flexer-beatz-2"
+          ]
+        },
+        {
+          "text": "Flexer made the beat for the JDZmedia cypher that brought Grudge, Smuttz, Flukes, V.X and Eyez together. Bru-C also credited him on “High Day”, featuring Youthoracle. In 2025 Pond Life included his “Good Time” on its tenth-anniversary EP.",
+          "claims": [
+            "flexer-beatz-3",
+            "flexer-beatz-4",
+            "flexer-beatz-5"
+          ]
+        }
+      ],
+      "roles": [
+        "Producer"
+      ],
+      "connections": [
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "flexer-beatz-3"
+          ]
+        },
+        {
+          "id": "v-x",
+          "label": "Named together in the profile",
+          "claims": [
+            "flexer-beatz-3"
+          ]
+        },
+        {
+          "id": "leeroy-grudge",
+          "label": "Named together in the profile",
+          "claims": [
+            "flexer-beatz-1"
+          ]
+        },
+        {
+          "id": "smuttz",
+          "label": "Named together in the profile",
+          "claims": [
+            "flexer-beatz-3"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@FlexerBeatz",
+          "source": "https://www.youtube.com/watch?v=-xxbJkUAG7w",
+          "locator": "Uploader channel for Munch & Crunch; same handle as the named beatmaker on P110."
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/FlexerBeatz",
+          "source": "https://www.youtube.com/watch?v=-xxbJkUAG7w",
+          "locator": "Description line headed Soundcloud; destination title FlexerBeatz."
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/FlexerBeatz",
+          "source": "https://www.youtube.com/watch?v=-xxbJkUAG7w",
+          "locator": "Description line headed Twitter; destination names the producer."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Flexer+Beatz&srlimit=8",
+            "finding": "Two scanned books matched; neither is an artist image."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=-xxbJkUAG7w",
+            "finding": "Artist's instrumental upload; no photograph of an identified subject with an applicable reuse grant."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://pondlifeparty.bandcamp.com/track/flexer-beatz-good-time",
+            "finding": "The label's artwork accompanies Good Time; page states all rights reserved. No separate artwork grant."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=-xxbJkUAG7w",
+            "finding": "The artist links his SoundCloud, Twitter and Instagram directly."
+          },
+          {
+            "url": "https://www.youtube.com/@FlexerBeatz",
+            "finding": "Direct destination opened under FlexerBeatz; the original upload's owner ID is UCDK1ZJUv48yohp0bd708axg."
+          },
+          {
+            "url": "https://soundcloud.com/FlexerBeatz",
+            "finding": "The profile title returned FlexerBeatz; this is the original channel's own link."
+          },
+          {
+            "url": "https://x.com/FlexerBeatz",
+            "finding": "Public profile identifies producer and links music; P110's artist/beat lines corroborate the same spelling."
+          },
+          {
+            "url": "https://www.instagram.com/FlexInTheBox",
+            "finding": "The linked FlexInTheBox handle returned an Instagram shell; this is a series/project name, so withheld as a personal profile."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2012,
+          "source": "https://www.youtube.com/watch?v=-xxbJkUAG7w",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2025,
+          "source": "https://pondlifeparty.bandcamp.com/track/flexer-beatz-good-time",
+          "locator": "Credits."
+        }
+      },
+      "activityChecked": "2026-11-23",
+      "placeNotes": {
+        "derby": "2 Ruff Diamonds’ Derby scene"
+      }
+    },
+    {
+      "id": "jakman",
+      "name": "JakMan",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "JakMan appears alongside Dubzy and Directs on “They Dont Believe You”. Motion21 filmed the trio for the video, released in 2011.",
+      "claims": [
+        {
+          "id": "jakman-1",
+          "text": "JakMan appears alongside Dubzy and Directs on “They Dont Believe You”. Motion21 filmed the trio for the video, released in 2011.",
+          "source": "They Dont Believe You (Official Video)",
+          "publisher": "Motion21 Entertainment",
+          "url": "https://www.youtube.com/watch?v=N-v7vULBpbc",
+          "locator": "Full billing, Motion21 credit and publication date.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "jakman-2",
+          "text": "Link Up TV published their video for “Snazz 4 Life” in 2013.",
+          "source": "Dubzy, Directs & JakMan – Snazz 4 Life [Music Video]",
+          "publisher": "Link Up TV",
+          "url": "https://www.youtube.com/watch?v=QcqeyQ7mvj0",
+          "locator": "Official music video title, billing and publication date; Link Up TV is the publisher.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "jakman-3",
+          "text": "The track appeared on Dubzy’s Gift of the Gab the following year. Dubzy credits Baza with its production.",
+          "source": "Snazz 4 Life (feat. JakMan & Directs)",
+          "publisher": "Dubzy",
+          "url": "https://dubzysnazz.bandcamp.com/track/snazz-4-life-feat-jakman-directs",
+          "locator": "Track header, album link, release date and Produced by line.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "JakMan appears alongside Dubzy and Directs on “They Dont Believe You”. Motion21 filmed the trio for the video, released in 2011.",
+          "claims": [
+            "jakman-1"
+          ]
+        },
+        {
+          "text": "Link Up TV published their video for “Snazz 4 Life” in 2013. The track appeared on Dubzy’s Gift of the Gab the following year. Dubzy credits Baza with its production.",
+          "claims": [
+            "jakman-2",
+            "jakman-3"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "dubzy",
+          "label": "Named together in the profile",
+          "claims": [
+            "jakman-1",
+            "jakman-3"
+          ]
+        },
+        {
+          "id": "directs",
+          "label": "Named together in the profile",
+          "claims": [
+            "jakman-1"
+          ]
+        }
+      ],
+      "socials": [],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=N-v7vULBpbc",
+            "finding": "Filmmaker's page names the three artists but supplies no identification for an individual frame and no reusable-image licence."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=JakMan+grime&srlimit=8",
+            "finding": "Leading file hits were digitised printed works, with no identified musician portrait."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://dubzysnazz.bandcamp.com/track/snazz-4-life-feat-jakman-directs",
+            "finding": "Cover accompanies Dubzy's release; all rights reserved with no separate cover permissions."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=N-v7vULBpbc",
+            "finding": "The handles belong to the filmmaker and Dubzy. No JakMan account is named."
+          },
+          {
+            "url": "https://dubzysnazz.bandcamp.com/track/snazz-4-life-feat-jakman-directs",
+            "finding": "About links go to Dubzy's profiles."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=QcqeyQ7mvj0",
+            "finding": "The linked handles are Link Up TV and Dubzy. No direct artist account confirmed."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=N-v7vULBpbc",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2014,
+          "source": "https://dubzysnazz.bandcamp.com/track/snazz-4-life-feat-jakman-directs",
+          "locator": "Track heading and Credits."
+        }
+      },
+      "activityChecked": "2026-11-23",
+      "placeNotes": {
+        "derby": "Collaborated with Derby MCs"
+      }
+    },
+    {
       "id": "jaykae",
       "name": "Jaykae",
       "aliases": [],
@@ -914,6 +1538,1220 @@
       "activityChecked": "2026-11-23"
     },
     {
+      "id": "jnr",
+      "name": "JNR",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Eyez named JNR alongside Mystic, Badz and Fernz when asked about artists from Derby.",
+      "claims": [
+        {
+          "id": "jnr-1",
+          "text": "Eyez named JNR alongside Mystic, Badz and Fernz when asked about artists from Derby.",
+          "source": "New Noise – Eyez",
+          "publisher": "Wonderland",
+          "url": "https://www.wonderlandmagazine.com/2016/05/27/new-noise-eyez/",
+          "locator": "Answer listing people from Manchester and Derby.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "jnr-2",
+          "text": "JNR and Don Fernz shared the mic in SwaggaCampMedia’s PGS grime cypher with S.M.",
+          "source": "Fernz and JNR – grime cypher",
+          "publisher": "SwaggaCampMedia",
+          "url": "https://www.youtube.com/watch?v=xwLQ2eUTa7Y",
+          "locator": "Title names JNR, Fernz and S.M, with artist handles in the description.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "jnr-3",
+          "text": "Dubzy brought JNR, Don Fernz and Tiny Teff together on “Sabotage”.",
+          "source": "Sabotage",
+          "publisher": "Dubzy on Bandcamp",
+          "url": "https://dubzysnazz.bandcamp.com/track/sabotage-feat-don-fernz-jnr-tiny-teff",
+          "locator": "Featured artists in track title.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "jnr-4",
+          "text": "On the YNC tape Wait And See, JNR has “Drug Love” to himself, then joins C. Badz and SMG for “High And Sway”.",
+          "source": "Wait and See",
+          "publisher": "KIP Promotions / YNC",
+          "url": "https://kippromotions.bandcamp.com/album/ync-wait-and-see",
+          "locator": "Tracklist, tracks eight and nine.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Eyez named JNR alongside Mystic, Badz and Fernz when asked about artists from Derby. JNR and Don Fernz shared the mic in SwaggaCampMedia’s PGS grime cypher with S.M.",
+          "claims": [
+            "jnr-1",
+            "jnr-2"
+          ]
+        },
+        {
+          "text": "Dubzy brought JNR, Don Fernz and Tiny Teff together on “Sabotage”. On the YNC tape Wait And See, JNR has “Drug Love” to himself, then joins C. Badz and SMG for “High And Sway”.",
+          "claims": [
+            "jnr-3",
+            "jnr-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "dubzy",
+          "label": "Named together in the profile",
+          "claims": [
+            "jnr-3"
+          ]
+        },
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "jnr-1"
+          ]
+        },
+        {
+          "id": "don-fernz",
+          "label": "Named together in the profile",
+          "claims": [
+            "jnr-2",
+            "jnr-3"
+          ]
+        },
+        {
+          "id": "mystic",
+          "label": "Named together in the profile",
+          "claims": [
+            "jnr-1"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "X",
+          "url": "https://x.com/jnr_24",
+          "source": "https://www.youtube.com/watch?v=xwLQ2eUTa7Y",
+          "locator": "In the performer's handle list."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=JNR+grime+Derby&srlimit=8",
+            "finding": "Returned a historical periodical, no identified Derby MC."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://kippromotions.bandcamp.com/album/ync-wait-and-see",
+            "finding": "Compilation carries an all-rights-reserved notice."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://x.com/jnr_24",
+            "finding": "Exact public handle supplied on Fernz/JNR video."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2012,
+          "source": "https://www.youtube.com/watch?v=tNdUFpCnJ3M",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2016,
+          "source": "https://kippromotions.bandcamp.com/album/ync-wait-and-see",
+          "locator": "Release credits."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "karnage-whamblama",
+      "name": "Karnage Whamblama",
+      "aliases": [
+        "Karnage"
+      ],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Karnage Whamblama calls himself a grime artist from Derby. His mixtape If You Don’t Know Me includes “Purge”, a collaboration with Beetone.",
+      "claims": [
+        {
+          "id": "karnage-whamblama-1",
+          "text": "Karnage Whamblama calls himself a grime artist from Derby. His mixtape If You Don’t Know Me includes “Purge”, a collaboration with Beetone.",
+          "source": "If You Don't Know Me",
+          "publisher": "Karnage Whamblama",
+          "url": "https://whamblama.bandcamp.com/album/if-you-dont-know-me",
+          "locator": "Artist’s own bio below the release and track seven.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "karnage-whamblama-2",
+          "text": "He also took part in Flex In The Box, on a cypher shared with Leeroy Grudge, KayGee, LR and Kriptik.",
+          "source": "Flex In The Box Cypher",
+          "publisher": "FlexerBeatz",
+          "url": "https://www.youtube.com/watch?v=3eYee4OAVNk",
+          "locator": "Full billing in the title and the individual performer credits.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "karnage-whamblama-3",
+          "text": "At the Expression Sessions in Derby, Karnage and Sarai ran Saturday drop-ins where young people wrote lyrics and could try them in a recording booth. The sessions started at Arthur Street Studios and later moved to Creative Central. The pair made a film for the celebration at the end of the project in 2019.",
+          "source": "‘Rapping’ up the project",
+          "publisher": "The Expression Sessions / Global Education Derby",
+          "url": "https://theexpressionsessions.weebly.com/blog/rapping-up-the-project",
+          "locator": "Project account, paragraphs two to four and six, and the signed comment from Karnage Whamblama.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Karnage Whamblama calls himself a grime artist from Derby. His mixtape If You Don’t Know Me includes “Purge”, a collaboration with Beetone. He also took part in Flex In The Box, on a cypher shared with Leeroy Grudge, KayGee, LR and Kriptik.",
+          "claims": [
+            "karnage-whamblama-1",
+            "karnage-whamblama-2"
+          ]
+        },
+        {
+          "text": "At the Expression Sessions in Derby, Karnage and Sarai ran Saturday drop-ins where young people wrote lyrics and could try them in a recording booth. The sessions started at Arthur Street Studios and later moved to Creative Central. The pair made a film for the celebration at the end of the project in 2019.",
+          "claims": [
+            "karnage-whamblama-3"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "kaygee",
+          "label": "Named together in the profile",
+          "claims": [
+            "karnage-whamblama-2"
+          ]
+        },
+        {
+          "id": "leeroy-grudge",
+          "label": "Named together in the profile",
+          "claims": [
+            "karnage-whamblama-2"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://whamblama.bandcamp.com/music",
+          "source": "https://whamblama.bandcamp.com/album/if-you-dont-know-me",
+          "locator": "Artist byline, bio and discography connect to Karnage Whamblama's direct music page."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/whamblama/",
+          "source": "https://www.youtube.com/watch?v=dT-ZYpPNe-I",
+          "locator": "Check Karnage block and corroborating Flex In The Box performer field."
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@karnage_the_great",
+          "source": "https://www.youtube.com/watch?v=kJvEGDPopFs",
+          "locator": "Original owner channel UCtbh4LAmSfOqtRlbHJvgPZQ, matching Bandcamp title and whamblama identity."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://theexpressionsessions.weebly.com/blog/rapping-up-the-project",
+            "finding": "Images accompany the project and people quoted; no individually cleared portrait or image licence given."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Karnage+Whamblama&srlimit=8",
+            "finding": "No matching Commons files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.flickr.com/search/?text=Karnage%20Whamblama&license=4%2C5%2C9%2C10",
+            "finding": "No results."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://whamblama.bandcamp.com/album/if-you-dont-know-me",
+            "finding": "Cover of the artist's own release; license says all rights reserved."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://whamblama.bandcamp.com/album/a-o-t-k",
+            "finding": "The same rights restriction applies; no image-specific rights grant."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://whamblama.bandcamp.com/music",
+            "finding": "Artist-run music page lists the two mixtapes and self-authored bio."
+          },
+          {
+            "url": "https://www.instagram.com/whamblama/",
+            "finding": "Instagram served its public shell. SBTV, the independent Flex In The Box upload and the artist's Purge upload all name whamblama."
+          },
+          {
+            "url": "https://www.youtube.com/@karnage_the_great",
+            "finding": "Purge is the exact Beetone collaboration listed on his Bandcamp; video links his whamblama handle."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2019,
+          "source": "https://theexpressionsessions.weebly.com/blog/rapping-up-the-project",
+          "locator": "Opening four paragraphs."
+        },
+        "last": {
+          "year": 2024,
+          "source": "https://dandelionradio.com/tracklists/2024-06/main.htm",
+          "locator": "June programme listing and track table."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "kaygee",
+      "name": "KayGee",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "KayGee is a Derby grime MC. SBTV gave him a solo Warm Up Session as part of its Derby series in 2019.",
+      "claims": [
+        {
+          "id": "kaygee-1",
+          "text": "KayGee is a Derby grime MC. SBTV gave him a solo Warm Up Session as part of its Derby series in 2019.",
+          "source": "Kaygee | Warm Up Sessions [S11.EP29]: SBTV Derby",
+          "publisher": "SBTV: Music",
+          "url": "https://www.youtube.com/watch?v=GKGKe7EXS_0",
+          "locator": "Video title, date and opening sentence.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "kaygee-2",
+          "text": "Five years earlier he was in the room at Rinse FM with Eyez, Dubzy, Directs and Lox for Sir Spyro’s Grime Show.",
+          "source": "Grime Show: Eyez, Dubzy, Kaygee, Directs & Lox",
+          "publisher": "Rinse FM",
+          "url": "https://www.youtube.com/watch?v=4W_8EJQZqpE",
+          "locator": "Original 2014 video title and description of the live mix.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "kaygee-3",
+          "text": "He teamed up with LR for “Care Home”, their contribution to the local WarDerbz series.",
+          "source": "KayGee & LR – Care Home (Vigilant War Dub)",
+          "publisher": "IMJUSTDERBZ",
+          "url": "https://www.youtube.com/watch?v=dJywKjMpErI",
+          "locator": "Title and description, episode eight.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "kaygee-4",
+          "text": "In 2026 Charlie Sloth featured him on Fire in the Streets, with a link to KayGee’s own channel.",
+          "source": "KayGee – Fire in the Streets",
+          "publisher": "CharlieSloth",
+          "url": "https://www.youtube.com/watch?v=AAvABDlL2MI",
+          "locator": "Title, publication date and Artist line in the description.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "KayGee is a Derby grime MC. SBTV gave him a solo Warm Up Session as part of its Derby series in 2019. Five years earlier he was in the room at Rinse FM with Eyez, Dubzy, Directs and Lox for Sir Spyro’s Grime Show.",
+          "claims": [
+            "kaygee-1",
+            "kaygee-2"
+          ]
+        },
+        {
+          "text": "He teamed up with LR for “Care Home”, their contribution to the local WarDerbz series. In 2026 Charlie Sloth featured him on Fire in the Streets, with a link to KayGee’s own channel.",
+          "claims": [
+            "kaygee-3",
+            "kaygee-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "dubzy",
+          "label": "Named together in the profile",
+          "claims": [
+            "kaygee-2"
+          ]
+        },
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "kaygee-2"
+          ]
+        },
+        {
+          "id": "lox",
+          "label": "Named together in the profile",
+          "claims": [
+            "kaygee-2"
+          ]
+        },
+        {
+          "id": "directs",
+          "label": "Named together in the profile",
+          "claims": [
+            "kaygee-2"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@kaygeetv6894",
+          "source": "https://www.youtube.com/watch?v=AAvABDlL2MI",
+          "locator": "Check out KayGee link and Artist block; the artist's known X account pins the same video."
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/KayGeeSnazz",
+          "source": "https://www.youtube.com/watch?v=GKGKe7EXS_0",
+          "locator": "Check Kaygee block; public bio says Derby and musician."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/kaygee_de/",
+          "source": "https://www.youtube.com/watch?v=GKGKe7EXS_0",
+          "locator": "Check Kaygee block; same handle in FlexerBeatz's Follow KayGee (Derby) section."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=GKGKe7EXS_0",
+            "finding": "Solo item names the artist, but the inspected watch metadata contains no CC reuse licence."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=KayGee+Derby+grime&srlimit=8",
+            "finding": "First eight file results were printed or medical volumes, with no identified portrait."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://fits.lnk.to/kaygee",
+            "finding": "Checked the publisher-linked release landing page for Fire in the Streets. It offers listening destinations with no image-reuse terms."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=GKGKe7EXS_0",
+            "finding": "The broadcaster links Twitter and Instagram."
+          },
+          {
+            "url": "https://x.com/KayGeeSnazz",
+            "finding": "Artist profile shows Derby and pins Charlie Sloth's exact upload."
+          },
+          {
+            "url": "https://www.instagram.com/kaygee_de/",
+            "finding": "Direct profile served the Instagram shell. Both SBTV and the producer's Flex In The Box description independently link this handle."
+          },
+          {
+            "url": "https://www.youtube.com/@kaygeetv6894",
+            "finding": "Direct destination title KayGeeTV; Charlie Sloth identifies this as the featured artist's channel."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2014,
+          "source": "https://www.youtube.com/watch?v=4W_8EJQZqpE",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2026,
+          "source": "https://www.youtube.com/watch?v=AAvABDlL2MI",
+          "locator": "Upload date on the publisher’s watch page."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "kayse",
+      "name": "KaySe",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "KaySe is a Derby MC. Uniq Media filmed him freestyling over “Dead Battery” in 2014.",
+      "claims": [
+        {
+          "id": "kayse-1",
+          "text": "KaySe is a Derby MC. Uniq Media filmed him freestyling over “Dead Battery” in 2014.",
+          "source": "KaySe - Grime Freestyle [Uniq Media]",
+          "publisher": "Uniq Media",
+          "url": "https://www.youtube.com/watch?v=SP8vXgGgNSg",
+          "locator": "Grime Freestyle title, upload date and instrumental credit.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "kayse-2",
+          "text": "He recorded “SNM” with Eyez over a Sam Moore production.",
+          "source": "Eyez x Kayse – SNM",
+          "publisher": "Pressure Made Music / Arthur St Studios",
+          "url": "https://www.youtube.com/watch?v=qZzGFVnWj1g",
+          "locator": "Artist and producer billing in the title.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "kayse-3",
+          "text": "For his own track “Stars”, Daniel James directed the video and Alex Taylor handled the camera and drone.",
+          "source": "Kayse – Stars",
+          "publisher": "Pressure Made Music / Arthur St Studios",
+          "url": "https://www.youtube.com/watch?v=sApMCnwiiAI",
+          "locator": "Camera/Drone and Directed by lines.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "kayse-4",
+          "text": "KaySe returned to a studio-session format for episode 18 of Urban Linkz in 2021.",
+          "source": "Kayse - Urban Linkz Studio Sessions (Episode 18)",
+          "publisher": "Urban Linkz International",
+          "url": "https://www.youtube.com/watch?v=eSr8nHkUHA4",
+          "locator": "Episode title, publication date and Derby billing.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "KaySe is a Derby MC. Uniq Media filmed him freestyling over “Dead Battery” in 2014.",
+          "claims": [
+            "kayse-1"
+          ]
+        },
+        {
+          "text": "He recorded “SNM” with Eyez over a Sam Moore production. For his own track “Stars”, Daniel James directed the video and Alex Taylor handled the camera and drone. KaySe returned to a studio-session format for episode 18 of Urban Linkz in 2021.",
+          "claims": [
+            "kayse-2",
+            "kayse-3",
+            "kayse-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "kayse-2"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "X",
+          "url": "https://x.com/Kayse_NL",
+          "source": "https://www.youtube.com/watch?v=sApMCnwiiAI",
+          "locator": "Artist handle in studio description."
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/kayse_nl",
+          "source": "https://www.youtube.com/watch?v=sApMCnwiiAI",
+          "locator": "The studio links the artist’s upload of Stars. Its artist byline opens the KaySe_NL profile."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Kayse+Derby&srlimit=8",
+            "finding": "Historical records found. None identified this MC."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://soundcloud.com/kayse_nl/kayse-stars",
+            "finding": "Track artwork has no public reuse permission identified."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://x.com/Kayse_NL",
+            "finding": "Exact handle printed by the studio. The public bio identifies an Instagram name."
+          },
+          {
+            "url": "https://soundcloud.com/kayse_nl/kayse-stars",
+            "finding": "Studio's Stars description links directly to this upload."
+          },
+          {
+            "url": "https://www.instagram.com/justkayse/",
+            "finding": "Account named by artist bio; direct page returned an Instagram shell."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2014,
+          "source": "https://www.youtube.com/watch?v=SP8vXgGgNSg",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2021,
+          "source": "https://www.youtube.com/watch?v=eSr8nHkUHA4",
+          "locator": "Upload date on the publisher’s watch page."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "leeroy-grudge",
+      "name": "Leeroy Grudge",
+      "aliases": [
+        "Lee-Roy Grudge"
+      ],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Leeroy Grudge is an MC from Derby who worked with producer Flexer Beatz as 2 Ruff Diamonds.",
+      "claims": [
+        {
+          "id": "leeroy-grudge-1",
+          "text": "Leeroy Grudge is an MC from Derby who worked with producer Flexer Beatz as 2 Ruff Diamonds.",
+          "source": "Leeroy Grudge [ROAD RAGE]",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=vusEYv3D3L8",
+          "locator": "JDZmedia’s opening description of Road Rage.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "leeroy-grudge-2",
+          "text": "Before the duo’s SBTV session, both were already on the credits of a 2012 JDZmedia cypher. Grudge traded bars with Smuttz, Flukes, V.X and Eyez over Flexer’s beat.",
+          "source": "Lee-Roy Grudge, Smuttz, Flukes, V.X & Eyez [CYPHER]",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=59JfWPwr2DM",
+          "locator": "2012 title, publication date and production line.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "leeroy-grudge-3",
+          "text": "P110 billed him as Lee-Roy Grudge for his solo #1TAKE.",
+          "source": "P110 – Lee-Roy Grudge | @LeeroyGrudge #1TAKE",
+          "publisher": "P110: Music",
+          "url": "https://www.youtube.com/watch?v=yiwRlKXXPos",
+          "locator": "Video title including the @LeeroyGrudge handle.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "leeroy-grudge-4",
+          "text": "SBTV later featured the pair in its Derby Warm Up Sessions, with Grudge on the mic and Flexer on production.",
+          "source": "Leeroy Grudge | Warm Up Sessions [S11.EP19]: SBTV Derby",
+          "publisher": "SBTV: Music",
+          "url": "https://www.youtube.com/watch?v=vUB8kfAxATA",
+          "locator": "First paragraph of the 2019 session.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "leeroy-grudge-5",
+          "text": "They appeared together again on “Flare Up Ya Lighter” in 2020.",
+          "source": "Flare Up Ya Lighter (2RD) [Official Video]",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=76Zi8gdJeLM",
+          "locator": "Official video title and upload date.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Leeroy Grudge is an MC from Derby who worked with producer Flexer Beatz as 2 Ruff Diamonds. Before the duo’s SBTV session, both were already on the credits of a 2012 JDZmedia cypher. Grudge traded bars with Smuttz, Flukes, V.X and Eyez over Flexer’s beat.",
+          "claims": [
+            "leeroy-grudge-1",
+            "leeroy-grudge-2"
+          ]
+        },
+        {
+          "text": "P110 billed him as Lee-Roy Grudge for his solo #1TAKE. SBTV later featured the pair in its Derby Warm Up Sessions, with Grudge on the mic and Flexer on production. They appeared together again on “Flare Up Ya Lighter” in 2020.",
+          "claims": [
+            "leeroy-grudge-3",
+            "leeroy-grudge-4",
+            "leeroy-grudge-5"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "leeroy-grudge-2"
+          ]
+        },
+        {
+          "id": "v-x",
+          "label": "Named together in the profile",
+          "claims": [
+            "leeroy-grudge-2"
+          ]
+        },
+        {
+          "id": "flexer-beatz",
+          "label": "Named together in the profile",
+          "claims": [
+            "leeroy-grudge-1"
+          ]
+        },
+        {
+          "id": "smuttz",
+          "label": "Named together in the profile",
+          "claims": [
+            "leeroy-grudge-2"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "X",
+          "url": "https://x.com/LeeroyGrudge",
+          "source": "https://www.youtube.com/watch?v=yiwRlKXXPos",
+          "locator": "P110 explicitly pairs the stage name with @LeeroyGrudge, corroborated by the bio and SBTV post."
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/Lee-Roy-Grudge",
+          "source": "https://www.youtube.com/watch?v=3eYee4OAVNk",
+          "locator": "Follow Leeroy Grudge block; page title independently confirms spelling."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=vUB8kfAxATA",
+            "finding": "Solo portrait lead from the broadcaster's session; no reusable portrait terms on the inspected item."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Leeroy+Grudge&srlimit=8",
+            "finding": "File search returned zero matches."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.flickr.com/search/?text=Leeroy%20Grudge&license=4%2C5%2C9%2C10",
+            "finding": "Licence-filtered Flickr search reported no matches."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/artist/2rd/626242399",
+            "finding": "Roll With the Enemy cover accompanies a release billing him with 2RD. No cover image reuse grant appeared."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=3eYee4OAVNk",
+            "finding": "Follow Leeroy Grudge section of his duo partner's upload lists Instagram, SoundCloud and Twitter."
+          },
+          {
+            "url": "https://x.com/LeeroyGrudge",
+            "finding": "Self-identifies the role and Derby; his post names Flexer and the SBTV session."
+          },
+          {
+            "url": "https://soundcloud.com/Lee-Roy-Grudge",
+            "finding": "Page title says Lee-roy Grudge; this is the musical partner's exact destination."
+          },
+          {
+            "url": "https://www.instagram.com/LeeroyGrudge",
+            "finding": "Preferred artist handle named by Flexer. Opened to an Instagram shell; no further profile details visible."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=xR4aHdhtBJ4",
+          "locator": "The February 2011 crew upload names Lee-Roy Grudge with Smuttz, Devious and Baz."
+        },
+        "last": {
+          "year": 2020,
+          "source": "https://www.youtube.com/watch?v=76Zi8gdJeLM",
+          "locator": "Upload date on the publisher’s watch page."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "lox",
+      "name": "Lox",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Lox is a Derby MC who recorded a solo SPITFIRE for JDZmedia over a beat by Baza.",
+      "claims": [
+        {
+          "id": "lox-1",
+          "text": "Lox is a Derby MC who recorded a solo SPITFIRE for JDZmedia over a beat by Baza.",
+          "source": "Lox [SPITFIRE]",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=3ajNJqwysNY",
+          "locator": "Opening description and @BazaSnazz production credit.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "lox-2",
+          "text": "One of his earlier freestyles was a thank-you to SwaggaCampMedia for reaching a million views.",
+          "source": "Lox [Freestyle] – #SC1M",
+          "publisher": "SwaggaCampMedia / ITAL EDGE ENTERTAINMENT",
+          "url": "https://www.youtube.com/watch?v=dR-N-Ya7a9k",
+          "locator": "Publisher’s description of the 2012 #SC1M freestyle.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "lox-3",
+          "text": "On Rinse FM he shared Sir Spyro’s Grime Show with Eyez, Dubzy, KayGee and Directs.",
+          "source": "Grime Show: Eyez, Dubzy, Kaygee, Directs & Lox",
+          "publisher": "Rinse FM",
+          "url": "https://www.youtube.com/watch?v=4W_8EJQZqpE",
+          "locator": "Title and description of the live mix.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "lox-4",
+          "text": "In the 2016 Grime-A-Side final against Leicester, Lox took the mic for Derby.",
+          "source": "Leicester VS Derby Cypher | FINAL | Grime-A-Side",
+          "publisher": "Red Bull GMT",
+          "url": "https://www.youtube.com/watch?v=i1rUeV51NxE",
+          "locator": "The organiser’s on-screen LOX, @LOXONLINEE and DERBY caption at about 1:55.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "lox-5",
+          "text": "Away from the clash, he recorded “She Keeps Calling” with Eyez and Wardz at Arthur Street Studios, with Geo on production.",
+          "source": "She Keeps Calling [Explicit]",
+          "publisher": "Arthur St Studios",
+          "url": "https://arthurststudios.bandcamp.com/track/she-keeps-calling-explicit",
+          "locator": "About and Credits sections of the studio’s release.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Lox is a Derby MC who recorded a solo SPITFIRE for JDZmedia over a beat by Baza. One of his earlier freestyles was a thank-you to SwaggaCampMedia for reaching a million views. On Rinse FM he shared Sir Spyro’s Grime Show with Eyez, Dubzy, KayGee and Directs.",
+          "claims": [
+            "lox-1",
+            "lox-2",
+            "lox-3"
+          ]
+        },
+        {
+          "text": "In the 2016 Grime-A-Side final against Leicester, Lox took the mic for Derby. Away from the clash, he recorded “She Keeps Calling” with Eyez and Wardz at Arthur Street Studios, with Geo on production.",
+          "claims": [
+            "lox-4",
+            "lox-5"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "dubzy",
+          "label": "Named together in the profile",
+          "claims": [
+            "lox-3"
+          ]
+        },
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "lox-3",
+            "lox-5"
+          ]
+        },
+        {
+          "id": "kaygee",
+          "label": "Named together in the profile",
+          "claims": [
+            "lox-3"
+          ]
+        },
+        {
+          "id": "directs",
+          "label": "Named together in the profile",
+          "claims": [
+            "lox-3"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "X",
+          "url": "https://x.com/LoxOnlinee",
+          "source": "https://www.youtube.com/watch?v=AYiYk1mqmwM",
+          "locator": "Description line 3; X profile has a public conversation with Dubzy."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=3ajNJqwysNY",
+            "finding": "Solo appearance gives a portrait lead. JDZmedia credits itself as filmmaker; no licence clearing stills found."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Lox+Derby+grime&srlimit=8",
+            "finding": "The three returned files were historical printed works."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://arthurststudios.bandcamp.com/track/she-keeps-calling-explicit",
+            "finding": "The studio's release marks all rights reserved; no image-specific permission."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=i1rUeV51NxE",
+            "finding": "Lox is identifiable by named lower third as the MC on the right in a white headband, microphone in hand, around 1:55. No image reuse grant established."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=AYiYk1mqmwM",
+            "finding": "JDZmedia identifies Twitter Loxonlinee and Instagram Loxonline."
+          },
+          {
+            "url": "https://x.com/LoxOnlinee",
+            "finding": "Profile reciprocally gives Instagram Loxonline; exchanges dated 31 August 2018 with Dubzy and a 2017 post about Derby's Grime-A-Side result corroborate identity."
+          },
+          {
+            "url": "https://www.instagram.com/loxonline/",
+            "finding": "Opened the linked handle; served the Instagram shell. Cross-linked by the confirmed X bio and independently printed by JDZmedia."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2012,
+          "source": "https://www.youtube.com/watch?v=dR-N-Ya7a9k",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2017,
+          "source": "https://www.youtube.com/watch?v=AYiYk1mqmwM",
+          "locator": "Upload date on the publisher’s watch page."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "mystic",
+      "name": "Mystic",
+      "aliases": [
+        "Mystic Mob"
+      ],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Mystic is a Derby MC. His first documented JDZmedia SPITFIRE paired him with a beat by MarvManPro.",
+      "claims": [
+        {
+          "id": "mystic-1",
+          "text": "Mystic is a Derby MC. His first documented JDZmedia SPITFIRE paired him with a beat by MarvManPro.",
+          "source": "Mystic [SPITFIRE] | JDZmedia",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=WkaeJ4TlIOw",
+          "locator": "Opening description and production credit.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "mystic-2",
+          "text": "He went back to JDZmedia for an Elite Session over a Z Dot instrumental.",
+          "source": "Mystic [ELITE SESSIONS] JDZmedia",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=_DSg-WAaqcg",
+          "locator": "Billing and producer line in the original description.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "mystic-3",
+          "text": "On “Coretta’s Dream”, Mystic shared the billing with Staxxy and Kurtis Robinson over Blakstar’s production for Derby Dreams.",
+          "source": "Coretta’s Dream",
+          "publisher": "Derby Dreams",
+          "url": "https://derbydreams.bandcamp.com/track/corettas-dream-staxxy-mystic-kurtis-robinson-produced-by-blakstar",
+          "locator": "Track title and featured credits.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "mystic-4",
+          "text": "TooHardForTV later filmed him going back to back with Sinseer on grime.",
+          "source": "Mystic x Sinseer",
+          "publisher": "TooHardForTV",
+          "url": "https://www.youtube.com/watch?v=CmO-3gL4Q_s",
+          "locator": "Original billing, description and upload date.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Mystic is a Derby MC. His first documented JDZmedia SPITFIRE paired him with a beat by MarvManPro. He went back to JDZmedia for an Elite Session over a Z Dot instrumental.",
+          "claims": [
+            "mystic-1",
+            "mystic-2"
+          ]
+        },
+        {
+          "text": "On “Coretta’s Dream”, Mystic shared the billing with Staxxy and Kurtis Robinson over Blakstar’s production for Derby Dreams. TooHardForTV later filmed him going back to back with Sinseer on grime.",
+          "claims": [
+            "mystic-3",
+            "mystic-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [],
+      "socials": [
+        {
+          "label": "X",
+          "url": "https://x.com/OfficialMystic",
+          "source": "https://www.youtube.com/watch?v=WkaeJ4TlIOw",
+          "locator": "Exact handle in original publisher description."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Mystic+JDZmedia+Derby&srlimit=8",
+            "finding": "Found no identified freely licensed portrait."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://derbydreams.bandcamp.com/track/corettas-dream-staxxy-mystic-kurtis-robinson-produced-by-blakstar",
+            "finding": "Bandcamp artwork has no reuse permission for a profile."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://x.com/OfficialMystic",
+            "finding": "JDZ prints exact handle; public musician bio lists Derby/Perth."
+          },
+          {
+            "url": "https://mysticmob.bandcamp.com/album/rizla-papers-volume-1-prod-by-riz1",
+            "finding": "Bandcamp artist billing uses Mystic Mob and credits Riz1."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2013,
+          "source": "https://www.youtube.com/watch?v=WkaeJ4TlIOw",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2016,
+          "source": "https://www.youtube.com/watch?v=CmO-3gL4Q_s",
+          "locator": "Upload date on the publisher’s watch page."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "rukus",
+      "name": "Rukus",
+      "aliases": [],
+      "placeIds": [
+        "derby",
+        "birmingham"
+      ],
+      "intro": "Rukus grew up in Birmingham and later lived in Derby. A rapper, DJ and producer, he founded Trinity, a Midlands collective where MCs and producers worked alongside DJs and breakdancers.",
+      "claims": [
+        {
+          "id": "rukus-1",
+          "text": "Rukus grew up in Birmingham and later lived in Derby. A rapper, DJ and producer, he founded Trinity, a Midlands collective where MCs and producers worked alongside DJs and breakdancers.",
+          "source": "Meet the Directors",
+          "publisher": "Baby People",
+          "url": "https://www.babypeople.co.uk/directors",
+          "locator": "Baby People’s Rukus biography, first two paragraphs.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "rukus-2",
+          "text": "He was also part of Antourage with Shade One and Yogi.",
+          "source": "Baby J",
+          "publisher": "Rapnews.co.uk",
+          "url": "https://rapnews.co.uk/?p=576",
+          "locator": "Baby J’s forthcoming releases, Ants Dem Swarm line.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "rukus-3",
+          "text": "In Derby’s grime scene he recorded “Off the Floor” with Dubzy, Eyez, TaylorTaylor and Tuska.",
+          "source": "Off the Floor (ft. TaylorTaylor, Tuska, Eyez & Rukus)",
+          "publisher": "Dubzy",
+          "url": "https://dubzysnazz.bandcamp.com/track/off-the-floor-ft-taylortaylor-tuska-eyez-rukus",
+          "locator": "Track and album credits on Dubzy’s Gift of the Gab.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "rukus-4",
+          "text": "His work later reached the stage at Derby Theatre. He wrote 4 Walls, a 2023 play that used live music, dance and projected images to tell stories about people living in the same block of flats.",
+          "source": "4 Walls",
+          "publisher": "Derby Theatre",
+          "url": "https://derbytheatre.co.uk/event/4-walls-2023/",
+          "locator": "2023 show dates, byline and Show Details synopsis.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Rukus grew up in Birmingham and later lived in Derby. A rapper, DJ and producer, he founded Trinity, a Midlands collective where MCs and producers worked alongside DJs and breakdancers. He was also part of Antourage with Shade One and Yogi.",
+          "claims": [
+            "rukus-1",
+            "rukus-2"
+          ]
+        },
+        {
+          "text": "In Derby’s grime scene he recorded “Off the Floor” with Dubzy, Eyez, TaylorTaylor and Tuska. His work later reached the stage at Derby Theatre. He wrote 4 Walls, a 2023 play that used live music, dance and projected images to tell stories about people living in the same block of flats.",
+          "claims": [
+            "rukus-3",
+            "rukus-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC",
+        "DJ",
+        "Producer"
+      ],
+      "connections": [
+        {
+          "id": "dubzy",
+          "label": "Named together in the profile",
+          "claims": [
+            "rukus-3"
+          ]
+        },
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "rukus-3"
+          ]
+        },
+        {
+          "id": "shade-one",
+          "label": "Named together in the profile",
+          "claims": [
+            "rukus-2"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "X",
+          "url": "https://x.com/RUKADIAH",
+          "source": "https://flvz.bandcamp.com/track/no-sah",
+          "locator": "Artist lines above the FLVZ biography print Twitter: Rukadiah; destination bio references Let It Go."
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@Rukdarapper",
+          "source": "https://www.youtube.com/watch?v=tRJKsJy7gsM",
+          "locator": "Uploader channel UCT8n9nsCgr8Vt0XOkKVilLw, artist handle @Rukadiah in description. His X profile pins this exact video."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.babypeople.co.uk/directors",
+            "finding": "The picture immediately preceding Rukus identifies a portrait candidate; no reuse terms or photographer credit accompany it."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://derbytheatre.co.uk/event/4-walls-2023/",
+            "finding": "Production photography credits © Grant Archer. The gallery is neither a cleared portrait nor a grant of reuse."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Rukus+Derby&srlimit=8",
+            "finding": "Returned historic periodical and book scans among the top hits."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://flvz.bandcamp.com/track/no-sah",
+            "finding": "FLVZ marks the release all rights reserved; no cover reuse terms located."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://flvz.bandcamp.com/track/no-sah",
+            "finding": "The label prints Rukadiah and Rukusofficialpage."
+          },
+          {
+            "url": "https://x.com/RUKADIAH",
+            "finding": "The profile names Ruk Da Rapper, identifies the Midlands and references Let It Go; pinned upload leads to his own YouTube channel."
+          },
+          {
+            "url": "https://www.youtube.com/@Rukdarapper",
+            "finding": "Opened the channel, then checked original Deep Like upload: Rukus and Nicodemus in the description, with @Rukadiah linked back."
+          },
+          {
+            "url": "https://www.facebook.com/rukusofficialpage",
+            "finding": "FLVZ's Facebook handle returned an error on direct inspection; omitted."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2005,
+          "source": "https://rapnews.co.uk/?p=576",
+          "locator": "Page date; Derby and forthcoming releases questions."
+        },
+        "last": {
+          "year": 2023,
+          "source": "https://derbytheatre.co.uk/event/4-walls-2023/",
+          "locator": "Date range below byline."
+        }
+      },
+      "activityChecked": "2026-11-23",
+      "placeNotes": {
+        "derby": "Lived in Derby",
+        "birmingham": "Grew up in Birmingham"
+      }
+    },
+    {
       "id": "s-x",
       "name": "S-X",
       "aliases": [],
@@ -1068,6 +2906,485 @@
           "year": 2025,
           "source": "https://www.youtube.com/watch?v=YxVEcOZa_o8",
           "locator": "HARDER TO FIND music video, artist's official S-X channel, 3 October 2025. The January 2026 catalogue listing for Always Wrong is a reissue of his 2019 recording and does not establish new activity."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "shade-one",
+      "name": "Shade One",
+      "aliases": [
+        "Shade1",
+        "Shade-One",
+        "Shade 1",
+        "Shade-1"
+      ],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Shade One was part of Antourage alongside Yogi and Rukus. In 2005, when Rapnews asked Baby J who was making music in Derby, Shade One was among the first people he named.",
+      "claims": [
+        {
+          "id": "shade-one-1",
+          "text": "Shade One was part of Antourage alongside Yogi and Rukus. In 2005, when Rapnews asked Baby J who was making music in Derby, Shade One was among the first people he named.",
+          "source": "Baby J",
+          "publisher": "Rapnews.co.uk",
+          "url": "https://rapnews.co.uk/?p=576",
+          "locator": "Answer to the Derby question and the Ants Dem Swarm line in the forthcoming releases.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "shade-one-2",
+          "text": "Continental GT remembers him in Midlandz Mafia, the grime crew that brought together artists across Birmingham, Leicester and Derby and had a weekly show on Silk FM.",
+          "source": "LEGACY – Continental GT",
+          "publisher": "LEGACY exhibition",
+          "url": "https://static1.squarespace.com/static/6501bba91dfff5327e8f6304/t/653a52ddd3841a56a44df1ce/1698321118824/LEGACY%2BLARGE%2BPRINT%2B231020.pdf",
+          "locator": "LEGACY, printed page 53, Continental GT’s recollection beginning “I’d say from 2007” and the paragraph alongside it.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "shade-one-3",
+          "text": "GT’s own channel bills him as Shade-1 with GT and RD.",
+          "source": "midlandz mafia gt-rd-shade-1...",
+          "publisher": "CONTINENTAL GT",
+          "url": "https://www.youtube.com/watch?v=52cEGekbJ2M",
+          "locator": "Original video title and Midlandz Mafia description.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "shade-one-4",
+          "text": "In 2021 DJ Barnzy published a Midlandz Mafia link-up that again billed Shade One, this time with Vader, Nutcracka and Brady.",
+          "source": "Midlandz Mafia 2021 Link Up",
+          "publisher": "DJ BARNZY",
+          "url": "https://www.youtube.com/watch?v=eMmmNfJvGX8",
+          "locator": "Upload date and full set billing.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Shade One was part of Antourage alongside Yogi and Rukus. In 2005, when Rapnews asked Baby J who was making music in Derby, Shade One was among the first people he named. Continental GT remembers him in Midlandz Mafia, the grime crew that brought together artists across Birmingham, Leicester and Derby and had a weekly show on Silk FM.",
+          "claims": [
+            "shade-one-1",
+            "shade-one-2"
+          ]
+        },
+        {
+          "text": "GT’s own channel bills him as Shade-1 with GT and RD. In 2021 DJ Barnzy published a Midlandz Mafia link-up that again billed Shade One, this time with Vader, Nutcracka and Brady.",
+          "claims": [
+            "shade-one-3",
+            "shade-one-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "rukus",
+          "label": "Named together in the profile",
+          "claims": [
+            "shade-one-1"
+          ]
+        }
+      ],
+      "socials": [],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Shade+One+Midlandz+Mafia&srlimit=8",
+            "finding": "Zero matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.flickr.com/search/?text=midlandz%20mafia&license=4%2C5%2C9%2C10",
+            "finding": "The licence-filtered search returned no matches."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=VI5cFWhS0-0",
+            "finding": "Named artist video but no photographer or image licence authorising a still."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://www.youtube.com/watch?v=nxPRA75-Xbc",
+            "finding": "The publisher links Boss Type II and its predecessor. No visual reuse terms in the credits."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://smarturl.it/BOSSTYPE1",
+            "finding": "Previously published Boss Type retail shortcut returned HTTP 404."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/album/boss-type/1286655940",
+            "finding": "Apple Music identifies this as Boss Type by Shade1. Retail cover displayed without an identified licence for use as the artist portrait or artwork."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=RgtDIvl1Wz0",
+            "finding": "Historic @DaRealShade_1 explicitly credited to the MC."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=VI5cFWhS0-0",
+            "finding": "Independent publisher supplies the same handle as Shade1."
+          },
+          {
+            "url": "https://x.com/darealshade_1",
+            "finding": "Direct destination returned HTTP 404. No replacement account verified."
+          },
+          {
+            "url": "https://music.apple.com/us/artist/shade1/1286657190",
+            "finding": "Retail artist page linked through the Boss Type release. This is an artist catalogue destination; who manages it is unverified."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2005,
+          "source": "https://rapnews.co.uk/?p=576",
+          "locator": "Page date, Derby and forthcoming-releases questions."
+        },
+        "last": {
+          "year": 2021,
+          "source": "https://www.youtube.com/watch?v=eMmmNfJvGX8",
+          "locator": "Upload date on the publisher’s watch page."
+        }
+      },
+      "activityChecked": "2026-11-23",
+      "placeNotes": {
+        "derby": "Derby scene · Antourage"
+      }
+    },
+    {
+      "id": "smuttz",
+      "name": "Smuttz",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "Smuttz is a Derby MC whose solo SPITFIRE for JDZmedia featured production by Darx.",
+      "claims": [
+        {
+          "id": "smuttz-1",
+          "text": "Smuttz is a Derby MC whose solo SPITFIRE for JDZmedia featured production by Darx.",
+          "source": "Smuttz [SPITFIRE] [PT.2]",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=z7x_WE2kynU",
+          "locator": "First two sentences of the description.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "smuttz-2",
+          "text": "Bars On Demand introduced him in 2011 as the owner of Gritty Substancez.",
+          "source": "Smuttz | Freestyle [HD]",
+          "publisher": "BarsOnDemandUK",
+          "url": "https://www.youtube.com/watch?v=VAKmSlhCcU8",
+          "locator": "Opening description of the Real Talk freestyle.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "smuttz-3",
+          "text": "His own channel names Leeroy Grudge, Devious and Baz alongside him on a crew recording.",
+          "source": "Gritty Substancez",
+          "publisher": "MrSmuttz",
+          "url": "https://www.youtube.com/watch?v=xR4aHdhtBJ4",
+          "locator": "Description under Artists; Grudge billed as Lee-Roy Grudge.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "smuttz-4",
+          "text": "His birthday set brought Gritty Substancez and New Loyalty together. TooHardForTV billed Eyez, JNR, Karnage and Jam Jam among the guests.",
+          "source": "Smuttz Birthday Set",
+          "publisher": "TooHardForTV",
+          "url": "https://www.youtube.com/watch?v=aQWQI8R5-XQ",
+          "locator": "Video title and the first line of the description.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "smuttz-5",
+          "text": "In 2020 he recorded “Out of the Ashes” with Wiseone, who produced and recorded the freestyle, and Titan, who edited the video.",
+          "source": "SMUTTZ [OUT OF THE ASHES] | GIFTED SPECIMENZ",
+          "publisher": "Gifted Specimenz (GIFTED SPECIMENZ)",
+          "url": "https://www.youtube.com/watch?v=pSecmfREEI4",
+          "locator": "Publication date, production, recording and edit credits.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Smuttz is a Derby MC whose solo SPITFIRE for JDZmedia featured production by Darx. Bars On Demand introduced him in 2011 as the owner of Gritty Substancez. His own channel names Leeroy Grudge, Devious and Baz alongside him on a crew recording.",
+          "claims": [
+            "smuttz-1",
+            "smuttz-2",
+            "smuttz-3"
+          ]
+        },
+        {
+          "text": "His birthday set brought Gritty Substancez and New Loyalty together. TooHardForTV billed Eyez, JNR, Karnage and Jam Jam among the guests. In 2020 he recorded “Out of the Ashes” with Wiseone, who produced and recorded the freestyle, and Titan, who edited the video.",
+          "claims": [
+            "smuttz-4",
+            "smuttz-5"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "smuttz-4"
+          ]
+        },
+        {
+          "id": "jnr",
+          "label": "Named together in the profile",
+          "claims": [
+            "smuttz-4"
+          ]
+        },
+        {
+          "id": "leeroy-grudge",
+          "label": "Named together in the profile",
+          "claims": [
+            "smuttz-3"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@MrSmuttz",
+          "source": "https://www.youtube.com/watch?v=IB8SqfukGpQ",
+          "locator": "MrSmuttz uploader, ID UC2sSiWakCrcUsba_I4cZw2Q; it publishes both his solo track and named crew item."
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/bold-eagle-don",
+          "source": "https://www.youtube.com/watch?v=IB8SqfukGpQ",
+          "locator": "Soundcloud line in the artist's upload. Destination title is SMUTTZ."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=VAKmSlhCcU8",
+            "finding": "Named solo session, but no explicit permission to reuse a video still."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=Smuttz+Derby&srlimit=8",
+            "finding": "No matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.flickr.com/search/?text=Smuttz%20Derby&license=4%2C5%2C9%2C10",
+            "finding": "No matches in the licence-filtered search."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/artist/smuttz/1499306905",
+            "finding": "Eagle Eyes – EP appears under Singles & EPs, 2013. Artwork present; no cover reuse grant."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=IB8SqfukGpQ",
+            "finding": "MrSmuttz links bold-eagle-don on SoundCloud and the older X handle baldeagledon."
+          },
+          {
+            "url": "https://www.youtube.com/@MrSmuttz",
+            "finding": "Direct destination is the channel that published the named crew item and solo recording."
+          },
+          {
+            "url": "https://soundcloud.com/bold-eagle-don",
+            "finding": "Direct page title is SMUTTZ, matching the self-published recording."
+          },
+          {
+            "url": "https://x.com/baldeagledon",
+            "finding": "Account unavailable. Historical handle omitted."
+          },
+          {
+            "url": "https://www.instagram.com/smuttzofficial_gs/",
+            "finding": "Original Gifted Specimenz description identifies the artist's Instagram. Direct destination returned an Instagram shell; current control not independently confirmed."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=xR4aHdhtBJ4",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2020,
+          "source": "https://www.youtube.com/watch?v=pSecmfREEI4",
+          "locator": "Upload date on the publisher’s watch page."
+        }
+      },
+      "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "v-x",
+      "name": "V.X",
+      "aliases": [],
+      "placeIds": [
+        "derby"
+      ],
+      "intro": "V.X was appearing under the New Loyalty name by 2011, when SwaggaCampMedia filmed a solo grime freestyle.",
+      "claims": [
+        {
+          "id": "v-x-1",
+          "text": "V.X was appearing under the New Loyalty name by 2011, when SwaggaCampMedia filmed a solo grime freestyle.",
+          "source": "V.X (New Loyalty) – Freestyle [GRIME]",
+          "publisher": "SwaggaCampMedia / ITAL EDGE ENTERTAINMENT",
+          "url": "https://www.youtube.com/watch?v=RbJks-7R8vw",
+          "locator": "Full title, date and separate rap freestyle mentioned in the description.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "v-x-2",
+          "text": "A year later he joined Leeroy Grudge, Smuttz, Flukes and Eyez on a JDZmedia cypher produced by Flexer Beatz.",
+          "source": "Lee-Roy Grudge, Smuttz, Flukes, V.X & Eyez [CYPHER]",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=59JfWPwr2DM",
+          "locator": "Cypher billing, upload date and production line.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "v-x-3",
+          "text": "In his 2016 round-up of the Derby scene, filmmaker Daniel James picked out V.X’s video for the title track of his Ghost EP.",
+          "source": "Derby is charging up!",
+          "publisher": "Daniel James Agency",
+          "url": "https://danieljamesagencydotcom.wordpress.com/2016/09/02/derby-is-charging-up-arthurststudios-vx_01332-kayse_nl-sherzy_nl-crudded_badz-akmigram/",
+          "locator": "Opening paragraph and first entry on the September round-up.",
+          "checked": "2026-11-23"
+        },
+        {
+          "id": "v-x-4",
+          "text": "Arthur Street Studios credited Akmi for the visuals on “Ghost” and A2Zbeats and SamMooreNL for the audio.",
+          "source": "V.X – Ghost",
+          "publisher": "Arthur St Studios / Pressure Made Music",
+          "url": "https://www.youtube.com/watch?v=pLSMnN_YM8c",
+          "locator": "Original Ghost video, Connect block.",
+          "checked": "2026-11-23"
+        }
+      ],
+      "bio": [
+        {
+          "text": "V.X was appearing under the New Loyalty name by 2011, when SwaggaCampMedia filmed a solo grime freestyle. A year later he joined Leeroy Grudge, Smuttz, Flukes and Eyez on a JDZmedia cypher produced by Flexer Beatz.",
+          "claims": [
+            "v-x-1",
+            "v-x-2"
+          ]
+        },
+        {
+          "text": "In his 2016 round-up of the Derby scene, filmmaker Daniel James picked out V.X’s video for the title track of his Ghost EP. Arthur Street Studios credited Akmi for the visuals on “Ghost” and A2Zbeats and SamMooreNL for the audio.",
+          "claims": [
+            "v-x-3",
+            "v-x-4"
+          ]
+        }
+      ],
+      "roles": [
+        "MC"
+      ],
+      "connections": [
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "v-x-2"
+          ]
+        },
+        {
+          "id": "leeroy-grudge",
+          "label": "Named together in the profile",
+          "claims": [
+            "v-x-2"
+          ]
+        },
+        {
+          "id": "flexer-beatz",
+          "label": "Named together in the profile",
+          "claims": [
+            "v-x-2"
+          ]
+        },
+        {
+          "id": "smuttz",
+          "label": "Named together in the profile",
+          "claims": [
+            "v-x-2"
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "label": "X",
+          "url": "https://x.com/VX_01332",
+          "source": "https://www.youtube.com/watch?v=pLSMnN_YM8c",
+          "locator": "CONNECT block: Artist. Exact handle and Ghost EP independently match the destination."
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-23",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=RbJks-7R8vw",
+            "finding": "Named solo freestyle; no CC licence found in the original watch metadata."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srsearch=V.X+Derby+grime&srlimit=8",
+            "finding": "Top file hits unrelated printed volumes."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.flickr.com/search/?text=V.X%20Derby%20Grime&license=4%2C5%2C9%2C10",
+            "finding": "Filtered search had no matches."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://arthurststudios.bandcamp.com/track/07-just-corey-ft-v-x-demons",
+            "finding": "Official track art belongs to this credited release, which is marked all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=pLSMnN_YM8c",
+            "finding": "Explicitly labels @VX_01332 as artist."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=6lILkBN8OjU",
+            "finding": "An independent filmmaker prints the same handle."
+          },
+          {
+            "url": "https://x.com/VX_01332",
+            "finding": "Bio and pinned post both link the Ghost EP; profile lists Derby."
+          }
+        ]
+      },
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=RbJks-7R8vw",
+          "locator": "Upload date on the publisher’s watch page."
+        },
+        "last": {
+          "year": 2016,
+          "source": "https://arthurststudios.bandcamp.com/track/07-just-corey-ft-v-x-demons",
+          "locator": "Credits."
         }
       },
       "activityChecked": "2026-11-23"

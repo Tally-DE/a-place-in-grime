@@ -46,3 +46,57 @@ if (copyPrompt) {
     }
   });
 }
+
+const packetFiles = document.querySelector('#packet-files');
+if (packetFiles && window.crypto?.randomUUID) {
+  packetFiles.hidden = false;
+  const receipts = new Map();
+  const results = packetFiles.querySelector('ol');
+  const status = packetFiles.querySelector('[role="status"]');
+  const button = packetFiles.querySelector('button');
+  packetFiles.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (button.disabled) return;
+    button.disabled = true;
+    const files = Array.from(packetFiles.elements.files.files);
+    const credit = packetFiles.elements.credit.value;
+    let accepted = 0;
+    for (const [index, file] of files.entries()) {
+      status.textContent = `Checking file ${index + 1} of ${files.length}…`;
+      const row = document.createElement('li');
+      try {
+        if (file.size > 180000) throw new Error('This file is too large for one packet.');
+        const note = await file.text();
+        if (note.length > 45000) throw new Error('Keep each question under 45,000 characters.');
+        const packet = JSON.parse(note);
+        if (packet?.version !== 4 || !packet.task_id) throw new Error('Choose a version 4 artist packet.');
+        const key = JSON.stringify([credit,note]);
+        const receipt = receipts.get(key) || {token: crypto.randomUUID(), url: ''};
+        receipts.set(key, receipt);
+        if (!receipt.url) {
+          const response = await fetch('/packet', {method:'POST',body:new URLSearchParams({note,credit,token:receipt.token})});
+          if (!response.ok) {
+            const page = new DOMParser().parseFromString(await response.text(),'text/html');
+            throw new Error(page.querySelector('[role="alert"]')?.textContent || 'Could not confirm delivery. Retry this file.');
+          }
+          const target = new URL(response.url);
+          if (target.origin !== location.origin || target.pathname !== '/receipt/'+receipt.token) throw new Error('No receipt returned. Retry this file.');
+          receipt.url = target.pathname;
+        }
+        const anchor = document.createElement('a');
+        anchor.href = receipt.url;
+        anchor.textContent = file.name+' — private receipt';
+        if (!results.querySelector('a[href="'+receipt.url+'"]')) {
+          row.append(anchor);
+          results.append(row);
+        }
+        accepted++;
+      } catch (error) {
+        row.textContent = file.name+' — '+(error instanceof SyntaxError?'This file could not be read as JSON.':error.message);
+        results.append(row);
+      }
+    }
+    status.textContent = `${accepted} of ${files.length} files received. Save the receipt links before leaving.`;
+    button.disabled = false;
+  });
+}

@@ -66,3 +66,7 @@ Follow the artist or label’s outgoing links to their actual profiles. Check we
 An editor should be able to open the source, find the line and reproduce the exact relationship. An artist’s testimony can establish whom they remember. An uploader’s own credit can establish the role printed on that upload. A mirror, a repost and a Wayback capture of that upload share one origin. Record contrary evidence and preserve uncertainty over aliases, membership and place until it is resolved.
 
 Compare methods by **new people with inspectable evidence**, mistaken merges or locations averted, and whether another person can follow the next lead. Compare quiet scenes and older sources alongside easy-to-search artists. Real Derby trials and outstanding questions are recorded in the [field notes](trials/derby.md).
+
+## Reading an old video credit
+
+Start with the original watch ID when web search turns up only a repost. Open the publisher's video and expand its description. Save the performer billing, producer or camera credit, and the time of any on-screen name. If the page works but playback does not, record what was visible. A title card inspected in a player preview can establish the words on that frame. Describe that inspection in the locator and leave audio marked unchecked. Keep the upload date separate from the recording date.

@@ -1,17 +1,24 @@
 {
   "case_id": "derby-scene",
-  "revision": 2,
+  "revision": 3,
   "scope": "Identify people in the Derby grime scene across eras. Preserve unresolved credits and nearby or cross-city connections at the precision the sources support.",
-  "summary": "A local studio announcement identifies Staxxy as a Derby artist. Their participation in grime is an open question. Prior radio and interview passes surfaced other leads, including an unresolved producer handle. These are research drafts.",
-  "evidence_files": ["../trials/derby.md", "../examples/derby-dubzy.json"],
+  "summary": "Fifteen profiles passed review in the 30-minute Derby trial. The Derby index distinguishes local artists from collaborators. Staxxy's grime connection and several early identities remain open.",
+  "evidence_files": ["../trials/derby.md", "../examples/derby-dubzy.json", "../trials/derby-2026-11-23.md", "../sources/derby.md"],
   "coverage": [
     {"place": "Derby", "period": "2013–2016", "collection": "Selected i-D interview, JDZmedia upload, Rinse session and YNC release credits", "extent": "Named items in the field notes only"},
     {"place": "Derby and the wider Midlands", "period": "2000s", "collection": "Midlandz Mafia web and oral-history trail", "extent": "One crew trail. Earlier physical line-ups remain open."},
     {"place": "Derby", "period": "2016", "collection": "Arthur Street Studios and local filmmaker coverage", "extent": "31 July launch announcement checked. The remaining channel listings have not been surveyed."},
     {"place": "Derby", "period": "Open", "collection": "Local flyers, youth projects, physical tapes and local press", "extent": "Unsurveyed in this case"}
   ],
-  "next_task": "derby-staxxy-grime",
+  "next_task": "derby-lr-solo",
   "tasks": [
+    {
+      "id": "derby-lr-solo",
+      "status": "ready",
+      "question": "Which solo credit identifies the LR billed for Derby in Flex In The Box?",
+      "source_url": "https://www.youtube.com/watch?v=3eYee4OAVNk",
+      "next_action": "Compare the individual performer credit with a solo recording and the original WarDerbz billing."
+    },
     {
       "id": "derby-studio-launch",
       "status": "closed",
@@ -23,9 +30,9 @@
     },
     {
       "id": "derby-staxxy-grime",
-      "status": "ready",
+      "status": "waiting",
       "question": "Is there an attributable credit or first-hand account tying Staxxy to grime?",
-      "next_action": "Search Staxxy with Derby and a station, grime set or clash. Start from the spelling and local studio in derby-studio-launch. Save one independently inspectable item and a locator, or log the queries and leave the genre open. A general Derby music listing already exists."
+      "next_action": "Find a track-specific grime billing, set or first-hand account. The studio-wide tag on FRIO and the archived Lightwork billing were checked in the timed trial."
     },
     {
       "id": "derby-kaygee",
@@ -35,9 +42,9 @@
     },
     {
       "id": "derby-fernz",
-      "status": "waiting",
+      "status": "closed",
       "question": "Does the Fernz in Eyez’s interview use the credited name Don Fernz?",
-      "next_action": "Resume when a contemporary participant or publisher links both names. The YNC credit and interview are already recorded in the field notes."
+      "next_action": "The PGS cypher bills Fernz and links @donfernz. BigFingzTV identifies the handle as Derby MC and producer Don Fernz. See the dated trial review."
     },
     {
       "id": "derby-hekkers",
@@ -55,6 +62,7 @@
   "log": [
     {"date": "2026-11-22", "task": "derby-hekkers", "note": "JDZmedia explicitly credits the handle. The exact-handle search and Hekkers with Dubzy did not resolve a second identity. The producer’s location remains open."},
     {"date": "2026-11-22", "task": "derby-midlandz-flyer", "note": "The retrieved crew profile dates to 2016. The earlier bounded lookup and precise addresses are in the field notes."},
-    {"date": "2026-11-22", "task": "derby-studio-launch", "note": "Resumed revision 1 from disk in a fresh process and opened the saved original. The first-upload paragraph identifies Staxxy as a Derby artist. The post describes a city music platform. Genre remains open in derby-staxxy-grime. This check covered the written announcement."}
+    {"date": "2026-11-22", "task": "derby-studio-launch", "note": "Resumed revision 1 from disk in a fresh process and opened the saved original. The first-upload paragraph identifies Staxxy as a Derby artist. The post describes a city music platform. Genre remains open in derby-staxxy-grime. This check covered the written announcement."},
+    {"date": "2026-11-23", "task": "derby-fernz", "note": "Reviewed sixteen packets and accepted fifteen profiles. The dated trial report records the decisions, source collections and handoff for the next researcher."}
   ]
 }
