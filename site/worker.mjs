@@ -55,8 +55,9 @@ function activityLine(a) {
   if(t.start&&t.end)dates.push('Active '+t.start.year+'–'+t.end.year);
   else if(t.start)dates.push('Started in '+t.start.year);
   else if(t.end)dates.push('Active until '+t.end.year);
-  else if(t.first)dates.push('First documented in '+t.first.year);
-  if(t.last&&!t.end&&!t.current&&t.last.year!==t.first?.year)dates.push('Latest credit in '+t.last.year);
+  else if(t.first&&t.last&&!t.current&&t.last.year!==t.first.year)dates.push('Credits on record from '+t.first.year+' to '+t.last.year);
+  else if(t.first)dates.push('Documented here in '+t.first.year);
+  if(t.last&&(t.start||!t.first)&&!t.end&&!t.current&&t.last.year!==t.first?.year)dates.push('Latest documented credit in '+t.last.year);
   if(t.current&&!t.end)dates.push('Active as of '+new Intl.DateTimeFormat('en-GB',{month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(t.current.asOf)));
   return dates.join(' · ');
 }

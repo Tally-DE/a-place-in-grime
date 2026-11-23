@@ -1,23 +1,62 @@
 {
   "case_id": "derby-scene",
-  "revision": 3,
+  "revision": 4,
   "scope": "Identify people in the Derby grime scene across eras. Preserve unresolved credits and nearby or cross-city connections at the precision the sources support.",
-  "summary": "Fifteen profiles passed review in the 30-minute Derby trial. The Derby index distinguishes local artists from collaborators. Staxxy's grime connection and several early identities remain open.",
-  "evidence_files": ["../trials/derby.md", "../examples/derby-dubzy.json", "../trials/derby-2026-11-23.md", "../sources/derby.md"],
-  "coverage": [
-    {"place": "Derby", "period": "2013–2016", "collection": "Selected i-D interview, JDZmedia upload, Rinse session and YNC release credits", "extent": "Named items in the field notes only"},
-    {"place": "Derby and the wider Midlands", "period": "2000s", "collection": "Midlandz Mafia web and oral-history trail", "extent": "One crew trail. Earlier physical line-ups remain open."},
-    {"place": "Derby", "period": "2016", "collection": "Arthur Street Studios and local filmmaker coverage", "extent": "31 July launch announcement checked. The remaining channel listings have not been surveyed."},
-    {"place": "Derby", "period": "Open", "collection": "Local flyers, youth projects, physical tapes and local press", "extent": "Unsurveyed in this case"}
+  "summary": "The first Derby trial added fifteen profiles. The Derby Archives pass added seventeen and resolved LR’s solo credit. Staxxy and Cizz Real still need a specific grime credit.",
+  "evidence_files": [
+    "../trials/derby.md",
+    "../examples/derby-dubzy.json",
+    "../trials/derby-2026-11-23.md",
+    "../sources/derby.md",
+    "../trials/derby-archives-02.md"
   ],
-  "next_task": "derby-lr-solo",
+  "coverage": [
+    {
+      "place": "Derby",
+      "period": "2013–2016",
+      "collection": "Selected i-D interview, JDZmedia upload, Rinse session and YNC release credits",
+      "extent": "Named items in the field notes only"
+    },
+    {
+      "place": "Derby and the wider Midlands",
+      "period": "2000s",
+      "collection": "Midlandz Mafia web and oral-history trail",
+      "extent": "One crew trail. Earlier physical line-ups remain open."
+    },
+    {
+      "place": "Derby",
+      "period": "2016",
+      "collection": "Arthur Street Studios and local filmmaker coverage",
+      "extent": "31 July launch announcement checked. The remaining channel listings have not been surveyed."
+    },
+    {
+      "place": "Derby",
+      "period": "Open",
+      "collection": "Local flyers, youth projects, physical tapes and local press",
+      "extent": "Unsurveyed in this case"
+    },
+    {
+      "place": "Derby",
+      "period": "2000s–2020s",
+      "collection": "Derby Archives and participant sources",
+      "extent": "756 video IDs listed, 44 watch pages opened individually. Exact items in derby-archives-02.md."
+    }
+  ],
+  "next_task": "derby-natty-whitey-freaky-g",
   "tasks": [
     {
-      "id": "derby-lr-solo",
+      "id": "derby-natty-whitey-freaky-g",
       "status": "ready",
+      "question": "Which participant recording identifies the two MCs on DJ Natty’s 12 December 2004 clash?",
+      "source_url": "https://www.youtube.com/watch?v=Ct96ZvUyWyg",
+      "next_action": "Compare the Whitey and Freaky G billing with DJ Natty’s own copies or a contemporary inlay. Establish each performer’s place separately."
+    },
+    {
+      "id": "derby-lr-solo",
+      "status": "closed",
       "question": "Which solo credit identifies the LR billed for Derby in Flex In The Box?",
       "source_url": "https://www.youtube.com/watch?v=3eYee4OAVNk",
-      "next_action": "Compare the individual performer credit with a solo recording and the original WarDerbz billing."
+      "next_action": "SBTV solo session 4z8Kp8oxpaE and the FlexerBeatz group credit both identify lr_de. The Last Days feature remains open."
     },
     {
       "id": "derby-studio-launch",
@@ -60,9 +99,30 @@
     }
   ],
   "log": [
-    {"date": "2026-11-22", "task": "derby-hekkers", "note": "JDZmedia explicitly credits the handle. The exact-handle search and Hekkers with Dubzy did not resolve a second identity. The producer’s location remains open."},
-    {"date": "2026-11-22", "task": "derby-midlandz-flyer", "note": "The retrieved crew profile dates to 2016. The earlier bounded lookup and precise addresses are in the field notes."},
-    {"date": "2026-11-22", "task": "derby-studio-launch", "note": "Resumed revision 1 from disk in a fresh process and opened the saved original. The first-upload paragraph identifies Staxxy as a Derby artist. The post describes a city music platform. Genre remains open in derby-staxxy-grime. This check covered the written announcement."},
-    {"date": "2026-11-23", "task": "derby-fernz", "note": "Reviewed sixteen packets and accepted fifteen profiles. The dated trial report records the decisions, source collections and handoff for the next researcher."}
+    {
+      "date": "2026-11-22",
+      "task": "derby-hekkers",
+      "note": "JDZmedia explicitly credits the handle. The exact-handle search and Hekkers with Dubzy did not resolve a second identity. The producer’s location remains open."
+    },
+    {
+      "date": "2026-11-22",
+      "task": "derby-midlandz-flyer",
+      "note": "The retrieved crew profile dates to 2016. The earlier bounded lookup and precise addresses are in the field notes."
+    },
+    {
+      "date": "2026-11-22",
+      "task": "derby-studio-launch",
+      "note": "Resumed revision 1 from disk in a fresh process and opened the saved original. The first-upload paragraph identifies Staxxy as a Derby artist. The post describes a city music platform. Genre remains open in derby-staxxy-grime. This check covered the written announcement."
+    },
+    {
+      "date": "2026-11-23",
+      "task": "derby-fernz",
+      "note": "Reviewed sixteen packets and accepted fifteen profiles. The dated trial report records the decisions, source collections and handoff for the next researcher."
+    },
+    {
+      "date": "2026-11-23",
+      "task": "derby-lr-solo",
+      "note": "Seventeen profiles accepted and four licensed Build TV portraits identified. The second archive log lists the item IDs and remaining leads."
+    }
   ]
 }

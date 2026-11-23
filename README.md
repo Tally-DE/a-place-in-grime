@@ -2,7 +2,7 @@
 
 The aim is to document every artist we can establish took part in UK grime, across all four nations, every era and every level of visibility. An MC who appeared at one local night, a producer remembered by a handle and an artist with a national career all belong within scope. A remembered name can enter as a lead immediately. A public profile can be brief. Release lists are optional.
 
-The working catalogue includes artist and place pages, alias search, claim-level corrections and verification, and a private submissions inbox. The first five artist profiles are in [catalogue.json](catalogue.json). The website is currently an [owner-private pilot](https://a-place-in-grime.tally-de.chatgpt.site). The research repository and task queue are public.
+The working catalogue includes artist and place pages, alias search, claim-level corrections and verification, and a private submissions inbox. The reviewed artist profiles are in [catalogue.json](catalogue.json). The website is currently an [owner-private pilot](https://a-place-in-grime.tally-de.chatgpt.site). The research repository and task queue are public.
 
 ## Take part
 

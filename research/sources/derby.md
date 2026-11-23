@@ -10,6 +10,8 @@ The uploader collects audio and mixtapes from Derby across grime, rap and singin
 
 The 30-minute trial also inspected two upload listings here. “Lightwork” bills V.X and Staxxy. “Kyle” bills JakMan, Jay P and J Dubz. Find an original release or an artist credit for “Kyle” before joining profiles or dating the recording. [Lightwork](https://www.youtube.com/watch?v=elHwAYcpMqM) · [Kyle](https://www.youtube.com/watch?v=fHEG5ptc4DQ)
 
+The next pass indexed the 756 visible uploads and opened 44 individual watch pages. The [item log](../trials/derby-archives-02.md) lists their stable IDs and unresolved credits.
+
 ## SwaggaCampMedia
 
 Also written **Swagga Camp Media**. The channel now calls itself **ITAL EDGE ENTERTAINMENT** and names SwaggaCampMedia as its former name. The same channel ID carries Derby Carnival performances, freestyles and sets from elsewhere in the Midlands. [Channel UC473PsqhGCeiBsqjUL5nvGw](https://www.youtube.com/channel/UC473PsqhGCeiBsqjUL5nvGw) · [Uploads](https://www.youtube.com/@ITALEDGE/videos)
@@ -49,3 +51,15 @@ The film of [V.X’s “Ghost”](https://www.youtube.com/watch?v=pLSMnN_YM8c) s
 | [Motion21](https://www.youtube.com/channel/UC9WCxGTD_XvrlljKMg3PSrQ) | The original [They Dont Believe You video](https://www.youtube.com/watch?v=N-v7vULBpbc) bills JakMan, Dubzy and Directs. | Follow the promo named in the description and compare its original track credits. |
 | [Misjif Television](https://www.youtube.com/channel/UCFuUxxQ3O3cZi3sne3MeYHQ) | A [BARZ group session](https://www.youtube.com/watch?v=tNdUFpCnJ3M) bills Don Fernz, SMG, Emkay and JNR. | Trace one of the SMG or Emkay credits into a second source. |
 | [BigFingzTV](https://www.youtube.com/channel/UC7AZBvv6_63HQlmTGKujefA) | Its [Don Fernz freestyle](https://www.youtube.com/watch?v=9m5LlbdkjzQ) introduces a Derby MC and producer. Its [Shade-One and Jesse James session](https://www.youtube.com/watch?v=RgtDIvl1Wz0) distinguishes the East Midlands and Peckham. | Use the individual descriptions when performers from different places share the mic. |
+
+## Other collections checked in the Derby Archives pass
+
+Use [DJ Natty From Derby](https://www.mixcloud.com/nathaniel-anderson/) as a participant’s collection. The artist’s biography identifies him as a Derby grime DJ. The 31-show inventory includes early grime and UK garage. His own set descriptions distinguish the recording date from his 2020 uploads. Next, identify the individually billed MCs in the 2003 DJ JC practice set. The self-published Midlands Mafia tape is dated 5 June 2005 but has no venue or individual billing.
+
+[Build TV](https://www.youtube.com/channel/UC4FOCrPfrYAqxlua9sVNf1g) is an East Midlands performance channel. Its 274 public video titles were enumerated. Its original 50KG performances of LC, Dilch, Roly and Vigilant mark the individual on screen and carry an explicit Creative Commons Attribution licence. Other uploads on the very same channel did not show that licence. Its Staxxy promo explicitly credits an outside filmmaking team. Next, check individual releases and creator credits, not the channel as a blanket source of cleared pictures.
+
+[HomeRun UK](https://homerunuk.net/events) preserves local event announcements. A Night at the Casino Pt2 bills Wiseone for an all-original grime/dubstep headline set and separates flyer and photography credits. The notice is a booking, not a performance review.
+
+[Grime Wars](https://www.youtube.com/channel/UC9Lz2HJZvSshvK72qju-OMg) publishes individually filmed sessions. pVNJoHYpcws places Barkz’s freestyle in Derby; ncghJh_1ULk expressly calls Derby Vigilant’s hometown. Do not generalise place from the channel name.
+
+The original solo sessions checked on SBTV’s Derby run were LR (4z8Kp8oxpaE), Beetone (C52SBvuxsLA) and Dilch (iuwrXiz5GbE). Each gives an individually labelled artist account. Follow the show’s own links when navigating common names.
