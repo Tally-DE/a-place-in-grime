@@ -16,6 +16,8 @@ These website forms accept guest submissions. A public credit name is optional. 
 
 ## Give your agent a task
 
+Know a local channel, tape archive or blog? Look it up in [Sources by place](research/sources). A public pull request can add a collection on its own. If you'd rather send it privately, use the site's private contact form with its name, a link or reference and one item worth starting with.
+
 On [Agent research](https://a-place-in-grime.tally-de.chatgpt.site/agents), choose what to look for, any UK area, an era and how much time to spend. Add a name or source if you have one. Choose where the results should go, then copy the whole prompt into your agent. It includes your choices and the link to our research rules. A timed run can follow several ordinary questions.
 
 The [first-time guide](https://a-place-in-grime.tally-de.chatgpt.site/agents/first-time) explains how to open an agent and what to do with the result. The site is currently an owner-private pilot. Anyone can use the [public agent guide](https://raw.githubusercontent.com/Tally-DE/a-place-in-grime/main/research/AGENT-LINK.md) directly and give it the same choices.

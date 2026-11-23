@@ -1,5 +1,6 @@
 const repo = 'https://github.com/Tally-DE/a-place-in-grime';
 const agentLink = 'https://raw.githubusercontent.com/Tally-DE/a-place-in-grime/main/research/AGENT-LINK.md';
+const sourceDirectory = repo+'/tree/main/research/sources';
 const places = new Map(catalogue.places.map(p => [p.id, p]));
 const artists = new Map(catalogue.artists.map(a => [a.id, a]));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -190,6 +191,7 @@ function contribute() {
 }
 const researchFocus = {
   discover: ['Find artists missing from the catalogue', 'Look for people who have no profile yet. Check aliases before proposing a new artist.'],
+  collection: ['Explore a local channel or archive', 'Find the collection in the source directory or trace the clue I gave you. Take one small part that is still unchecked. Record the items inspected, the people credited and where the next researcher can start.'],
   profile: ['Build up an artist’s profile', 'Look for first-hand accounts of how the artist started and who they worked with.'],
   media: ['Find a picture and the artist’s own links', 'Start with the artist’s documented credits and existing media checks. Trace an identified and reusable image to its rights holder, and follow the artist’s own links to their current profiles.'],
   activity: ['Check activity dates and booking links', 'Find dated performances or credits. Look for the artist’s own account of when they started or stopped, and a public booking page tied to the artist or their representative.'],
@@ -232,7 +234,7 @@ function researchForm(s,error='') {
       </fieldset>
       <button class="primary">Make my prompt</button>
     </form>
-    <nav class="research-nav" aria-label="Research links">${link(repo+'/issues?q=is%3Aissue+is%3Aopen','Open research questions')}${link('/packet','Send findings privately')}</nav>
+    <nav class="research-nav" aria-label="Research links">${link(sourceDirectory,'Sources by place')}${link(repo+'/issues?q=is%3Aissue+is%3Aopen','Open research questions')}${link('/packet','Send findings privately')}</nav>
   </div>`,error?422:200);
 }
 function researchPrompt(url,raw) {
@@ -254,6 +256,7 @@ function researchPrompt(url,raw) {
     s.duration==='One question' ? 'Take one question. Stop when you have checked it and saved what you found.' : 'Work for up to '+time+'. Record your start time and deadline. Keep taking questions within this brief until time runs out or there is no useful work left. If interrupted, save where you got to and resume against the same deadline.',
     method+' Read the project’s source and handoff rules here:\n'+agentLink,
     'Check the catalogue and public work queue for overlap first. Save each source, where to look in it, what it proves and the next person worth following. Leave uncertain details open.',
+    'Look in the shared source directory for this area: '+sourceDirectory+'. Read what has already been checked. When you find a useful collection or cover a new part of one, save its name, old names, stable link or shelf reference, the exact items inspected and the next item to check. '+(s.delivery==='private'?'Put these notes in the packet’s trail_note for the editor.':'Add the collection or update its coverage in research/sources in your pull request.'),
     'Include profile_media in the version 4 packet. Look for a reusable portrait, then licensed artwork from the artist if needed. Identify the person or artwork from a caption, credit or timestamp. Give the original source, creator, licence and changes. Check direct official profiles against artist or label links. Record where you looked and what you could verify, even if no image or account is usable.',
     'Complete profile_research too. Check stage names and roles, city or town and the nature of that connection, biography, crews and the next named lead. Find dated evidence of activity. Distinguish first or last surviving credits from an actual career start, end or current status. Look for the official public booking page, verify who it represents, and record the search even when nothing turns up. Never claim a page, contact the artist, include private details or assume they are available for bookings.',
     s.delivery==='private' ? 'Keep my research private. Read the public queue, skip work someone already has, and keep checkpoints locally. Do not create issues, comments or pull requests. Give me the finished evidence packet as version 4 JSON and a short summary. I will submit it myself at '+url.origin+'/packet.'

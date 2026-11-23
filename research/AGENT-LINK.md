@@ -16,6 +16,8 @@ Use the contributor’s chosen area, years, starting clue, type of research, tim
 
 ## Follow the evidence
 
+Start in [Sources by place](https://github.com/Tally-DE/a-place-in-grime/tree/main/research/sources). Look up your area and search the files for previous channel names or collection IDs. Read the actual items and the coverage notes. A useful new archive is a contribution in its own right. Follow the directory instructions to add it or extend the entry, including the exact items checked and where to resume. Private runs return those notes in `trail_note`.
+
 Look where the people involved left a record: station listings, named set line-ups, local film crews and press, flyers, tape or CD inlays, labels, producer credits, artist interviews, archived websites and public memories shared with permission. For a lost page, recover the original URL or media ID first. Open the exact Wayback capture, record its timestamp and distinguish a readable billing from playable audio. Search the next name with the crew, place, station or year that gave you the lead. An appearance in Derby supports an event connection. Recording someone’s hometown requires its own evidence.
 
 Complete the [profile checks](https://github.com/Tally-DE/a-place-in-grime/blob/main/research/METHOD.md#check-the-artist-profile). Record who the artist is, their role and known aliases, the supported city or town relationship, biographical facts, crews, collaborators and the next promising lead. Check dated activity and booking routes even when the answer is unknown. Record the exact pages checked and carry gaps into the checkpoint. A research reservation is for an issue. Never claim the artist’s page, contact the artist or their team, send enquiries or submit private details.
