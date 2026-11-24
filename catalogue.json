@@ -1,8 +1,28 @@
 {
   "places": [
     {
+      "id": "aberdeen",
+      "name": "Aberdeen",
+      "kind": "city"
+    },
+    {
+      "id": "belfast",
+      "name": "Belfast",
+      "kind": "city"
+    },
+    {
       "id": "birmingham",
       "name": "Birmingham",
+      "kind": "city"
+    },
+    {
+      "id": "bristol",
+      "name": "Bristol",
+      "kind": "city"
+    },
+    {
+      "id": "cardiff",
+      "name": "Cardiff",
       "kind": "city"
     },
     {
@@ -11,8 +31,38 @@
       "kind": "city"
     },
     {
+      "id": "edinburgh",
+      "name": "Edinburgh",
+      "kind": "city"
+    },
+    {
       "id": "glasgow",
       "name": "Glasgow",
+      "kind": "city"
+    },
+    {
+      "id": "harlow",
+      "name": "Harlow",
+      "kind": "town"
+    },
+    {
+      "id": "hull",
+      "name": "Hull",
+      "kind": "city"
+    },
+    {
+      "id": "ipswich",
+      "name": "Ipswich",
+      "kind": "town"
+    },
+    {
+      "id": "leeds",
+      "name": "Leeds",
+      "kind": "city"
+    },
+    {
+      "id": "leicester",
+      "name": "Leicester",
       "kind": "city"
     },
     {
@@ -26,14 +76,44 @@
       "kind": "city"
     },
     {
+      "id": "newcastle-upon-tyne",
+      "name": "Newcastle upon Tyne",
+      "kind": "city"
+    },
+    {
+      "id": "newport",
+      "name": "Newport",
+      "kind": "city"
+    },
+    {
+      "id": "northampton",
+      "name": "Northampton",
+      "kind": "town"
+    },
+    {
       "id": "nottingham",
       "name": "Nottingham",
+      "kind": "city"
+    },
+    {
+      "id": "paisley",
+      "name": "Paisley",
+      "kind": "town"
+    },
+    {
+      "id": "sheffield",
+      "name": "Sheffield",
       "kind": "city"
     },
     {
       "id": "solihull",
       "name": "Solihull",
       "kind": "town"
+    },
+    {
+      "id": "southampton",
+      "name": "Southampton",
+      "kind": "city"
     },
     {
       "id": "wolverhampton",
@@ -614,6 +694,414 @@
       "activityChecked": "2026-11-23"
     },
     {
+      "id": "belfast-grime-man",
+      "name": "Belfast Grime Man",
+      "aliases": [],
+      "placeIds": [
+        "belfast"
+      ],
+      "roles": [
+        "MC",
+        "Producer"
+      ],
+      "intro": "Belfast Grime Man writes as well as making beats. In his own notes to “Sons of the Shankill” he describes rewriting the words and producing the remix with John Quake.",
+      "claims": [
+        {
+          "id": "belfast-grime-man-1",
+          "text": "Belfast Grime Man writes as well as making beats. In his own notes to “Sons of the Shankill” he describes rewriting the words and producing the remix with John Quake.",
+          "source": "sons of the shankill  ~ belfast grime man X john quake",
+          "publisher": "Belfast grime man, artist channel",
+          "url": "https://www.youtube.com/watch?v=i_sUxEtOSM0",
+          "locator": "Uploader and short artist-written description saying he and John Quake produced this remix and he rewrote it.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "belfast-grime-man-2",
+          "text": "The pair joined The Belfast Bapcast in July 2025 to talk about grime in the city.",
+          "source": "Grime, Grit & Madness Unfiltered | Belfast Grime Man x John Quake Exclusive Interview 🎵",
+          "publisher": "The Belfast Bapcast",
+          "url": "https://www.youtube.com/watch?v=e_vLxxtC2-A",
+          "locator": "Title, producer and artist introduction and episode description dated 28 July 2025. Both guests are identified as local.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "belfast-grime-man-3",
+          "text": "Both names appear again on “Shankill Lullaby”, released the following year.",
+          "source": "Shankill Lullaby - song and lyrics by Belfast Grime Man, John Quake | Spotify",
+          "publisher": "Belfast Grime Man and John Quake / Spotify",
+          "url": "https://open.spotify.com/track/75xZLp7GNxzGBFqD6FUoYI",
+          "locator": "Track artist bill and year; each artist name opens an individual profile.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Belfast Grime Man writes as well as making beats. In his own notes to “Sons of the Shankill” he describes rewriting the words and producing the remix with John Quake.",
+          "claims": [
+            "belfast-grime-man-1"
+          ]
+        },
+        {
+          "text": "The pair joined The Belfast Bapcast in July 2025 to talk about grime in the city. Both names appear again on “Shankill Lullaby”, released the following year.",
+          "claims": [
+            "belfast-grime-man-2",
+            "belfast-grime-man-3"
+          ]
+        }
+      ],
+      "connections": [],
+      "placeNotes": {
+        "belfast": "Part of the Belfast grime scene"
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Belfast+Grime+Man%22&srlimit=14&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=e_vLxxtC2-A",
+            "finding": "The original interview names two guests. No individually identified and licensed portrait established here."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://open.spotify.com/track/75xZLp7GNxzGBFqD6FUoYI",
+            "finding": "The single appears on the artists’ listening page. No reuse permission for the cover is given."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=i_sUxEtOSM0",
+            "finding": "Original upload uses the performer’s name and first-person production notes. Its channel ID is UCcOG-nEZ_z-ZcvENfRNLtAg."
+          },
+          {
+            "url": "https://open.spotify.com/track/75xZLp7GNxzGBFqD6FUoYI",
+            "finding": "The track links both artists separately and names this id as Belfast Grime Man."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/channel/UCcOG-nEZ_z-ZcvENfRNLtAg",
+          "source": "https://www.youtube.com/watch?v=i_sUxEtOSM0",
+          "locator": "Original upload uses the performer’s name and first-person production notes. Its channel ID is UCcOG-nEZ_z-ZcvENfRNLtAg."
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/artist/4lsJ66AcGxqFq63wWogyF9",
+          "source": "https://open.spotify.com/track/75xZLp7GNxzGBFqD6FUoYI",
+          "locator": "The track links both artists separately and names this id as Belfast Grime Man."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2025,
+          "source": "https://www.youtube.com/watch?v=i_sUxEtOSM0",
+          "locator": "Published Sons of the Shankill on 24 June 2025. Artist channel video date and description."
+        },
+        "last": {
+          "year": 2026,
+          "source": "https://open.spotify.com/track/75xZLp7GNxzGBFqD6FUoYI",
+          "locator": "Co-credited on Shankill Lullaby in 2026. Official release footer and the two artist links."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
+      "id": "blaze-ipswich",
+      "name": "Blaze",
+      "aliases": [],
+      "placeIds": [
+        "ipswich"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Blaze is the older of the two Ipswich brothers who make music as Brotherhood. He and Menace describe grime as the starting point for their music.",
+      "claims": [
+        {
+          "id": "blaze-ipswich-1",
+          "text": "Blaze is the older of the two Ipswich brothers who make music as Brotherhood. He and Menace describe grime as the starting point for their music.",
+          "source": "Troubles Of An Empath",
+          "publisher": "Brotherhood",
+          "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "Artist biography below the track credits names the brothers, Ipswich and their grime roots. Credits date the release to 10 December 2021.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "blaze-ipswich-2",
+          "text": "On DJ Cameo’s 1Xtra show in 2014 they went back to back with Dusty and D-Bo.",
+          "source": "Gimmegrime: Brotherhood and friends",
+          "publisher": "BBC Radio 1Xtra",
+          "url": "https://www.youtube.com/watch?v=gUngb5E0gOc",
+          "locator": "Description identifies both Ipswich MCs and guests Dusty and D-Bo on DJ Cameo’s UKG show. Uploaded 4 February 2014.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "blaze-ipswich-3",
+          "text": "Blaze took the mic on his own for SBTV in 2020, reworking Kano’s “Signs In Life” for the InsightsInside60 series in support of Black Lives Matter.",
+          "source": "Blaze, Signs of Life",
+          "publisher": "SBTV",
+          "url": "https://www.youtube.com/watch?v=4a6QEbgnHrw",
+          "locator": "8 June 2020 solo video. The opening description calls this a cover of Kano’s “Signs In Life” and names the Black Lives Matter theme.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "blaze-ipswich-4",
+          "text": "In 2025 he and Menace were billed as Brvtherhood for a homecoming show at the Smokehouse in Ipswich.",
+          "source": "The Homecoming Show",
+          "publisher": "Brighten The Corners",
+          "url": "https://www.brightenthecorners.co.uk/events/brvtherhood",
+          "locator": "Venue listing for 13 September 2025, paragraphs naming both brothers and tracing the pair from 2006 to the 2011 Elusive tour.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Blaze is the older of the two Ipswich brothers who make music as Brotherhood. He and Menace describe grime as the starting point for their music. On DJ Cameo’s 1Xtra show in 2014 they went back to back with Dusty and D-Bo.",
+          "claims": [
+            "blaze-ipswich-1",
+            "blaze-ipswich-2"
+          ]
+        },
+        {
+          "text": "Blaze took the mic on his own for SBTV in 2020, reworking Kano’s “Signs In Life” for the InsightsInside60 series in support of Black Lives Matter. In 2025 he and Menace were billed as Brvtherhood for a homecoming show at the Smokehouse in Ipswich.",
+          "claims": [
+            "blaze-ipswich-3",
+            "blaze-ipswich-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "kano",
+          "label": "Named together in the profile",
+          "claims": [
+            "blaze-ipswich-3"
+          ]
+        },
+        {
+          "id": "menace-ipswich",
+          "label": "Named together in the profile",
+          "claims": [
+            "blaze-ipswich-1",
+            "blaze-ipswich-4"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Brotherhood%22+Ipswich+grime&format=json",
+            "finding": "This Commons file search returned unrelated historical publications. None identifies the MC."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=4a6QEbgnHrw",
+            "finding": "The page identifies the MC, but the publisher supplies no reusable image licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+            "finding": "The duo’s own page marks the LP all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+            "finding": "The artists name their individual Instagram handles in the album note, also identified by SBTV. Instagram shows a login shell."
+          },
+          {
+            "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+            "finding": "The artist biography identifies both MCs and the group account."
+          },
+          {
+            "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+            "finding": "The artist page links BrotherhoodUK on YouTube. Its channel uses Brvtherhood and identifies the Ipswich brothers."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/itsblaze/",
+          "source": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "The artists name their individual Instagram handles in the album note, also identified by SBTV. Instagram shows a login shell."
+        },
+        {
+          "label": "Brotherhood on Bandcamp",
+          "url": "https://brotherhooduk.bandcamp.com/",
+          "source": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "The artist biography identifies both MCs and the group account."
+        },
+        {
+          "label": "Brotherhood on YouTube",
+          "url": "https://www.youtube.com/channel/UCaF9kyssIOlnZlWfFKV7HAw",
+          "source": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "The artist page links BrotherhoodUK on YouTube. Its channel uses Brvtherhood and identifies the Ipswich brothers."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=kCiviXupgpU",
+          "locator": "S-StarTV released the named freestyle on 24 April 2011. 24 April 2011 upload. The title individually names both MCs and the description identifies the Ipswich grime act."
+        },
+        "last": {
+          "year": 2021,
+          "source": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "Troubles Of An Empath released 10 December 2021. Artist biography below the track credits names the brothers, Ipswich and their grime roots. Credits date the release to 10 December 2021."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
+      "id": "bloom",
+      "name": "Bloom",
+      "aliases": [],
+      "placeIds": [
+        "belfast"
+      ],
+      "roles": [
+        "Producer",
+        "DJ"
+      ],
+      "intro": "Bloom played house and techno in Belfast and found grime through Rinse and the internet. After making R&B instrumentals, he began looking for a harsher sound.",
+      "claims": [
+        {
+          "id": "bloom-1",
+          "text": "Bloom played house and techno in Belfast and found grime through Rinse and the internet. After making R&B instrumentals, he began looking for a harsher sound.",
+          "source": "County Antrim riddim: FACT meets rising grime producer Bloom - Fact Magazine",
+          "publisher": "FACT",
+          "url": "https://www.factmag.com/2013/01/07/county-antrim-riddim-fact-meets-rising-grime-producer-bloom/",
+          "locator": "Opening interview question asking for background and the answer beginning “I’m from Belfast”; opening release paragraph.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "bloom-2",
+          "text": "Mr. Mitch’s Gobstopper label released “Quartz” in 2012 with remixes from Starkey and Slackk.",
+          "source": "Quartz | Bloom",
+          "publisher": "Bloom / Gobstopper Records",
+          "url": "https://bloombeats.bandcamp.com/album/quartz",
+          "locator": "Track list, release essay on the Gobstopper original, Starkey and Slackk remix titles, and date beneath the credits.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "bloom-3",
+          "text": "His six-track Sfumato followed in 2018.",
+          "source": "Sfumato | Bloom",
+          "publisher": "Bloom",
+          "url": "https://bloombeats.bandcamp.com/album/sfumato",
+          "locator": "Release note and date beneath the six-track listing, 23 November 2018.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "bloom-4",
+          "text": "For Plain Sailing’s first grime rave, Bloom played the records while EMBY and Leo Miyagee traded bars in the Committee Room at Belfast’s Ulster Sports Club.",
+          "source": "Plain Sailing — Quarantune",
+          "publisher": "Quarantune, interview with Plain Sailing",
+          "url": "https://www.quarantune.world/features/plainsailing",
+          "locator": "Euphoric grime: organiser Andy identifies the Committee Room at Ulster Sports Club in Belfast and names the DJ and both MCs.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Bloom played house and techno in Belfast and found grime through Rinse and the internet. After making R&B instrumentals, he began looking for a harsher sound. Mr. Mitch’s Gobstopper label released “Quartz” in 2012 with remixes from Starkey and Slackk.",
+          "claims": [
+            "bloom-1",
+            "bloom-2"
+          ]
+        },
+        {
+          "text": "His six-track Sfumato followed in 2018. For Plain Sailing’s first grime rave, Bloom played the records while EMBY and Leo Miyagee traded bars in the Committee Room at Belfast’s Ulster Sports Club.",
+          "claims": [
+            "bloom-3",
+            "bloom-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "emby",
+          "label": "Named together in the profile",
+          "claims": [
+            "bloom-4"
+          ]
+        },
+        {
+          "id": "leo-miyagee",
+          "label": "Named together in the profile",
+          "claims": [
+            "bloom-4"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Bloom%22+Belfast+grime&srlimit=14&format=json",
+            "finding": "The returned file titles did not identify a portrait of this artist."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.factmag.com/2013/01/07/county-antrim-riddim-fact-meets-rising-grime-producer-bloom/",
+            "finding": "The interviewed producer is identified. The article provides no reusable portrait licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://bloombeats.bandcamp.com/album/quartz",
+            "finding": "The release page marks the work all rights reserved and offers no separate reuse licence for the artwork."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://bloombeats.bandcamp.com/album/quartz",
+            "finding": "Artist link above the track list opens Bloom’s Belfast catalogue, including Quartz and Sfumato."
+          },
+          {
+            "url": "https://www.factmag.com/2013/01/07/county-antrim-riddim-fact-meets-rising-grime-producer-bloom/",
+            "finding": "FACT’s hyperlinked artist name opens the bloombeats artist profile."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://bloombeats.bandcamp.com/",
+          "source": "https://bloombeats.bandcamp.com/album/quartz",
+          "locator": "Artist link above the track list opens Bloom’s Belfast catalogue, including Quartz and Sfumato."
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/bloombeats",
+          "source": "https://www.factmag.com/2013/01/07/county-antrim-riddim-fact-meets-rising-grime-producer-bloom/",
+          "locator": "FACT’s hyperlinked artist name opens the bloombeats artist profile."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2012,
+          "source": "https://bloombeats.bandcamp.com/album/quartz",
+          "locator": "Quartz was released on 3 August 2012. Release date under credits."
+        },
+        "last": {
+          "year": 2018,
+          "source": "https://bloombeats.bandcamp.com/album/sfumato",
+          "locator": "Sfumato was released on 23 November 2018. Release date under credits."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
       "id": "bugzy-malone",
       "name": "Bugzy Malone",
       "aliases": [],
@@ -748,6 +1236,240 @@
         "changes": "Cropped from the original concert photograph on Wikimedia Commons, resized for display.",
         "path": "/assets/artists/bugzy-malone.jpg"
       }
+    },
+    {
+      "id": "chiedu-oraka",
+      "name": "Chiedu Oraka",
+      "aliases": [],
+      "placeIds": [
+        "hull"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Chiedu Oraka was born and raised in Hull.",
+      "claims": [
+        {
+          "id": "chiedu-oraka-1",
+          "text": "Chiedu Oraka was born and raised in Hull.",
+          "source": "Chiedu Oraka – Untold Hull",
+          "publisher": "Untold Hull, interview by Jerome Whittingham",
+          "url": "https://untoldhull.org/1156-ChieduOraka",
+          "locator": "Interview 1156, recorded 14 July 2016, introductory biography.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "chiedu-oraka-2",
+          "text": "He remembers hearing More Fire Crew’s “Oi!” on a visit to London and being struck by the sound of people rapping in UK accents. In his own grime tracks he writes about growing up Black and working-class in the north.",
+          "source": "Chiedu Oraka: Northern grime trailblazer’s story proves he’s a fighter",
+          "publisher": "NME, interview with Chiedu Oraka",
+          "url": "https://www.nme.com/features/music-features/chiedu-okara-artist-interview-misfit-mixtape-radar-3750765",
+          "locator": "Opening, Why did you first start rapping and the account of hearing More Fire Crew.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "chiedu-oraka-3",
+          "text": "In March 2024 he was billed for the Selector Radio showcase at SXSW in Austin.",
+          "source": "Chiedu Oraka - UK Sounds",
+          "publisher": "PRS Foundation / UK Sounds",
+          "url": "https://uksounds.prsfoundation.com/speaker/chiedu-oraka/",
+          "locator": "SXSW 2024, onstage 15 March, UK Sounds listing and artist website.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "chiedu-oraka-4",
+          "text": "The next month he released Misfit, a mixtape produced by Deezkid.",
+          "source": "Misfit | Chiedu Oraka",
+          "publisher": "Chiedu Oraka on Bandcamp",
+          "url": "https://chieduoraka.bandcamp.com/album/misfit",
+          "locator": "Misfit credits, production and 26 April 2024 release date.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Chiedu Oraka was born and raised in Hull. He remembers hearing More Fire Crew’s “Oi!” on a visit to London and being struck by the sound of people rapping in UK accents. In his own grime tracks he writes about growing up Black and working-class in the north.",
+          "claims": [
+            "chiedu-oraka-1",
+            "chiedu-oraka-2"
+          ]
+        },
+        {
+          "text": "In March 2024 he was billed for the Selector Radio showcase at SXSW in Austin. The next month he released Misfit, a mixtape produced by Deezkid.",
+          "claims": [
+            "chiedu-oraka-3",
+            "chiedu-oraka-4"
+          ]
+        }
+      ],
+      "connections": [],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Chiedu+Oraka%22&srlimit=20&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.africansinyorkshireproject.com/chiedu-oraka.html",
+            "finding": "Named oral-history interview on African Stories carries project copyright. Untold Hull’s NC-ND terms do not establish an individual re-usable portrait licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://chieduoraka.bandcamp.com/album/misfit",
+            "finding": "The cover is sold as a signed print; release is marked all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://uksounds.prsfoundation.com/speaker/chiedu-oraka/",
+            "finding": "PRS Foundation’s artist page links the website."
+          },
+          {
+            "url": "https://chieduoraka.com/",
+            "finding": "Official site links @orakald."
+          },
+          {
+            "url": "https://chieduoraka.bandcamp.com/album/misfit",
+            "finding": "Chiedu Oraka’s own release catalogue."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Website",
+          "url": "https://chieduoraka.com/",
+          "source": "https://uksounds.prsfoundation.com/speaker/chiedu-oraka/",
+          "locator": "PRS Foundation’s artist page links the website."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://instagram.com/orakald/",
+          "source": "https://chieduoraka.com/",
+          "locator": "Official site links @orakald."
+        },
+        {
+          "label": "Bandcamp",
+          "url": "https://chieduoraka.bandcamp.com/",
+          "source": "https://chieduoraka.bandcamp.com/album/misfit",
+          "locator": "Chiedu Oraka’s own release catalogue."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2016,
+          "source": "https://untoldhull.org/1156-ChieduOraka",
+          "locator": "Gave his Untold Hull oral-history interview on 14 July 2016. Interview 1156."
+        },
+        "last": {
+          "year": 2024,
+          "source": "https://chieduoraka.bandcamp.com/album/misfit",
+          "locator": "Misfit released on 26 April 2024. Credits."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
+      "id": "coco",
+      "name": "Coco",
+      "aliases": [],
+      "placeIds": [
+        "sheffield"
+      ],
+      "roles": [
+        "MC",
+        "Producer"
+      ],
+      "intro": "Coco started MCing in Sheffield around 2006 with encouragement from his crew Youth Camp. He remembers recording early refixes on a Windows PC microphone, taking on tracks like Essentials’ “State Your Name”.",
+      "claims": [
+        {
+          "id": "coco-1",
+          "text": "Coco started MCing in Sheffield around 2006 with encouragement from his crew Youth Camp. He remembers recording early refixes on a Windows PC microphone, taking on tracks like Essentials’ “State Your Name”.",
+          "source": "WHY I RATE: Coco - TRENCH",
+          "publisher": "TRENCH, interview with Coco",
+          "url": "https://trenchtrenchtrench.com/features/why-i-rate-coco",
+          "locator": "Where He’s From, When He Started, First Music That Inspired Him, and recordings with Youth Camp.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "coco-2",
+          "text": "He later worked with fellow Sheffield artist Toddla T on “Big Bou Yah” and “Ingredients”, the latter with Scrufizzer.",
+          "source": "WHY I RATE: Coco - TRENCH",
+          "publisher": "TRENCH, interview with Coco",
+          "url": "https://trenchtrenchtrench.com/features/why-i-rate-coco",
+          "locator": "Where He’s From, When He Started, First Music That Inspired Him, and recordings with Youth Camp.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "coco-3",
+          "text": "Back in Sheffield, he has helped other rappers, singers and producers through the Pattern + Push masterclass programme.",
+          "source": "Coco Masterclass Programme — Pattern + Push",
+          "publisher": "Pattern + Push",
+          "url": "https://www.patternandpush.com/coco-masterclass",
+          "locator": "Coco Masterclass Programme invitation and host identification.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Coco started MCing in Sheffield around 2006 with encouragement from his crew Youth Camp. He remembers recording early refixes on a Windows PC microphone, taking on tracks like Essentials’ “State Your Name”.",
+          "claims": [
+            "coco-1"
+          ]
+        },
+        {
+          "text": "He later worked with fellow Sheffield artist Toddla T on “Big Bou Yah” and “Ingredients”, the latter with Scrufizzer. Back in Sheffield, he has helped other rappers, singers and producers through the Pattern + Push masterclass programme.",
+          "claims": [
+            "coco-2",
+            "coco-3"
+          ]
+        }
+      ],
+      "connections": [],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Coco%22+Sheffield+grime&srlimit=14&format=json",
+            "finding": "The returned file titles did not identify a portrait of this artist."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.patternandpush.com/coco-masterclass",
+            "finding": "Named programme image and biographies supply no open portrait licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://thecocouk.bandcamp.com/",
+            "finding": "The artist’s catalogue does not license its cover images for reuse."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://thecocouk.bandcamp.com/",
+            "finding": "Coco’s own Sheffield page, with Toddla T credits and Juice in the catalogue."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://thecocouk.bandcamp.com/",
+          "source": "https://thecocouk.bandcamp.com/",
+          "locator": "Coco’s own Sheffield page, with Toddla T credits and Juice in the catalogue."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2006,
+          "source": "https://trenchtrenchtrench.com/features/why-i-rate-coco",
+          "locator": "Coco recalls starting around 2006. When He Started, in the artist’s own words."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "d-double-e",
@@ -885,6 +1607,115 @@
         "changes": "Resized for display.",
         "path": "/assets/artists/d-double-e.jpg"
       }
+    },
+    {
+      "id": "dellux",
+      "name": "Dellux",
+      "aliases": [],
+      "placeIds": [
+        "newport"
+      ],
+      "roles": [
+        "Producer"
+      ],
+      "intro": "Dellux is a producer from Newport who made beats for Astroid Boys.",
+      "claims": [
+        {
+          "id": "dellux-1",
+          "text": "Dellux is a producer from Newport who made beats for Astroid Boys.",
+          "source": "A Look Inside Cardiff's Rap and Grime Scene",
+          "publisher": "VICE, interviews with South Wales artists",
+          "url": "https://www.vice.com/en/article/the-urban-scene-looks-rosy-in-cardiff/",
+          "locator": "Paragraph beginning Still, there are opportunities, in the interview with Dellux.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "dellux-2",
+          "text": "Traxx brought him into the group alongside DJ Comfort and drummer Harry Williams as the MCs began building a live band.",
+          "source": "Astroid Boys: The Welsh troupe dissect their genre-mashing brand of grime, punk and metal",
+          "publisher": "NME, interview with Astroid Boys",
+          "url": "https://www.nme.com/blogs/nme-blogs/astroid-boys-the-welsh-grime-punk-and-metal-2045413",
+          "locator": "Paragraph on Traxx recruiting DJ Comfort, Harry Williams and Dellux.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "dellux-3",
+          "text": "While producing the group’s Bacon Dream EP, he was also making tracks of his own. He put nine of them out as Dimensions in 2014, including “NP19” with Critical and Vorn.",
+          "source": "Dimensions | Dellux",
+          "publisher": "Dellux on Bandcamp",
+          "url": "https://dellux.bandcamp.com/album/dimensions",
+          "locator": "About, track list, release date and artist links on Dimensions.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Dellux is a producer from Newport who made beats for Astroid Boys. Traxx brought him into the group alongside DJ Comfort and drummer Harry Williams as the MCs began building a live band.",
+          "claims": [
+            "dellux-1",
+            "dellux-2"
+          ]
+        },
+        {
+          "text": "While producing the group’s Bacon Dream EP, he was also making tracks of his own. He put nine of them out as Dimensions in 2014, including “NP19” with Critical and Vorn.",
+          "claims": [
+            "dellux-3"
+          ]
+        }
+      ],
+      "connections": [],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Dellux%22+music&srlimit=14&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.nme.com/blogs/nme-blogs/astroid-boys-the-welsh-grime-punk-and-metal-2045413",
+            "finding": "Band imagery does not individually clear or licence a portrait of Dellux."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://dellux.bandcamp.com/album/dimensions",
+            "finding": "Artwork credited to Tom Winslade and Tom Joy, release marked all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://dellux.bandcamp.com/album/dimensions",
+            "finding": "Dellux artist link above track list."
+          },
+          {
+            "url": "https://dellux.bandcamp.com/album/dimensions",
+            "finding": "Artist’s Bandcamp sidebar links SoundCloud under the Dellux biography."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://dellux.bandcamp.com/",
+          "source": "https://dellux.bandcamp.com/album/dimensions",
+          "locator": "Dellux artist link above track list."
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/dellux",
+          "source": "https://dellux.bandcamp.com/album/dimensions",
+          "locator": "Artist’s Bandcamp sidebar links SoundCloud under the Dellux biography."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2014,
+          "source": "https://dellux.bandcamp.com/album/dimensions",
+          "locator": "Dimensions released 24 January 2014. Credits after About."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "detz",
@@ -1361,6 +2192,163 @@
         }
       },
       "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "dialect",
+      "name": "Dialect",
+      "aliases": [],
+      "placeIds": [
+        "leeds"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Dialect is a Leeds-born MC who came through battles, appearing on Lord of the Mics and captaining a team for Grime-a-Side.",
+      "claims": [
+        {
+          "id": "dialect-1",
+          "text": "Dialect is a Leeds-born MC who came through battles, appearing on Lord of the Mics and captaining a team for Grime-a-Side.",
+          "source": "Dialect — MUSIC:LEEDS",
+          "publisher": "MUSIC:LEEDS",
+          "url": "https://www.musicleeds.com/supported-artists-2020/2020/12/15/dialect",
+          "locator": "Artist profile, first two paragraphs, Grime-a-Side captaincy and accounts.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "dialect-2",
+          "text": "In 2014 he went up against Derby MC Eyez in front of the Don’t Flop crowd.",
+          "source": "DIALECT VS EYEZ | Don't Flop Grime Clash",
+          "publisher": "Don't Flop Entertainment",
+          "url": "https://www.youtube.com/watch?v=a9q-us3JYsY",
+          "locator": "Original upload, title and individual on-screen name at 1:06.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "dialect-3",
+          "text": "His 2019 album All or Nothing featured Ntantu and Graft.",
+          "source": "Dialect — MUSIC:LEEDS",
+          "publisher": "MUSIC:LEEDS",
+          "url": "https://www.musicleeds.com/supported-artists-2020/2020/12/15/dialect",
+          "locator": "Artist profile, first two paragraphs, Grime-a-Side captaincy and accounts.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "dialect-4",
+          "text": "That year he also worked with Leeds production duo Vital Techniques on “Best In This”, flipping a grime instrumental into a two-step track for 1Forty.",
+          "source": "Best In This [Free DL] | Dialect x Vital Techniques | 1Forty",
+          "publisher": "1Forty",
+          "url": "https://1forty.bandcamp.com/track/best-in-this-free-dl",
+          "locator": "Artist and release credits and label description of the collaboration.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Dialect is a Leeds-born MC who came through battles, appearing on Lord of the Mics and captaining a team for Grime-a-Side. In 2014 he went up against Derby MC Eyez in front of the Don’t Flop crowd.",
+          "claims": [
+            "dialect-1",
+            "dialect-2"
+          ]
+        },
+        {
+          "text": "His 2019 album All or Nothing featured Ntantu and Graft. That year he also worked with Leeds production duo Vital Techniques on “Best In This”, flipping a grime instrumental into a two-step track for 1Forty.",
+          "claims": [
+            "dialect-3",
+            "dialect-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "eyez",
+          "label": "Named together in the profile",
+          "claims": [
+            "dialect-2"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Dialect%22+Leeds+grime&srlimit=14&format=json",
+            "finding": "The returned file titles did not identify a portrait of this artist."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=a9q-us3JYsY",
+            "finding": "The individual is identified by the DIALECT on-screen billing at 1:06. YouTube lists Creative Commons Attribution license (reuse allowed)."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://1forty.bandcamp.com/track/best-in-this-free-dl",
+            "finding": "1Forty marks the release all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.musicleeds.com/supported-artists-2020/2020/12/15/dialect",
+            "finding": "Artist Instagram link under MUSIC:LEEDS biography."
+          },
+          {
+            "url": "https://www.musicleeds.com/supported-artists-2020/2020/12/15/dialect",
+            "finding": "Artist Spotify link beside Instagram."
+          },
+          {
+            "url": "https://www.musicleeds.com/supported-artists-2020/2020/12/15/dialect",
+            "finding": "Artist Facebook link in the same profile."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/dialectofficial/",
+          "source": "https://www.musicleeds.com/supported-artists-2020/2020/12/15/dialect",
+          "locator": "Artist Instagram link under MUSIC:LEEDS biography."
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/artist/7bGwGWOvTaXeppSCDu4Np2",
+          "source": "https://www.musicleeds.com/supported-artists-2020/2020/12/15/dialect",
+          "locator": "Artist Spotify link beside Instagram."
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/dialectgrimeWY",
+          "source": "https://www.musicleeds.com/supported-artists-2020/2020/12/15/dialect",
+          "locator": "Artist Facebook link in the same profile."
+        }
+      ],
+      "photo": {
+        "kind": "portrait",
+        "title": "Dialect at Don’t Flop Grime Clash",
+        "source": "https://www.youtube.com/watch?v=a9q-us3JYsY",
+        "credit": "Don't Flop Entertainment",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsNote": "The original Don’t Flop upload lists a Creative Commons Attribution licence.",
+        "identityUrl": "https://www.youtube.com/watch?v=a9q-us3JYsY",
+        "identityNote": "The film introduces Dialect by name on screen at 1:06.",
+        "assetLocator": "https://www.youtube.com/watch?v=a9q-us3JYsY&t=66s",
+        "alt": "Dialect facing the crowd during his Don’t Flop introduction, with his name on screen.",
+        "changes": "One uncropped video frame at 1:06, saved as a JPEG.",
+        "path": "/assets/artists/dialect.jpg"
+      },
+      "activity": {
+        "first": {
+          "year": 2014,
+          "source": "https://www.youtube.com/watch?v=a9q-us3JYsY",
+          "locator": "Don’t Flop published the Eyez clash on 18 October 2014. Uploader metadata."
+        },
+        "last": {
+          "year": 2019,
+          "source": "https://1forty.bandcamp.com/track/best-in-this-free-dl",
+          "locator": "Best In This released 23 July 2019. Footer under the label’s release notes."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "dilch",
@@ -2266,6 +3254,20 @@
           "claims": [
             "dubzy-gap-anthem"
           ]
+        },
+        {
+          "id": "dialect",
+          "label": "Named together in the profile",
+          "claims": [
+            "dubzy-gap-anthem"
+          ]
+        },
+        {
+          "id": "kamakaze",
+          "label": "Named together in the profile",
+          "claims": [
+            "dubzy-gap-anthem"
+          ]
         }
       ],
       "socials": [
@@ -2391,6 +3393,128 @@
       "activityChecked": "2026-11-23"
     },
     {
+      "id": "emby",
+      "name": "EMBY",
+      "aliases": [],
+      "placeIds": [
+        "belfast"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "EMBY moved from London to Belfast when he was thirteen.",
+      "claims": [
+        {
+          "id": "emby-1",
+          "text": "EMBY moved from London to Belfast when he was thirteen.",
+          "source": "The 10 Best Emerging Irish Artists & Producers, according to EMBY | DMY",
+          "publisher": "DMY, interview and guest selection by EMBY",
+          "url": "https://dmy.co/10-best/the-10-best-emerging-irish-rappers-according-to-emby",
+          "locator": "Biography before the selections and the paragraphs for Kessler and Tomiké. Date above title 30 May 2023.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "emby-2",
+          "text": "At Plain Sailing’s first grime rave in Belfast’s Ulster Sports Club he shared the mic with Leo Miyagee over Bloom’s selections.",
+          "source": "Plain Sailing — Quarantune",
+          "publisher": "Quarantune, interview with Plain Sailing",
+          "url": "https://www.quarantune.world/features/plainsailing",
+          "locator": "Euphoric grime, co-founder Andy’s account of the Committee Room in Belfast, naming the two MCs and DJ.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "emby-3",
+          "text": "He brought grime to AVA Festival in 2021. When the festival booked him again in 2023, he named Kessler as his partner for the Pump House set. He has also recorded with Dublin singer Tomiké on “Radio”.",
+          "source": "The 10 Best Emerging Irish Artists & Producers, according to EMBY | DMY",
+          "publisher": "DMY, interview and guest selection by EMBY",
+          "url": "https://dmy.co/10-best/the-10-best-emerging-irish-rappers-according-to-emby",
+          "locator": "Biography before the selections and the paragraphs for Kessler and Tomiké. Date above title 30 May 2023.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "EMBY moved from London to Belfast when he was thirteen. At Plain Sailing’s first grime rave in Belfast’s Ulster Sports Club he shared the mic with Leo Miyagee over Bloom’s selections.",
+          "claims": [
+            "emby-1",
+            "emby-2"
+          ]
+        },
+        {
+          "text": "He brought grime to AVA Festival in 2021. When the festival booked him again in 2023, he named Kessler as his partner for the Pump House set. He has also recorded with Dublin singer Tomiké on “Radio”.",
+          "claims": [
+            "emby-3"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "bloom",
+          "label": "Named together in the profile",
+          "claims": [
+            "emby-2"
+          ]
+        },
+        {
+          "id": "leo-miyagee",
+          "label": "Named together in the profile",
+          "claims": [
+            "emby-2"
+          ]
+        }
+      ],
+      "placeNotes": {
+        "belfast": "Moved to Belfast at thirteen"
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22EMBY%22+Belfast+rapper&srlimit=20&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.quarantune.world/features/plainsailing",
+            "finding": "The organiser identifies EMBY in the venue photograph but gives no reusable licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/artist/tomike/1458217998",
+            "finding": "Tomiké’s page lists the Radio single artwork with EMBY but provides no image reuse terms."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://dmy.co/10-best/the-10-best-emerging-irish-rappers-according-to-emby",
+            "finding": "DMY links the artist name directly to @emby.mp3."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/emby.mp3/",
+          "source": "https://dmy.co/10-best/the-10-best-emerging-irish-rappers-according-to-emby",
+          "locator": "DMY links the artist name directly to @emby.mp3."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2021,
+          "source": "https://dmy.co/10-best/the-10-best-emerging-irish-rappers-according-to-emby",
+          "locator": "Performed at AVA Festival in Belfast in 2021. Opening introduction; his 2023 guest slot was still forthcoming at publication."
+        },
+        "last": {
+          "year": 2023,
+          "source": "https://dmy.co/10-best/the-10-best-emerging-irish-rappers-according-to-emby",
+          "locator": "Gave the 30 May 2023 DMY interview ahead of his announced AVA slot with Kessler. Byline and Kessler entry."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
       "id": "eyez",
       "name": "Eyez",
       "aliases": [],
@@ -2498,6 +3622,13 @@
           "label": "Captained opposing teams in the 2016 Grime-A-Side quarter-final.",
           "claims": [
             "eyez-quarter"
+          ]
+        },
+        {
+          "id": "dialect",
+          "label": "Named together in the profile",
+          "claims": [
+            "eyez-gap"
           ]
         }
       ],
@@ -3087,6 +4218,266 @@
       }
     },
     {
+      "id": "h-man",
+      "name": "H-Man",
+      "aliases": [
+        "Hendaz"
+      ],
+      "placeIds": [
+        "newcastle-upon-tyne"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "H-Man, also known as Hendaz, started MCing in Newcastle’s rave scene. He met Just B at a rave in Gateshead, and names Wiley and Skepta among the grime MCs who inspired him.",
+      "claims": [
+        {
+          "id": "h-man-1",
+          "text": "H-Man, also known as Hendaz, started MCing in Newcastle’s rave scene. He met Just B at a rave in Gateshead, and names Wiley and Skepta among the grime MCs who inspired him.",
+          "source": "Newcastle Grime Music Artist H-Man talks Seeing Demons. peep®",
+          "publisher": "peep, interview with H-Man",
+          "url": "https://www.peep.ltd/journalism/grime-music-artist-h-man/",
+          "locator": "Opening, the meeting with Just B, the filmed Rap Time set and the account of growing up in Newcastle.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "h-man-2",
+          "text": "His 2012 release From a Boy to a H-Man includes Audio Outlawz tracks with C2-O and Davey Blast.",
+          "source": "H-Man - From a Boy to a H-Man | Stay Freezin Records",
+          "publisher": "Stay Freezin Records",
+          "url": "https://stayfreezinrecords.bandcamp.com/album/h-man-from-a-boy-to-a-h-man",
+          "locator": "From a Boy to a H-Man track list and release credits, 8 May 2012.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "h-man-3",
+          "text": "At the outdoor Rap Time sessions under Byker Bridge he performed “All For the Toon”, his song about what happened to his part of Newcastle during redevelopment.",
+          "source": "Newcastle Grime Music Artist H-Man talks Seeing Demons. peep®",
+          "publisher": "peep, interview with H-Man",
+          "url": "https://www.peep.ltd/journalism/grime-music-artist-h-man/",
+          "locator": "Opening, the meeting with Just B, the filmed Rap Time set and the account of growing up in Newcastle.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "H-Man, also known as Hendaz, started MCing in Newcastle’s rave scene. He met Just B at a rave in Gateshead, and names Wiley and Skepta among the grime MCs who inspired him.",
+          "claims": [
+            "h-man-1"
+          ]
+        },
+        {
+          "text": "His 2012 release From a Boy to a H-Man includes Audio Outlawz tracks with C2-O and Davey Blast. At the outdoor Rap Time sessions under Byker Bridge he performed “All For the Toon”, his song about what happened to his part of Newcastle during redevelopment.",
+          "claims": [
+            "h-man-2",
+            "h-man-3"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "skepta",
+          "label": "Named together in the profile",
+          "claims": [
+            "h-man-1"
+          ]
+        },
+        {
+          "id": "wiley",
+          "label": "Named together in the profile",
+          "claims": [
+            "h-man-1"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22H-Man%22+Newcastle+grime&srlimit=14&format=json",
+            "finding": "The returned file titles did not identify a portrait of this artist."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.peep.ltd/journalism/grime-music-artist-h-man/",
+            "finding": "The article and filmed performance identify him, but offer no reusable portrait licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://stayfreezinrecords.bandcamp.com/album/h-man-from-a-boy-to-a-h-man",
+            "finding": "Stay Freezin Records marks the release all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.peep.ltd/journalism/grime-music-artist-h-man/",
+            "finding": "The interviewer links filmed sets and peep’s own accounts without verifying an individual account or bookings form."
+          },
+          {
+            "url": "https://stayfreezinrecords.bandcamp.com/album/h-man-from-a-boy-to-a-h-man",
+            "finding": "Contact Stay Freezin Records is the label’s general link, not the artist’s booking route."
+          }
+        ]
+      },
+      "socials": [],
+      "activity": {
+        "first": {
+          "year": 2012,
+          "source": "https://stayfreezinrecords.bandcamp.com/album/h-man-from-a-boy-to-a-h-man",
+          "locator": "From a Boy to a H-Man released on 8 May 2012. Credits following track 11."
+        },
+        "last": {
+          "year": 2023,
+          "source": "https://www.peep.ltd/journalism/grime-music-artist-h-man/",
+          "locator": "Interviewed about Rap Time and his music in July 2023. Original publication date, the session under the bridge and his account of “All For the Toon”."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
+      "id": "izzie-gibbs",
+      "name": "Izzie Gibbs",
+      "aliases": [],
+      "placeIds": [
+        "northampton"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Northampton MC Izzie Gibbs opened for Big Narstie on tour in 2014 and signed to Dice afterwards. The two went on to record “My Life” together.",
+      "claims": [
+        {
+          "id": "izzie-gibbs-1",
+          "text": "Northampton MC Izzie Gibbs opened for Big Narstie on tour in 2014 and signed to Dice afterwards. The two went on to record “My Life” together.",
+          "source": "New signing: Izzie Gibbs",
+          "publisher": "MN2S",
+          "url": "https://mn2s.com/news/live/new-signing-izzie-gibbs/",
+          "locator": "Opening Northampton paragraph, then the 2014 tour, Dice signing and “My Life” paragraphs.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "izzie-gibbs-2",
+          "text": "On DJ Cameo’s GimmeGrime, Gibbs and his Northampton crew took the mic over a selection of older grime instrumentals.",
+          "source": "GimmeGrime with DJ Cameo",
+          "publisher": "BBC Radio 1Xtra",
+          "url": "https://www.youtube.com/watch?v=P5Ae6UNB7so",
+          "locator": "The description names his Northampton crew and the old-school grime instrumentals. Published 2 December 2014.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "izzie-gibbs-3",
+          "text": "He took two turns in the Just Live Records cypher alongside Kamakaze and Jafro.",
+          "source": "Just Live Records Cypher",
+          "publisher": "Just Live Records",
+          "url": "https://www.youtube.com/watch?v=XedFHGAOwgo",
+          "locator": "Video description, numbered order of appearance. Kamakaze opens, Izzie Gibbs appears fourth and returns eleventh, and Jafro is seventh.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "izzie-gibbs-4",
+          "text": "Speaking to Noctis about his EP 96Ls, he picked “Roads” as the track where the jokes, melodies and weight of what he wanted to say came together.",
+          "source": "5 Minutes With Izzie Gibbs",
+          "publisher": "Noctis",
+          "url": "https://noctismag.com/music/izzie-gibbs-5-minutes-with/",
+          "locator": "First three paragraphs, including his account of why “Roads” stood out to him.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Northampton MC Izzie Gibbs opened for Big Narstie on tour in 2014 and signed to Dice afterwards. The two went on to record “My Life” together. On DJ Cameo’s GimmeGrime, Gibbs and his Northampton crew took the mic over a selection of older grime instrumentals.",
+          "claims": [
+            "izzie-gibbs-1",
+            "izzie-gibbs-2"
+          ]
+        },
+        {
+          "text": "He took two turns in the Just Live Records cypher alongside Kamakaze and Jafro. Speaking to Noctis about his EP 96Ls, he picked “Roads” as the track where the jokes, melodies and weight of what he wanted to say came together.",
+          "claims": [
+            "izzie-gibbs-3",
+            "izzie-gibbs-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "kamakaze",
+          "label": "Named together in the profile",
+          "claims": [
+            "izzie-gibbs-3"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=tNJvbb-S9gE",
+            "finding": "The billing identifies the MC. The original film does not display a reuse licence."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://noctismag.com/music/izzie-gibbs-5-minutes-with/",
+            "finding": "Interview photography has no visible grant for republication."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/album/jutsu-ep/1508416014",
+            "finding": "The release page shows the EP sleeve without an artwork reuse licence."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://www.youtube.com/watch?v=tNJvbb-S9gE",
+            "finding": "The channel credited by JDZmedia resolves to the Izzie Gibbs artist channel."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=tNJvbb-S9gE",
+            "finding": "JDZmedia labels @IzzieGibbs as his Instagram in the solo description. Instagram shows a login shell."
+          },
+          {
+            "url": "https://music.apple.com/us/album/jutsu-ep/1508416014",
+            "finding": "The Jutsu release links this named performer page, including the same Dice repertoire."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/channel/UC7eqzWGXR0-a4yVBDkALWog",
+          "source": "https://www.youtube.com/watch?v=tNJvbb-S9gE",
+          "locator": "The channel credited by JDZmedia resolves to the Izzie Gibbs artist channel."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/izziegibbs/",
+          "source": "https://www.youtube.com/watch?v=tNJvbb-S9gE",
+          "locator": "JDZmedia labels @IzzieGibbs as his Instagram in the solo description. Instagram shows a login shell."
+        },
+        {
+          "label": "Apple Music",
+          "url": "https://music.apple.com/us/artist/izzie-gibbs/959268642",
+          "source": "https://music.apple.com/us/album/jutsu-ep/1508416014",
+          "locator": "The Jutsu release links this named performer page, including the same Dice repertoire."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2014,
+          "source": "https://www.youtube.com/watch?v=P5Ae6UNB7so",
+          "locator": "1Xtra posted the GimmeGrime set on 2 December 2014. The description names his Northampton crew and the old-school grime instrumentals. Published 2 December 2014."
+        },
+        "last": {
+          "year": 2021,
+          "source": "https://www.youtube.com/watch?v=tNJvbb-S9gE",
+          "locator": "JDZmedia published the ICE MODE performance on 22 February 2021. Individual freestyle, artist introduction, Instagram and YouTube links. Published 22 February 2021."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
       "id": "jakman",
       "name": "JakMan",
       "aliases": [],
@@ -3671,6 +5062,162 @@
         }
       },
       "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "kamakaze",
+      "name": "Kamakaze",
+      "aliases": [],
+      "placeIds": [
+        "leicester"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Kamakaze first wanted to write bars after hearing “Mandem” by Leicester crew YTS.",
+      "claims": [
+        {
+          "id": "kamakaze-1",
+          "text": "Kamakaze first wanted to write bars after hearing “Mandem” by Leicester crew YTS.",
+          "source": "Why I Rate Kamakaze",
+          "publisher": "TRENCH",
+          "url": "https://trenchtrenchtrench.com/features/why-i-rate-kamakaze",
+          "locator": "The “First Music That Inspired Him” answer names YTS and “Mandem”.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "kamakaze-2",
+          "text": "In 2015 the Leicester MC recorded a Road Rage freestyle for JDZmedia over a beat by Westy.",
+          "source": "Road Rage",
+          "publisher": "JDZmedia",
+          "url": "https://www.youtube.com/watch?v=bKB_aRMAq3c",
+          "locator": "Description names Leicester, producer Westy and the artist handle. Published 9 November 2015.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "kamakaze-3",
+          "text": "He took Skee and Jafro with him to a sound clash and described BLG as the people he would keep making music with.",
+          "source": "The regional grime artists you need to know",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/the-regional-grime-artists-you-need-to-know/",
+          "locator": "Kamakaze’s Leicester interview, answer about other artists he rates.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "kamakaze-4",
+          "text": "Kamakaze opened the Just Live Records cypher in 2016, sharing the line-up with Jafro and Izzie Gibbs.",
+          "source": "Just Live Records Cypher",
+          "publisher": "Just Live Records",
+          "url": "https://www.youtube.com/watch?v=XedFHGAOwgo",
+          "locator": "Video description, numbered order of appearance. Kamakaze opens, Izzie Gibbs appears fourth and returns eleventh, and Jafro is seventh.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "kamakaze-5",
+          "text": "A decade later he was still recording freestyles, including one for Charlie Sloth’s Fire in the Streets.",
+          "source": "Fire in the Streets",
+          "publisher": "Charlie Sloth",
+          "url": "https://www.youtube.com/watch?v=YS2gk92qILw",
+          "locator": "Opening description identifies the Leicester MC and links his own channel. Publication date 23 June 2026.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Kamakaze first wanted to write bars after hearing “Mandem” by Leicester crew YTS. In 2015 the Leicester MC recorded a Road Rage freestyle for JDZmedia over a beat by Westy.",
+          "claims": [
+            "kamakaze-1",
+            "kamakaze-2"
+          ]
+        },
+        {
+          "text": "He took Skee and Jafro with him to a sound clash and described BLG as the people he would keep making music with. Kamakaze opened the Just Live Records cypher in 2016, sharing the line-up with Jafro and Izzie Gibbs. A decade later he was still recording freestyles, including one for Charlie Sloth’s Fire in the Streets.",
+          "claims": [
+            "kamakaze-3",
+            "kamakaze-4",
+            "kamakaze-5"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "izzie-gibbs",
+          "label": "Named together in the profile",
+          "claims": [
+            "kamakaze-4"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/wiki/File:Matt_Robinson.jpg",
+            "finding": "File usage and category identify a rugby league player. The name alone does not identify the Leicester MC."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.youtube.com/watch?v=bKB_aRMAq3c",
+            "finding": "Solo performance names Kamakaze. The film carries no explicit reuse licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://kamakazelc.bandcamp.com/album/memories-over-money-vinyl-lp",
+            "finding": "The artist’s own LP page marks the release all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://kamakazelc.bandcamp.com/album/memories-over-money-vinyl-lp",
+            "finding": "Artist and Leicester catalogue links beneath the sleeve."
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=YS2gk92qILw",
+            "finding": "“Check out Kamakaze here” links his named YouTube channel."
+          },
+          {
+            "url": "https://admiralsports.com/blogs/journal/kamakaze-on-football-music-and-the-city-that-raised-him",
+            "finding": "The interview links Kamakaze’s Instagram handle directly. Instagram serves a login shell to signed-out visitors."
+          },
+          {
+            "url": "https://soundcloud.com/kamakaze-of-blg",
+            "finding": "The older JDZmedia link returned 404."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://kamakazelc.bandcamp.com/",
+          "source": "https://kamakazelc.bandcamp.com/album/memories-over-money-vinyl-lp",
+          "locator": "Artist and Leicester catalogue links beneath the sleeve."
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@kamakazemusic",
+          "source": "https://www.youtube.com/watch?v=YS2gk92qILw",
+          "locator": "“Check out Kamakaze here” links his named YouTube channel."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/kamakazelc/",
+          "source": "https://admiralsports.com/blogs/journal/kamakaze-on-football-music-and-the-city-that-raised-him",
+          "locator": "The interview links Kamakaze’s Instagram handle directly. Instagram serves a login shell to signed-out visitors."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2015,
+          "source": "https://www.youtube.com/watch?v=bKB_aRMAq3c",
+          "locator": "Road Rage published 9 November 2015. Description names Leicester, producer Westy and the artist handle. Published 9 November 2015."
+        },
+        "last": {
+          "year": 2026,
+          "source": "https://www.youtube.com/watch?v=YS2gk92qILw",
+          "locator": "Fire in the Streets published 23 June 2026. Opening description identifies the Leicester MC and links his own channel. Publication date 23 June 2026."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "kano",
@@ -4876,6 +6423,148 @@
       "activityChecked": "2026-11-23"
     },
     {
+      "id": "leo-miyagee",
+      "name": "Leo Miyagee",
+      "aliases": [],
+      "placeIds": [
+        "belfast"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Leo Miyagee is a Belfast-based rapper, born in Zimbabwe, whose music draws on jazz and soul.",
+      "claims": [
+        {
+          "id": "leo-miyagee-1",
+          "text": "Leo Miyagee is a Belfast-based rapper, born in Zimbabwe, whose music draws on jazz and soul.",
+          "source": "An Evening with Leo Miyagee (Cinemagic / Black history Month) | The Black Box",
+          "publisher": "The Black Box, Belfast",
+          "url": "https://www.blackboxbelfast.com/event/an-evening-with-leo-miyagee-cinemagic-black-history-month/",
+          "locator": "Cinemagic live music programme, artist biography and 13 October 2026 billing.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "leo-miyagee-2",
+          "text": "At Plain Sailing’s first grime rave he and EMBY traded bars while Bloom DJed in the Committee Room of Belfast’s Ulster Sports Club.",
+          "source": "Plain Sailing — Quarantune",
+          "publisher": "Quarantune, interview with Plain Sailing",
+          "url": "https://www.quarantune.world/features/plainsailing",
+          "locator": "Euphoric grime: co-founder Andy names the MCs working back to back with DJ Bloom in the Committee Room.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "leo-miyagee-3",
+          "text": "In 2024 he headlined BBC Introducing Live at Sound of Belfast.",
+          "source": "Leo Miyagee: POWER UP Music Creator - PRS for Music Foundation",
+          "publisher": "PRS Foundation, artist biography",
+          "url": "https://prsfoundation.com/grantees/leo-miyagee-power-up-music-creator/",
+          "locator": "Short Bio in Leo’s own words. He calls himself a Belfast rap artist and describes jazz influences and the 2024 Sound of Belfast headline set.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "leo-miyagee-4",
+          "text": "That December he and Eulogy released Vein of Folly.",
+          "source": "‎VEIN OF FOLLY - Album by Leo Miyagee & Eulogy - Apple Music",
+          "publisher": "Leo Miyagee & Eulogy / Apple Music",
+          "url": "https://music.apple.com/us/album/vein-of-folly/1786864460",
+          "locator": "Vein of Folly artist billing and December 2024 release information.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Leo Miyagee is a Belfast-based rapper, born in Zimbabwe, whose music draws on jazz and soul. At Plain Sailing’s first grime rave he and EMBY traded bars while Bloom DJed in the Committee Room of Belfast’s Ulster Sports Club.",
+          "claims": [
+            "leo-miyagee-1",
+            "leo-miyagee-2"
+          ]
+        },
+        {
+          "text": "In 2024 he headlined BBC Introducing Live at Sound of Belfast. That December he and Eulogy released Vein of Folly.",
+          "claims": [
+            "leo-miyagee-3",
+            "leo-miyagee-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "bloom",
+          "label": "Named together in the profile",
+          "claims": [
+            "leo-miyagee-2"
+          ]
+        },
+        {
+          "id": "emby",
+          "label": "Named together in the profile",
+          "claims": [
+            "leo-miyagee-2"
+          ]
+        }
+      ],
+      "placeNotes": {
+        "belfast": "Based in Belfast"
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Leo+Miyagee%22&srlimit=14&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.quarantune.world/features/plainsailing",
+            "finding": "The organiser identifies who is in the image and their stage roles; no clear reuse grant for the photograph."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/album/vein-of-folly/1786864460",
+            "finding": "The album page names Leo and Eulogy. No open cover-art licence appears."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://prsfoundation.com/grantees/leo-miyagee-power-up-music-creator/",
+            "finding": "PRS profile directly links leomiyagee. PITCH independently links the same Instagram."
+          },
+          {
+            "url": "https://prsfoundation.com/grantees/leo-miyagee-power-up-music-creator/",
+            "finding": "PRS profile names this Spotify artist; Leo’s Linktree links the same artist ID."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/leomiyagee/",
+          "source": "https://prsfoundation.com/grantees/leo-miyagee-power-up-music-creator/",
+          "locator": "PRS profile directly links leomiyagee. PITCH independently links the same Instagram."
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/artist/6VMZtIttp7AzkGKOCJJ4QL",
+          "source": "https://prsfoundation.com/grantees/leo-miyagee-power-up-music-creator/",
+          "locator": "PRS profile names this Spotify artist; Leo’s Linktree links the same artist ID."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2024,
+          "source": "https://music.apple.com/us/album/vein-of-folly/1786864460",
+          "locator": "Released Vein of Folly with Eulogy in December 2024. Album date on Apple Music; PRS gives the following day. The month and year agree."
+        },
+        "last": {
+          "year": 2026,
+          "source": "https://www.blackboxbelfast.com/event/an-evening-with-leo-miyagee-cinemagic-black-history-month/",
+          "locator": "Billed to perform at the Black Box on 13 October 2026. Date and event title; the listing records a booking."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
       "id": "lethal-bizzle",
       "name": "Lethal Bizzle",
       "aliases": [
@@ -4993,6 +6682,130 @@
         }
       },
       "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "local",
+      "name": "Local",
+      "aliases": [
+        "MC Hologram"
+      ],
+      "placeIds": [
+        "cardiff"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Local started MCing at a Cardiff youth club under the name MC Hologram. In his oral history for Museum Wales he remembers the early Cardiff grime scene, its crew rivalries and the time he spent performing in Malia.",
+      "claims": [
+        {
+          "id": "local-1",
+          "text": "Local started MCing at a Cardiff youth club under the name MC Hologram. In his oral history for Museum Wales he remembers the early Cardiff grime scene, its crew rivalries and the time he spent performing in Malia.",
+          "source": "Recordiad Sain / Audio Recording: Richard Sheppard (AKA Local) - Collections Online | Museum Wales",
+          "publisher": "Amgueddfa Cymru – Museum Wales",
+          "url": "https://museum.wales/collections/online/object/31497d65-cefc-31ee-a339-ccc3f921d477/Recordiad-Sain--Audio-Recording-Richard-Sheppard-AKA-Local/",
+          "locator": "Object F2025.41.60; interview summary and Creation/Production (2024).",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "local-2",
+          "text": "In 2014 he joined Jammer, Opium and Leeds MC Dialect on DJ Cameo’s 1Xtra show for a Lord of the Mics session.",
+          "source": "GimmeGrime: Lord of the Mics 6",
+          "publisher": "BBC Radio 1Xtra",
+          "url": "https://www.youtube.com/watch?v=tpQLzxG9Yxg",
+          "locator": "6 October 2014. DJ Cameo’s line-up names Local alongside Jammer, Opium, Dialect and Hazman.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "local-3",
+          "text": "Local credits Lord of the Mics with changing the way people heard him. He often writes in silence, then finds a beat to fit the words.",
+          "source": "“If It’s Not 100% Me, It Gets Deleted” Local Breaks Down His Music, The Madness And His Upcoming UK Tour – Klat",
+          "publisher": "Klat, interview with Local",
+          "url": "https://klatmag.com/if-its-not-100-me-it-gets-deleted-local-breaks-down-his-music-the-madness-and-his-upcoming-uk-tour/",
+          "locator": "Answers about Lord of the Mics, cutting across grime, UKG and drum and bass, and writing in silence.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Local started MCing at a Cardiff youth club under the name MC Hologram. In his oral history for Museum Wales he remembers the early Cardiff grime scene, its crew rivalries and the time he spent performing in Malia.",
+          "claims": [
+            "local-1"
+          ]
+        },
+        {
+          "text": "In 2014 he joined Jammer, Opium and Leeds MC Dialect on DJ Cameo’s 1Xtra show for a Lord of the Mics session. Local credits Lord of the Mics with changing the way people heard him. He often writes in silence, then finds a beat to fit the words.",
+          "claims": [
+            "local-2",
+            "local-3"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "dialect",
+          "label": "Named together in the profile",
+          "claims": [
+            "local-2"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Local%22+Cardiff+grime&srlimit=14&format=json",
+            "finding": "The returned file titles did not identify a portrait of this artist."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://prsfoundation.com/grantees/local-ppl-momentum-music-fund/",
+            "finding": "The grant profile has no individual reuse permission for its portrait."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://dansudiscsuk.bandcamp.com/album/paranoid",
+            "finding": "The cover for Paranoid is shown by Dansu Discs. No reusable artwork terms are supplied."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://prsfoundation.com/grantees/local-ppl-momentum-music-fund/",
+            "finding": "Artist biography links @itslocs, and the Instagram page identifies itself as LOCAL."
+          },
+          {
+            "url": "https://prsfoundation.com/grantees/local-ppl-momentum-music-fund/",
+            "finding": "PRS Foundation links the named Spotify artist profile directly."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/itslocs/",
+          "source": "https://prsfoundation.com/grantees/local-ppl-momentum-music-fund/",
+          "locator": "Artist biography links @itslocs, and the Instagram page identifies itself as LOCAL."
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/artist/5pNualCkz8Fih2WjCYwEZ2",
+          "source": "https://prsfoundation.com/grantees/local-ppl-momentum-music-fund/",
+          "locator": "PRS Foundation links the named Spotify artist profile directly."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2014,
+          "source": "https://www.youtube.com/watch?v=tpQLzxG9Yxg",
+          "locator": "1Xtra published the session in 2014. Original upload date, title and named line-up."
+        },
+        "last": {
+          "year": 2024,
+          "source": "https://museum.wales/collections/online/object/31497d65-cefc-31ee-a339-ccc3f921d477/Recordiad-Sain--Audio-Recording-Richard-Sheppard-AKA-Local/",
+          "locator": "In 2024 he recorded an oral history for the exhibition Hip Hop: A Welsh Story. Creation/Production period 2024; acquisition in 2025 is a separate date."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "lox",
@@ -5324,6 +7137,295 @@
       "activityChecked": "2026-11-23"
     },
     {
+      "id": "mace-the-great",
+      "name": "Mace The Great",
+      "aliases": [],
+      "placeIds": [
+        "cardiff"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Mace The Great is a Cardiff MC who moves between grime, rap and garage.",
+      "claims": [
+        {
+          "id": "mace-the-great-1",
+          "text": "Mace The Great is a Cardiff MC who moves between grime, rap and garage.",
+          "source": "Mace the Great Interview  | HYPE Magazine",
+          "publisher": "HYPE Magazine, interview with Mace the Great",
+          "url": "https://hypemagazine.co.za/2024/05/22/mace-the-great-interview/",
+          "locator": "First answer describing his home city and the range of music he makes; answer on PRS support.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "mace-the-great-2",
+          "text": "He named SplottWorld after the part of Cardiff where he grew up and remembers supporting Dizzee Rascal at the city’s arena.",
+          "source": "Behind the Scene with MACE THE GREAT » News » Cardiff Music City",
+          "publisher": "Cardiff Music City",
+          "url": "https://cardiffmusiccity.wales/2025/03/11/behind-the-scene-with-mace/",
+          "locator": "Questions about his upbringing, favourite gig, local artists and the Welcome To Wales event.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "mace-the-great-3",
+          "text": "SplottWorld came out in 2023 on SplottWorld Ent.",
+          "source": "‎SplottWorld - Album by Mace the Great - Apple Music",
+          "publisher": "SplottWorld Ent. / Apple Music",
+          "url": "https://music.apple.com/us/album/splottworld/1675269099",
+          "locator": "Album title, release credit beneath the listing and date 24 March 2023.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "mace-the-great-4",
+          "text": "He shared a Red Bull Mic Flex session with Sage Todz, another Welsh MC who appears on his Show Stoppaz mixtape.",
+          "source": "Mace The Great promises big things with Show Stoppaz mixtape",
+          "publisher": "Buzz, interview with Mace The Great",
+          "url": "https://www.buzzmag.co.uk/mace-great-interview-show-stoppaz-mixtape/",
+          "locator": "Show Stoppaz feature, paragraph on Red Bull Mic Flex and the features paragraph.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Mace The Great is a Cardiff MC who moves between grime, rap and garage. He named SplottWorld after the part of Cardiff where he grew up and remembers supporting Dizzee Rascal at the city’s arena.",
+          "claims": [
+            "mace-the-great-1",
+            "mace-the-great-2"
+          ]
+        },
+        {
+          "text": "SplottWorld came out in 2023 on SplottWorld Ent. He shared a Red Bull Mic Flex session with Sage Todz, another Welsh MC who appears on his Show Stoppaz mixtape.",
+          "claims": [
+            "mace-the-great-3",
+            "mace-the-great-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "dizzee-rascal",
+          "label": "Named together in the profile",
+          "claims": [
+            "mace-the-great-2"
+          ]
+        },
+        {
+          "id": "sage-todz",
+          "label": "Named together in the profile",
+          "claims": [
+            "mace-the-great-4"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Mace+the+Great%22&srlimit=14&format=json",
+            "finding": "The returned file titles did not identify a portrait of this artist."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://cardiffmusiccity.wales/2025/03/11/behind-the-scene-with-mace/",
+            "finding": "The commissioned portrait is by Ren Faulkner. The feature gives a photographer credit but no reuse permission."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/album/splottworld/1675269099",
+            "finding": "The album’s artwork is shown by the releasing label. No cover reuse permission supplied."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://prsfoundation.com/grantees/mace-the-great-power-up-music-creator/",
+            "finding": "The grantee profile links youtube.com/c/MaceTheGreat."
+          },
+          {
+            "url": "https://prsfoundation.com/grantees/mace-the-great-power-up-music-creator/",
+            "finding": "The funder links this specific artist ID in the musician’s profile."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "YouTube",
+          "url": "https://youtube.com/c/MaceTheGreat",
+          "source": "https://prsfoundation.com/grantees/mace-the-great-power-up-music-creator/",
+          "locator": "The grantee profile links youtube.com/c/MaceTheGreat."
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/artist/409dMgiEKYmsc1l01pdcEM",
+          "source": "https://prsfoundation.com/grantees/mace-the-great-power-up-music-creator/",
+          "locator": "The funder links this specific artist ID in the musician’s profile."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2023,
+          "source": "https://music.apple.com/us/album/splottworld/1675269099",
+          "locator": "Released SplottWorld on 24 March 2023. Album release date."
+        },
+        "last": {
+          "year": 2025,
+          "source": "https://www.buzzmag.co.uk/mace-great-interview-show-stoppaz-mixtape/",
+          "locator": "Discussed Show Stoppaz and its guest artists in November 2025. Interview publication date of 13 November 2025; the release was then forthcoming."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
+      "id": "menace-ipswich",
+      "name": "Menace",
+      "aliases": [],
+      "placeIds": [
+        "ipswich"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Menace is the younger of the two MCs in Ipswich duo Brotherhood. He and Blaze started out in grime and later recorded hip-hop together.",
+      "claims": [
+        {
+          "id": "menace-ipswich-1",
+          "text": "Menace is the younger of the two MCs in Ipswich duo Brotherhood. He and Blaze started out in grime and later recorded hip-hop together.",
+          "source": "Troubles Of An Empath",
+          "publisher": "Brotherhood",
+          "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "Artist biography below the track credits names the brothers, Ipswich and their grime roots. Credits date the release to 10 December 2021.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "menace-ipswich-2",
+          "text": "They began making music together in 2006 and were invited onto Wiley’s Elusive tour in 2011.",
+          "source": "The Homecoming Show",
+          "publisher": "Brighten The Corners",
+          "url": "https://www.brightenthecorners.co.uk/events/brvtherhood",
+          "locator": "Venue listing for 13 September 2025, paragraphs naming both brothers and tracing the pair from 2006 to the 2011 Elusive tour.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "menace-ipswich-3",
+          "text": "Menace described jotting down phrases through the day and building bars around them when he sat down to write. He and Blaze recorded much of their music at home.",
+          "source": "Menace from Brotherhood talks writing, collaborations & future plans",
+          "publisher": "The Student Pocket Guide",
+          "url": "https://www.thestudentpocketguide.com/2020/04/entertainment/music/brotherhood-menace-interview/",
+          "locator": "In the 2020 interview, see the questions about writing lyrics and recording during lockdown.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "menace-ipswich-4",
+          "text": "A 1Xtra freestyle with DJ Cameo puts both brothers on the mic alongside Dusty and D-Bo.",
+          "source": "Gimmegrime: Brotherhood and friends",
+          "publisher": "BBC Radio 1Xtra",
+          "url": "https://www.youtube.com/watch?v=gUngb5E0gOc",
+          "locator": "Description identifies both Ipswich MCs and guests Dusty and D-Bo on DJ Cameo’s UKG show. Uploaded 4 February 2014.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Menace is the younger of the two MCs in Ipswich duo Brotherhood. He and Blaze started out in grime and later recorded hip-hop together. They began making music together in 2006 and were invited onto Wiley’s Elusive tour in 2011.",
+          "claims": [
+            "menace-ipswich-1",
+            "menace-ipswich-2"
+          ]
+        },
+        {
+          "text": "Menace described jotting down phrases through the day and building bars around them when he sat down to write. He and Blaze recorded much of their music at home. A 1Xtra freestyle with DJ Cameo puts both brothers on the mic alongside Dusty and D-Bo.",
+          "claims": [
+            "menace-ipswich-3",
+            "menace-ipswich-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "blaze-ipswich",
+          "label": "Named together in the profile",
+          "claims": [
+            "menace-ipswich-1",
+            "menace-ipswich-3"
+          ]
+        },
+        {
+          "id": "wiley",
+          "label": "Named together in the profile",
+          "claims": [
+            "menace-ipswich-2"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Brotherhood%22+Ipswich+grime&format=json",
+            "finding": "This Commons file search returned unrelated historical publications. None identifies the MC."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.thestudentpocketguide.com/2020/04/entertainment/music/brotherhood-menace-interview/",
+            "finding": "The page identifies the MC, but the publisher supplies no reusable image licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+            "finding": "The duo’s own page marks the LP all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+            "finding": "The artists name their individual Instagram handles in the album note, also identified by SBTV. Instagram shows a login shell."
+          },
+          {
+            "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+            "finding": "The artist biography identifies both MCs and the group account."
+          },
+          {
+            "url": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+            "finding": "The artist page links BrotherhoodUK on YouTube. Its channel uses Brvtherhood and identifies the Ipswich brothers."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/itsmenace/",
+          "source": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "The artists name their individual Instagram handles in the album note, also identified by SBTV. Instagram shows a login shell."
+        },
+        {
+          "label": "Brotherhood on Bandcamp",
+          "url": "https://brotherhooduk.bandcamp.com/",
+          "source": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "The artist biography identifies both MCs and the group account."
+        },
+        {
+          "label": "Brotherhood on YouTube",
+          "url": "https://www.youtube.com/channel/UCaF9kyssIOlnZlWfFKV7HAw",
+          "source": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "The artist page links BrotherhoodUK on YouTube. Its channel uses Brvtherhood and identifies the Ipswich brothers."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2011,
+          "source": "https://www.youtube.com/watch?v=kCiviXupgpU",
+          "locator": "S-StarTV released the named freestyle on 24 April 2011. 24 April 2011 upload. The title individually names both MCs and the description identifies the Ipswich grime act."
+        },
+        "last": {
+          "year": 2021,
+          "source": "https://brotherhooduk.bandcamp.com/album/troubles-of-an-empath",
+          "locator": "Troubles Of An Empath released 10 December 2021. Artist biography below the track credits names the brothers, Ipswich and their grime roots. Credits date the release to 10 December 2021."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
       "id": "mystic",
       "name": "Mystic",
       "aliases": [
@@ -5437,6 +7539,255 @@
         }
       },
       "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "ne-o",
+      "name": "NE-O",
+      "aliases": [
+        "North East One"
+      ],
+      "placeIds": [
+        "newcastle-upon-tyne"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "NE-O came through Newcastle’s grime scene with NE Dons in 2017. He remembers grime being his favourite music at school and still makes room in his sets for a “Rhythm ’n’ Gash” freestyle.",
+      "claims": [
+        {
+          "id": "ne-o-1",
+          "text": "NE-O came through Newcastle’s grime scene with NE Dons in 2017. He remembers grime being his favourite music at school and still makes room in his sets for a “Rhythm ’n’ Gash” freestyle.",
+          "source": "NE-O: The Newcastle Rapper Redefining the Grime Scene in 2024",
+          "publisher": "Babystep Magazine, interview with NE-O",
+          "url": "https://www.babystepmagazine.com/single-post/ne-o-the-newcastle-rapper-redefining-the-grime-scene-in-2024",
+          "locator": "Introduction and answers about grime, live sets and writing Isit with Eyeconic.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "ne-o-2",
+          "text": "After a break in 2023, he and Eyeconic wrote “Isit” in a single sitting and put on a joint headline show.",
+          "source": "NE-O: The Newcastle Rapper Redefining the Grime Scene in 2024",
+          "publisher": "Babystep Magazine, interview with NE-O",
+          "url": "https://www.babystepmagazine.com/single-post/ne-o-the-newcastle-rapper-redefining-the-grime-scene-in-2024",
+          "locator": "Introduction and answers about grime, live sets and writing Isit with Eyeconic.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "ne-o-3",
+          "text": "He was one of the artists selected for the Glasshouse’s Summer Studios residency in 2024.",
+          "source": "Summer Studios 2024: Meet the artists | The Glasshouse",
+          "publisher": "The Glasshouse International Centre for Music",
+          "url": "https://theglasshouseicm.org/artist-development/summer-studios/summer-studios-2024-meet-the-artists/",
+          "locator": "Summer Studios 2024, NE-O artist biography and Linktree.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "NE-O came through Newcastle’s grime scene with NE Dons in 2017. He remembers grime being his favourite music at school and still makes room in his sets for a “Rhythm ’n’ Gash” freestyle.",
+          "claims": [
+            "ne-o-1"
+          ]
+        },
+        {
+          "text": "After a break in 2023, he and Eyeconic wrote “Isit” in a single sitting and put on a joint headline show. He was one of the artists selected for the Glasshouse’s Summer Studios residency in 2024.",
+          "claims": [
+            "ne-o-2",
+            "ne-o-3"
+          ]
+        }
+      ],
+      "connections": [],
+      "placeNotes": {
+        "newcastle-upon-tyne": "Based in Newcastle upon Tyne"
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22NE+Dons%22&srlimit=14&format=json",
+            "finding": "The returned file titles did not identify a portrait of this artist."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://theglasshouseicm.org/artist-development/summer-studios/summer-studios-2024-meet-the-artists/",
+            "finding": "The participant page names the artist but provides no independent permission to reuse its photographs."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://ne-o1.bandcamp.com/",
+            "finding": "Store artwork is not offered under an open licence."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://theglasshouseicm.org/artist-development/summer-studios/summer-studios-2024-meet-the-artists/",
+            "finding": "Glasshouse’s NE-O section links this individual Linktree."
+          },
+          {
+            "url": "https://ne-o1.bandcamp.com/",
+            "finding": "Named artist and matching Newcastle location."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Artist links",
+          "url": "https://linktr.ee/ne.o_uk",
+          "source": "https://theglasshouseicm.org/artist-development/summer-studios/summer-studios-2024-meet-the-artists/",
+          "locator": "Glasshouse’s NE-O section links this individual Linktree."
+        },
+        {
+          "label": "Bandcamp",
+          "url": "https://ne-o1.bandcamp.com/",
+          "source": "https://ne-o1.bandcamp.com/",
+          "locator": "Named artist and matching Newcastle location."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2017,
+          "source": "https://theglasshouseicm.org/artist-development/summer-studios/summer-studios-2024-meet-the-artists/",
+          "locator": "Began with NE Dons in 2017 according to the residency artist biography. NE-O section."
+        },
+        "last": {
+          "year": 2024,
+          "source": "https://theglasshouseicm.org/artist-development/summer-studios/summer-studios-2024-meet-the-artists/",
+          "locator": "Selected for Summer Studios in 2024. 2024 artist roster."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
+      "id": "nova",
+      "name": "Nova",
+      "aliases": [
+        "Nova Scotia the Truth",
+        "DJ Scotia",
+        "Nova Scotia"
+      ],
+      "placeIds": [
+        "edinburgh",
+        "glasgow"
+      ],
+      "roles": [
+        "MC",
+        "DJ",
+        "Producer"
+      ],
+      "intro": "Nova grew up going to Bristo Battles and Spectrum Cyphers in Edinburgh. When she moved to Glasgow at 19, she got to know the LVLZ grime crew.",
+      "claims": [
+        {
+          "id": "nova-1",
+          "text": "Nova grew up going to Bristo Battles and Spectrum Cyphers in Edinburgh. When she moved to Glasgow at 19, she got to know the LVLZ grime crew.",
+          "source": "Meet the MC: Nova | DJ Mag",
+          "publisher": "DJ Mag, interview with Nova",
+          "url": "https://djmag.com/longreads/meet-mc-nova",
+          "locator": "Paragraphs on Bristo Battles and Spectrum Cyphers in Edinburgh and moving to Glasgow at 19.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "nova-2",
+          "text": "She uses a different name for each part of her work. She raps as Nova, produces as Nova Scotia and plays records as DJ Scotia.",
+          "source": "DJ Scotia on Jupiter Rising, OH141 and Risin' Up: The Skinny",
+          "publisher": "The Skinny, interview with DJ Scotia",
+          "url": "https://www.theskinny.co.uk/clubs/interviews/dj-scotia-on-jupiter-rising-oh141-and-risin-up",
+          "locator": "Opening explanation of performing names, OH141 and Risin’ Up.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "nova-3",
+          "text": "On Re-Up she wrote every lyric, working with producers including Inkke and Kami-O.",
+          "source": "Re-Up | Nova",
+          "publisher": "Nova on Bandcamp",
+          "url": "https://novascotiathetruth.bandcamp.com/album/re-up",
+          "locator": "Re-Up description and production credits after track list.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "nova-4",
+          "text": "In 2020 it became the first rap or grime record to win the Scottish Album of the Year Award.",
+          "source": "Nova Revealed As Winner of the 2020 Scottish Album Of The Year Award With Debut Release 'Re-Up' - Scottish Music Industry Association",
+          "publisher": "Scottish Music Industry Association",
+          "url": "https://www.smia.org.uk/news/nova-revealed-as-winner-of-the-2020-scottish-album-of-the-year-award-with-debut-release-re-up/",
+          "locator": "Award announcement, 30 October 2020, first three paragraphs.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Nova grew up going to Bristo Battles and Spectrum Cyphers in Edinburgh. When she moved to Glasgow at 19, she got to know the LVLZ grime crew. She uses a different name for each part of her work. She raps as Nova, produces as Nova Scotia and plays records as DJ Scotia.",
+          "claims": [
+            "nova-1",
+            "nova-2"
+          ]
+        },
+        {
+          "text": "On Re-Up she wrote every lyric, working with producers including Inkke and Kami-O. In 2020 it became the first rap or grime record to win the Scottish Album of the Year Award.",
+          "claims": [
+            "nova-3",
+            "nova-4"
+          ]
+        }
+      ],
+      "connections": [],
+      "placeNotes": {
+        "edinburgh": "Based in Edinburgh at the time of her 2020 Scottish Album of the Year Award",
+        "glasgow": "Moved to Glasgow at nineteen and met the LVLZ grime crew there"
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Shaheeda+Sinckler%22+OR+%22Nova+Scotia+the+Truth%22&srlimit=20&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://djmag.com/longreads/meet-mc-nova",
+            "finding": "Portraits identified in the interview, without an open reuse licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://novascotiathetruth.bandcamp.com/album/re-up",
+            "finding": "Artwork by Rosalind Shrinivas; release marked all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://novascotiathetruth.bandcamp.com/album/re-up",
+            "finding": "Nova artist link on Re-Up."
+          },
+          {
+            "url": "https://www.theskinny.co.uk/clubs/interviews/dj-scotia-on-jupiter-rising-oh141-and-risin-up",
+            "finding": "Interview links her Risin’ Up mixtape and individual account."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://novascotiathetruth.bandcamp.com/",
+          "source": "https://novascotiathetruth.bandcamp.com/album/re-up",
+          "locator": "Nova artist link on Re-Up."
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/novascotiathetruth",
+          "source": "https://www.theskinny.co.uk/clubs/interviews/dj-scotia-on-jupiter-rising-oh141-and-risin-up",
+          "locator": "Interview links her Risin’ Up mixtape and individual account."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2020,
+          "source": "https://novascotiathetruth.bandcamp.com/album/re-up",
+          "locator": "Re-Up came out on 25 January 2020. Release credits."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "p-money",
@@ -5724,6 +8075,113 @@
         }
       },
       "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "ransom-fa",
+      "name": "Ransom FA",
+      "aliases": [],
+      "placeIds": [
+        "aberdeen"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Ransom FA is an MC from Aberdeen. He first heard Bearman and Nu Brand Flexx through the music his older sibling had on Bearshare. He found his own city in what those London MCs were talking about.",
+      "claims": [
+        {
+          "id": "ransom-fa-1",
+          "text": "Ransom FA is an MC from Aberdeen. He first heard Bearman and Nu Brand Flexx through the music his older sibling had on Bearshare. He found his own city in what those London MCs were talking about.",
+          "source": "Meet Ransom FA : The Artist Bringing Sounds Of The North",
+          "publisher": "The Black Scotsman, interview with Ransom FA",
+          "url": "https://theblackscotsman.wordpress.com/2016/07/06/meet-ransom-fa-the-grime-mc-whose-bringing-a-sound-of-the-north/",
+          "locator": "Opening identification and answers about Bearshare, Eskimo Dance and SBTV.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "ransom-fa-2",
+          "text": "In 2016 he linked up with Paisley MC Shogun for “Wake Up” and appeared with Aberdeen’s Gidd Gamz on Risky Roadz.",
+          "source": "Meet Ransom FA : The Artist Bringing Sounds Of The North",
+          "publisher": "The Black Scotsman, interview with Ransom FA",
+          "url": "https://theblackscotsman.wordpress.com/2016/07/06/meet-ransom-fa-the-grime-mc-whose-bringing-a-sound-of-the-north/",
+          "locator": "Opening identification and answers about Bearshare, Eskimo Dance and SBTV.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "ransom-fa-3",
+          "text": "He went on to present The Rap Trip with Scunthorpe rapper F.O.S, visiting rap communities around Britain.",
+          "source": "Ransom FA — Pop Mutations",
+          "publisher": "Pop Mutations",
+          "url": "https://www.popmutations.com/ransom-fa",
+          "locator": "Performer biography, opening and final paragraphs.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Ransom FA is an MC from Aberdeen. He first heard Bearman and Nu Brand Flexx through the music his older sibling had on Bearshare. He found his own city in what those London MCs were talking about.",
+          "claims": [
+            "ransom-fa-1"
+          ]
+        },
+        {
+          "text": "In 2016 he linked up with Paisley MC Shogun for “Wake Up” and appeared with Aberdeen’s Gidd Gamz on Risky Roadz. He went on to present The Rap Trip with Scunthorpe rapper F.O.S, visiting rap communities around Britain.",
+          "claims": [
+            "ransom-fa-2",
+            "ransom-fa-3"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "shogun",
+          "label": "Named together in the profile",
+          "claims": [
+            "ransom-fa-2"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Ransom+FA%22&srlimit=14&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://theblackscotsman.wordpress.com/2016/07/06/meet-ransom-fa-the-grime-mc-whose-bringing-a-sound-of-the-north/",
+            "finding": "The credited interview offers no reusable portrait licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/artist/ransom-fa/951985660",
+            "finding": "Release covers on the artist catalogue carry no licence for independent reuse."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://music.apple.com/us/artist/ransom-fa/951985660",
+            "finding": "Identified by its Scottish cypher and Momentum releases."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Apple Music",
+          "url": "https://music.apple.com/us/artist/ransom-fa/951985660",
+          "source": "https://music.apple.com/us/artist/ransom-fa/951985660",
+          "locator": "Identified by its Scottish cypher and Momentum releases."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2016,
+          "source": "https://theblackscotsman.wordpress.com/2016/07/06/meet-ransom-fa-the-grime-mc-whose-bringing-a-sound-of-the-north/",
+          "locator": "Discussed the release of Sounds of the North in July 2016. Interview introduction, 6 July 2016."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "rapture-4d",
@@ -6053,6 +8511,166 @@
         "changes": "Full video frame, saved as a JPEG.",
         "path": "/assets/artists/roly.jpg"
       }
+    },
+    {
+      "id": "royal-t",
+      "name": "Royal-T",
+      "aliases": [],
+      "placeIds": [
+        "southampton"
+      ],
+      "roles": [
+        "DJ",
+        "Producer"
+      ],
+      "intro": "Royal-T is a grime DJ and producer from Southampton.",
+      "claims": [
+        {
+          "id": "royal-t-1",
+          "text": "Royal-T is a grime DJ and producer from Southampton.",
+          "source": "Introducing Royal T",
+          "publisher": "fabric",
+          "url": "https://www.fabriclondon.com/posts/introducing-royal-t-its-all-grime-to-me",
+          "locator": "Artist introduction and the questions on Rinse and his latest 12-inch. He identifies himself as a grime DJ and producer from Southampton.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "royal-t-2",
+          "text": "When he sent his instrumental “1UP” to Elijah, the Butterz DJ urged him to get an MC on it. P Money was the voice Royal-T had in mind. DJ Smallz, Logan and Vectra were among the DJs who helped get the beat heard.",
+          "source": "Threefold Media meets Royal-T",
+          "publisher": "Threefold Media",
+          "url": "https://welcometothefold.wordpress.com/2009/12/07/threefold-media-meets-royal-t/",
+          "locator": "7 December 2009. The questions about “1UP” name Elijah, the DJs playing it and P Money’s vocal.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "royal-t-3",
+          "text": "A longtime Rinse listener, he went on to record for the station’s label himself. He told fabric that the mix of two-step and grime on his records came from the music he grew up with.",
+          "source": "Introducing Royal T",
+          "publisher": "fabric",
+          "url": "https://www.fabriclondon.com/posts/introducing-royal-t-its-all-grime-to-me",
+          "locator": "Artist introduction and the questions on Rinse and his latest 12-inch. He identifies himself as a grime DJ and producer from Southampton.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "royal-t-4",
+          "text": "On his 2018 release Something For You he reworked Flava D’s “Closer” and Jme’s “Show You”.",
+          "source": "Something For You LP",
+          "publisher": "Royal-T",
+          "url": "https://royaltroyalt.bandcamp.com/album/something-for-you-lp",
+          "locator": "Original track list, tracks 4 and 6. Credits date the record to 29 November 2018.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Royal-T is a grime DJ and producer from Southampton. When he sent his instrumental “1UP” to Elijah, the Butterz DJ urged him to get an MC on it. P Money was the voice Royal-T had in mind. DJ Smallz, Logan and Vectra were among the DJs who helped get the beat heard.",
+          "claims": [
+            "royal-t-1",
+            "royal-t-2"
+          ]
+        },
+        {
+          "text": "A longtime Rinse listener, he went on to record for the station’s label himself. He told fabric that the mix of two-step and grime on his records came from the music he grew up with. On his 2018 release Something For You he reworked Flava D’s “Closer” and Jme’s “Show You”.",
+          "claims": [
+            "royal-t-3",
+            "royal-t-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "jme",
+          "label": "Named together in the profile",
+          "claims": [
+            "royal-t-4"
+          ]
+        },
+        {
+          "id": "p-money",
+          "label": "Named together in the profile",
+          "claims": [
+            "royal-t-2"
+          ]
+        }
+      ],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://www.fabriclondon.com/posts/introducing-royal-t-its-all-grime-to-me",
+            "finding": "fabric identifies its guest but supplies no reuse licence for the photograph."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://royaltroyalt.bandcamp.com/album/something-for-you-lp",
+            "finding": "The artist marks the LP all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://royaltroyalt.bandcamp.com/album/something-for-you-lp",
+            "finding": "The release links to the artist’s own catalogue."
+          },
+          {
+            "url": "https://royaltroyalt.bandcamp.com/",
+            "finding": "The artist links the royaltmusic account under his biography on Bandcamp."
+          },
+          {
+            "url": "https://royaltroyalt.bandcamp.com/",
+            "finding": "The artist links the royaltmusic account under his biography on Bandcamp."
+          },
+          {
+            "url": "https://royaltroyalt.bandcamp.com/",
+            "finding": "The artist links the royaltmusic account under his biography on Bandcamp."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://royaltroyalt.bandcamp.com/",
+          "source": "https://royaltroyalt.bandcamp.com/album/something-for-you-lp",
+          "locator": "The release links to the artist’s own catalogue."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/royaltmusic/",
+          "source": "https://royaltroyalt.bandcamp.com/",
+          "locator": "The artist links the royaltmusic account under his biography on Bandcamp."
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/royaltmusic",
+          "source": "https://royaltroyalt.bandcamp.com/",
+          "locator": "The artist links the royaltmusic account under his biography on Bandcamp."
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/royaltmusic",
+          "source": "https://royaltroyalt.bandcamp.com/",
+          "locator": "The artist links the royaltmusic account under his biography on Bandcamp."
+        }
+      ],
+      "booking": {
+        "url": "https://royaltroyalt.bandcamp.com/",
+        "source": "https://royaltroyalt.bandcamp.com/album/something-for-you-lp",
+        "locator": "In the artist’s own sidebar the professional booking contact is explicitly labelled “Bookings”. Link to that page."
+      },
+      "activity": {
+        "first": {
+          "year": 2009,
+          "source": "https://welcometothefold.wordpress.com/2009/12/07/threefold-media-meets-royal-t/",
+          "locator": "Interviewed in 2009 about “1UP” and P Money’s version. 7 December 2009. The questions about “1UP” name Elijah, the DJs playing it and P Money’s vocal."
+        },
+        "last": {
+          "year": 2018,
+          "source": "https://royaltroyalt.bandcamp.com/album/something-for-you-lp",
+          "locator": "Something For You released on 29 November 2018. Original track list, tracks 4 and 6. Credits date the record to 29 November 2018."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "rukus",
@@ -6388,6 +9006,154 @@
       "activityChecked": "2026-11-23"
     },
     {
+      "id": "sage-todz",
+      "name": "Sage Todz",
+      "aliases": [],
+      "placeIds": [
+        "cardiff",
+        "harlow"
+      ],
+      "roles": [
+        "MC",
+        "Producer"
+      ],
+      "intro": "Sage Todz moved from Harlow to Penygroes in North Wales when he was seven and learnt Welsh at school. He saved up for a microphone and recording gear by working in a café in Caernarfon.",
+      "claims": [
+        {
+          "id": "sage-todz-1",
+          "text": "Sage Todz moved from Harlow to Penygroes in North Wales when he was seven and learnt Welsh at school. He saved up for a microphone and recording gear by working in a café in Caernarfon.",
+          "source": "Sage Todz: \"If you're in music in Wales, you know about FOCUS Wales!\" | Interview | The Line of Best Fit",
+          "publisher": "The Line of Best Fit, interview with Sage Todz",
+          "url": "https://www.thelineofbestfit.com/features/interviews/sage-todz-finding-power-in-between",
+          "locator": "Opening, move from Harlow aged seven, producing music, 2018 SoundCloud recordings and account of O HYD.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "sage-todz-2",
+          "text": "He raps in Welsh as well as English, moving between grime and drill.",
+          "source": "Ones to watch: Black Welsh music talent | Creative Wales",
+          "publisher": "Creative Wales",
+          "url": "https://www.creative.wales/five-black-welsh-artists-and-cultural-leaders",
+          "locator": "Sage Todz section on Welsh-language rap, grime and drill.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "sage-todz-3",
+          "text": "For Wales’ World Cup play-off against Ukraine, he made “O HYD” around a sample of Dafydd Iwan’s “Yma o Hyd”.",
+          "source": "Black History Month on RedWall+ - FAW",
+          "publisher": "Football Association of Wales",
+          "url": "https://faw.cymru/news/black-history-month-on-redwall/",
+          "locator": "Sage Todz section: O HYD and the Ukraine play-off.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "sage-todz-4",
+          "text": "He has also shared a Red Bull Mic Flex session with Cardiff MC Mace The Great and appeared on Mace’s Show Stoppaz mixtape.",
+          "source": "Mace The Great promises big things with Show Stoppaz mixtape",
+          "publisher": "Buzz, interview with Mace The Great",
+          "url": "https://www.buzzmag.co.uk/mace-great-interview-show-stoppaz-mixtape/",
+          "locator": "Red Bull Mic Flex appearance and guests on Show Stoppaz.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "sage-todz-5",
+          "text": "By 2026 he was helping other artists learn the business through the Cardiff youth organisation Sound Progression.",
+          "source": "Sage Todz: \"If you're in music in Wales, you know about FOCUS Wales!\" | Interview | The Line of Best Fit",
+          "publisher": "The Line of Best Fit, interview with Sage Todz",
+          "url": "https://www.thelineofbestfit.com/features/interviews/sage-todz-finding-power-in-between",
+          "locator": "Opening, move from Harlow aged seven, producing music, 2018 SoundCloud recordings and account of O HYD.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Sage Todz moved from Harlow to Penygroes in North Wales when he was seven and learnt Welsh at school. He saved up for a microphone and recording gear by working in a café in Caernarfon. He raps in Welsh as well as English, moving between grime and drill.",
+          "claims": [
+            "sage-todz-1",
+            "sage-todz-2"
+          ]
+        },
+        {
+          "text": "For Wales’ World Cup play-off against Ukraine, he made “O HYD” around a sample of Dafydd Iwan’s “Yma o Hyd”. He has also shared a Red Bull Mic Flex session with Cardiff MC Mace The Great and appeared on Mace’s Show Stoppaz mixtape. By 2026 he was helping other artists learn the business through the Cardiff youth organisation Sound Progression.",
+          "claims": [
+            "sage-todz-3",
+            "sage-todz-4",
+            "sage-todz-5"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "mace-the-great",
+          "label": "Named together in the profile",
+          "claims": [
+            "sage-todz-4"
+          ]
+        }
+      ],
+      "placeNotes": {
+        "cardiff": "Based in Cardiff in 2026",
+        "harlow": "Originally from Harlow before growing up in North Wales"
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Sage+Todz%22+OR+%22Toda+Ogunbanwo%22&srlimit=20&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://www.creative.wales/five-black-welsh-artists-and-cultural-leaders",
+            "finding": "Named editorial image but no re-usable portrait licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://sagetodz.bandcamp.com/album/not-upset-just-motivated",
+            "finding": "Cover belongs to release marked all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://sagetodz.bandcamp.com/album/not-upset-just-motivated",
+            "finding": "Named artist link on Not Upset Just Motivated."
+          },
+          {
+            "url": "https://linktr.ee/manliketodz",
+            "finding": "Account identifies the artist, links the same Bandcamp release and named performance by Sage Todz & The Problem Solvers."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://sagetodz.bandcamp.com/",
+          "source": "https://sagetodz.bandcamp.com/album/not-upset-just-motivated",
+          "locator": "Named artist link on Not Upset Just Motivated."
+        },
+        {
+          "label": "Artist links",
+          "url": "https://linktr.ee/manliketodz",
+          "source": "https://linktr.ee/manliketodz",
+          "locator": "Account identifies the artist, links the same Bandcamp release and named performance by Sage Todz & The Problem Solvers."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2018,
+          "source": "https://www.thelineofbestfit.com/features/interviews/sage-todz-finding-power-in-between",
+          "locator": "His own account places early SoundCloud releases in 2018. Answer about developing as an artist and university."
+        },
+        "last": {
+          "year": 2026,
+          "source": "https://sagetodz.bandcamp.com/album/not-upset-just-motivated",
+          "locator": "Not Upset Just Motivated released 24 August 2026. Credits."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
       "id": "shade-one",
       "name": "Shade One",
       "aliases": [
@@ -6538,6 +9304,131 @@
       }
     },
     {
+      "id": "shogun",
+      "name": "Shogun",
+      "aliases": [],
+      "placeIds": [
+        "paisley"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "Shogun is a grime MC based in Paisley.",
+      "claims": [
+        {
+          "id": "shogun-1",
+          "text": "Shogun is a grime MC based in Paisley.",
+          "source": "British Council UK Films Database: Shogun",
+          "publisher": "British Council UK Films Database",
+          "url": "https://filmsandfestivals.britishcouncil.org/projects/shogun",
+          "locator": "Synopsis and 2017 selection for the short film Shogun.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "shogun-2",
+          "text": "His 2016 freestyle “Vulcan” took him to a much wider audience. When he made his debut EP, Katana, he wanted Scottish producers on it and credited his crew Mans From The Mainland with helping him along the way.",
+          "source": "The Great Escape 2017: Shogun Q&A - The Skinny",
+          "publisher": "The Skinny, interview with Shogun",
+          "url": "https://www.theskinny.co.uk/music/opinion/the-great-escape-q-a-with-shogun",
+          "locator": "Opening and questions about Vulcan, local production and Mans From The Mainland.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "shogun-3",
+          "text": "He also appeared on Aberdeen MC Ransom FA’s “Wake Up”.",
+          "source": "Meet Ransom FA : The Artist Bringing Sounds Of The North",
+          "publisher": "The Black Scotsman, interview with Ransom FA",
+          "url": "https://theblackscotsman.wordpress.com/2016/07/06/meet-ransom-fa-the-grime-mc-whose-bringing-a-sound-of-the-north/",
+          "locator": "Opening identifies the collaboration Wake Up.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "shogun-4",
+          "text": "Emily McDonald made a short documentary about Shogun that screened at the 2017 BFI London Film Festival.",
+          "source": "British Council UK Films Database: Shogun",
+          "publisher": "British Council UK Films Database",
+          "url": "https://filmsandfestivals.britishcouncil.org/projects/shogun",
+          "locator": "Synopsis and 2017 selection for the short film Shogun.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Shogun is a grime MC based in Paisley. His 2016 freestyle “Vulcan” took him to a much wider audience. When he made his debut EP, Katana, he wanted Scottish producers on it and credited his crew Mans From The Mainland with helping him along the way.",
+          "claims": [
+            "shogun-1",
+            "shogun-2"
+          ]
+        },
+        {
+          "text": "He also appeared on Aberdeen MC Ransom FA’s “Wake Up”. Emily McDonald made a short documentary about Shogun that screened at the 2017 BFI London Film Festival.",
+          "claims": [
+            "shogun-3",
+            "shogun-4"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "ransom-fa",
+          "label": "Named together in the profile",
+          "claims": [
+            "shogun-3"
+          ]
+        }
+      ],
+      "placeNotes": {
+        "paisley": "Based in Paisley"
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Shogun%22+Paisley+rapper&srlimit=14&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://filmsandfestivals.britishcouncil.org/projects/shogun",
+            "finding": "The film database names its subject and filmmakers without clearing a portrait or still for reuse."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/album/katana-ep/1620644708",
+            "finding": "The release artwork offers no reusable licence."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://music.apple.com/us/album/katana-ep/1620644708",
+            "finding": "Artist credit above the six-track Katana EP."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Apple Music",
+          "url": "https://music.apple.com/us/artist/shogun/1215368247",
+          "source": "https://music.apple.com/us/album/katana-ep/1620644708",
+          "locator": "Artist credit above the six-track Katana EP."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2016,
+          "source": "https://www.theskinny.co.uk/music/opinion/the-great-escape-q-a-with-shogun",
+          "locator": "Vulcan gained an audience in summer 2016. May 2017 interview introduction says last summer."
+        },
+        "last": {
+          "year": 2017,
+          "source": "https://music.apple.com/us/album/katana-ep/1620644708",
+          "locator": "Katana EP released 29 June 2017. Release footer."
+        }
+      },
+      "activityChecked": "2026-11-24"
+    },
+    {
       "id": "shystie",
       "name": "Shystie",
       "aliases": [],
@@ -6671,6 +9562,124 @@
         }
       },
       "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "sir-hiss",
+      "name": "Sir Hiss",
+      "aliases": [],
+      "placeIds": [
+        "bristol"
+      ],
+      "roles": [
+        "DJ",
+        "Producer"
+      ],
+      "intro": "Sir Hiss started out making grime instrumentals in Bristol for himself and his friends. In 2017 a clip went round of Commodo playing his “Danny Uzi Vert” dub at Outlook. Commodo had even added the sub-bass himself so he could play it out.",
+      "claims": [
+        {
+          "id": "sir-hiss-1",
+          "text": "Sir Hiss started out making grime instrumentals in Bristol for himself and his friends. In 2017 a clip went round of Commodo playing his “Danny Uzi Vert” dub at Outlook. Commodo had even added the sub-bass himself so he could play it out.",
+          "source": "In Session: Sir Hiss - Mixmag.net",
+          "publisher": "Mixmag, interview with Sir Hiss",
+          "url": "https://mixmag.net/feature/in-session-sir-hiss-dj-mix-bristol-dubstep-140-electro-grime-interview",
+          "locator": "Opening account of Commodo and Danny Uzi Vert; answers on grime and growing up around Bristol music.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "sir-hiss-2",
+          "text": "As well as DJing, Sir Hiss started No More Mailouts to release his own records and music by other Bristol producers.",
+          "source": "In Session: Sir Hiss - Mixmag.net",
+          "publisher": "Mixmag, interview with Sir Hiss",
+          "url": "https://mixmag.net/feature/in-session-sir-hiss-dj-mix-bristol-dubstep-140-electro-grime-interview",
+          "locator": "Opening account of Commodo and Danny Uzi Vert; answers on grime and growing up around Bristol music.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "sir-hiss-3",
+          "text": "His debut album Time Dilation came out on Pineapple Records in 2025, drawing together grime, electro and techno.",
+          "source": "Time Dilation | Sir Hiss",
+          "publisher": "Sir Hiss / Pineapple Records on Bandcamp",
+          "url": "https://sirhissbristol.bandcamp.com/album/time-dilation",
+          "locator": "Album description, track list, Bristol artist location and 2 October 2025 release footer.",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "Sir Hiss started out making grime instrumentals in Bristol for himself and his friends. In 2017 a clip went round of Commodo playing his “Danny Uzi Vert” dub at Outlook. Commodo had even added the sub-bass himself so he could play it out.",
+          "claims": [
+            "sir-hiss-1"
+          ]
+        },
+        {
+          "text": "As well as DJing, Sir Hiss started No More Mailouts to release his own records and music by other Bristol producers. His debut album Time Dilation came out on Pineapple Records in 2025, drawing together grime, electro and techno.",
+          "claims": [
+            "sir-hiss-2",
+            "sir-hiss-3"
+          ]
+        }
+      ],
+      "connections": [],
+      "placeNotes": {
+        "bristol": "Part of the Bristol scene"
+      },
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22Sir+Hiss%22+Bristol&srlimit=14&format=json",
+            "finding": "The returned file titles did not identify a portrait of this artist."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://mixmag.net/feature/in-session-sir-hiss-dj-mix-bristol-dubstep-140-electro-grime-interview",
+            "finding": "Interview portraits do not carry an independent reusable licence."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://sirhissbristol.bandcamp.com/album/time-dilation",
+            "finding": "Release and artwork are not offered under an open licence; the release says all rights reserved."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://sirhissbristol.bandcamp.com/album/time-dilation",
+            "finding": "Artist catalogue link matched to Time Dilation."
+          },
+          {
+            "url": "https://www.nobodyiswatching.co.uk/journal/interviews/sir-hiss",
+            "finding": "Sir Hiss is linked by name in the interview."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Bandcamp",
+          "url": "https://sirhissbristol.bandcamp.com/",
+          "source": "https://sirhissbristol.bandcamp.com/album/time-dilation",
+          "locator": "Artist catalogue link matched to Time Dilation."
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/sirhissbristol/",
+          "source": "https://www.nobodyiswatching.co.uk/journal/interviews/sir-hiss",
+          "locator": "Sir Hiss is linked by name in the interview."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2017,
+          "source": "https://mixmag.net/feature/in-session-sir-hiss-dj-mix-bristol-dubstep-140-electro-grime-interview",
+          "locator": "Commodo played Danny Uzi Vert in 2017. Introduction and Sir Hiss quotation."
+        },
+        "last": {
+          "year": 2025,
+          "source": "https://sirhissbristol.bandcamp.com/album/time-dilation",
+          "locator": "Time Dilation released on 2 October 2025. Credits."
+        }
+      },
+      "activityChecked": "2026-11-24"
     },
     {
       "id": "sir-spyro",
@@ -7874,6 +10883,13 @@
           "claims": [
             "vigilant-5"
           ]
+        },
+        {
+          "id": "dialect",
+          "label": "Named together in the profile",
+          "claims": [
+            "vigilant-2"
+          ]
         }
       ],
       "intro": "Grime Wars filmed Vigilant in his hometown of Derby in 2017.",
@@ -8173,6 +11189,122 @@
         }
       },
       "activityChecked": "2026-11-23"
+    },
+    {
+      "id": "yazmean",
+      "name": "YazMean",
+      "aliases": [
+        "Shawgz"
+      ],
+      "placeIds": [
+        "cardiff"
+      ],
+      "roles": [
+        "MC"
+      ],
+      "intro": "YazMean grew into battle rap in Cardiff, joining a freestyle at a night she had gone to with friends. Don’t Flop later brought her back into battling. She describes her sound as drawing on both grime and trap.",
+      "claims": [
+        {
+          "id": "yazmean-1",
+          "text": "YazMean grew into battle rap in Cardiff, joining a freestyle at a night she had gone to with friends. Don’t Flop later brought her back into battling. She describes her sound as drawing on both grime and trap.",
+          "source": "Grime Artist YazMean Talks Beats, Rhymes & Battles – Stanisland Magazine",
+          "publisher": "Stanisland, interview with YazMean",
+          "url": "https://stanisland.com/11-questions-for-grime-artist-yazmean/",
+          "locator": "Answers on her name and city, freestyling over potential beats, Cardiff battles, Don’t Flop and Ladies of Rage.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "yazmean-2",
+          "text": "Previously known as Shawgz, she released her debut EP BLK Tape through Bristol label Issa Vibe in 2018.",
+          "source": "Roundhouse Rising X Horizons Presents | Wales Week London",
+          "publisher": "Wales Week London / Roundhouse Rising x Horizons",
+          "url": "https://walesweek.london/whats-on/roundhouse-rising-x-horizons-presents",
+          "locator": "YazMean entry in the 2 March 2022 programme: former name, 2018 debut, Issa Vibe label and later performances.",
+          "checked": "2026-11-24"
+        },
+        {
+          "id": "yazmean-3",
+          "text": "For “Cream” she shot the video in Egypt. Veez Nixon made the beat and edited the film.",
+          "source": "Interview with Yaz Mean",
+          "publisher": "Urban Culture Wales, interview with YazMean",
+          "url": "https://urbanculturewales.wixsite.com/ucwales/post/interview-with-yaz-mean",
+          "locator": "Answers to “Where was the Music Video filmed?” and “Who produced the Music Video?”",
+          "checked": "2026-11-24"
+        }
+      ],
+      "bio": [
+        {
+          "text": "YazMean grew into battle rap in Cardiff, joining a freestyle at a night she had gone to with friends. Don’t Flop later brought her back into battling. She describes her sound as drawing on both grime and trap.",
+          "claims": [
+            "yazmean-1"
+          ]
+        },
+        {
+          "text": "Previously known as Shawgz, she released her debut EP BLK Tape through Bristol label Issa Vibe in 2018. For “Cream” she shot the video in Egypt. Veez Nixon made the beat and edited the film.",
+          "claims": [
+            "yazmean-2",
+            "yazmean-3"
+          ]
+        }
+      ],
+      "connections": [],
+      "mediaResearch": {
+        "checked_on": "2026-11-24",
+        "image_search": [
+          {
+            "kind": "portrait",
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&list=search&srnamespace=6&srsearch=%22YazMean%22+rapper&srlimit=14&format=json",
+            "finding": "Commons file search returned no matching files."
+          },
+          {
+            "kind": "portrait",
+            "url": "https://stanisland.com/11-questions-for-grime-artist-yazmean/",
+            "finding": "The interview identifies the MC. There are no published reuse terms for its photograph."
+          },
+          {
+            "kind": "artwork",
+            "url": "https://music.apple.com/us/artist/yazmean/1476382722",
+            "finding": "Artist page displays single covers for Mango and Nasty without an image reuse licence."
+          }
+        ],
+        "link_search": [
+          {
+            "url": "https://stanisland.com/11-questions-for-grime-artist-yazmean/",
+            "finding": "The interview links her Instagram at @yazmean.x."
+          },
+          {
+            "url": "https://music.apple.com/us/artist/yazmean/1476382722",
+            "finding": "The individual profile lists Mango and Nasty, both corroborated by the interviews and event programme."
+          }
+        ]
+      },
+      "socials": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/yazmean.x/",
+          "source": "https://stanisland.com/11-questions-for-grime-artist-yazmean/",
+          "locator": "The interview links her Instagram at @yazmean.x."
+        },
+        {
+          "label": "Apple Music",
+          "url": "https://music.apple.com/us/artist/yazmean/1476382722",
+          "source": "https://music.apple.com/us/artist/yazmean/1476382722",
+          "locator": "The individual profile lists Mango and Nasty, both corroborated by the interviews and event programme."
+        }
+      ],
+      "activity": {
+        "first": {
+          "year": 2018,
+          "source": "https://walesweek.london/whats-on/roundhouse-rising-x-horizons-presents",
+          "locator": "Released BLK Tape in 2018. YazMean biography in the Roundhouse event programme."
+        },
+        "last": {
+          "year": 2021,
+          "source": "https://urbanculturewales.wixsite.com/ucwales/post/interview-with-yaz-mean",
+          "locator": "Interviewed about the video for “Cream” in March 2021. The article is dated 2 March 2021. Yaz Mean describes shooting the video in Egypt."
+        }
+      },
+      "activityChecked": "2026-11-24"
     }
   ]
 }

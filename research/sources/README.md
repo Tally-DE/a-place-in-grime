@@ -6,6 +6,7 @@ Start here when you want to know where a scene left a record. A channel may have
 | --- | --- |
 | [Derby](derby.md) | Derby Archives, SwaggaCampMedia / ITAL EDGE, TooHardForTV, Daniel James / Arthur Street Studios, DJ Natty, Build TV, Grime Wars, HomeRun |
 | [UK interviews and scene collections](uk.md) | Red Bull Music Academy, V&A, Astral Black and named leads from the first UK-wide pass. |
+| [Local sources around the UK](local-scenes.md) | Oral histories, freestyles, club nights and label credits. Includes what has already been checked and a name or recording to follow next. |
 
 ## Add a collection
 

@@ -1,6 +1,6 @@
 # UK interviews and scene collections
 
-On 23 November 2026 the first UK-wide pass added 18 profiles. It covered London, Glasgow, Manchester, Nottingham and the West Midlands. Wales and Northern Ireland remain open.
+On 23 November 2026 the first UK-wide pass added 18 profiles. It covered London, Glasgow, Manchester, Nottingham and the West Midlands. For the later work in Wales, Northern Ireland, Scotland and more English cities, see [local sources around the UK](local-scenes.md).
 
 | Collection and item checked | What it preserves | Where to pick up |
 | --- | --- | --- |
